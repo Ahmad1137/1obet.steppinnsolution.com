@@ -1,0 +1,2923 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cricket</title>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/69c89fc43e.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- footer style -->
+    <style>
+      .footer .footerLinks {
+        background-color: rgb(34, 42, 60);
+        min-width: 100%;
+        opacity: 0.8;
+        text-align: center;
+      }
+      .footerLinks a {
+        color: white;
+      }
+      .footer {
+        min-width: 100%;
+      }
+      footer {
+        height: 100px;
+      }
+      .footer_img {
+        width: 100%;
+        display: flex;
+        opacity: 0.7;
+        -webkit-box-pack: center;
+        justify-content: center;
+        background-color: rgb(34, 42, 60);
+      }
+      .footer_img .footerLogos {
+        height: auto;
+        width: 100px;
+        display: flex;
+        flex-direction: row;
+        -webkit-box-pack: center;
+        justify-content: center;
+        gap: 10px;
+      }
+      .footer_img .footerLogos .loginImageOne {
+        min-width: 120px;
+        height: auto;
+        cursor: pointer;
+      }
+      .footer_img .footerLogos .loginImageTwo {
+        min-width: auto;
+        height: 40px;
+        margin: auto;
+        cursor: pointer;
+      }
+      .loginfooterimg {
+        width: 120px;
+        height: auto;
+        cursor: pointer;
+      }
+      .loginfooterimgto {
+        margin: auto;
+        height: 35px;
+      }
+    </style>
+    <style>
+      .css-yhsfmz > :not(style) + :not(style) {
+        margin: 0.25rem 0px 0px;
+      }
+      .css-jnr44o {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0.25rem;
+      }
+      .css-9jay18 {
+        display: flex;
+        flex-direction: row;
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+      }
+      .css-yhsfmz {
+        display: flex;
+        flex-direction: column;
+      }
+      .css-2p8vrk {
+        display: flex;
+        flex-direction: row;
+        -webkit-box-align: center;
+        align-items: center;
+      }
+      .css-g6etzp {
+        display: flex;
+        flex-direction: row;
+        -webkit-box-align: center;
+        align-items: center;
+        padding: 0.125rem;
+        background: rgb(0, 0, 0);
+      }
+      .css-iz2ltj {
+        height: 14px;
+        width: 14px;
+      }
+      .css-g6etzp > :not(style) + :not(style) {
+        margin: 0px 0px 0px 0.25rem;
+      }
+      .css-tn9bsb {
+        margin: 0px;
+        line-height: 1.32;
+        font-size: 0.875rem;
+        letter-spacing: 0.1px;
+        font-family: "Public Sans", sans-serif, -apple-system,
+          BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+          sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-weight: 500;
+        color: white;
+      }
+      .css-2p8vrk > :not(style) + :not(style) {
+        margin: 0px 0px 0px 0.25rem;
+      }
+      .css-19hxgaf {
+        display: flex;
+        flex-direction: row;
+        -webkit-box-align: center;
+        align-items: center;
+        padding: 0.125rem;
+        background: rgb(0, 0, 0);
+        cursor: pointer;
+      }
+      .css-het29j {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        -webkit-box-pack: center;
+        justify-content: center;
+        height: 50px;
+      }
+      .css-qzylx {
+        margin: 0px;
+        line-height: 1.32;
+        font-size: 0.875rem;
+        letter-spacing: 0.1px;
+        font-family: "Public Sans", sans-serif, -apple-system,
+          BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+          sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-weight: 500;
+        color: rgb(0, 0, 0);
+      }
+      .css-xuwo8i {
+        margin: 0px;
+        line-height: 1.467;
+        font-family: "Public Sans", sans-serif, -apple-system,
+          BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+          sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        color: red;
+        font-size: 12px;
+        font-weight: 700;
+      }
+      .css-yhsfmz > :not(style) + :not(style) {
+        margin: 0.25rem 0px 0px;
+      }
+      .css-het29j {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        -webkit-box-pack: center;
+        justify-content: center;
+        height: 50px;
+      }
+      .css-8dztdt {
+        display: flex;
+        flex-direction: row;
+        -webkit-box-pack: end;
+        justify-content: flex-end;
+      }
+      .css-1todn3t {
+        margin: 0px;
+        line-height: 1.32;
+        font-size: 0.875rem;
+        letter-spacing: 0.1px;
+        font-family: "Public Sans", sans-serif, -apple-system,
+          BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+          sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-weight: 500;
+        color: rgb(255, 255, 255);
+        padding: 0.125rem 0.5rem;
+        width: 195px;
+        background: rgb(0, 0, 0);
+        text-align: right;
+      }
+      .css-8dztdt > :not(style) + :not(style) {
+        margin: 0px 0px 0px 0.25rem;
+      }
+      .css-f2ku00 {
+        margin: 0px;
+        line-height: 1.32;
+        font-size: 0.875rem;
+        letter-spacing: 0.1px;
+        font-family: "Public Sans", sans-serif, -apple-system,
+          BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+          sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-weight: 500;
+        color: rgb(255, 255, 255);
+        padding: 0.125rem 0.5rem;
+        width: 195px;
+        background: rgb(0, 0, 0);
+      }
+      .css-y0gi4w {
+        display: flex;
+        flex-direction: row-reverse;
+        width: 195px;
+        cursor: pointer;
+        height: 50px;
+      }
+      .css-1y0llhg {
+        display: flex;
+        flex-direction: column;
+        width: 63px;
+        background: rgb(141, 210, 240);
+        -webkit-box-pack: center;
+        justify-content: center;
+      }
+      .css-o92rli {
+        margin: 0px;
+        line-height: 1.467;
+        font-family: "Public Sans", sans-serif, -apple-system,
+          BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+          sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        color: rgb(0, 0, 0);
+        text-align: center;
+        font-weight: 700;
+        font-size: 20px;
+      }
+      .css-17uwr3x {
+        margin: 0px;
+        line-height: 1.467;
+        font-family: "Public Sans", sans-serif, -apple-system,
+          BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+          sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-weight: 400;
+        color: rgb(0, 0, 0);
+        text-align: center;
+        font-size: 14px;
+      }
+      .css-y0gi4w > :not(style) + :not(style) {
+        margin: 0px 0.25rem 0px 0px;
+      }
+      .css-1snnq6o {
+        display: flex;
+        flex-direction: row;
+        width: 195px;
+        cursor: pointer;
+        height: 50px;
+      }
+      .css-aelu6g {
+        display: flex;
+        flex-direction: column;
+        width: 63px;
+        background: rgb(255, 175, 178);
+        -webkit-box-pack: center;
+        justify-content: center;
+      }
+      .css-1snnq6o > :not(style) + :not(style) {
+        margin: 0px 0px 0px 0.25rem;
+      }
+    </style>
+
+    <style>
+      @media screen and (min-width: 1000px) {
+        .display_dekstop {
+          display: none;
+        }
+      }
+      @media screen and (max-width: 1000px) {
+        .display_mobile {
+          display: none;
+        }
+        .display_block {
+          display: block !important;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        .hide_at_561 {
+          display: none;
+        }
+        .css-1todn3t {
+          width: 63px;
+          text-align: center;
+        }
+        .css-f2ku00 {
+          width: 59px;
+          text-align: center;
+        }
+        .css-1snnq6o {
+          display: flex;
+          flex-direction: row;
+          width: 62px;
+          cursor: pointer;
+          height: 50px;
+        }
+        .css-y0gi4w {
+          width: 60px;
+        }
+      }
+      @media screen and (max-width: 250px) {
+        .css-tn9xkt {
+          font-size: xx-small !important;
+          text-wrap: nowrap;
+        }
+      }
+    </style>
+    <style>
+      .css-14afmp0 {
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+        transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+        background-image: none;
+        width: 100%;
+        overflow-x: auto;
+        border-radius: 0px;
+        box-shadow: none;
+        border-top-color: rgba(0, 0, 0, 0.16);
+      }
+      .css-rxit2l {
+        display: table;
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0px;
+      }
+      .css-12dfzmm {
+        display: table-row-group;
+      }
+      .css-e03dsj {
+        color: inherit;
+        display: table-row;
+        vertical-align: middle;
+        outline: 0px;
+      }
+    </style>
+    <style>
+      .css-ddwuyb {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0.25rem;
+      }
+      .css-1s05omm {
+        box-sizing: border-box;
+        margin: 0px;
+        flex-direction: row;
+        height: 38px;
+        display: flex;
+        position: relative;
+      }
+      .css-nu8l0g {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+        margin-right: 1.375rem;
+        -webkit-box-align: center;
+        align-items: center;
+        display: flex;
+        position: relative;
+        background-color: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
+      }
+      .css-nu8l0g::after {
+        border-right: 20px solid rgba(0, 0, 0, 0);
+        border-top: 38px solid rgb(0, 0, 0);
+        content: "";
+        left: 100%;
+        position: absolute;
+      }
+      .css-1tv6lwp {
+        background-color: rgb(0, 168, 38);
+        flex: 1 1 0%;
+        position: relative;
+        -webkit-box-align: center;
+        align-items: center;
+        -webkit-box-pack: end;
+        justify-content: flex-end;
+        display: flex;
+        padding-right: 1.25rem;
+        color: rgb(255, 255, 255);
+      }
+      .css-1tv6lwp::before {
+        border-bottom: 38px solid rgb(0, 168, 38);
+        border-left: 20px solid rgba(0, 0, 0, 0);
+        content: "";
+        position: absolute;
+        right: 100%;
+      }
+      .css-9laub6 {
+        margin: 0px;
+        line-height: 1.467;
+        font-family: "Public Sans", sans-serif, -apple-system,
+          BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+          sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-weight: 400;
+        color: brown;
+        font-style: italic;
+        font-size: 14px;
+      }
+      .css-p58oka {
+        display: flex;
+        flex-flow: wrap;
+      }
+      .css-rhier5 {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid rgb(125, 130, 133);
+        width: 20%;
+        cursor: pointer;
+      }
+      .css-1mj48m5 {
+        margin: 0px;
+        line-height: 1.467;
+        font-size: 0.9375rem;
+        font-family: "Public Sans", sans-serif, -apple-system,
+          BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+          sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-weight: 400;
+        color: rgb(0, 0, 0);
+        padding: 0.5rem;
+        text-align: center;
+        background-color: rgb(141, 210, 240);
+      }
+      .css-1uelkw {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1.25rem;
+      }
+      .css-17pexuo {
+        display: flex;
+        flex-direction: row;
+        -webkit-box-pack: center;
+        justify-content: center;
+      }
+      .css-6jwo7t {
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+      }
+      .css-tn9xkt {
+        margin: 0px;
+        line-height: 1.467;
+        font-size: 0.9375rem;
+        font-family: "Public Sans", sans-serif, -apple-system,
+          BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+          sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-weight: 400;
+        color: rgb(0, 0, 0);
+      }
+      .css-13mkirs {
+        display: flex;
+        flex-direction: row;
+        cursor: pointer;
+      }
+      .css-khshwk {
+        display: flex;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        justify-content: center;
+        font-size: 60px;
+        font-weight: 700;
+        text-align: center;
+        width: 50%;
+        background: rgb(255, 178, 175);
+      }
+      .css-6orp6a {
+        display: flex;
+        flex-direction: row;
+        -webkit-box-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        align-items: center;
+        width: 50%;
+        background: rgb(141, 210, 240);
+      }
+      .css-up5l35 {
+        display: flex;
+        flex-direction: row;
+        -webkit-box-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        align-items: center;
+        font-size: 26px;
+        text-align: center;
+      }
+      .css-1bv81gv {
+        margin: 0.75rem 0px 0px;
+        line-height: 1.467;
+        font-family: "Public Sans", sans-serif, -apple-system,
+          BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+          sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-weight: 400;
+        color: brown;
+        font-size: 12px;
+      }
+      .css-17pexuo > :not(style) + :not(style) {
+        margin: 0px 0px 0px 1.25rem;
+      }
+      .css-1uelkw > :not(style) + :not(style) {
+        margin: 1.25rem 0px 0px;
+      }
+      .css-1gb1rig {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+      }
+      .css-1vouuc8 {
+        display: flex;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        justify-content: center;
+        font-size: 60px;
+        font-weight: 700;
+        text-align: center;
+        background: rgb(255, 178, 175);
+      }
+      .css-1nvrxws {
+        display: flex;
+        flex-direction: row;
+        -webkit-box-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        align-items: center;
+        background: rgb(141, 210, 240);
+      }
+      .css-up5l35 {
+        display: flex;
+        flex-direction: row;
+        -webkit-box-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        align-items: center;
+        font-size: 26px;
+        text-align: center;
+      }
+    </style>
+    <style>
+      .svg-icon {
+        align-items: center;
+        background-color: rgb(24, 25, 24);
+        border-radius: 3px;
+        display: flex;
+        height: 48px;
+        justify-content: center;
+        width: 48px;
+      }
+      .timedeaitls {
+        display: flex;
+        flex-direction: column;
+      }
+      .timedeaitls_wrapper {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+      }
+      .sound_screen {
+        font-size: 2rem;
+      }
+      .mainheader {
+        color: white;
+        align-items: center;
+        display: flex;
+        min-width: 0;
+        background-color: #00a826;
+        width: 100%;
+      }
+      .font-size {
+        font-size: larger;
+      }
+      .bg-black {
+        background-color: black;
+      }
+      .image_size {
+        height: 14px;
+        width: 14px;
+      }
+      .rules-text {
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s, opacity 0.5s linear;
+        position: absolute;
+        top: 0;
+        left: 1rem; /* Adjust as needed for positioning */
+      }
+      .rules {
+        position: relative;
+        display: inline-block;
+      }
+      .rules:hover .rules-text {
+        visibility: visible;
+        opacity: 1;
+        background-color: black;
+        color: white;
+      }
+      .match_name {
+        text-wrap: nowrap;
+      }
+      .custom-box-black {
+        width: 63px;
+        margin-top: 2px;
+        color: rgb(18, 18, 18);
+        background-color: rgb(141, 210, 240);
+        margin-right: 0.1rem;
+      }
+      .custom-bg-color-black {
+        background-color: rgb(141, 210, 240);
+      }
+
+      .custom-box-lay {
+        width: 63px;
+        margin-top: 2px;
+        color: rgb(18, 18, 18);
+        background-color: rgb(255, 175, 178);
+        margin-right: 0.1rem;
+      }
+      td {
+        vertical-align: top;
+      }
+      td > div {
+        margin-bottom: 10px;
+      }
+      td p {
+        margin: 0;
+      }
+      .match_bets_score {
+        align-items: center;
+        display: flex;
+        gap: 6px;
+        justify-content: center;
+      }
+      .match_bets_style {
+        align-items: center;
+        background-color: var(--titleBarLeftBg);
+        color: #fff;
+        display: flex;
+        font-size: 12px;
+        line-height: 16px;
+        margin-right: 22px;
+        padding: 0 10px;
+        position: relative;
+        background-color: black;
+      }
+      .match_bets_style_score_black {
+        display: flex;
+        flex-flow: row nowrap;
+        font-family: Verdana;
+        height: 38px;
+        position: relative;
+        width: 100%;
+      }
+      .match_bets_score_green {
+        align-items: center;
+        background-color: #00a826;
+        color: #00143c;
+        display: flex;
+        flex: 1 1;
+        justify-content: right;
+        padding-right: 10px;
+        position: relative;
+        text-align: right;
+      }
+      .match_bets_style_score_black .match_bets_style::after {
+        border-right: 20px solid #0000;
+        border-top: 38px solid #000;
+        content: "";
+        height: 0;
+        left: 100%;
+        position: absolute;
+        top: 0;
+        width: 0;
+      }
+      .min-w-100 {
+        min-width: 100%;
+      }
+      .table-layout-auto {
+        table-layout: auto;
+      }
+      .ant_table_cell {
+        background-color: #000;
+        color: white;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 17px;
+      }
+
+      .back_lay {
+        padding-left: 6rem;
+        padding-right: 6rem;
+      }
+    </style>
+    <style>
+      .css-1jtgica {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0.5rem;
+        background: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
+        padding: 0.5rem;
+      }
+      .css-1ks4tg7 {
+        display: flex;
+        flex-direction: row;
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: center;
+        align-items: center;
+      }
+      .css-j7qwjs {
+        display: flex;
+        flex-direction: column;
+      }
+      .css-1mgdvdd {
+        display: flex;
+        flex-direction: row;
+      }
+      .css-1gfpw9x {
+        margin: 0px;
+        line-height: 1.467;
+        font-family: "Public Sans", sans-serif, -apple-system,
+          BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+          sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        color: rgb(255, 255, 255);
+        font-size: 14px;
+        font-weight: 700;
+      }
+      .css-1mgdvdd > :not(style) + :not(style) {
+        margin: 0px 0px 0px 0.25rem;
+      }
+      .css-1xhj18k {
+        display: flex;
+        flex-direction: row;
+      }
+      .css-11h2uyk {
+        margin: 0px;
+        line-height: 1.467;
+        font-family: "Public Sans", sans-serif, -apple-system,
+          BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+          sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-weight: 400;
+        color: rgb(255, 255, 255);
+        font-size: 14px;
+      }
+      .css-vide34 {
+        display: flex;
+        flex-direction: row;
+        -webkit-box-align: center;
+        align-items: center;
+      }
+      .css-vide34 > :not(style) + :not(style) {
+        margin: 0px 0px 0px 0.5rem;
+      }
+
+      .css-ypblli {
+        display: flex;
+        flex-direction: column;
+        max-width: 30%;
+      }
+      .css-klloh0 {
+        margin: 0px;
+        line-height: 1.467;
+        font-family: "Public Sans", sans-serif, -apple-system,
+          BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+          sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        color: rgb(255, 215, 0);
+        text-align: center;
+        font-size: 21px;
+        font-weight: 800;
+      }
+      .css-xnim3s {
+        font-size: 13px;
+        font-weight: 800;
+        text-align: center;
+      }
+    </style>
+    <!-- sidebar style -->
+    <style>
+      ul li {
+        list-style: none;
+        text-decoration: none;
+        margin-right: 15px;
+        margin-bottom: 1rem;
+      }
+      ul li a {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        line-height: 40px;
+        font-size: 20px;
+        color: white;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+        padding-left: 10px;
+        border-radius: 10px;
+      }
+      ul li a:hover {
+        text-decoration: none;
+        background-color: #00a826;
+        color: white;
+      }
+      ul li a img {
+        margin-right: 10px;
+        transition: transform 0.3s ease;
+        animation: rotate 2s linear infinite;
+      }
+      ul li a.active img {
+        animation: none;
+      }
+      ul li a.active img {
+        animation: none;
+      }
+      @keyframes rotate {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      ul li a.active {
+        background-color: #00a826;
+      }
+      .menu-toggle {
+        font-size: 35px;
+        color: white;
+        cursor: pointer;
+        transition: all 0.5s ease;
+      }
+      .sidebar {
+        position: fixed;
+        top: 0;
+        left: -300px;
+        width: 300px;
+        height: 100%;
+        background: black;
+        color: white;
+        padding-left: 10px;
+        transition: all 0.5s ease;
+        overflow-y: auto; /* Add scrolling */
+        z-index: 1000;
+      }
+      .sidebar.open {
+        left: 0;
+      }
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2px;
+        background-color: black;
+        color: white;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        transition: padding-left 0.5s ease;
+      }
+      .marquee-container {
+        overflow: hidden;
+        white-space: nowrap;
+        width: 100%;
+        background-color: black;
+        color: white;
+        padding-top: 50px; /* Adjust for fixed header */
+      }
+      .marquee-text {
+        display: inline-block;
+        padding-left: 100%;
+        animation: marquee 15s linear infinite;
+      }
+      @keyframes marquee {
+        0% {
+          transform: translateX(0%);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+      .marquee-container:hover .marquee-text {
+        animation-play-state: paused;
+      }
+      .close-toggle {
+        cursor: pointer;
+
+        margin-left: auto; /* Push to the right */
+      }
+
+      @media screen and (max-width: 790px) {
+        .sidebar {
+          width: 250px;
+        }
+        .sidebar.open ~ #header {
+          padding-left: 250px !important;
+        }
+        .header {
+          font-size: medium;
+        }
+      }
+      @media screen and (max-width: 690) {
+        .content {
+          padding-left: 0 !important;
+        }
+        .sidebar.open ~ #header {
+          padding-left: 0px !important;
+        }
+
+        .sidebar.open ~ .content {
+          padding-left: 0 !important;
+        }
+        .menu-toggle {
+          display: inline-block;
+        }
+      }
+      @media screen and (min-width: 690px) {
+        .close-toggle {
+          display: none;
+        }
+      }
+      @media screen and (max-width: 442px) {
+        .header {
+          padding: 3px;
+        }
+        .sound_screen {
+          position: absolute;
+          top: 34%;
+          text-align: center;
+          font-size: 1.8rem;
+        }
+        .timedeaitls_wrapper {
+          align-items: start;
+        }
+      }
+      @media screen and (max-width: 425px) {
+        .menu-toggle {
+          font-size: small;
+        }
+        .dashbaord {
+          font-size: small;
+        }
+        .bettor {
+          font-size: small;
+        }
+        .header {
+          font-size: small;
+          text-wrap: nowrap;
+        }
+        .marquee-text {
+          font-size: small;
+        }
+      }
+      @media screen and (max-width: 320px) {
+        .sound_screen {
+          position: absolute;
+          top: 40%;
+          text-align: center;
+          font-size: 1.8rem;
+        }
+        .menu-toggle {
+          font-size: small;
+        }
+        .dashbaord {
+          font-size: x-small;
+        }
+        .bettor {
+          font-size: x-small;
+        }
+        .header {
+          font-size: x-small;
+          text-wrap: nowrap;
+        }
+        .css-tn9xkt {
+          text-wrap: nowrap;
+        }
+      }
+    </style>
+    <style>
+      .dropdown-container {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 56px;
+        left: auto;
+        right: 1%;
+        width: 230px;
+        height: 270px;
+        background-color: white;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        border: 1px solid #ddd;
+        overflow: auto;
+        padding: 8px;
+      }
+
+      .dropdown-item {
+        padding: 8px 16px;
+        cursor: pointer;
+        border-radius: 6px;
+      }
+
+      .dropdown-item:hover {
+        background-color: #f1f1f1;
+        color: rgb(0, 168, 38);
+      }
+
+      hr {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header" id="header">
+      <i class="fa fa-bars menu-toggle ml-1" id="menuToggle"></i>
+      <!-- <h5 class="ml-2 mb-0 dashbaord">Dashboard</h5> -->
+      <div class="mx-auto">
+        <span class="navbar-brand mb-0 h1 text-center bettor">Bettor</span>
+      </div>
+      <div class="ml-auto">
+        <span class="navbar-text">B:2378</span>
+        <span class="navbar-text ml-3 text-success">L:0</span>
+        <span class="navbar-text ml-3">Username</span>
+        <span
+          ><svg
+            stroke="currentColor"
+            fill="currentColor"
+            stroke-width="0"
+            viewBox="0 0 512 512"
+            class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeMedium css-1slk8wg"
+            aria-hidden="true"
+            style="height: 1rem; width: 1rem"
+            xmlns="http://www.w3.org/2000/svg"
+            id="dropdownToggle"
+          >
+            <path
+              d="M256 294.1L383 167c9.4-9.4 24.6-9.4 33.9 0s9.3 24.6 0 34L273 345c-9.1 9.1-23.7 9.3-33.1.7L95 201.1c-4.7-4.7-7-10.9-7-17s2.3-12.3 7-17c9.4-9.4 24.6-9.4 33.9 0l127.1 127z"
+            ></path>
+          </svg>
+          <div class="dropdown-menu">
+            <a href="myprofile.html" class="dropdown-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                aria-hidden="true"
+                role="img"
+                font-size="1.375rem"
+                class="iconify iconify--tabler"
+                width="1em"
+                height="1em"
+                viewBox="0 0 24 24"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                >
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path
+                    d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2m1-10l2 2l4-4"
+                  ></path>
+                </g>
+              </svg>
+              My Profile
+            </a>
+            <a href="#" class="dropdown-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                aria-hidden="true"
+                role="img"
+                font-size="1.375rem"
+                class="iconify iconify--tabler"
+                width="1em"
+                height="1em"
+                viewBox="0 0 24 24"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                >
+                  <path
+                    d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 0 0-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 0 0-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 0 0-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 0 0-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 0 0 1.066-2.573c-.94-1.543.826-3.31 2.37-2.37c1 .608 2.296.07 2.572-1.065z"
+                  ></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </g>
+              </svg>
+              Statement
+            </a>
+            <a href="#" class="dropdown-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                aria-hidden="true"
+                role="img"
+                font-size="1.375rem"
+                class="iconify iconify--tabler"
+                width="1em"
+                height="1em"
+                viewBox="0 0 24 24"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                >
+                  <rect width="18" height="14" x="3" y="5" rx="3"></rect>
+                  <path d="M3 10h18M7 15h.01M11 15h2"></path>
+                </g>
+              </svg>
+              Result
+            </a>
+            <hr />
+            <a href="#" class="dropdown-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                aria-hidden="true"
+                role="img"
+                font-size="1.375rem"
+                class="iconify iconify--tabler"
+                width="1em"
+                height="1em"
+                viewBox="0 0 24 24"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                >
+                  <circle cx="12" cy="12" r="4"></circle>
+                  <circle cx="12" cy="12" r="9"></circle>
+                  <path
+                    d="m15 15l3.35 3.35M9 15l-3.35 3.35m0-12.7L9 9m9.35-3.35L15 9"
+                  ></path>
+                </g>
+              </svg>
+              Profit Loss
+            </a>
+            <a href="#" class="dropdown-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                aria-hidden="true"
+                role="img"
+                font-size="1.375rem"
+                class="iconify iconify--tabler"
+                width="1em"
+                height="1em"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M16.7 8A3 3 0 0 0 14 6h-4a3 3 0 0 0 0 6h4a3 3 0 0 1 0 6h-4a3 3 0 0 1-2.7-2M12 3v3m0 12v3"
+                ></path>
+              </svg>
+              Bet History
+            </a>
+            <hr />
+            <a href="#" class="dropdown-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                aria-hidden="true"
+                role="img"
+                font-size="1.375rem"
+                class="iconify iconify--tabler"
+                width="1em"
+                height="1em"
+                viewBox="0 0 24 24"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                >
+                  <path
+                    d="M14 8V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2-2v-2"
+                  ></path>
+                  <path d="M7 12h14l-3-3m0 6l3-3"></path>
+                </g>
+              </svg>
+              Logout
+            </a>
+          </div>
+        </span>
+      </div>
+    </div>
+    <div class="marquee-container">
+      <div class="marquee-text">
+        Welcome to 1obet.com - Announcement - All casino Profit Loss will be 1
+        to 2 Ratio - Her casino may Jeet Har 1 ka 2 ho ge - Welcome to Exchange
+        - Zero commissions on chota bara, kalli jotta, fancies
+      </div>
+    </div>
+    <!-- main boady content -->
+    <div class="content m-2 d-flex display_block">
+      <div class="w-100">
+        <div class="mainheader p-2 mt-1">
+          <div class="svg-icon mr-3">
+            <svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 512 512"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M433.2 17.99L159.8 291.4l60.8 60.8-6.3 6.3L494 78.79c0-24.32-36.5-60.8-60.8-60.8zM161.5 64.03a32 32 0 0 0-7.8.59c3.9 21.25 13.8 38.48 30.3 52.48a32 32 0 0 0 3.7-37.13 32 32 0 0 0-26.2-15.94zm-24.1 9.35a32 32 0 0 0-5.1 38.62 32 32 0 0 0 36 14.9c-15.5-14.7-25.9-32.79-30.9-53.52zm26.4 247.22C126.3 378.1 60.46 427.7 19.06 479.5c-4.82 5.9 7.6 18.2 13.53 13.5C84.32 451.6 133.9 385.7 191.4 348.2z"
+              ></path>
+            </svg>
+          </div>
+          <div class="timedeaitls_wrapper">
+            <div class="timedeaitls">
+              <span
+                ><span>2 hours and 39 minutes ago | </span
+                ><span>Jun 24 9:30 AM</span></span
+              >
+              <div class="timedeaitls">
+                <h1 class="m-0 font-size">
+                  Sri Lanka Women v West Indies Women
+                </h1>
+                <div>Matched: 3,915,808</div>
+              </div>
+            </div>
+            <div>
+              <h4>OPEN</h4>
+              <div class="sound_screen">
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 16 16"
+                  height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06zm7.137 2.096a.5.5 0 0 1 0 .708L12.207 8l1.647 1.646a.5.5 0 0 1-.708.708L11.5 8.707l-1.646 1.647a.5.5 0 0 1-.708-.708L10.793 8 9.146 6.354a.5.5 0 1 1 .708-.708L11.5 7.293l1.646-1.647a.5.5 0 0 1 .708 0z"
+                  ></path>
+                </svg>
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 24 24"
+                  height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                  style="cursor: pointer"
+                >
+                  <path
+                    d="M20 6h-5.586l2.293-2.293-1.414-1.414L12 5.586 8.707 2.293 7.293 3.707 9.586 6H4c-1.103 0-2 .897-2 2v11c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V8c0-1.103-.897-2-2-2zM4 19V8h16l.002 11H4z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="MuiStack-root css-1jtgica">
+            <div class="MuiStack-root css-1ks4tg7">
+              <div class="MuiStack-root css-j7qwjs">
+                <div class="MuiStack-root css-1mgdvdd">
+                  <div class="MuiStack-root css-1mgdvdd">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-1gfpw9x"
+                    >
+                      GAM
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-1gfpw9x"
+                    >
+                      115-2 (13.4)
+                    </p>
+                  </div>
+                  <p class="MuiTypography-root MuiTypography-body1 css-1gfpw9x">
+                    CRR 8.42
+                  </p>
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-11h2uyk"
+                  ></p>
+                </div>
+                <div class="MuiStack-root css-1xhj18k">
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-11h2uyk"
+                  ></p>
+                  <p class="MuiTypography-root MuiTypography-body1 css-11h2uyk">
+                    RRR 9.95
+                  </p>
+                </div>
+                <div class="MuiStack-root css-vide34">
+                  <p class="MuiTypography-root MuiTypography-body1 css-11h2uyk">
+                    Over:
+                  </p>
+                  <p class="MuiTypography-root MuiTypography-body1 css-11h2uyk">
+                    2
+                  </p>
+                  <p class="MuiTypography-root MuiTypography-body1 css-11h2uyk">
+                    1
+                  </p>
+                  <p class="MuiTypography-root MuiTypography-body1 css-11h2uyk">
+                    1
+                  </p>
+                  <p class="MuiTypography-root MuiTypography-body1 css-11h2uyk">
+                    1
+                  </p>
+                  <p class="MuiTypography-root MuiTypography-body1 css-11h2uyk">
+                    = 5
+                  </p>
+                </div>
+              </div>
+              <div class="MuiStack-root css-ypblli">
+                <p class="MuiTypography-root MuiTypography-body1 css-klloh0">
+                  Ball
+                </p>
+                <div class="MuiBox-root css-xnim3s">
+                  Galle Marvels NEED 63 RUNS IN 6.2 OVERS TO WIN
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-black display_dekstop">
+          <iframe
+            class="iframe"
+            style="width: 100%; height: 100%"
+            src="https://tele.bazigarprediction.website/score/index.php?match_id=33369838"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen=""
+          ></iframe>
+        </div>
+        <!-- match odds , fancies etc -->
+        <div class="MuiStack-root css-jnr44o">
+          <div class="MuiStack-root css-9jay18">
+            <div class="MuiStack-root css-yhsfmz">
+              <div class="MuiStack-root css-2p8vrk">
+                <div class="MuiStack-root css-g6etzp">
+                  <img
+                    class="MuiBox-root css-iz2ltj"
+                    src="./public/assets/icons/betterIcon/inPlayW.png"
+                  />
+                  <h6
+                    class="MuiTypography-root MuiTypography-subtitle2 css-tn9bsb"
+                  >
+                    Match Odds
+                  </h6>
+                </div>
+                <div class="MuiStack-root css-19hxgaf" aria-label="Rules">
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 24 24"
+                    color="#fff"
+                    height="18px"
+                    width="18px"
+                    xmlns="http://www.w3.org/2000/svg"
+                    style="color: rgb(255, 255, 255)"
+                  >
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                    <path
+                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+              <div class="MuiStack-root css-het29j">
+                <h6
+                  class="MuiTypography-root MuiTypography-subtitle2 css-qzylx"
+                >
+                  Colombo Strikers
+                </h6>
+                <p
+                  class="MuiTypography-root MuiTypography-body1 css-1ha19hj"
+                ></p>
+              </div>
+              <div class="MuiStack-root css-het29j">
+                <h6
+                  class="MuiTypography-root MuiTypography-subtitle2 css-qzylx"
+                >
+                  B-Love Kandy
+                </h6>
+                <p
+                  class="MuiTypography-root MuiTypography-body1 css-1ha19hj"
+                ></p>
+              </div>
+            </div>
+            <div class="MuiStack-root css-yhsfmz">
+              <div class="MuiStack-root css-8dztdt">
+                <h6
+                  class="MuiTypography-root MuiTypography-subtitle2 css-1todn3t"
+                >
+                  Back
+                </h6>
+                <h6
+                  class="MuiTypography-root MuiTypography-subtitle2 css-f2ku00"
+                >
+                  Lay
+                </h6>
+              </div>
+              <div class="MuiStack-root css-yhsfmz">
+                <div class="MuiStack-root css-1mgdvdd">
+                  <div class="MuiStack-root css-y0gi4w">
+                    <div class="MuiStack-root css-1y0llhg">
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                      >
+                        1.79
+                      </p>
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                      >
+                        4.1K
+                      </p>
+                    </div>
+                    <div class="MuiStack-root css-1y0llhg hide_at_561">
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                      >
+                        1.78
+                      </p>
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                      >
+                        5.5K
+                      </p>
+                    </div>
+                    <div class="MuiStack-root css-1y0llhg hide_at_561">
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                      >
+                        1.77
+                      </p>
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                      >
+                        23.2K
+                      </p>
+                    </div>
+                  </div>
+                  <div class="MuiStack-root css-1snnq6o">
+                    <div class="MuiStack-root css-aelu6g hide_at_561">
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                      >
+                        1.8
+                      </p>
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                      >
+                        6.1K
+                      </p>
+                    </div>
+                    <div class="MuiStack-root css-aelu6g hide_at_561">
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                      >
+                        1.81
+                      </p>
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                      >
+                        14.9K
+                      </p>
+                    </div>
+                    <div class="MuiStack-root css-aelu6g">
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                      >
+                        1.82
+                      </p>
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                      >
+                        3.0K
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="MuiStack-root css-1mgdvdd">
+                  <div class="MuiStack-root css-y0gi4w">
+                    <div class="MuiStack-root css-1y0llhg">
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                      >
+                        2.24
+                      </p>
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                      >
+                        6.3K
+                      </p>
+                    </div>
+                    <div class="MuiStack-root css-1y0llhg hide_at_561">
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                      >
+                        2.22
+                      </p>
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                      >
+                        11.6K
+                      </p>
+                    </div>
+                    <div class="MuiStack-root css-1y0llhg hide_at_561">
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                      >
+                        2.2
+                      </p>
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                      >
+                        1.8K
+                      </p>
+                    </div>
+                  </div>
+                  <div class="MuiStack-root css-1snnq6o">
+                    <div class="MuiStack-root css-aelu6g hide_at_561">
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                      >
+                        2.26
+                      </p>
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                      >
+                        4.8
+                      </p>
+                    </div>
+                    <div class="MuiStack-root css-aelu6g">
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                      >
+                        2.28
+                      </p>
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                      >
+                        3.2K
+                      </p>
+                    </div>
+                    <div class="MuiStack-root css-aelu6g hide_at_561">
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                      >
+                        2.3
+                      </p>
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                      >
+                        22.1K
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="MuiStack-root css-jnr44o">
+          <div class="MuiStack-root css-9jay18">
+            <div class="MuiStack-root css-yhsfmz">
+              <div class="MuiStack-root css-2p8vrk">
+                <div class="MuiStack-root css-g6etzp">
+                  <img
+                    class="MuiBox-root css-iz2ltj"
+                    src="./public/assets/icons/betterIcon/inPlayW.png"
+                  />
+                  <h6
+                    class="MuiTypography-root MuiTypography-subtitle2 css-tn9bsb"
+                  >
+                    Bookmaker
+                  </h6>
+                </div>
+                <div class="MuiStack-root css-19hxgaf" aria-label="Rules">
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 24 24"
+                    color="#fff"
+                    height="18px"
+                    width="18px"
+                    xmlns="http://www.w3.org/2000/svg"
+                    style="color: rgb(255, 255, 255)"
+                  >
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                    <path
+                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+              <div class="MuiStack-root css-het29j">
+                <h6
+                  class="MuiTypography-root MuiTypography-subtitle2 css-qzylx"
+                >
+                  Colombo Strikers
+                </h6>
+                <p
+                  class="MuiTypography-root MuiTypography-body1 css-1ha19hj"
+                ></p>
+              </div>
+              <div class="MuiStack-root css-het29j">
+                <h6
+                  class="MuiTypography-root MuiTypography-subtitle2 css-qzylx"
+                >
+                  B-Love Kandy
+                </h6>
+                <p
+                  class="MuiTypography-root MuiTypography-body1 css-1ha19hj"
+                ></p>
+              </div>
+            </div>
+            <div class="MuiStack-root css-yhsfmz">
+              <div class="MuiStack-root css-8dztdt">
+                <h6
+                  class="MuiTypography-root MuiTypography-subtitle2 css-1todn3t"
+                >
+                  Back
+                </h6>
+                <h6
+                  class="MuiTypography-root MuiTypography-subtitle2 css-f2ku00"
+                >
+                  Lay
+                </h6>
+              </div>
+              <div class="MuiStack-root css-yhsfmz">
+                <div class="MuiStack-root css-1mgdvdd">
+                  <div class="MuiStack-root css-y0gi4w">
+                    <div class="MuiStack-root css-1y0llhg">
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                      >
+                        1.79
+                      </p>
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                      >
+                        4.1K
+                      </p>
+                    </div>
+                    <div class="MuiStack-root css-1y0llhg hide_at_561">
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                      >
+                        1.78
+                      </p>
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                      >
+                        5.5K
+                      </p>
+                    </div>
+                    <div class="MuiStack-root css-1y0llhg hide_at_561">
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                      >
+                        1.77
+                      </p>
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                      >
+                        23.2K
+                      </p>
+                    </div>
+                  </div>
+                  <div class="MuiStack-root css-1snnq6o">
+                    <div class="MuiStack-root css-aelu6g hide_at_561">
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                      >
+                        1.8
+                      </p>
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                      >
+                        6.1K
+                      </p>
+                    </div>
+                    <div class="MuiStack-root css-aelu6g hide_at_561">
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                      >
+                        1.81
+                      </p>
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                      >
+                        14.9K
+                      </p>
+                    </div>
+                    <div class="MuiStack-root css-aelu6g">
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                      >
+                        1.82
+                      </p>
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                      >
+                        3.0K
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="MuiStack-root css-1mgdvdd">
+                  <div class="MuiStack-root css-y0gi4w">
+                    <div class="MuiStack-root css-1y0llhg">
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                      >
+                        2.24
+                      </p>
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                      >
+                        6.3K
+                      </p>
+                    </div>
+                    <div class="MuiStack-root css-1y0llhg hide_at_561">
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                      >
+                        2.22
+                      </p>
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                      >
+                        11.6K
+                      </p>
+                    </div>
+                    <div class="MuiStack-root css-1y0llhg hide_at_561">
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                      >
+                        2.2
+                      </p>
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                      >
+                        1.8K
+                      </p>
+                    </div>
+                  </div>
+                  <div class="MuiStack-root css-1snnq6o">
+                    <div class="MuiStack-root css-aelu6g hide_at_561">
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                      >
+                        2.26
+                      </p>
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                      >
+                        4.8
+                      </p>
+                    </div>
+                    <div class="MuiStack-root css-aelu6g hide_at_561">
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                      >
+                        2.28
+                      </p>
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                      >
+                        3.2K
+                      </p>
+                    </div>
+                    <div class="MuiStack-root css-aelu6g">
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                      >
+                        2.3
+                      </p>
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                      >
+                        22.1K
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="MuiStack-root css-jnr44o">
+          <div class="MuiStack-root css-9jay18">
+            <div class="MuiStack-root css-yhsfmz">
+              <div class="MuiStack-root css-2p8vrk">
+                <div class="MuiStack-root css-g6etzp">
+                  <img
+                    class="MuiBox-root css-iz2ltj"
+                    src="./public/assets/icons/betterIcon/inPlayW.png"
+                  />
+                  <h6
+                    class="MuiTypography-root MuiTypography-subtitle2 css-tn9bsb"
+                  >
+                    Tide Match
+                  </h6>
+                </div>
+                <div class="MuiStack-root css-19hxgaf" aria-label="Rules">
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 24 24"
+                    color="#fff"
+                    height="18px"
+                    width="18px"
+                    xmlns="http://www.w3.org/2000/svg"
+                    style="color: rgb(255, 255, 255)"
+                  >
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                    <path
+                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+              <div class="MuiStack-root css-het29j">
+                <h6
+                  class="MuiTypography-root MuiTypography-subtitle2 css-qzylx"
+                >
+                  Colombo Strikers
+                </h6>
+                <p
+                  class="MuiTypography-root MuiTypography-body1 css-1ha19hj"
+                ></p>
+              </div>
+              <div class="MuiStack-root css-het29j">
+                <h6
+                  class="MuiTypography-root MuiTypography-subtitle2 css-qzylx"
+                >
+                  B-Love Kandy
+                </h6>
+                <p
+                  class="MuiTypography-root MuiTypography-body1 css-1ha19hj"
+                ></p>
+              </div>
+            </div>
+            <div class="MuiStack-root css-yhsfmz">
+              <div class="MuiStack-root css-8dztdt">
+                <h6
+                  class="MuiTypography-root MuiTypography-subtitle2 css-1todn3t"
+                >
+                  Back
+                </h6>
+                <h6
+                  class="MuiTypography-root MuiTypography-subtitle2 css-f2ku00"
+                >
+                  Lay
+                </h6>
+              </div>
+              <div class="MuiStack-root css-yhsfmz">
+                <div class="MuiStack-root css-1mgdvdd">
+                  <div class="MuiStack-root css-y0gi4w">
+                    <div class="MuiStack-root css-1y0llhg">
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                      >
+                        1.79
+                      </p>
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                      >
+                        4.1K
+                      </p>
+                    </div>
+                    <div class="MuiStack-root css-1y0llhg hide_at_561">
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                      >
+                        1.78
+                      </p>
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                      >
+                        5.5K
+                      </p>
+                    </div>
+                    <div class="MuiStack-root css-1y0llhg hide_at_561">
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                      >
+                        1.77
+                      </p>
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                      >
+                        23.2K
+                      </p>
+                    </div>
+                  </div>
+                  <div class="MuiStack-root css-1snnq6o">
+                    <div class="MuiStack-root css-aelu6g">
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                      >
+                        1.8
+                      </p>
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                      >
+                        6.1K
+                      </p>
+                    </div>
+                    <div class="MuiStack-root css-aelu6g hide_at_561">
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                      >
+                        1.81
+                      </p>
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                      >
+                        14.9K
+                      </p>
+                    </div>
+                    <div class="MuiStack-root css-aelu6g hide_at_561">
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                      >
+                        1.82
+                      </p>
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                      >
+                        3.0K
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="MuiStack-root css-1mgdvdd">
+                  <div class="MuiStack-root css-y0gi4w">
+                    <div class="MuiStack-root css-1y0llhg">
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                      >
+                        2.24
+                      </p>
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                      >
+                        6.3K
+                      </p>
+                    </div>
+                    <div class="MuiStack-root css-1y0llhg hide_at_561">
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                      >
+                        2.22
+                      </p>
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                      >
+                        11.6K
+                      </p>
+                    </div>
+                    <div class="MuiStack-root css-1y0llhg hide_at_561">
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                      >
+                        2.2
+                      </p>
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                      >
+                        1.8K
+                      </p>
+                    </div>
+                  </div>
+                  <div class="MuiStack-root css-1snnq6o">
+                    <div class="MuiStack-root css-aelu6g hide_at_561">
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                      >
+                        2.26
+                      </p>
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                      >
+                        4.8
+                      </p>
+                    </div>
+                    <div class="MuiStack-root css-aelu6g hide_at_561">
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                      >
+                        2.28
+                      </p>
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                      >
+                        3.2K
+                      </p>
+                    </div>
+                    <div class="MuiStack-root css-aelu6g">
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                      >
+                        2.3
+                      </p>
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                      >
+                        22.1K
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="MuiStack-root css-jnr44o">
+          <div class="MuiStack-root css-9jay18">
+            <div class="MuiStack-root css-yhsfmz">
+              <div class="MuiStack-root css-2p8vrk">
+                <div class="MuiStack-root css-g6etzp">
+                  <img
+                    class="MuiBox-root css-iz2ltj"
+                    src="./public/assets/icons/betterIcon/inPlayW.png"
+                  />
+                  <h6
+                    class="MuiTypography-root MuiTypography-subtitle2 css-tn9bsb"
+                  >
+                    Fancy
+                  </h6>
+                </div>
+                <div class="MuiStack-root css-19hxgaf" aria-label="Rules">
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 24 24"
+                    color="#fff"
+                    height="18px"
+                    width="18px"
+                    xmlns="http://www.w3.org/2000/svg"
+                    style="color: rgb(255, 255, 255)"
+                  >
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                    <path
+                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+              <div class="MuiStack-root css-het29j">
+                <h6
+                  class="MuiTypography-root MuiTypography-subtitle2 css-qzylx"
+                >
+                  Colombo Strikers
+                </h6>
+                <p
+                  class="MuiTypography-root MuiTypography-body1 css-1ha19hj"
+                ></p>
+              </div>
+              <div class="MuiStack-root css-het29j">
+                <h6
+                  class="MuiTypography-root MuiTypography-subtitle2 css-qzylx"
+                >
+                  B-Love Kandy
+                </h6>
+                <p
+                  class="MuiTypography-root MuiTypography-body1 css-1ha19hj"
+                ></p>
+              </div>
+            </div>
+            <div class="MuiStack-root css-yhsfmz">
+              <div class="MuiStack-root css-8dztdt">
+                <h6
+                  class="MuiTypography-root MuiTypography-subtitle2 css-1todn3t"
+                >
+                  Back
+                </h6>
+                <h6
+                  class="MuiTypography-root MuiTypography-subtitle2 css-f2ku00"
+                >
+                  Lay
+                </h6>
+              </div>
+              <div class="MuiStack-root css-yhsfmz">
+                <div class="MuiStack-root css-1mgdvdd">
+                  <div class="MuiStack-root css-y0gi4w">
+                    <div class="MuiStack-root css-1y0llhg">
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                      >
+                        1.79
+                      </p>
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                      >
+                        4.1K
+                      </p>
+                    </div>
+                    <div class="MuiStack-root css-1y0llhg hide_at_561">
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                      >
+                        1.78
+                      </p>
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                      >
+                        5.5K
+                      </p>
+                    </div>
+                    <div class="MuiStack-root css-1y0llhg hide_at_561">
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                      >
+                        1.77
+                      </p>
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                      >
+                        23.2K
+                      </p>
+                    </div>
+                  </div>
+                  <div class="MuiStack-root css-1snnq6o">
+                    <div class="MuiStack-root css-aelu6g hide_at_561">
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                      >
+                        1.8
+                      </p>
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                      >
+                        6.1K
+                      </p>
+                    </div>
+                    <div class="MuiStack-root css-aelu6g hide_at_561">
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                      >
+                        1.81
+                      </p>
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                      >
+                        14.9K
+                      </p>
+                    </div>
+                    <div class="MuiStack-root css-aelu6g">
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                      >
+                        1.82
+                      </p>
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                      >
+                        3.0K
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="MuiStack-root css-1mgdvdd">
+                  <div class="MuiStack-root css-y0gi4w">
+                    <div class="MuiStack-root css-1y0llhg">
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                      >
+                        2.24
+                      </p>
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                      >
+                        6.3K
+                      </p>
+                    </div>
+                    <div class="MuiStack-root css-1y0llhg hide_at_561">
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                      >
+                        2.22
+                      </p>
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                      >
+                        11.6K
+                      </p>
+                    </div>
+                    <div class="MuiStack-root css-1y0llhg hide_at_561">
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                      >
+                        2.2
+                      </p>
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                      >
+                        1.8K
+                      </p>
+                    </div>
+                  </div>
+                  <div class="MuiStack-root css-1snnq6o">
+                    <div class="MuiStack-root css-aelu6g hide_at_561">
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                      >
+                        2.26
+                      </p>
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                      >
+                        4.8
+                      </p>
+                    </div>
+                    <div class="MuiStack-root css-aelu6g hide_at_561">
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                      >
+                        2.28
+                      </p>
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                      >
+                        3.2K
+                      </p>
+                    </div>
+                    <div class="MuiStack-root css-aelu6g">
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                      >
+                        2.3
+                      </p>
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                      >
+                        22.1K
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="MuiStack-root css-ddwuyb">
+          <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1s05omm">
+            <div class="MuiBox-root css-nu8l0g">JKS 5 Over Figure</div>
+            <div class="MuiBox-root css-1tv6lwp">
+              <p class="MuiTypography-root MuiTypography-body1 css-9laub6">
+                (0% commission)
+              </p>
+            </div>
+          </div>
+          <div class="MuiStack-root css-p58oka">
+            <div class="MuiStack-root css-rhier5">
+              <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
+                0
+              </p>
+              <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
+                8.85
+              </p>
+            </div>
+            <div class="MuiStack-root css-rhier5">
+              <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
+                1
+              </p>
+              <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
+                8.85
+              </p>
+            </div>
+            <div class="MuiStack-root css-rhier5">
+              <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
+                2
+              </p>
+              <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
+                8.85
+              </p>
+            </div>
+            <div class="MuiStack-root css-rhier5">
+              <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
+                3
+              </p>
+              <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
+                8.85
+              </p>
+            </div>
+            <div class="MuiStack-root css-rhier5">
+              <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
+                4
+              </p>
+              <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
+                8.85
+              </p>
+            </div>
+            <div class="MuiStack-root css-rhier5">
+              <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
+                5
+              </p>
+              <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
+                8.85
+              </p>
+            </div>
+            <div class="MuiStack-root css-rhier5">
+              <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
+                6
+              </p>
+              <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
+                8.85
+              </p>
+            </div>
+            <div class="MuiStack-root css-rhier5">
+              <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
+                7
+              </p>
+              <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
+                8.85
+              </p>
+            </div>
+            <div class="MuiStack-root css-rhier5">
+              <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
+                8
+              </p>
+              <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
+                8.85
+              </p>
+            </div>
+            <div class="MuiStack-root css-rhier5">
+              <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
+                9
+              </p>
+              <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
+                8.85
+              </p>
+            </div>
+          </div>
+          <div class="MuiStack-root css-1uelkw">
+            <div class="MuiStack-root css-17pexuo">
+              <div class="MuiStack-root css-il7sii">
+                <p class="MuiTypography-root MuiTypography-body1 css-tn9xkt">
+                  JOTTA
+                </p>
+                <div class="MuiStack-root css-13mkirs" style="min-width: 140px">
+                  <div class="MuiStack-root css-khshwk">J</div>
+                  <div class="MuiStack-root css-6orp6a">
+                    <div class="MuiStack-root css-up5l35">
+                      100
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-1bv81gv"
+                      >
+                        %
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="MuiStack-root css-il7sii">
+                <div class="MuiStack-root css-10o8scn">
+                  <p class="MuiTypography-root MuiTypography-body1 css-tn9xkt">
+                    KALI(0% commission)
+                  </p>
+                </div>
+                <div class="MuiStack-root css-13mkirs">
+                  <div class="MuiStack-root css-khshwk">K</div>
+                  <div class="MuiStack-root css-6orp6a">
+                    <div class="MuiStack-root css-up5l35">
+                      100
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-1bv81gv"
+                      >
+                        %
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="MuiStack-root css-17pexuo">
+              <div class="MuiStack-root css-il7sii" style="min-width: 140px">
+                <p class="MuiTypography-root MuiTypography-body1 css-tn9xkt">
+                  CHOTA
+                </p>
+                <div class="MuiStack-root css-1gb1rig">
+                  <div class="MuiStack-root css-1vouuc8">CH</div>
+                  <div class="MuiStack-root css-1nvrxws">
+                    <div class="MuiStack-root css-up5l35">
+                      100
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-1bv81gv"
+                      >
+                        %
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="MuiStack-root css-il7sii">
+                <div class="MuiStack-root css-10o8scn">
+                  <p class="MuiTypography-root MuiTypography-body1 css-tn9xkt">
+                    BARA(0% commission)
+                  </p>
+                </div>
+                <div class="MuiStack-root css-1gb1rig">
+                  <div class="MuiStack-root css-1vouuc8">BR</div>
+                  <div class="MuiStack-root css-1nvrxws">
+                    <div class="MuiStack-root css-up5l35">
+                      100
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-1bv81gv"
+                      >
+                        %
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-1 ml-1">
+        <div class="bg-black display_mobile">
+          <iframe
+            class="iframe"
+            style="width: 100%; height: 100%"
+            src="https://tele.bazigarprediction.website/score/index.php?match_id=33369838"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen=""
+          ></iframe>
+        </div>
+        <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1s05omm">
+          <div class="MuiBox-root css-nu8l0g">
+            <p
+              class="MuiTypography-root MuiTypography-body1 css-tn9xkt text-white"
+            >
+              Related Events
+            </p>
+          </div>
+          <div class="MuiBox-root css-1tv6lwp"></div>
+        </div>
+        <div>
+          <table class="table table-bordered custom-table">
+            <tbody class="MuiTableBody-root css-12dfzmm">
+              <tr class="MuiTableRow-root css-e03dsj">
+                <td
+                  class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1rgxqo9"
+                  style="padding: 5px 15px"
+                >
+                  Today<br class="MuiBox-root css-0" />15:00
+                </td>
+                <td
+                  class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1rgxqo9"
+                  style="cursor: pointer; padding: 5px 15px"
+                >
+                  Leicestershire v Middlesex
+                </td>
+              </tr>
+              <tr class="MuiTableRow-root css-e03dsj">
+                <td
+                  class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1rgxqo9"
+                  style="padding: 5px 15px"
+                >
+                  Today<br class="MuiBox-root css-0" />15:00
+                </td>
+                <td
+                  class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1rgxqo9"
+                  style="cursor: pointer; padding: 5px 15px"
+                >
+                  Derbyshire v Yorkshire
+                </td>
+              </tr>
+              <tr class="MuiTableRow-root css-e03dsj">
+                <td
+                  class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1rgxqo9"
+                  style="padding: 5px 15px"
+                >
+                  Today<br class="MuiBox-root css-0" />15:00
+                </td>
+                <td
+                  class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1rgxqo9"
+                  style="cursor: pointer; padding: 5px 15px"
+                >
+                  Northamptonshire v Sussex
+                </td>
+              </tr>
+              <tr class="MuiTableRow-root css-e03dsj">
+                <td
+                  class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1rgxqo9"
+                  style="padding: 5px 15px"
+                >
+                  Today<br class="MuiBox-root css-0" />15:00
+                </td>
+                <td
+                  class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1rgxqo9"
+                  style="cursor: pointer; padding: 5px 15px"
+                >
+                  Gloucestershire v Glamorgan
+                </td>
+              </tr>
+              <tr class="MuiTableRow-root css-e03dsj">
+                <td
+                  class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1rgxqo9"
+                  style="padding: 5px 15px"
+                >
+                  Today<br class="MuiBox-root css-0" />15:00
+                </td>
+                <td
+                  class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1rgxqo9"
+                  style="cursor: pointer; padding: 5px 15px"
+                >
+                  Hampshire v Kent
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <!-- footer -->
+    <footer class="m-3" id="footer">
+      <div class="margin-top footer">
+        <div class="row" style="margin: auto">
+          <div class="col" style="background-color: rgb(34, 42, 60)">
+            <div class="footerLinks">
+              <div>
+                <a href="#/privacyPolicy" target="_blank"> PrivacyPolicy</a>
+                <a href="#/terms-and-conditions" target="_blank"
+                  >- Terms and Conditions</a
+                >
+                <a href="#/rules-regulation" target="_blank"
+                  >- Rules and Regulations</a
+                >
+                <a href="#/KYC" target="_blank">- KYC</a>
+                <a href="#/responsible-game" target="_blank"
+                  >- Responsible Gaming</a
+                >
+                <a href="#/about-us" target="_blank">- About Us</a>
+                <a href="#/self-exclusion-policy" target="_blank"
+                  >- SelfexclusionPolicy</a
+                >
+                <a href="#/under-age-policy" target="_blank"
+                  >- UnderagePolicy</a
+                >
+                <a href="#/dispute" target="_blank">- Dispute Resolution</a>
+                <a href="#/aml" target="_blank">- AML</a>
+                <a href="#/fairness-and-rng" target="_blank"
+                  >- Fairness &amp; RNG</a
+                >
+                <a href="#/A-P-B" target="_blank">- Accounts &amp; Bonuses</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer_img">
+        <div class="row justify-content-center">
+          <div class="col-auto">
+            <img
+              src="./public/assets/images/login-footer-image2.webp"
+              alt="BellIconDark Img"
+              class="loginfooterimg"
+            />
+
+            <img
+              src="data:image/png;base64,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"
+              alt="BellIconDark Img"
+              class="loginfooterimgto"
+            />
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- sidebar -->
+    <div class="sidebar" id="sidebar">
+      <div class="d-flex align-items-center mt-3">
+        <img
+          src="./public/assets/images/logo.webp 512.webp"
+          alt="1obet-logo"
+          width="50"
+          height="50"
+        />
+        <h3>1OBET</h3>
+        <i class="fa fa-times close-toggle ml-5" id="closeToggle"></i>
+      </div>
+      <ul class="p-0">
+        <li>
+          <a href="dashboard.html" class="menu-item">
+            <img
+              src="./public/assets/side-menu-icons/light-icons/dashboard.png"
+              alt=""
+            /><span class="m-1">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="tennis.html" class="menu-item">
+            <img
+              src="./public/assets/side-menu-icons/light-icons/tennis.png"
+              alt=""
+            /><span class="m-1">Tennis</span>
+          </a>
+        </li>
+        <li>
+          <a href="cricket.html" class="menu-item active">
+            <img
+              src="./public/assets/side-menu-icons/light-icons/cricket.png"
+              alt=""
+            /><span class="ml-1">Cricket</span>
+          </a>
+        </li>
+        <li>
+          <a href="soccer.html" class="menu-item">
+            <img
+              src="./public/assets/side-menu-icons/light-icons/soccer.png"
+              alt=""
+            /><span class="ml-1">Soccer</span>
+          </a>
+        </li>
+        <li>
+          <a href="greyhound.html" class="menu-item">
+            <img
+              src="./public/assets/side-menu-icons/light-icons/royal-casino.png"
+              alt=""
+            /><span class="ml-1">Greyhound</span>
+          </a>
+        </li>
+        <li>
+          <a href="current_postion.html" class="menu-item">
+            <img
+              src="./public/assets/side-menu-icons/light-icons/current-position.png"
+              alt=""
+            /><span class="ml-1">Current position</span>
+          </a>
+        </li>
+        <li>
+          <a href="horserace.html" class="menu-item">
+            <img
+              src="./public/assets/side-menu-icons/light-icons/horse-race.png"
+              alt=""
+            /><span class="ml-1">Horse Race</span>
+          </a>
+        </li>
+        <li>
+          <a href="sportsBook.html" class="menu-item">
+            <img
+              src="./public/assets/side-menu-icons/light-icons/all-sports.png"
+              alt=""
+            /><span class="ml-1">Sports Book</span>
+          </a>
+        </li>
+        <li>
+          <a href="betfair_games.html" class="menu-item">
+            <img
+              src="./public/assets/side-menu-icons/light-icons/bet-fair-games.png"
+              alt=""
+            /><span class="ml-1">Betfair Games</span>
+          </a>
+        </li>
+        <li>
+          <a href="evolution_casino.html" class="menu-item">
+            <img
+              src="./public/assets/side-menu-icons/light-icons/royal-casino.png"
+              alt=""
+            /><span class="ml-1">Evoluation Casino</span>
+          </a>
+        </li>
+        <li>
+          <a href="1obetcasino.html" class="menu-item">
+            <img
+              src="./public/assets/side-menu-icons/light-icons/royal-casino.png"
+              alt=""
+            /><span class="ml-1">1obet Casino</span>
+          </a>
+        </li>
+        <li>
+          <a href="result.html" class="menu-item">
+            <img
+              src="./public/assets/side-menu-icons/light-icons/results.png"
+              alt=""
+            /><span class="ml-1">Result</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="menu-item">
+            <img
+              src="./public/assets/side-menu-icons/light-icons/royal-casino.png"
+              alt=""
+            /><span class="ml-1">Ezugi Casino</span>
+          </a>
+        </li>
+        <li>
+          <a href="120_british_casino.html" class="menu-item">
+            <img
+              src="./public/assets/side-menu-icons/light-icons/royal-casino.png"
+              alt=""
+            /><span class="ml-1">120 British Casino</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      const closeToggle = document.getElementById("closeToggle");
+      const menuToggle = document.getElementById("menuToggle");
+      const sidebar = document.getElementById("sidebar");
+      const header = document.getElementById("header");
+      const content = document.querySelector(".content");
+      const footer = document.getElementById("footer");
+
+      menuToggle.addEventListener("click", function () {
+        sidebar.classList.toggle("open");
+        // Adjust the position of the toggle button and header padding
+        if (sidebar.classList.contains("open")) {
+          if (window.innerWidth <= 690) {
+            header.style.paddingLeft = "0";
+            content.style.paddingLeft = "0";
+            footer.style.paddingLeft = "0";
+          } else if (window.innerWidth <= 790) {
+            header.style.paddingLeft = "250px";
+            content.style.paddingLeft = "250px";
+            footer.style.paddingLeft = "250px";
+          } else {
+            header.style.paddingLeft = "308px";
+            content.style.paddingLeft = "310px";
+            footer.style.paddingLeft = "310px";
+          }
+        } else {
+          header.style.paddingLeft = "0";
+          content.style.paddingLeft = "0";
+          footer.style.paddingLeft = "0";
+        }
+      });
+      closeToggle.addEventListener("click", function () {
+        sidebar.classList.remove("open");
+        header.style.paddingLeft = "0";
+        content.style.paddingLeft = "0";
+        footer.style.paddingLeft = "0";
+      });
+      window.addEventListener("resize", function () {
+        if (sidebar.classList.contains("open")) {
+          if (window.innerWidth <= 690) {
+            header.style.paddingLeft = "0";
+            content.style.paddingLeft = "0";
+            footer.style.paddingLeft = "0"; // Add this line
+          } else if (window.innerWidth <= 790) {
+            header.style.paddingLeft = "250px";
+            content.style.paddingLeft = "250px";
+            footer.style.paddingLeft = "250px"; // Add this line
+          } else {
+            header.style.paddingLeft = "308px";
+            content.style.paddingLeft = "310px";
+            footer.style.paddingLeft = "310px"; // Add this line
+          }
+        }
+      });
+
+      document.querySelectorAll(".menu-item").forEach((item) => {
+        item.addEventListener("click", function () {
+          document.querySelectorAll(".menu-item").forEach((i) => {
+            i.classList.remove("active");
+          });
+          this.classList.add("active");
+        });
+      });
+    </script>
+    <script>
+      const wrapper = document.querySelector(".wrapper");
+      const carousel = document.querySelector(".carousel");
+      const firstCardWidth = carousel.querySelector(".card").offsetWidth;
+      const arrowBtns = document.querySelectorAll(".wrapper i");
+      const carouselChildrens = [...carousel.children];
+
+      let isDragging = false,
+        isAutoPlay = true,
+        startX,
+        startScrollLeft,
+        timeoutId;
+
+      // Get the number of cards that can fit in the carousel at once
+      let cardPerView = Math.round(carousel.offsetWidth / firstCardWidth);
+
+      // Insert copies of the last few cards to beginning of carousel for infinite scrolling
+      carouselChildrens
+        .slice(-cardPerView)
+        .reverse()
+        .forEach((card) => {
+          carousel.insertAdjacentHTML("afterbegin", card.outerHTML);
+        });
+
+      // Insert copies of the first few cards to end of carousel for infinite scrolling
+      carouselChildrens.slice(0, cardPerView).forEach((card) => {
+        carousel.insertAdjacentHTML("beforeend", card.outerHTML);
+      });
+
+      // Scroll the carousel at appropriate postition to hide first few duplicate cards on Firefox
+      carousel.classList.add("no-transition");
+      carousel.scrollLeft = carousel.offsetWidth;
+      carousel.classList.remove("no-transition");
+
+      // Add event listeners for the arrow buttons to scroll the carousel left and right
+      arrowBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          carousel.scrollLeft +=
+            btn.id == "left" ? -firstCardWidth : firstCardWidth;
+        });
+      });
+
+      const dragStart = (e) => {
+        isDragging = true;
+        carousel.classList.add("dragging");
+        // Records the initial cursor and scroll position of the carousel
+        startX = e.pageX;
+        startScrollLeft = carousel.scrollLeft;
+      };
+
+      const dragging = (e) => {
+        if (!isDragging) return; // if isDragging is false return from here
+        // Updates the scroll position of the carousel based on the cursor movement
+        carousel.scrollLeft = startScrollLeft - (e.pageX - startX);
+      };
+
+      const dragStop = () => {
+        isDragging = false;
+        carousel.classList.remove("dragging");
+      };
+
+      const infiniteScroll = () => {
+        // If the carousel is at the beginning, scroll to the end
+        if (carousel.scrollLeft === 0) {
+          carousel.classList.add("no-transition");
+          carousel.scrollLeft = carousel.scrollWidth - 2 * carousel.offsetWidth;
+          carousel.classList.remove("no-transition");
+        }
+        // If the carousel is at the end, scroll to the beginning
+        else if (
+          Math.ceil(carousel.scrollLeft) ===
+          carousel.scrollWidth - carousel.offsetWidth
+        ) {
+          carousel.classList.add("no-transition");
+          carousel.scrollLeft = carousel.offsetWidth;
+          carousel.classList.remove("no-transition");
+        }
+
+        // Clear existing timeout & start autoplay if mouse is not hovering over carousel
+        clearTimeout(timeoutId);
+        if (!wrapper.matches(":hover")) autoPlay();
+      };
+
+      const autoPlay = () => {
+        if (window.innerWidth < 800 || !isAutoPlay) return; // Return if window is smaller than 800 or isAutoPlay is false
+        // Autoplay the carousel after every 2500 ms
+        timeoutId = setTimeout(
+          () => (carousel.scrollLeft += firstCardWidth),
+          2500
+        );
+      };
+      autoPlay();
+
+      carousel.addEventListener("mousedown", dragStart);
+      carousel.addEventListener("mousemove", dragging);
+      document.addEventListener("mouseup", dragStop);
+      carousel.addEventListener("scroll", infiniteScroll);
+      wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
+      wrapper.addEventListener("mouseleave", autoPlay);
+    </script>
+    <script>
+      document
+        .getElementById("dropdownToggle")
+        .addEventListener("click", function () {
+          var dropdownMenu = document.querySelector(".dropdown-menu");
+          dropdownMenu.style.display =
+            dropdownMenu.style.display === "block" ? "none" : "block";
+        });
+
+      // Close the dropdown if the user clicks outside of it
+      window.onclick = function (event) {
+        if (!event.target.matches("#dropdownToggle")) {
+          var dropdowns = document.getElementsByClassName("dropdown-menu");
+          for (var i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.style.display === "block") {
+              openDropdown.style.display = "none";
+            }
+          }
+        }
+      };
+    </script>
+  </body>
+</html>

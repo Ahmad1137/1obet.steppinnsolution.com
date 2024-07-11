@@ -1,0 +1,3758 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1obetdashboar</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <script
+      src="https://kit.fontawesome.com/69c89fc43e.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      
+      body {
+        font-family: "Public Sans", sans-serif, -apple-system,
+          BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+          sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-size: 1rem;
+      }
+      .css-1xvgq63 {
+    user-select: none;
+    width: 1em;
+    height: 1em;
+    overflow: hidden;
+    display: inline-block;
+    text-align: center;
+    flex-shrink: 0;
+    font-size: 1.40625rem;
+    color: white;
+    cursor: pointer;
+}
+      .footer .footerLinks {
+        background-color: rgb(34, 42, 60);
+        min-width: 100%;
+        opacity: 0.8;
+        text-align: center;
+      }
+      .footerLinks a {
+        color: white;
+        font-size: 1.1rem;
+      }
+      .footerLinks a:hover {
+        color: white;
+        text-decoration: none;
+      }
+      .footer {
+        min-width: 100%;
+      }
+      footer {
+        height: 100px;
+        padding-top: 20px;
+      }
+      .footer_img {
+        width: 100%;
+        display: flex;
+        opacity: 0.7;
+        -webkit-box-pack: center;
+        justify-content: center;
+        background-color: rgb(34, 42, 60);
+      }
+      .footer_img .footerLogos {
+        height: auto;
+        width: 100px;
+        display: flex;
+        flex-direction: row;
+        -webkit-box-pack: center;
+        justify-content: center;
+        gap: 10px;
+      }
+      .footer_img .footerLogos .loginImageOne {
+        min-width: 120px;
+        height: auto;
+        cursor: pointer;
+      }
+      .footer_img .footerLogos .loginImageTwo {
+        min-width: auto;
+        height: 40px;
+        margin: auto;
+        cursor: pointer;
+      }
+      .loginfooterimg {
+        width: 120px;
+        height: auto;
+        cursor: pointer;
+      }
+      .loginfooterimgto {
+        margin: auto;
+        height: 35px;
+      }
+    </style>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul li {
+        list-style: none;
+        text-decoration: none;
+        margin-right: 15px;
+        margin-bottom: 1rem;
+      }
+      .sidebar {
+        position: fixed;
+        top: 0;
+        left: -300px;
+        width: 300px;
+        height: 100%;
+        background: black;
+        color: white;
+        padding-left: 10px;
+        transition: all 0.5s ease;
+        overflow-y: auto; /* Add scrolling */
+        z-index: 1000;
+      }
+      ul li a {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        line-height: 40px;
+        font-size: 20px;
+        color: white;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+        padding-left: 10px;
+        border-radius: 10px;
+      }
+      ul li a:hover {
+        text-decoration: none;
+        background-color: #00a826;
+        color: white;
+      }
+      ul li a img {
+        margin-right: 10px;
+        transition: transform 0.3s ease;
+        animation: rotate 2s linear infinite;
+      }
+      ul li a.active img {
+        animation: none;
+      }
+      @keyframes rotate {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      ul li a.active {
+        background-color: #00a826;
+      }
+      .menu-toggle {
+        font-size: 35px;
+        color: white;
+        cursor: pointer;
+        transition: all 0.5s ease;
+      }
+      .sidebar.open {
+        left: 0;
+      }
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2px;
+        background-color: black;
+        color: white;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        transition: padding-left 0.5s ease;
+      }
+      .marquee-container {
+        overflow: hidden;
+        white-space: nowrap;
+        width: 100%;
+        background-color: black;
+        color: white;
+        padding-top: 50px; /* Adjust for fixed header */
+      }
+      .marquee-text {
+        display: inline-block;
+        padding-left: 100%;
+        animation: marquee 30s linear infinite;
+      }
+      @keyframes marquee {
+        0% {
+          transform: translateX(0%);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+      .marquee-container:hover .marquee-text {
+        animation-play-state: paused;
+      }
+    </style>
+    <style>
+      .css-1s05omm {
+        box-sizing: border-box;
+        margin: 0px;
+        flex-direction: row;
+        height: 38px;
+        display: flex;
+        position: relative;
+      }
+
+      .css-nu8l0g {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+        margin-right: 1.375rem;
+        -webkit-box-align: center;
+        align-items: center;
+        display: flex;
+        position: relative;
+        background-color: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
+      }
+      .css-a4cdis {
+        display: flex;
+        flex-direction: row;
+        
+
+      }
+      .css-nu8l0g .MuiTypography-root {
+        color: rgb(255, 255, 255);
+      }
+      .css-1tv6lwp {
+        background-color: rgb(0, 168, 38);
+        flex: 1 1 0%;
+        padding-right: 1.25rem;
+        position: relative;
+        -webkit-box-align: center;
+        align-items: center;
+        -webkit-box-pack: end;
+        justify-content: flex-end;
+        display: flex;
+
+        color: rgb(255, 255, 255);
+      }
+      .MuiStack-root p {
+        margin-bottom: 0rem;
+        margin-left: 8px;
+        font-family: "Public Sans", sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      }
+      .css-1tv6lwp::before {
+        border-bottom: 38px solid rgb(0, 168, 38);
+        border-left: 20px solid rgba(0, 0, 0, 0);
+        content: "";
+        position: absolute;
+        right: 100%;
+      }
+      .css-nu8l0g::after {
+        border-right: 20px solid rgba(0, 0, 0, 0);
+        border-top: 38px solid rgb(0, 0, 0);
+        content: "";
+        left: 100%;
+        position: absolute;
+      }
+    </style>
+    <style>
+      .css-flm59u {
+        box-sizing: border-box;
+        margin: 0.75rem 0px 0px;
+        flex-direction: row;
+        height: 37px;
+        display: flex;
+        position: relative;
+      }
+      .css-2p8vrk {
+        display: flex;
+        flex-direction: row;
+        -webkit-box-align: center;
+        align-items: center;
+      }
+      .css-nu8l0g svg {
+        background: rgb(0, 168, 38);
+        border-radius: 27px;
+        width: 20px;
+        height: 20px;
+        fill: black;
+      }
+    </style>
+    <style>
+      .css-1yehak0 {
+        display: flex;
+        flex-direction: row;
+        margin-top: 0.75rem;
+        overflow-x: auto;
+      }
+      .css-1yehak0 p
+      {
+        font-size: 17px !important;
+      }
+      .css-sfjdjv {
+        width: 100%;
+        cursor: pointer;
+      }
+    </style>
+    <style>
+      .css-136bwoc {
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+        transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+        background-image: none;
+        width: 100%;
+        overflow-x: auto;
+        box-shadow: none;
+        border: 1px solid rgb(171, 176, 179);
+        border-radius: 0px;
+      }
+      .css-rxit2l {
+        display: table;
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0px;
+      }
+      .css-disv23 {
+        display: table-header-group;
+        background: rgb(0, 0, 0);
+        text-transform: uppercase;
+      }
+      .css-e03dsj {
+        color: inherit;
+        display: table-row;
+        vertical-align: middle;
+        outline: 0px;
+      }
+      .css-e03dsj:last-of-type th {
+        border: 1px solid rgb(224, 224, 224) !important;
+        padding: 12px;
+      }
+      .css-disv23 .MuiTableCell-root {
+        text-transform: capitalize;
+        color: rgb(255, 255, 255);
+        font-size: 14px;
+      }
+      .css-disv23 .MuiTableCell-head {
+        font-weight: 500;
+        letter-spacing: 1px;
+        font-size: 1rem;
+      }
+      .css-136bwoc th {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+      }
+      .css-17l795x {
+        user-select: none;
+        overflow: hidden;
+        display: inline-block;
+        text-align: center;
+        flex-shrink: 0;
+        font-size: 1.40625rem;
+        width: 22px;
+        height: 22px;
+      }
+      .css-544u3x {
+        margin: 0px;
+        line-height: 1.32;
+        font-size: 0.875rem;
+        letter-spacing: 0.1px;
+        font-family: "Public Sans", sans-serif, -apple-system,
+          BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+          sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        color: rgb(0, 168, 38);
+        padding-left: 0.5rem;
+        font-weight: 600;
+      }
+      .css-12dfzmm {
+        display: table-row-group;
+      }
+      .css-1sa68b5 {
+        color: inherit;
+        display: table-row;
+        vertical-align: middle;
+        outline: 0px;
+      }
+      .css-136bwoc td {
+        padding: 0px !important;
+      }
+      .css-12dfzmm .MuiTableCell-body {
+        letter-spacing: 0.25px;
+        color: rgb(25 23 23);
+      }
+      .css-ha2b3j {
+        font-size: 0.8125rem;
+        line-height: 1.53846;
+        font-family: "Public Sans", sans-serif, -apple-system,
+          BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+          sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-weight: 400;
+        display: table-cell;
+        vertical-align: inherit;
+        text-align: center;
+        padding-right: 16px;
+        padding-left: 16px;
+        color: rgb(0, 0, 0);
+        border: 1px solid rgb(224, 224, 224);
+        background: rgb(0, 168, 38);
+        padding-top: 8px !important;
+        padding-bottom: 8px !important;
+      }
+      .css-j7qwjs {
+        display: flex;
+        flex-direction: column;
+      }
+      .css-jup9dp {
+        font-size: 0.8125rem;
+        line-height: 1.53846;
+        font-family: "Public Sans", sans-serif, -apple-system,
+          BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+          sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-weight: 400;
+        display: table-cell;
+        vertical-align: inherit;
+        text-align: left;
+        padding-right: 16px;
+        padding-left: 16px;
+        color: rgb(0, 0, 0);
+        border: 1px solid rgb(224, 224, 224);
+        cursor: pointer;
+        padding-top: 8px !important;
+        padding-bottom: 8px !important;
+      }
+      .css-dn6vr0 {
+        margin: 0px;
+        line-height: 1.32;
+        font-size: 0.875rem;
+        letter-spacing: 0.1px;
+        font-family: "Public Sans", sans-serif, -apple-system,
+          BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+          sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-weight: 500;
+        color: rgb(0, 0, 0);
+        padding-left: 0.5rem;
+      }
+      .css-gy29k5 {
+        font-size: 0.8125rem;
+        line-height: 1.53846;
+        font-family: "Public Sans", sans-serif, -apple-system,
+          BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+          sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-weight: 400;
+        display: table-cell;
+        vertical-align: inherit;
+        text-align: center;
+        padding-right: 16px;
+        padding-left: 16px;
+        color: rgb(0, 0, 0);
+        border: 1px solid rgb(224, 224, 224);
+        padding-top: 8px !important;
+        padding-bottom: 8px !important;
+      }
+      .css-dvxtzn {
+        display: flex;
+        flex-direction: column;
+        -webkit-box-align: center;
+        align-items: center;
+      }
+      .css-144pslc {
+        user-select: none;
+        width: 1em;
+        height: 1em;
+        overflow: hidden;
+        display: inline-block;
+        text-align: center;
+        flex-shrink: 0;
+        font-size: 14px;
+      }
+      .css-1xhj18k {
+        display: flex;
+        flex-direction: row;
+      }
+      .css-5sk20m {
+        display: flex;
+        flex-direction: column;
+        background: rgb(255, 175, 178);
+        width: 63px;
+      }
+      .css-15yvhi8 {
+        margin: 0px;
+        line-height: 1.467;
+        font-family: "Public Sans", sans-serif, -apple-system,
+          BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+          sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        color: rgb(0, 0, 0);
+        font-size: 18px;
+        font-weight: 600;
+      }
+      .css-i1yige {
+        margin: 0px;
+        line-height: 1.467;
+        font-family: "Public Sans", sans-serif, -apple-system,
+          BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+          sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-weight: 400;
+        color: rgb(0, 0, 0);
+        font-size: 14px;
+      }
+      .css-1kgyuku {
+        display: flex;
+        flex-direction: column;
+        background: rgb(141, 210, 240);
+        width: 63px;
+      }
+    </style>
+    <style>
+      /* Import Google font - Poppins */
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      .wrapper {
+        width: 100%;
+        position: relative;
+        margin-top: 1rem;
+      }
+      .wrapper i {
+        top: 50%;
+        height: 50px;
+        width: 50px;
+        cursor: pointer;
+        font-size: 1.25rem;
+        position: absolute;
+        text-align: center;
+        line-height: 50px;
+        background: #fff;
+        border-radius: 50%;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+        transform: translateY(-50%);
+        transition: transform 0.1s linear;
+      }
+      .wrapper i:active {
+        transform: translateY(-50%) scale(0.85);
+      }
+      .wrapper i:first-child {
+        left: -22px;
+      }
+      .wrapper i:last-child {
+        right: -22px;
+      }
+      .wrapper .carousel {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: calc((100% / 4) - 12px);
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 18px;
+
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+      }
+      .carousel::-webkit-scrollbar {
+        display: none;
+      }
+      .carousel.no-transition {
+        scroll-behavior: auto;
+      }
+      .carousel.dragging {
+        scroll-snap-type: none;
+        scroll-behavior: auto;
+      }
+      .carousel.dragging .card {
+        cursor: grab;
+        user-select: none;
+      }
+      .carousel :where(.card, .img) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .carousel .card {
+        scroll-snap-align: start;
+
+        list-style: none;
+        background: #fff;
+        cursor: pointer;
+        width: 100%;
+        flex-direction: column;
+      }
+      .carousel .card .img {
+        height: 100%;
+        width: 100%;
+      }
+      .card .img img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+      .carousel .card h2 {
+        font-weight: 500;
+        font-size: 1.56rem;
+        margin: 30px 0 5px;
+      }
+      .carousel .card span {
+        color: #6a6d78;
+        font-size: 1.31rem;
+      }
+
+       @media screen and (max-width: 1024px) {
+        .css-flm59u
+        {
+          margin: 0px;
+        }
+        }
+      @media screen and (max-width: 900px) {
+        .wrapper .carousel {
+          grid-auto-columns: calc((100% / 2) - 9px);
+        }
+      }
+    </style>
+    <style>
+      @media screen and (max-width: 510px) {
+        .creditdetal
+        {
+          height: 45px;
+        }
+        .creditdetal_border::before
+        {
+          border-bottom: 45px solid rgb(0, 168, 38) !important;
+        }
+        .creditdetal_border::after
+        {
+           border-top: 45px solid rgb(0, 0, 0);
+        }
+        
+      }
+      @media screen and (max-width: 790px) {
+        .sidebar {
+          width: 250px;
+        }
+        .sidebar.open ~ #header {
+          padding-left: 250px !important;
+        }
+        .header {
+          font-size: medium;
+        }
+        .hidden-head {
+          display: none;
+        }
+        .css-1xhj18k {
+          display: none;
+        }
+        .css-tn9xkt {
+          margin-left: 10px;
+          font-family: "Public Sans", sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        }
+      }
+      
+      .close-toggle {
+        cursor: pointer;
+        /* Initially hidden */
+        margin-left: auto; /* Push to the right */
+      }
+
+      @media screen and (max-width: 690) {
+        .content {
+          padding-left: 0 !important;
+        }
+        .sidebar.open ~ #header {
+          padding-left: 0px !important;
+        }
+
+        .sidebar.open ~ .content {
+          padding-left: 0 !important;
+        }
+        .menu-toggle {
+          display: inline-block;
+        }
+      }
+      @media screen and (min-width: 690px) {
+        .close-toggle {
+          display: none;
+        }
+        
+      }
+      @media screen and (max-width: 442px) {
+        .header {
+          padding: 3px;
+        }
+      }
+      @media screen and (max-width: 425px) {
+        .menu-toggle {
+          font-size: small;
+        }
+        .dashbaord {
+          font-size: small;
+        }
+        .bettor {
+          font-size: small;
+        }
+        .header {
+          font-size: small;
+          text-wrap: nowrap;
+        }
+        .marquee-text {
+          font-size: small;
+        }
+      }
+      @media screen and (max-width: 320px) {
+        .menu-toggle {
+          font-size: small;
+        }
+        .dashbaord {
+          font-size: x-small;
+        }
+        .bettor {
+          font-size: x-small;
+        }
+        .header {
+          font-size: x-small;
+          text-wrap: nowrap;
+        }
+        .MuiStack-root p {
+          font-size: small;
+        }
+      }
+    </style>
+    <style>
+      .dropdown-container {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 56px;
+        left: auto;
+        right: 1%;
+        width: 230px;
+        height: 270px;
+        background-color: white;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        border: 1px solid #ddd;
+        overflow: auto;
+        padding: 8px;
+      }
+
+      .dropdown-item {
+        padding: 8px 16px;
+        cursor: pointer;
+        border-radius: 6px;
+      }
+
+      .dropdown-item:hover {
+        background-color: #f1f1f1;
+        color: rgb(0, 168, 38);
+      }
+
+      hr {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header" id="header">
+      <i class="fa fa-bars menu-toggle ml-1" id="menuToggle"></i>
+      <!-- <h5 class="ml-2 mb-0 dashbaord">Dashboard</h5> -->
+      <div class="mx-auto">
+        <span class="navbar-brand mb-0 h1 text-center bettor">Bettor</span>
+      </div>
+      <div class="ml-auto">
+        <span class="navbar-text">B:2378</span>
+        <span class="navbar-text ml-3 text-success">L:0</span>
+        <span class="navbar-text ml-3">Username</span>
+        <span
+          ><svg
+            stroke="currentColor"
+            fill="currentColor"
+            stroke-width="0"
+            viewBox="0 0 512 512"
+            class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeMedium css-1slk8wg"
+            aria-hidden="true"
+            style="height: 1rem; width: 1rem"
+            xmlns="http://www.w3.org/2000/svg"
+            id="dropdownToggle"
+          >
+            <path
+              d="M256 294.1L383 167c9.4-9.4 24.6-9.4 33.9 0s9.3 24.6 0 34L273 345c-9.1 9.1-23.7 9.3-33.1.7L95 201.1c-4.7-4.7-7-10.9-7-17s2.3-12.3 7-17c9.4-9.4 24.6-9.4 33.9 0l127.1 127z"
+            ></path>
+          </svg>
+          <div class="dropdown-menu">
+            <a href="myprofile.html" class="dropdown-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                aria-hidden="true"
+                role="img"
+                font-size="1.375rem"
+                class="iconify iconify--tabler"
+                width="1em"
+                height="1em"
+                viewBox="0 0 24 24"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                >
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path
+                    d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2m1-10l2 2l4-4"
+                  ></path>
+                </g>
+              </svg>
+              My Profile
+            </a>
+            <a href="#" class="dropdown-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                aria-hidden="true"
+                role="img"
+                font-size="1.375rem"
+                class="iconify iconify--tabler"
+                width="1em"
+                height="1em"
+                viewBox="0 0 24 24"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                >
+                  <path
+                    d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 0 0-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 0 0-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 0 0-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 0 0-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 0 0 1.066-2.573c-.94-1.543.826-3.31 2.37-2.37c1 .608 2.296.07 2.572-1.065z"
+                  ></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </g>
+              </svg>
+              Statement
+            </a>
+            <a href="#" class="dropdown-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                aria-hidden="true"
+                role="img"
+                font-size="1.375rem"
+                class="iconify iconify--tabler"
+                width="1em"
+                height="1em"
+                viewBox="0 0 24 24"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                >
+                  <rect width="18" height="14" x="3" y="5" rx="3"></rect>
+                  <path d="M3 10h18M7 15h.01M11 15h2"></path>
+                </g>
+              </svg>
+              Result
+            </a>
+            <hr />
+            <a href="#" class="dropdown-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                aria-hidden="true"
+                role="img"
+                font-size="1.375rem"
+                class="iconify iconify--tabler"
+                width="1em"
+                height="1em"
+                viewBox="0 0 24 24"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                >
+                  <circle cx="12" cy="12" r="4"></circle>
+                  <circle cx="12" cy="12" r="9"></circle>
+                  <path
+                    d="m15 15l3.35 3.35M9 15l-3.35 3.35m0-12.7L9 9m9.35-3.35L15 9"
+                  ></path>
+                </g>
+              </svg>
+              Profit Loss
+            </a>
+            <a href="#" class="dropdown-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                aria-hidden="true"
+                role="img"
+                font-size="1.375rem"
+                class="iconify iconify--tabler"
+                width="1em"
+                height="1em"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M16.7 8A3 3 0 0 0 14 6h-4a3 3 0 0 0 0 6h4a3 3 0 0 1 0 6h-4a3 3 0 0 1-2.7-2M12 3v3m0 12v3"
+                ></path>
+              </svg>
+              Bet History
+            </a>
+            <hr />
+            <a href="#" class="dropdown-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                aria-hidden="true"
+                role="img"
+                font-size="1.375rem"
+                class="iconify iconify--tabler"
+                width="1em"
+                height="1em"
+                viewBox="0 0 24 24"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                >
+                  <path
+                    d="M14 8V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2-2v-2"
+                  ></path>
+                  <path d="M7 12h14l-3-3m0 6l3-3"></path>
+                </g>
+              </svg>
+              Logout
+            </a>
+          </div>
+        </span>
+      </div>
+    </div>
+    <div class="marquee-container">
+      <div class="marquee-text">
+        Welcome to 1obet.com - Announcement - All casino Profit Loss will be 1
+        to 2 Ratio - Her casino may Jeet Har 1 ka 2 ho ge - Welcome to Exchange
+        - Zero commissions on chota bara, kalli jotta, fancies
+      </div>
+    </div>
+    <!-- main content of body -->
+    <div class="content m-2">
+      <div class="css-1s05omm creditdetal">
+        <div class="MuiBox-root css-nu8l0g creditdetal_border">
+          <div class="MuiStack-root css-a4cdis">
+            <p class="MuiTypography-root  css-tn9xkt ">
+              Credit: 0
+            </p>
+            <p class="MuiTypography-root css-tn9xkt">
+              Balance: 2,844.8
+            </p>
+            <p class="MuiTypography-root  css-tn9xkt">
+              Liable: 0
+            </p>
+            <p class="MuiTypography-root  css-tn9xkt">
+              Active Bet: 0
+            </p>
+          </div>
+        </div>
+        <div class="MuiBox-root css-1tv6lwp creditdetal_border"></div>
+      </div>
+      <div class="wrapper">
+        <ul class="carousel">
+          <li class="card">
+            <div class="img">
+              <img
+                src="./public/assets/images/betterDash2.jpg"
+                alt="img"
+                draggable="false"
+              />
+            </div>
+          </li>
+          <li class="card">
+            <div class="img">
+              <img
+                src="./public/assets/images/betterDash3.jpg"
+                alt="img"
+                draggable="false"
+              />
+            </div>
+          </li>
+          <li class="card">
+            <div class="img">
+              <img
+                src="./public/assets/images/betterDash4.jpg"
+                alt="img"
+                draggable="false"
+              />
+            </div>
+          </li>
+          <li class="card">
+            <div class="img">
+              <img
+                src="./public/assets/images/betterDash5.jpg"
+                alt="img"
+                draggable="false"
+              />
+            </div>
+          </li>
+          <li class="card">
+            <div class="img">
+              <img
+                src="./public/assets/images/casino.png"
+                alt="img"
+                draggable="false"
+              />
+            </div>
+          </li>
+          <li class="card">
+            <div class="img">
+              <img
+                src="./public/assets/images/casinoGame1.jpg"
+                alt="img"
+                draggable="false"
+              />
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-flm59u">
+        <div class="MuiBox-root css-nu8l0g">
+          <div class="MuiStack-root css-2p8vrk">
+            <svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 512 512"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M400 16c-21.335 9.73-58.244 17.34-73.086 48.232-22.36 1.948-72.753 10.673-122.22 40.25-58.098 34.74-116.017 97.417-131.776 213.702l-.48 3.537-2.774 2.25c-30.87 25.002-40.657 38.937-44.416 61.153-3.536 20.9-.72 51.46-.363 101.877H328.36c3.455-16.892 10.44-29.245 12.472-41.568 2.337-14.176.19-29.938-20.812-58.547-43.078-58.683-46.853-129.458-12.916-171.28-8.654-2.765-15.09-6.887-19.458-12.546-6.115-7.924-7.4-17.006-8.57-25.884l17.848-2.352c1.112 8.446 2.38 13.88 4.97 17.237 2.59 3.356 7.31 6.472 19.55 8.46l-.022.128.172-.17 5.998 9.424c19.957 31.358 42.84 51.292 73.332 54.44l6.51.672 1.367 6.4c2.74 12.828 8.626 19.095 15.116 22.238 6.49 3.143 14.225 2.944 20.47.205 9.316-4.086 14.518-11.35 16.7-22.712 2.122-11.05.546-25.834-5.137-42.106-33.538-38.248-44.475-87.277-63.903-128.772-6.055-9.947-12.448-18.518-20.385-24.856C376.808 55.126 386.456 34.852 400 16zM214.068 34.97C179.55 35.06 146.075 43.06 96 58.58c31.146 9.92 70.397 18.9 86.037 39.01 4.463-3.017 8.94-5.88 13.418-8.56 40.51-24.22 80.387-35.286 108.23-40.04-35.854-9.477-63.047-14.094-89.617-14.023zM157.16 96.712c-1.13-.01-2.265-.01-3.402.004-30.353.37-63.1 9.745-96.647 31.283 27.186 3.672 54.67 3.724 72.58 15.398 15.9-17.92 33.144-32.634 50.677-44.668-7.548-1.244-15.292-1.938-23.207-2.017zM368 128a13.214 13.215 0 0 1 13.213 13.215A13.214 13.215 0 0 1 368 154.432a13.214 13.215 0 0 1-13.213-13.217A13.214 13.215 0 0 1 368 128zm-238.906 16.068c-36.395 1.495-68.903 6.53-104.76 24.766 33.236 7.095 50.913 13.507 65.025 33.83 11.522-22.53 25.045-41.93 39.734-58.596zM74.518 201.46C53.53 201.65 36.614 213.14 16 224c27.854 0 46.067 3.862 58.71 12.055 4.33-11.652 9.16-22.615 14.41-32.924-5.12-1.19-9.963-1.71-14.602-1.67zm-.623 36.82c-17.933 5.845-35.452 7.15-54.23 22.284 17.62 4.638 34.79 9.596 41.398 22.034 3.496-15.77 7.814-30.523 12.832-44.32zm370.142 8.57c1.617-.035 3.222.044 4.783.187l-1.64 17.926c-3.928-.36-5.513.416-5.57.465-.058.048-1.035.656-.635 5.886l-17.95 1.372c-.638-8.35 1.297-16.207 6.955-20.997 4.245-3.593 9.206-4.735 14.057-4.84zM52.215 290.723c-10.352.13-23.76 5.646-34.656 12.334 12.173 6.83 12.357 23.472 8.938 37.668 7.3-9.105 16.855-18.323 29.158-28.48 1.016-7.043 2.19-13.9 3.506-20.585-2.082-.67-4.42-.97-6.947-.937z"
+              ></path>
+            </svg>
+            <p class="MuiTypography-root">Horse Race</p>
+          </div>
+        </div>
+        <div class="MuiBox-root css-1tv6lwp">
+          <div class="MuiStack-root d-flex flex-row">
+            <svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeMedium css-1xvgq63"
+              aria-hidden="true"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="Circle_Chev_Left">
+                <g>
+                  <path
+                    d="M10.15,12.35a.492.492,0,0,1,0-.7l3-3a.495.495,0,0,1,.7.7L11.21,12l2.64,2.65a.495.495,0,0,1-.7.7Z"
+                  ></path>
+                  <path
+                    d="M12,21.933A9.933,9.933,0,1,1,21.933,12,9.944,9.944,0,0,1,12,21.933ZM12,3.067A8.933,8.933,0,1,0,20.933,12,8.943,8.943,0,0,0,12,3.067Z"
+                  ></path>
+                </g>
+              </g>
+            </svg>
+            <svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeMedium css-1xvgq63"
+              aria-hidden="true"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="Circle_Chev_Right">
+                <g>
+                  <path
+                    d="M13.85,11.65a.492.492,0,0,1,0,.7l-3,3a.495.495,0,0,1-.7-.7L12.79,12,10.15,9.35a.495.495,0,0,1,.7-.7Z"
+                  ></path>
+                  <path
+                    d="M12,2.067A9.933,9.933,0,1,1,2.067,12,9.944,9.944,0,0,1,12,2.067Zm0,18.866A8.933,8.933,0,1,0,3.067,12,8.943,8.943,0,0,0,12,20.933Z"
+                  ></path>
+                </g>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-flm59u">
+        <div class="MuiBox-root css-nu8l0g">
+          <div class="MuiStack-root css-2p8vrk">
+            <svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 512 512"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M137.75 17.28l-15.313 78.782 20.313 56.876h45.97L137.75 17.28zM74.5 19L20 378.156v116.156h208L210.125 386.5H113.28l-2.218-6.156-25.78-71.594 17.562-6.344 23.562 65.406h90.344l230.688-2.968 9.812-33.406H278.5V312.75h184.22l7.374-25.156L415.53 209.5H291.47l-20.345-37.594h-75.28l-.095-.28h-46.313L159.563 200l-17.593 6.28-26.532-74.25-.126.72L74.5 19zm133.375 178.22h56.094l21.405 38.874-26.094-.438-51.405-38.437zm230.47 12.28l38.53 55.094L493.03 209.5h-54.686zm-82.814 15.938c6.613 0 11.97 5.356 11.97 11.968 0 6.613-5.357 11.97-11.97 11.97-6.61 0-11.967-5.357-11.967-11.97 0-6.612 5.356-11.97 11.968-11.97zm44.595 0c6.612 0 12 5.356 12 11.968 0 6.613-5.388 11.97-12 11.97s-11.97-5.357-11.97-11.97c0-6.612 5.358-11.97 11.97-11.97zm-66.188 29.187c6.612 0 11.97 5.356 11.97 11.97 0 6.61-5.358 11.967-11.97 11.967-6.61 0-11.968-5.356-11.968-11.968 0-6.613 5.356-11.97 11.967-11.97zm43.125 0c6.612 0 12 5.356 12 11.97 0 6.61-5.388 11.967-12 11.967-6.61 0-11.968-5.356-11.968-11.968 0-6.613 5.357-11.97 11.97-11.97zm42.063 0c6.612 0 11.97 5.356 11.97 11.97 0 6.61-5.358 11.967-11.97 11.967-6.612 0-11.97-5.356-11.97-11.968 0-6.613 5.358-11.97 11.97-11.97z"
+              ></path>
+            </svg>
+            <p class="MuiTypography-root  css-tn9xkt">
+              Grey hound
+            </p>
+          </div>
+        </div>
+        <div class="MuiBox-root css-1tv6lwp">
+          <div class="MuiStack-root d-flex flex-row">
+            <svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeMedium css-1xvgq63"
+              aria-hidden="true"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="Circle_Chev_Left">
+                <g>
+                  <path
+                    d="M10.15,12.35a.492.492,0,0,1,0-.7l3-3a.495.495,0,0,1,.7.7L11.21,12l2.64,2.65a.495.495,0,0,1-.7.7Z"
+                  ></path>
+                  <path
+                    d="M12,21.933A9.933,9.933,0,1,1,21.933,12,9.944,9.944,0,0,1,12,21.933ZM12,3.067A8.933,8.933,0,1,0,20.933,12,8.943,8.943,0,0,0,12,3.067Z"
+                  ></path>
+                </g>
+              </g>
+            </svg>
+            <svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeMedium css-1xvgq63"
+              aria-hidden="true"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="Circle_Chev_Right">
+                <g>
+                  <path
+                    d="M13.85,11.65a.492.492,0,0,1,0,.7l-3,3a.495.495,0,0,1-.7-.7L12.79,12,10.15,9.35a.495.495,0,0,1,.7-.7Z"
+                  ></path>
+                  <path
+                    d="M12,2.067A9.933,9.933,0,1,1,2.067,12,9.944,9.944,0,0,1,12,2.067Zm0,18.866A8.933,8.933,0,1,0,3.067,12,8.943,8.943,0,0,0,12,20.933Z"
+                  ></path>
+                </g>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="MuiStack-root css-1yehak0">
+        <div class="MuiBox-root css-sfjdjv">
+          <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1s05omm">
+            <div class="MuiBox-root css-nu8l0g">
+              <div class="MuiStack-root css-2p8vrk">
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 512 512"
+                  height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M256 91.088c-111.453 0-202.122 88.575-202.122 197.456C53.878 397.426 144.548 486 256 486c111.453 0 202.122-88.574 202.122-197.456 0-108.881-90.67-197.455-202.122-197.455zm0 375.866c-100.942 0-183.076-80.039-183.076-178.41 0-98.37 82.134-178.41 183.076-178.41s183.076 80.04 183.076 178.41c0 98.371-82.134 178.41-183.076 178.41zm-.571-178.41l128.558 99.55A165.602 165.602 0 0 1 256 447.908c-90.467 0-164.03-71.493-164.03-159.365 0-87.681 73.266-159.055 163.447-159.352v159.352zM256 72.043a224.727 224.727 0 0 0-66.66 10.07V56.354A30.354 30.354 0 0 1 219.694 26h72.695a30.354 30.354 0 0 1 30.27 30.354v25.76A224.727 224.727 0 0 0 256 72.042zm128.939 40.71l20.117-19.748c8.797-8.642 21.272-10.463 27.878-4.083l20.403 19.748c6.594 6.38 4.761 18.558-3.988 27.2l-19.438 19.045a221.06 221.06 0 0 0-44.96-42.162zM82.435 154.51l-19.391-19.046c-8.797-8.642-10.713-20.724-4.202-26.985L78.875 89.1c6.476-6.26 18.856-4.344 27.652 4.298l20.046 19.688a221.06 221.06 0 0 0-44.138 41.425z"
+                  ></path>
+                </svg>
+                <p class="MuiTypography-root  "style="text-wrap:nowrap">
+                  In Play
+                </p>
+              </div>
+            </div>
+            <div class="MuiBox-root css-1tv6lwp">10</div>
+          </div>
+        </div>
+        <div class="MuiBox-root css-sfjdjv">
+          <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1s05omm">
+            <div class="MuiBox-root css-nu8l0g">
+              <div class="MuiStack-root css-2p8vrk">
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 512 512"
+                  height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M433.2 17.99L159.8 291.4l60.8 60.8-6.3 6.3L494 78.79c0-24.32-36.5-60.8-60.8-60.8zM161.5 64.03a32 32 0 0 0-7.8.59c3.9 21.25 13.8 38.48 30.3 52.48a32 32 0 0 0 3.7-37.13 32 32 0 0 0-26.2-15.94zm-24.1 9.35a32 32 0 0 0-5.1 38.62 32 32 0 0 0 36 14.9c-15.5-14.7-25.9-32.79-30.9-53.52zm26.4 247.22C126.3 378.1 60.46 427.7 19.06 479.5c-4.82 5.9 7.6 18.2 13.53 13.5C84.32 451.6 133.9 385.7 191.4 348.2z"
+                  ></path>
+                </svg>
+                <p class="MuiTypography-root MuiTypography-body1 css-17kmaxw">
+                  Cricket
+                </p>
+              </div>
+            </div>
+            <div class="MuiBox-root css-1tv6lwp">2</div>
+          </div>
+        </div>
+        <div class="MuiBox-root css-sfjdjv">
+          <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1s05omm">
+            <div class="MuiBox-root css-nu8l0g">
+              <div class="MuiStack-root css-2p8vrk">
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 512 512"
+                  height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M365.6 31c-6.6 0-13.2.6-19.7 1.59-34.5 5.44-66.5 23.14-88.3 44.96-28.8 28.85-49.6 70.85-58.4 111.65-1.6 6.7-2.6 13.6-3.5 20.4L162.2 334l15.8 15.8 124.3-33.5c6.8-.9 13.7-2 20.5-3.5 40.8-8.8 82.8-29.6 111.6-58.4 21.9-21.9 39.6-53.9 45-88.4 5.2-34.5-2.4-72.3-31.9-101.71-23.8-23.93-53.1-33.44-81.9-33.29zm.1 19.29c24.3-.28 47.9 7.49 68.2 27.71 25 24.9 31 55.2 26.3 85-4.6 29.9-20.7 58.8-39.5 77.6-25.4 25.4-64.7 45.2-102 53.2-37.2 8.2-71.2 3.8-87.8-12.9-16.5-16.5-20.9-50.4-12.8-87.7 8.1-37.2 27.8-76.6 53.3-101.94 18.7-18.78 47.7-34.84 77.6-39.55 5.5-.88 11.2-1.36 16.7-1.42zm-166 214.81c3.7 11.3 9.3 21.5 17.5 29.5 8.1 8.2 18.2 14 29.5 17.6l-63 16zm-50.3 83.6L50 448.2l-5.25-5.1-13.71 13.7L55.41 481l13.7-13.6-5.41-5.4 99.5-99.6zm211 45.1c-19.5 0-35.6 16-35.6 35.5s16.1 35.5 35.6 35.5c19.4 0 35.5-16 35.5-35.5s-16.1-35.5-35.5-35.5z"
+                  ></path>
+                </svg>
+                <p class="MuiTypography-root MuiTypography-body1 css-17kmaxw">
+                  Tennis
+                </p>
+              </div>
+            </div>
+            <div class="MuiBox-root css-1tv6lwp">34</div>
+          </div>
+        </div>
+        <div class="MuiBox-root css-sfjdjv">
+          <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1s05omm">
+            <div class="MuiBox-root css-nu8l0g">
+              <div class="MuiStack-root css-2p8vrk">
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 512 512"
+                  height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M290.2 49.04c-15.7.1-32.3 13.83-38 35.81-6.5 25.15 4.7 47.85 22.1 52.35 17.4 4.5 38.2-9.9 44.7-35 6.5-25.16-4.6-47.82-22.1-52.33-2.2-.56-4.4-.84-6.7-.83zM89.04 68.3L77.5 87.31c32.4 15.99 63.1 33.49 96.4 46.49 9.5-3.8 18.8-7.8 28-12-40.2-15.4-76.7-33.69-112.86-53.5zm148.06 56.1c-47.8 25.4-97.9 41.6-153.64 61.1l8.08 16.4c51.96-16.1 111.26-32.9 161.16-56-6.9-5.5-12.1-12.9-15.6-21.5zm30.3 34.8c-22.5 10.8-46.8 20.2-71.4 28.7-20.3 45.6-27.7 94.9-36.8 140.1l-2.1 10.5-101.02-39.4-16.03 25.4 130.25 60.7c1-1.4 1.7-2.5 2.9-4.5 3.9-6.7 9.2-16.6 15.2-28.6 11.9-23.8 26.7-55.9 40.4-88.1 13.8-32.1 26.4-64.4 33.9-88.4 1.9-6.1 3.5-11.6 4.7-16.4zm-31.9 134.6c-5.5 12.5-11.1 24.8-16.5 36.3 25 37.4 57 79 94.9 109.2l23.3-17.6c-35.8-39.7-72.9-84.3-101.7-127.9zM423.9 367a48 48 0 0 0-48 48 48 48 0 0 0 48 48 48 48 0 0 0 48-48 48 48 0 0 0-48-48z"
+                  ></path>
+                </svg>
+                <p class="MuiTypography-root MuiTypography-body1 css-17kmaxw">
+                  Soccer
+                </p>
+              </div>
+            </div>
+            <div class="MuiBox-root css-1tv6lwp">28</div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiTableContainer-root css-136bwoc"
+      >
+        <table class="MuiTable-root css-rxit2l">
+          <thead class="MuiTableHead-root css-disv23">
+            <tr class="MuiTableRow-root MuiTableRow-head css-e03dsj">
+              <th
+                class="text-center MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeMedium css-d861ke"
+                scope="col"
+                width="60px"
+              >
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 512 512"
+                  class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeMedium css-17l795x"
+                  aria-hidden="true"
+                  height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M365.6 31c-6.6 0-13.2.6-19.7 1.59-34.5 5.44-66.5 23.14-88.3 44.96-28.8 28.85-49.6 70.85-58.4 111.65-1.6 6.7-2.6 13.6-3.5 20.4L162.2 334l15.8 15.8 124.3-33.5c6.8-.9 13.7-2 20.5-3.5 40.8-8.8 82.8-29.6 111.6-58.4 21.9-21.9 39.6-53.9 45-88.4 5.2-34.5-2.4-72.3-31.9-101.71-23.8-23.93-53.1-33.44-81.9-33.29zm.1 19.29c24.3-.28 47.9 7.49 68.2 27.71 25 24.9 31 55.2 26.3 85-4.6 29.9-20.7 58.8-39.5 77.6-25.4 25.4-64.7 45.2-102 53.2-37.2 8.2-71.2 3.8-87.8-12.9-16.5-16.5-20.9-50.4-12.8-87.7 8.1-37.2 27.8-76.6 53.3-101.94 18.7-18.78 47.7-34.84 77.6-39.55 5.5-.88 11.2-1.36 16.7-1.42zm-166 214.81c3.7 11.3 9.3 21.5 17.5 29.5 8.1 8.2 18.2 14 29.5 17.6l-63 16zm-50.3 83.6L50 448.2l-5.25-5.1-13.71 13.7L55.41 481l13.7-13.6-5.41-5.4 99.5-99.6zm211 45.1c-19.5 0-35.6 16-35.6 35.5s16.1 35.5 35.6 35.5c19.4 0 35.5-16 35.5-35.5s-16.1-35.5-35.5-35.5z"
+                  ></path>
+                </svg>
+              </th>
+              <th
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium css-199x37d"
+                scope="col"
+              >
+                <h6
+                  class="MuiTypography-root MuiTypography-subtitle2 css-544u3x"
+                >
+                  tennis
+                </h6>
+              </th>
+              <th
+                class="text-center MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeMedium css-d861ke"
+                scope="col"
+                width="90px"
+              >
+                Matched
+              </th>
+              <th
+                class="hidden-head text-center MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeMedium css-d861ke"
+                scope="col"
+                width="126px"
+              >
+                1
+              </th>
+              <th
+                class="hidden-head text-center MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeMedium css-d861ke"
+                scope="col"
+                width="126px"
+              >
+                X
+              </th>
+              <th
+                class="hidden-head text-center MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeMedium css-d861ke"
+                scope="col"
+                width="126px"
+              >
+                2
+              </th>
+            </tr>
+          </thead>
+          <tbody class="MuiTableBody-root css-12dfzmm">
+            <tr class="MuiTableRow-root css-1sa68b5">
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-ha2b3j"
+              >
+                <div class="MuiStack-root css-j7qwjs">
+                  <p class="MuiTypography-root MuiTypography-body1 css-1p8texr">
+                    InPlay
+                  </p>
+                  <p class="MuiTypography-root MuiTypography-body1 css-1p8texr">
+                    17:30
+                  </p>
+                </div>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-jup9dp"
+              >
+                <h6
+                  class="MuiTypography-root MuiTypography-subtitle2 css-dn6vr0"
+                >
+                  Car Alcaraz v Ma Lajal
+                </h6>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-gy29k5"
+              >
+                <div class="MuiStack-root css-dvxtzn">
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 24 24"
+                    class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeMedium css-144pslc"
+                    aria-hidden="true"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M20 6h-5.586l2.293-2.293-1.414-1.414L12 5.586 8.707 2.293 7.293 3.707 9.586 6H4c-1.103 0-2 .897-2 2v11c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V8c0-1.103-.897-2-2-2zM4 19V8h16l.002 11H4z"
+                    ></path>
+                  </svg>
+                  649093.12
+                </div>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-gy29k5"
+              >
+                <div class="MuiStack-root css-1xhj18k">
+                  <div class="MuiStack-root css-5sk20m">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    >
+                      1.01
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    >
+                      77K
+                    </p>
+                  </div>
+                  <div class="MuiStack-root css-1kgyuku">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    >
+                      1.02
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    >
+                      50K
+                    </p>
+                  </div>
+                </div>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-gy29k5"
+              >
+                <div class="MuiStack-root css-1xhj18k">
+                  <div class="MuiStack-root css-5sk20m">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    ></p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    ></p>
+                  </div>
+                  <div class="MuiStack-root css-1kgyuku">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    ></p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    ></p>
+                  </div>
+                </div>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-gy29k5"
+              >
+                <div class="MuiStack-root css-1xhj18k">
+                  <div class="MuiStack-root css-5sk20m">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    >
+                      70
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    >
+                      7
+                    </p>
+                  </div>
+                  <div class="MuiStack-root css-1kgyuku">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    >
+                      90
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    >
+                      1
+                    </p>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr class="MuiTableRow-root css-1sa68b5">
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-ha2b3j"
+              >
+                <div class="MuiStack-root css-j7qwjs">
+                  <p class="MuiTypography-root MuiTypography-body1 css-1p8texr">
+                    InPlay
+                  </p>
+                  <p class="MuiTypography-root MuiTypography-body1 css-1p8texr">
+                    16:56
+                  </p>
+                </div>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-jup9dp"
+              >
+                <h6
+                  class="MuiTypography-root MuiTypography-subtitle2 css-dn6vr0"
+                >
+                  Daria Kasatkina v Shuai Zhang
+                </h6>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-gy29k5"
+              >
+                <div class="MuiStack-root css-dvxtzn">
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 24 24"
+                    class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeMedium css-144pslc"
+                    aria-hidden="true"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M20 6h-5.586l2.293-2.293-1.414-1.414L12 5.586 8.707 2.293 7.293 3.707 9.586 6H4c-1.103 0-2 .897-2 2v11c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V8c0-1.103-.897-2-2-2zM4 19V8h16l.002 11H4z"
+                    ></path>
+                  </svg>
+                  142042.4
+                </div>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-gy29k5"
+              >
+                <div class="MuiStack-root css-1xhj18k">
+                  <div class="MuiStack-root css-5sk20m">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    >
+                      1.01
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    >
+                      8K
+                    </p>
+                  </div>
+                  <div class="MuiStack-root css-1kgyuku">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    >
+                      1.02
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    >
+                      3K
+                    </p>
+                  </div>
+                </div>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-gy29k5"
+              >
+                <div class="MuiStack-root css-1xhj18k">
+                  <div class="MuiStack-root css-5sk20m">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    ></p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    ></p>
+                  </div>
+                  <div class="MuiStack-root css-1kgyuku">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    ></p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    ></p>
+                  </div>
+                </div>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-gy29k5"
+              >
+                <div class="MuiStack-root css-1xhj18k">
+                  <div class="MuiStack-root css-5sk20m">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    >
+                      50
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    >
+                      70
+                    </p>
+                  </div>
+                  <div class="MuiStack-root css-1kgyuku">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    >
+                      110
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    >
+                      75
+                    </p>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr class="MuiTableRow-root css-1sa68b5">
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-ha2b3j"
+              >
+                <div class="MuiStack-root css-j7qwjs">
+                  <p class="MuiTypography-root MuiTypography-body1 css-1p8texr">
+                    InPlay
+                  </p>
+                  <p class="MuiTypography-root MuiTypography-body1 css-1p8texr">
+                    16:50
+                  </p>
+                </div>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-jup9dp"
+              >
+                <h6
+                  class="MuiTypography-root MuiTypography-subtitle2 css-dn6vr0"
+                >
+                  Gael Monfils v Adria Mannarino
+                </h6>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-gy29k5"
+              >
+                <div class="MuiStack-root css-dvxtzn">
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 24 24"
+                    class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeMedium css-144pslc"
+                    aria-hidden="true"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M20 6h-5.586l2.293-2.293-1.414-1.414L12 5.586 8.707 2.293 7.293 3.707 9.586 6H4c-1.103 0-2 .897-2 2v11c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V8c0-1.103-.897-2-2-2zM4 19V8h16l.002 11H4z"
+                    ></path>
+                  </svg>
+                  350275.73
+                </div>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-gy29k5"
+              >
+                <div class="MuiStack-root css-1xhj18k">
+                  <div class="MuiStack-root css-5sk20m">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    >
+                      1.4
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    >
+                      313
+                    </p>
+                  </div>
+                  <div class="MuiStack-root css-1kgyuku">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    >
+                      1.42
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    >
+                      515
+                    </p>
+                  </div>
+                </div>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-gy29k5"
+              >
+                <div class="MuiStack-root css-1xhj18k">
+                  <div class="MuiStack-root css-5sk20m">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    ></p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    ></p>
+                  </div>
+                  <div class="MuiStack-root css-1kgyuku">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    ></p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    ></p>
+                  </div>
+                </div>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-gy29k5"
+              >
+                <div class="MuiStack-root css-1xhj18k">
+                  <div class="MuiStack-root css-5sk20m">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    >
+                      3.4
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    >
+                      22
+                    </p>
+                  </div>
+                  <div class="MuiStack-root css-1kgyuku">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    >
+                      3.5
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    >
+                      125
+                    </p>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr class="MuiTableRow-root css-1sa68b5">
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-ha2b3j"
+              >
+                <div class="MuiStack-root css-j7qwjs">
+                  <p class="MuiTypography-root MuiTypography-body1 css-1p8texr">
+                    InPlay
+                  </p>
+                  <p class="MuiTypography-root MuiTypography-body1 css-1p8texr">
+                    16:49
+                  </p>
+                </div>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-jup9dp"
+              >
+                <h6
+                  class="MuiTypography-root MuiTypography-subtitle2 css-dn6vr0"
+                >
+                  Marta Kostyuk v Rebec Sramkova
+                </h6>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-gy29k5"
+              >
+                <div class="MuiStack-root css-dvxtzn">
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 24 24"
+                    class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeMedium css-144pslc"
+                    aria-hidden="true"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M20 6h-5.586l2.293-2.293-1.414-1.414L12 5.586 8.707 2.293 7.293 3.707 9.586 6H4c-1.103 0-2 .897-2 2v11c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V8c0-1.103-.897-2-2-2zM4 19V8h16l.002 11H4z"
+                    ></path>
+                  </svg>
+                  192566.71
+                </div>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-gy29k5"
+              >
+                <div class="MuiStack-root css-1xhj18k">
+                  <div class="MuiStack-root css-5sk20m">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    >
+                      0
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    >
+                      0
+                    </p>
+                  </div>
+                  <div class="MuiStack-root css-1kgyuku">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    >
+                      1.01
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    >
+                      4K
+                    </p>
+                  </div>
+                </div>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-gy29k5"
+              >
+                <div class="MuiStack-root css-1xhj18k">
+                  <div class="MuiStack-root css-5sk20m">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    ></p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    ></p>
+                  </div>
+                  <div class="MuiStack-root css-1kgyuku">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    ></p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    ></p>
+                  </div>
+                </div>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-gy29k5"
+              >
+                <div class="MuiStack-root css-1xhj18k">
+                  <div class="MuiStack-root css-5sk20m">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    >
+                      110
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    >
+                      5
+                    </p>
+                  </div>
+                  <div class="MuiStack-root css-1kgyuku">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    >
+                      990
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    >
+                      0
+                    </p>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr class="MuiTableRow-root css-1sa68b5">
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-ha2b3j"
+              >
+                <div class="MuiStack-root css-j7qwjs">
+                  <p class="MuiTypography-root MuiTypography-body1 css-1p8texr">
+                    InPlay
+                  </p>
+                  <p class="MuiTypography-root MuiTypography-body1 css-1p8texr">
+                    16:48
+                  </p>
+                </div>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-jup9dp"
+              >
+                <h6
+                  class="MuiTypography-root MuiTypography-subtitle2 css-dn6vr0"
+                >
+                  Nao Hibino v Elise Mertens
+                </h6>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-gy29k5"
+              >
+                <div class="MuiStack-root css-dvxtzn">
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 24 24"
+                    class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeMedium css-144pslc"
+                    aria-hidden="true"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M20 6h-5.586l2.293-2.293-1.414-1.414L12 5.586 8.707 2.293 7.293 3.707 9.586 6H4c-1.103 0-2 .897-2 2v11c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V8c0-1.103-.897-2-2-2zM4 19V8h16l.002 11H4z"
+                    ></path>
+                  </svg>
+                  100959.22
+                </div>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-gy29k5"
+              >
+                <div class="MuiStack-root css-1xhj18k">
+                  <div class="MuiStack-root css-5sk20m">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    >
+                      1.56
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    >
+                      43
+                    </p>
+                  </div>
+                  <div class="MuiStack-root css-1kgyuku">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    >
+                      1.58
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    >
+                      93
+                    </p>
+                  </div>
+                </div>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-gy29k5"
+              >
+                <div class="MuiStack-root css-1xhj18k">
+                  <div class="MuiStack-root css-5sk20m">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    ></p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    ></p>
+                  </div>
+                  <div class="MuiStack-root css-1kgyuku">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    ></p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    ></p>
+                  </div>
+                </div>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-gy29k5"
+              >
+                <div class="MuiStack-root css-1xhj18k">
+                  <div class="MuiStack-root css-5sk20m">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    >
+                      2.74
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    >
+                      54
+                    </p>
+                  </div>
+                  <div class="MuiStack-root css-1kgyuku">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    >
+                      2.8
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    >
+                      24
+                    </p>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr class="MuiTableRow-root css-1sa68b5">
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-ha2b3j"
+              >
+                <div class="MuiStack-root css-j7qwjs">
+                  <p class="MuiTypography-root MuiTypography-body1 css-1p8texr">
+                    InPlay
+                  </p>
+                  <p class="MuiTypography-root MuiTypography-body1 css-1p8texr">
+                    16:47
+                  </p>
+                </div>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-jup9dp"
+              >
+                <h6
+                  class="MuiTypography-root MuiTypography-subtitle2 css-dn6vr0"
+                >
+                  Jasmin Paolini v Sara Sorribes Tormo
+                </h6>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-gy29k5"
+              >
+                <div class="MuiStack-root css-dvxtzn">
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 24 24"
+                    class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeMedium css-144pslc"
+                    aria-hidden="true"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M20 6h-5.586l2.293-2.293-1.414-1.414L12 5.586 8.707 2.293 7.293 3.707 9.586 6H4c-1.103 0-2 .897-2 2v11c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V8c0-1.103-.897-2-2-2zM4 19V8h16l.002 11H4z"
+                    ></path>
+                  </svg>
+                  222635.74
+                </div>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-gy29k5"
+              >
+                <div class="MuiStack-root css-1xhj18k">
+                  <div class="MuiStack-root css-5sk20m">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    >
+                      1.14
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    >
+                      1K
+                    </p>
+                  </div>
+                  <div class="MuiStack-root css-1kgyuku">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    >
+                      1.15
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    >
+                      7
+                    </p>
+                  </div>
+                </div>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-gy29k5"
+              >
+                <div class="MuiStack-root css-1xhj18k">
+                  <div class="MuiStack-root css-5sk20m">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    ></p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    ></p>
+                  </div>
+                  <div class="MuiStack-root css-1kgyuku">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    ></p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    ></p>
+                  </div>
+                </div>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-gy29k5"
+              >
+                <div class="MuiStack-root css-1xhj18k">
+                  <div class="MuiStack-root css-5sk20m">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    >
+                      7.6
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    >
+                      8
+                    </p>
+                  </div>
+                  <div class="MuiStack-root css-1kgyuku">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    >
+                      8.2
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    >
+                      175
+                    </p>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr class="MuiTableRow-root css-1sa68b5">
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-ha2b3j"
+              >
+                <div class="MuiStack-root css-j7qwjs">
+                  <p class="MuiTypography-root MuiTypography-body1 css-1p8texr">
+                    InPlay
+                  </p>
+                  <p class="MuiTypography-root MuiTypography-body1 css-1p8texr">
+                    16:46
+                  </p>
+                </div>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-jup9dp"
+              >
+                <h6
+                  class="MuiTypography-root MuiTypography-subtitle2 css-dn6vr0"
+                >
+                  Aran Rus v Yue Yuan
+                </h6>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-gy29k5"
+              >
+                <div class="MuiStack-root css-dvxtzn">
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 24 24"
+                    class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeMedium css-144pslc"
+                    aria-hidden="true"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M20 6h-5.586l2.293-2.293-1.414-1.414L12 5.586 8.707 2.293 7.293 3.707 9.586 6H4c-1.103 0-2 .897-2 2v11c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V8c0-1.103-.897-2-2-2zM4 19V8h16l.002 11H4z"
+                    ></path>
+                  </svg>
+                  88206.68
+                </div>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-gy29k5"
+              >
+                <div class="MuiStack-root css-1xhj18k">
+                  <div class="MuiStack-root css-5sk20m">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    >
+                      1.42
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    >
+                      167
+                    </p>
+                  </div>
+                  <div class="MuiStack-root css-1kgyuku">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    >
+                      1.45
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    >
+                      27
+                    </p>
+                  </div>
+                </div>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-gy29k5"
+              >
+                <div class="MuiStack-root css-1xhj18k">
+                  <div class="MuiStack-root css-5sk20m">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    ></p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    ></p>
+                  </div>
+                  <div class="MuiStack-root css-1kgyuku">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    ></p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    ></p>
+                  </div>
+                </div>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-gy29k5"
+              >
+                <div class="MuiStack-root css-1xhj18k">
+                  <div class="MuiStack-root css-5sk20m">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    >
+                      3.2
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    >
+                      36
+                    </p>
+                  </div>
+                  <div class="MuiStack-root css-1kgyuku">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    >
+                      3.4
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    >
+                      103
+                    </p>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr class="MuiTableRow-root css-1sa68b5">
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-ha2b3j"
+              >
+                <div class="MuiStack-root css-j7qwjs">
+                  <p class="MuiTypography-root MuiTypography-body1 css-1p8texr">
+                    InPlay
+                  </p>
+                  <p class="MuiTypography-root MuiTypography-body1 css-1p8texr">
+                    16:45
+                  </p>
+                </div>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-jup9dp"
+              >
+                <h6
+                  class="MuiTypography-root MuiTypography-subtitle2 css-dn6vr0"
+                >
+                  Matteo Berrettini v Marton Fucsovics
+                </h6>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-gy29k5"
+              >
+                <div class="MuiStack-root css-dvxtzn">
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 24 24"
+                    class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeMedium css-144pslc"
+                    aria-hidden="true"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M20 6h-5.586l2.293-2.293-1.414-1.414L12 5.586 8.707 2.293 7.293 3.707 9.586 6H4c-1.103 0-2 .897-2 2v11c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V8c0-1.103-.897-2-2-2zM4 19V8h16l.002 11H4z"
+                    ></path>
+                  </svg>
+                  249265.26
+                </div>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-gy29k5"
+              >
+                <div class="MuiStack-root css-1xhj18k">
+                  <div class="MuiStack-root css-5sk20m">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    >
+                      1.01
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    >
+                      13K
+                    </p>
+                  </div>
+                  <div class="MuiStack-root css-1kgyuku">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    >
+                      1.02
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    >
+                      1K
+                    </p>
+                  </div>
+                </div>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-gy29k5"
+              >
+                <div class="MuiStack-root css-1xhj18k">
+                  <div class="MuiStack-root css-5sk20m">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    ></p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    ></p>
+                  </div>
+                  <div class="MuiStack-root css-1kgyuku">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    ></p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    ></p>
+                  </div>
+                </div>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-gy29k5"
+              >
+                <div class="MuiStack-root css-1xhj18k">
+                  <div class="MuiStack-root css-5sk20m">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    >
+                      55
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    >
+                      7
+                    </p>
+                  </div>
+                  <div class="MuiStack-root css-1kgyuku">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    >
+                      110
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    >
+                      122
+                    </p>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr class="MuiTableRow-root css-1sa68b5">
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-ha2b3j"
+              >
+                <div class="MuiStack-root css-j7qwjs">
+                  <p class="MuiTypography-root MuiTypography-body1 css-1p8texr">
+                    InPlay
+                  </p>
+                  <p class="MuiTypography-root MuiTypography-body1 css-1p8texr">
+                    16:45
+                  </p>
+                </div>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-jup9dp"
+              >
+                <h6
+                  class="MuiTypography-root MuiTypography-subtitle2 css-dn6vr0"
+                >
+                  Stan Wawrinka v Char Broom
+                </h6>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-gy29k5"
+              >
+                <div class="MuiStack-root css-dvxtzn">
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 24 24"
+                    class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeMedium css-144pslc"
+                    aria-hidden="true"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M20 6h-5.586l2.293-2.293-1.414-1.414L12 5.586 8.707 2.293 7.293 3.707 9.586 6H4c-1.103 0-2 .897-2 2v11c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V8c0-1.103-.897-2-2-2zM4 19V8h16l.002 11H4z"
+                    ></path>
+                  </svg>
+                  216298.25
+                </div>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-gy29k5"
+              >
+                <div class="MuiStack-root css-1xhj18k">
+                  <div class="MuiStack-root css-5sk20m">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    >
+                      1.78
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    >
+                      111
+                    </p>
+                  </div>
+                  <div class="MuiStack-root css-1kgyuku">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    >
+                      1.84
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    >
+                      118
+                    </p>
+                  </div>
+                </div>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-gy29k5"
+              >
+                <div class="MuiStack-root css-1xhj18k">
+                  <div class="MuiStack-root css-5sk20m">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    ></p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    ></p>
+                  </div>
+                  <div class="MuiStack-root css-1kgyuku">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    ></p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    ></p>
+                  </div>
+                </div>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-gy29k5"
+              >
+                <div class="MuiStack-root css-1xhj18k">
+                  <div class="MuiStack-root css-5sk20m">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    >
+                      2.2
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    >
+                      99
+                    </p>
+                  </div>
+                  <div class="MuiStack-root css-1kgyuku">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    >
+                      2.3
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    >
+                      887
+                    </p>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr class="MuiTableRow-root css-1sa68b5">
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-ha2b3j"
+              >
+                <div class="MuiStack-root css-j7qwjs">
+                  <p class="MuiTypography-root MuiTypography-body1 css-1p8texr">
+                    InPlay
+                  </p>
+                  <p class="MuiTypography-root MuiTypography-body1 css-1p8texr">
+                    16:45
+                  </p>
+                </div>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-jup9dp"
+              >
+                <h6
+                  class="MuiTypography-root MuiTypography-subtitle2 css-dn6vr0"
+                >
+                  Seba Baez v Bra Nakashima
+                </h6>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-gy29k5"
+              >
+                <div class="MuiStack-root css-dvxtzn">
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 24 24"
+                    class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeMedium css-144pslc"
+                    aria-hidden="true"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M20 6h-5.586l2.293-2.293-1.414-1.414L12 5.586 8.707 2.293 7.293 3.707 9.586 6H4c-1.103 0-2 .897-2 2v11c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V8c0-1.103-.897-2-2-2zM4 19V8h16l.002 11H4z"
+                    ></path>
+                  </svg>
+                  195502.85
+                </div>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-gy29k5"
+              >
+                <div class="MuiStack-root css-1xhj18k">
+                  <div class="MuiStack-root css-5sk20m">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    >
+                      26
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    >
+                      111
+                    </p>
+                  </div>
+                  <div class="MuiStack-root css-1kgyuku">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    >
+                      36
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    >
+                      136
+                    </p>
+                  </div>
+                </div>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-gy29k5"
+              >
+                <div class="MuiStack-root css-1xhj18k">
+                  <div class="MuiStack-root css-5sk20m">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    ></p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    ></p>
+                  </div>
+                  <div class="MuiStack-root css-1kgyuku">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    ></p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    ></p>
+                  </div>
+                </div>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-gy29k5"
+              >
+                <div class="MuiStack-root css-1xhj18k">
+                  <div class="MuiStack-root css-5sk20m">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    >
+                      1.03
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    >
+                      5K
+                    </p>
+                  </div>
+                  <div class="MuiStack-root css-1kgyuku">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    >
+                      1.04
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    >
+                      3K
+                    </p>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr class="MuiTableRow-root css-1sa68b5">
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-ha2b3j"
+              >
+                <div class="MuiStack-root css-j7qwjs">
+                  <p class="MuiTypography-root MuiTypography-body1 css-1p8texr">
+                    InPlay
+                  </p>
+                  <p class="MuiTypography-root MuiTypography-body1 css-1p8texr">
+                    16:44
+                  </p>
+                </div>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-jup9dp"
+              >
+                <h6
+                  class="MuiTypography-root MuiTypography-subtitle2 css-dn6vr0"
+                >
+                  Dani Altmaier v Art Fery
+                </h6>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-gy29k5"
+              >
+                <div class="MuiStack-root css-dvxtzn">
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 24 24"
+                    class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeMedium css-144pslc"
+                    aria-hidden="true"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M20 6h-5.586l2.293-2.293-1.414-1.414L12 5.586 8.707 2.293 7.293 3.707 9.586 6H4c-1.103 0-2 .897-2 2v11c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V8c0-1.103-.897-2-2-2zM4 19V8h16l.002 11H4z"
+                    ></path>
+                  </svg>
+                  85375.64
+                </div>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-gy29k5"
+              >
+                <div class="MuiStack-root css-1xhj18k">
+                  <div class="MuiStack-root css-5sk20m">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    >
+                      2.76
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    >
+                      28
+                    </p>
+                  </div>
+                  <div class="MuiStack-root css-1kgyuku">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    >
+                      3.15
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    >
+                      99
+                    </p>
+                  </div>
+                </div>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-gy29k5"
+              >
+                <div class="MuiStack-root css-1xhj18k">
+                  <div class="MuiStack-root css-5sk20m">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    ></p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    ></p>
+                  </div>
+                  <div class="MuiStack-root css-1kgyuku">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    ></p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    ></p>
+                  </div>
+                </div>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-gy29k5"
+              >
+                <div class="MuiStack-root css-1xhj18k">
+                  <div class="MuiStack-root css-5sk20m">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    >
+                      1.47
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    >
+                      212
+                    </p>
+                  </div>
+                  <div class="MuiStack-root css-1kgyuku">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    >
+                      1.57
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    >
+                      221
+                    </p>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr class="MuiTableRow-root css-1sa68b5">
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-ha2b3j"
+              >
+                <div class="MuiStack-root css-j7qwjs">
+                  <p class="MuiTypography-root MuiTypography-body1 css-1p8texr">
+                    InPlay
+                  </p>
+                  <p class="MuiTypography-root MuiTypography-body1 css-1p8texr">
+                    14:46
+                  </p>
+                </div>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-jup9dp"
+              >
+                <h6
+                  class="MuiTypography-root MuiTypography-subtitle2 css-dn6vr0"
+                >
+                  Pavel Kotov v Jorda Thompson
+                </h6>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-gy29k5"
+              >
+                <div class="MuiStack-root css-dvxtzn">
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 24 24"
+                    class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeMedium css-144pslc"
+                    aria-hidden="true"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M20 6h-5.586l2.293-2.293-1.414-1.414L12 5.586 8.707 2.293 7.293 3.707 9.586 6H4c-1.103 0-2 .897-2 2v11c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V8c0-1.103-.897-2-2-2zM4 19V8h16l.002 11H4z"
+                    ></path>
+                  </svg>
+                  500997.38
+                </div>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-gy29k5"
+              >
+                <div class="MuiStack-root css-1xhj18k">
+                  <div class="MuiStack-root css-5sk20m">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    >
+                      3.1
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    >
+                      72
+                    </p>
+                  </div>
+                  <div class="MuiStack-root css-1kgyuku">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    >
+                      3.2
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    >
+                      864
+                    </p>
+                  </div>
+                </div>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-gy29k5"
+              >
+                <div class="MuiStack-root css-1xhj18k">
+                  <div class="MuiStack-root css-5sk20m">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    ></p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    ></p>
+                  </div>
+                  <div class="MuiStack-root css-1kgyuku">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    ></p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    ></p>
+                  </div>
+                </div>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-gy29k5"
+              >
+                <div class="MuiStack-root css-1xhj18k">
+                  <div class="MuiStack-root css-5sk20m">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    >
+                      1.46
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    >
+                      1K
+                    </p>
+                  </div>
+                  <div class="MuiStack-root css-1kgyuku">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    >
+                      1.47
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    >
+                      151
+                    </p>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr class="MuiTableRow-root css-1sa68b5">
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-ha2b3j"
+              >
+                <div class="MuiStack-root css-j7qwjs">
+                  <p class="MuiTypography-root MuiTypography-body1 css-1p8texr">
+                    InPlay
+                  </p>
+                  <p class="MuiTypography-root MuiTypography-body1 css-1p8texr">
+                    14:46
+                  </p>
+                </div>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-jup9dp"
+              >
+                <h6
+                  class="MuiTypography-root MuiTypography-subtitle2 css-dn6vr0"
+                >
+                  Matte Arnaldi v Franc Tiafoe
+                </h6>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-gy29k5"
+              >
+                <div class="MuiStack-root css-dvxtzn">
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 24 24"
+                    class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeMedium css-144pslc"
+                    aria-hidden="true"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M20 6h-5.586l2.293-2.293-1.414-1.414L12 5.586 8.707 2.293 7.293 3.707 9.586 6H4c-1.103 0-2 .897-2 2v11c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V8c0-1.103-.897-2-2-2zM4 19V8h16l.002 11H4z"
+                    ></path>
+                  </svg>
+                  467754.64
+                </div>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-gy29k5"
+              >
+                <div class="MuiStack-root css-1xhj18k">
+                  <div class="MuiStack-root css-5sk20m">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    >
+                      3.25
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    >
+                      436
+                    </p>
+                  </div>
+                  <div class="MuiStack-root css-1kgyuku">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    >
+                      3.3
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    >
+                      21
+                    </p>
+                  </div>
+                </div>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-gy29k5"
+              >
+                <div class="MuiStack-root css-1xhj18k">
+                  <div class="MuiStack-root css-5sk20m">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    ></p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    ></p>
+                  </div>
+                  <div class="MuiStack-root css-1kgyuku">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    ></p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    ></p>
+                  </div>
+                </div>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-gy29k5"
+              >
+                <div class="MuiStack-root css-1xhj18k">
+                  <div class="MuiStack-root css-5sk20m">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    >
+                      1.44
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    >
+                      48
+                    </p>
+                  </div>
+                  <div class="MuiStack-root css-1kgyuku">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    >
+                      1.45
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    >
+                      978
+                    </p>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr class="MuiTableRow-root css-1sa68b5">
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-ha2b3j"
+              >
+                <div class="MuiStack-root css-j7qwjs">
+                  <p class="MuiTypography-root MuiTypography-body1 css-1p8texr">
+                    InPlay
+                  </p>
+                  <p class="MuiTypography-root MuiTypography-body1 css-1p8texr">
+                    13:08
+                  </p>
+                </div>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-jup9dp"
+              >
+                <h6
+                  class="MuiTypography-root MuiTypography-subtitle2 css-dn6vr0"
+                >
+                  Mats Rosenkranz v Tom Gentzsch
+                </h6>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-gy29k5"
+              >
+                <div class="MuiStack-root css-dvxtzn">
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 24 24"
+                    class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeMedium css-144pslc"
+                    aria-hidden="true"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M20 6h-5.586l2.293-2.293-1.414-1.414L12 5.586 8.707 2.293 7.293 3.707 9.586 6H4c-1.103 0-2 .897-2 2v11c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V8c0-1.103-.897-2-2-2zM4 19V8h16l.002 11H4z"
+                    ></path>
+                  </svg>
+                  30701.89
+                </div>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-gy29k5"
+              >
+                <div class="MuiStack-root css-1xhj18k">
+                  <div class="MuiStack-root css-5sk20m">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    >
+                      1.65
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    >
+                      3
+                    </p>
+                  </div>
+                  <div class="MuiStack-root css-1kgyuku">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    >
+                      1.68
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    >
+                      101
+                    </p>
+                  </div>
+                </div>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-gy29k5"
+              >
+                <div class="MuiStack-root css-1xhj18k">
+                  <div class="MuiStack-root css-5sk20m">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    ></p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    ></p>
+                  </div>
+                  <div class="MuiStack-root css-1kgyuku">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    ></p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    ></p>
+                  </div>
+                </div>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-gy29k5"
+              >
+                <div class="MuiStack-root css-1xhj18k">
+                  <div class="MuiStack-root css-5sk20m">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    >
+                      2.48
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    >
+                      8
+                    </p>
+                  </div>
+                  <div class="MuiStack-root css-1kgyuku">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    >
+                      2.54
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    >
+                      2
+                    </p>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr class="MuiTableRow-root css-1sa68b5">
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-ha2b3j"
+              >
+                <div class="MuiStack-root css-j7qwjs">
+                  <p class="MuiTypography-root MuiTypography-body1 css-1p8texr">
+                    InPlay
+                  </p>
+                  <p class="MuiTypography-root MuiTypography-body1 css-1p8texr">
+                    15:41
+                  </p>
+                </div>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-jup9dp"
+              >
+                <h6
+                  class="MuiTypography-root MuiTypography-subtitle2 css-dn6vr0"
+                >
+                  Benedikt Henning v Daniel Cukierman
+                </h6>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-gy29k5"
+              >
+                <div class="MuiStack-root css-dvxtzn">
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 24 24"
+                    class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeMedium css-144pslc"
+                    aria-hidden="true"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M20 6h-5.586l2.293-2.293-1.414-1.414L12 5.586 8.707 2.293 7.293 3.707 9.586 6H4c-1.103 0-2 .897-2 2v11c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V8c0-1.103-.897-2-2-2zM4 19V8h16l.002 11H4z"
+                    ></path>
+                  </svg>
+                  37830.75
+                </div>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-gy29k5"
+              >
+                <div class="MuiStack-root css-1xhj18k">
+                  <div class="MuiStack-root css-5sk20m">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    >
+                      17.5
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    >
+                      9
+                    </p>
+                  </div>
+                  <div class="MuiStack-root css-1kgyuku">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    >
+                      26
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    >
+                      2
+                    </p>
+                  </div>
+                </div>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-gy29k5"
+              >
+                <div class="MuiStack-root css-1xhj18k">
+                  <div class="MuiStack-root css-5sk20m">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    ></p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    ></p>
+                  </div>
+                  <div class="MuiStack-root css-1kgyuku">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    ></p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    ></p>
+                  </div>
+                </div>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignCenter MuiTableCell-sizeMedium css-gy29k5"
+              >
+                <div class="MuiStack-root css-1xhj18k">
+                  <div class="MuiStack-root css-5sk20m">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    >
+                      1.04
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    >
+                      52
+                    </p>
+                  </div>
+                  <div class="MuiStack-root css-1kgyuku">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-15yvhi8"
+                    >
+                      1.06
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-i1yige"
+                    >
+                      152
+                    </p>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiTableContainer-root css-136bwoc"
+      >
+        <table class="MuiTable-root css-rxit2l">
+          <thead class="MuiTableHead-root css-disv23">
+            <tr class="MuiTableRow-root MuiTableRow-head css-e03dsj">
+              <th
+                class="text-center MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeMedium css-d861ke"
+                scope="col"
+                width="60px"
+              >
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 512 512"
+                  class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeMedium css-17l795x"
+                  aria-hidden="true"
+                  height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M433.2 17.99L159.8 291.4l60.8 60.8-6.3 6.3L494 78.79c0-24.32-36.5-60.8-60.8-60.8zM161.5 64.03a32 32 0 0 0-7.8.59c3.9 21.25 13.8 38.48 30.3 52.48a32 32 0 0 0 3.7-37.13 32 32 0 0 0-26.2-15.94zm-24.1 9.35a32 32 0 0 0-5.1 38.62 32 32 0 0 0 36 14.9c-15.5-14.7-25.9-32.79-30.9-53.52zm26.4 247.22C126.3 378.1 60.46 427.7 19.06 479.5c-4.82 5.9 7.6 18.2 13.53 13.5C84.32 451.6 133.9 385.7 191.4 348.2z"
+                  ></path>
+                </svg>
+              </th>
+              <th
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium css-199x37d"
+                scope="col"
+              >
+                <h6
+                  class="MuiTypography-root MuiTypography-subtitle2 css-1sfdxp7"
+                >
+                  cricket
+                </h6>
+              </th>
+              <th
+                class="text-center MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeMedium css-d861ke"
+                scope="col"
+                width="90px"
+              >
+                Matched
+              </th>
+              <th
+                class="hidden-head text-center MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeMedium css-d861ke"
+                scope="col"
+                width="126px"
+              >
+                1
+              </th>
+              <th
+                class="hidden-head text-center MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeMedium css-d861ke"
+                scope="col"
+                width="126px"
+              >
+                X
+              </th>
+              <th
+                class="hidden-head text-center MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeMedium css-d861ke"
+                scope="col"
+                width="126px"
+              >
+                2
+              </th>
+            </tr>
+          </thead>
+          <tbody class="MuiTableBody-root css-12dfzmm"></tbody>
+        </table>
+      </div>
+      <div
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiTableContainer-root css-136bwoc"
+      >
+        <table class="MuiTable-root css-rxit2l">
+          <thead class="MuiTableHead-root css-disv23">
+            <tr class="MuiTableRow-root MuiTableRow-head css-e03dsj">
+              <th
+                class="text-center MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeMedium css-d861ke"
+                scope="col"
+                width="60px"
+              >
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 512 512"
+                  class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeMedium css-17l795x"
+                  aria-hidden="true"
+                  height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M433.2 17.99L159.8 291.4l60.8 60.8-6.3 6.3L494 78.79c0-24.32-36.5-60.8-60.8-60.8zM161.5 64.03a32 32 0 0 0-7.8.59c3.9 21.25 13.8 38.48 30.3 52.48a32 32 0 0 0 3.7-37.13 32 32 0 0 0-26.2-15.94zm-24.1 9.35a32 32 0 0 0-5.1 38.62 32 32 0 0 0 36 14.9c-15.5-14.7-25.9-32.79-30.9-53.52zm26.4 247.22C126.3 378.1 60.46 427.7 19.06 479.5c-4.82 5.9 7.6 18.2 13.53 13.5C84.32 451.6 133.9 385.7 191.4 348.2z"
+                  ></path>
+                </svg>
+              </th>
+              <th
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium css-199x37d"
+                scope="col"
+              >
+                <h6
+                  class="MuiTypography-root MuiTypography-subtitle2 css-1sfdxp7"
+                >
+                  cricket
+                </h6>
+              </th>
+              <th
+                class="text-center MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeMedium css-d861ke"
+                scope="col"
+                width="90px"
+              >
+                Matched
+              </th>
+              <th
+                class="hidden-head text-center MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeMedium css-d861ke"
+                scope="col"
+                width="126px"
+              >
+                1
+              </th>
+              <th
+                class="hidden-head text-center MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeMedium css-d861ke"
+                scope="col"
+                width="126px"
+              >
+                X
+              </th>
+              <th
+                class="hidden-head text-center MuiTableCell-root MuiTableCell-head MuiTableCell-alignCenter MuiTableCell-sizeMedium css-d861ke"
+                scope="col"
+                width="126px"
+              >
+                2
+              </th>
+            </tr>
+          </thead>
+          <tbody class="MuiTableBody-root css-12dfzmm"></tbody>
+        </table>
+      </div>
+      <footer>
+        <div class="margin-top footer">
+          <div class="row" style="margin: auto">
+            <div class="col" style="background-color: rgb(34, 42, 60)">
+              <div class="footerLinks">
+                <div>
+                  <a href="#/privacyPolicy" target="_blank"> PrivacyPolicy</a>
+                  <a href="#/terms-and-conditions" target="_blank"
+                    >- Terms and Conditions</a
+                  >
+                  <a href="#/rules-regulation" target="_blank"
+                    >- Rules and Regulations</a
+                  >
+                  <a href="#/KYC" target="_blank">- KYC</a>
+                  <a href="#/responsible-game" target="_blank"
+                    >- Responsible Gaming</a
+                  >
+                  <a href="#/about-us" target="_blank">- About Us</a>
+                  <a href="#/self-exclusion-policy" target="_blank"
+                    >- SelfexclusionPolicy</a
+                  >
+                  <a href="#/under-age-policy" target="_blank"
+                    >- UnderagePolicy</a
+                  >
+                  <a href="#/dispute" target="_blank">- Dispute Resolution</a>
+                  <a href="#/aml" target="_blank">- AML</a>
+                  <a href="#/fairness-and-rng" target="_blank"
+                    >- Fairness &amp; RNG</a
+                  >
+                  <a href="#/A-P-B" target="_blank">- Accounts &amp; Bonuses</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer_img">
+          <div class="row justify-content-center">
+            <div class="col-auto">
+              <img
+                src="./public/assets/images/login-footer-image2.webp"
+                alt="BellIconDark Img"
+                class="loginfooterimg"
+              />
+
+              <img
+                src="data:image/png;base64,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"
+                alt="BellIconDark Img"
+                class="loginfooterimgto"
+              />
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- end boady main content -->
+    <div class="sidebar" id="sidebar">
+      <div class="d-flex align-items-center mt-3">
+        <img
+          src="./public/assets/images/logo.webp 512.webp"
+          alt="1obet-logo"
+          width="50"
+          height="50"
+        />
+        <h3>1OBET</h3>
+        <i class="fa fa-times close-toggle ml-5" id="closeToggle"></i>
+      </div>
+      <ul>
+        <li>
+          <a href="dashboard.html" class="menu-item active">
+            <img
+              src="./public/assets/side-menu-icons/light-icons/dashboard.png"
+              alt=""
+            /><span class="m-1">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="tennis.html" class="menu-item">
+            <img
+              src="./public/assets/side-menu-icons/light-icons/tennis.png"
+              alt=""
+            /><span class="m-1">Tennis</span>
+          </a>
+        </li>
+        <li>
+          <a href="cricket.html" class="menu-item">
+            <img
+              src="./public/assets/side-menu-icons/light-icons/cricket.png"
+              alt=""
+            /><span class="ml-1">Cricket</span>
+          </a>
+        </li>
+        <li>
+          <a href="soccer.html" class="menu-item">
+            <img
+              src="./public/assets/side-menu-icons/light-icons/soccer.png"
+              alt=""
+            /><span class="ml-1">Soccer</span>
+          </a>
+        </li>
+        <li>
+          <a href="greyhound.html" class="menu-item">
+            <img
+              src="./public/assets/side-menu-icons/light-icons/royal-casino.png"
+              alt=""
+            /><span class="ml-1">Greyhound</span>
+          </a>
+        </li>
+        <li>
+          <a href="current_postion.html" class="menu-item">
+            <img
+              src="./public/assets/side-menu-icons/light-icons/current-position.png"
+              alt=""
+            /><span class="ml-1">Current position</span>
+          </a>
+        </li>
+        <li>
+          <a href="horserace.html" class="menu-item">
+            <img
+              src="./public/assets/side-menu-icons/light-icons/horse-race.png"
+              alt=""
+            /><span class="ml-1">Horse Race</span>
+          </a>
+        </li>
+        <li>
+          <a href="sportsBook .html" class="menu-item">
+            <img
+              src="./public/assets/side-menu-icons/light-icons/all-sports.png"
+              alt=""
+            /><span class="ml-1">Sports Book</span>
+          </a>
+        </li>
+        <li>
+          <a href="betfair_games.html" class="menu-item">
+            <img
+              src="./public/assets/side-menu-icons/light-icons/bet-fair-games.png"
+              alt=""
+            /><span class="ml-1">Betfair Games</span>
+          </a>
+        </li>
+        <li>
+          <a href="evolution_casino.html" class="menu-item">
+            <img
+              src="./public/assets/side-menu-icons/light-icons/royal-casino.png"
+              alt=""
+            /><span class="ml-1">Evoluation Casino</span>
+          </a>
+        </li>
+        <li>
+          <a href="1obetcasino.html" class="menu-item">
+            <img
+              src="./public/assets/side-menu-icons/light-icons/royal-casino.png"
+              alt=""
+            /><span class="ml-1">1obet Casino</span>
+          </a>
+        </li>
+        <li>
+          <a href="result.html" class="menu-item">
+            <img
+              src="./public/assets/side-menu-icons/light-icons/results.png"
+              alt=""
+            /><span class="ml-1">Result</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="menu-item">
+            <img
+              src="./public/assets/side-menu-icons/light-icons/royal-casino.png"
+              alt=""
+            /><span class="ml-1">Ezugi Casino</span>
+          </a>
+        </li>
+        <li>
+          <a href="120_british_casino.html" class="menu-item">
+            <img
+              src="./public/assets/side-menu-icons/light-icons/royal-casino.png"
+              alt=""
+            /><span class="ml-1">120 British Casino</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <script>
+      const closeToggle = document.getElementById("closeToggle");
+      const menuToggle = document.getElementById("menuToggle");
+      const sidebar = document.getElementById("sidebar");
+      const header = document.getElementById("header");
+      const content = document.querySelector(".content");
+
+      menuToggle.addEventListener("click", function () {
+        sidebar.classList.toggle("open");
+        // Adjust the position of the toggle button and header padding
+        if (sidebar.classList.contains("open")) {
+          if (window.innerWidth <= 690) {
+            header.style.paddingLeft = "0";
+            content.style.paddingLeft = "0";
+          } else if (window.innerWidth <= 790) {
+            header.style.paddingLeft = "250px";
+            content.style.paddingLeft = "250px";
+          } else {
+            header.style.paddingLeft = "308px";
+            content.style.paddingLeft = "310px";
+          }
+        } else {
+          header.style.paddingLeft = "0";
+          content.style.paddingLeft = "0";
+        }
+      });
+      closeToggle.addEventListener("click", function () {
+        sidebar.classList.remove("open");
+      });
+      // window.addEventListener("resize", function () {
+      //   if (sidebar.classList.contains("open")) {
+      //     if (window.innerWidth <= 790) {
+      //       header.style.paddingLeft = "250px";
+      //       content.style.paddingLeft = "250px";
+      //     } else {
+      //       header.style.paddingLeft = "308px";
+      //       content.style.paddingLeft = "310px";
+      //     }
+      //   }
+      // });
+
+      document.querySelectorAll(".menu-item").forEach((item) => {
+        item.addEventListener("click", function () {
+          document.querySelectorAll(".menu-item").forEach((i) => {
+            i.classList.remove("active");
+          });
+          this.classList.add("active");
+        });
+      });
+    </script>
+    <script>
+      const wrapper = document.querySelector(".wrapper");
+      const carousel = document.querySelector(".carousel");
+      const firstCardWidth = carousel.querySelector(".card").offsetWidth;
+      const arrowBtns = document.querySelectorAll(".wrapper i");
+      const carouselChildrens = [...carousel.children];
+
+      let isDragging = false,
+        isAutoPlay = true,
+        startX,
+        startScrollLeft,
+        timeoutId;
+
+      // Get the number of cards that can fit in the carousel at once
+      let cardPerView = Math.round(carousel.offsetWidth / firstCardWidth);
+
+      // Insert copies of the last few cards to beginning of carousel for infinite scrolling
+      carouselChildrens
+        .slice(-cardPerView)
+        .reverse()
+        .forEach((card) => {
+          carousel.insertAdjacentHTML("afterbegin", card.outerHTML);
+        });
+
+      // Insert copies of the first few cards to end of carousel for infinite scrolling
+      carouselChildrens.slice(0, cardPerView).forEach((card) => {
+        carousel.insertAdjacentHTML("beforeend", card.outerHTML);
+      });
+
+      // Scroll the carousel at appropriate postition to hide first few duplicate cards on Firefox
+      carousel.classList.add("no-transition");
+      carousel.scrollLeft = carousel.offsetWidth;
+      carousel.classList.remove("no-transition");
+
+      // Add event listeners for the arrow buttons to scroll the carousel left and right
+      arrowBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          carousel.scrollLeft +=
+            btn.id == "left" ? -firstCardWidth : firstCardWidth;
+        });
+      });
+
+      const dragStart = (e) => {
+        isDragging = true;
+        carousel.classList.add("dragging");
+        // Records the initial cursor and scroll position of the carousel
+        startX = e.pageX;
+        startScrollLeft = carousel.scrollLeft;
+      };
+
+      const dragging = (e) => {
+        if (!isDragging) return; // if isDragging is false return from here
+        // Updates the scroll position of the carousel based on the cursor movement
+        carousel.scrollLeft = startScrollLeft - (e.pageX - startX);
+      };
+
+      const dragStop = () => {
+        isDragging = false;
+        carousel.classList.remove("dragging");
+      };
+
+      const infiniteScroll = () => {
+        // If the carousel is at the beginning, scroll to the end
+        if (carousel.scrollLeft === 0) {
+          carousel.classList.add("no-transition");
+          carousel.scrollLeft = carousel.scrollWidth - 2 * carousel.offsetWidth;
+          carousel.classList.remove("no-transition");
+        }
+        // If the carousel is at the end, scroll to the beginning
+        else if (
+          Math.ceil(carousel.scrollLeft) ===
+          carousel.scrollWidth - carousel.offsetWidth
+        ) {
+          carousel.classList.add("no-transition");
+          carousel.scrollLeft = carousel.offsetWidth;
+          carousel.classList.remove("no-transition");
+        }
+
+        // Clear existing timeout & start autoplay if mouse is not hovering over carousel
+        clearTimeout(timeoutId);
+        if (!wrapper.matches(":hover")) autoPlay();
+      };
+
+      const autoPlay = () => {
+        if (window.innerWidth < 200) return; // Return if window is smaller than 800 or isAutoPlay is false
+        // Autoplay the carousel after every 2500 ms
+        timeoutId = setTimeout(
+          () => (carousel.scrollLeft += firstCardWidth),
+          2500
+        );
+      };
+      autoPlay();
+
+      carousel.addEventListener("mousedown", dragStart);
+      carousel.addEventListener("mousemove", dragging);
+      document.addEventListener("mouseup", dragStop);
+      carousel.addEventListener("scroll", infiniteScroll);
+      wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
+      wrapper.addEventListener("mouseleave", autoPlay);
+    </script>
+    <script>
+      document
+        .getElementById("dropdownToggle")
+        .addEventListener("click", function () {
+          var dropdownMenu = document.querySelector(".dropdown-menu");
+          dropdownMenu.style.display =
+            dropdownMenu.style.display === "block" ? "none" : "block";
+        });
+
+      // Close the dropdown if the user clicks outside of it
+      window.onclick = function (event) {
+        if (!event.target.matches("#dropdownToggle")) {
+          var dropdowns = document.getElementsByClassName("dropdown-menu");
+          for (var i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.style.display === "block") {
+              openDropdown.style.display = "none";
+            }
+          }
+        }
+      };
+    </script>
+  </body>
+</html\
+

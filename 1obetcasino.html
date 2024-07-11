@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1Obet Casino</title>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/69c89fc43e.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- footer style -->
+    <style>
+      .footer .footerLinks {
+        background-color: rgb(34, 42, 60);
+        min-width: 100%;
+        opacity: 0.8;
+        text-align: center;
+      }
+      .footerLinks a {
+        color: white;
+      }
+      .footer {
+        min-width: 100%;
+      }
+      footer {
+        height: 100px;
+      }
+      .footer_img {
+        width: 100%;
+        display: flex;
+        opacity: 0.7;
+        -webkit-box-pack: center;
+        justify-content: center;
+        background-color: rgb(34, 42, 60);
+      }
+      .footer_img .footerLogos {
+        height: auto;
+        width: 100px;
+        display: flex;
+        flex-direction: row;
+        -webkit-box-pack: center;
+        justify-content: center;
+        gap: 10px;
+      }
+      .footer_img .footerLogos .loginImageOne {
+        min-width: 120px;
+        height: auto;
+        cursor: pointer;
+      }
+      .footer_img .footerLogos .loginImageTwo {
+        min-width: auto;
+        height: 40px;
+        margin: auto;
+        cursor: pointer;
+      }
+      .loginfooterimg {
+        width: 120px;
+        height: auto;
+        cursor: pointer;
+      }
+      .loginfooterimgto {
+        margin: auto;
+        height: 35px;
+      }
+    </style>
+
+    <!-- sidebar style -->
+    <style>
+      ul li {
+        list-style: none;
+        text-decoration: none;
+        margin-right: 15px;
+        margin-bottom: 1rem;
+      }
+      ul li a {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        line-height: 40px;
+        font-size: 20px;
+        color: white;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+        padding-left: 10px;
+        border-radius: 10px;
+      }
+      ul li a:hover {
+        text-decoration: none;
+        background-color: #00a826;
+        color: white;
+      }
+      ul li a img {
+        margin-right: 10px;
+        transition: transform 0.3s ease;
+        animation: rotate 2s linear infinite;
+      }
+      ul li a.active img {
+        animation: none;
+      }
+      ul li a.active img {
+        animation: none;
+      }
+      @keyframes rotate {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      ul li a.active {
+        background-color: #00a826;
+      }
+      .menu-toggle {
+        font-size: 35px;
+        color: white;
+        cursor: pointer;
+        transition: all 0.5s ease;
+      }
+      .sidebar {
+        position: fixed;
+        top: 0;
+        left: -300px;
+        width: 300px;
+        height: 100%;
+        background: black;
+        color: white;
+        padding-left: 10px;
+        transition: all 0.5s ease;
+        overflow-y: auto; /* Add scrolling */
+        z-index: 1000;
+      }
+      .sidebar.open {
+        left: 0;
+      }
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2px;
+        background-color: black;
+        color: white;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+
+        transition: padding-left 0.5s ease;
+      }
+      .marquee-container {
+        overflow: hidden;
+        white-space: nowrap;
+        width: 100%;
+        background-color: black;
+        color: white;
+        padding-top: 50px; /* Adjust for fixed header */
+      }
+      .marquee-text {
+        display: inline-block;
+        padding-left: 100%;
+        animation: marquee 15s linear infinite;
+      }
+      @keyframes marquee {
+        0% {
+          transform: translateX(0%);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+      .marquee-container:hover .marquee-text {
+        animation-play-state: paused;
+      }
+      .close-toggle {
+        cursor: pointer;
+
+        margin-left: auto; /* Push to the right */
+      }
+
+      @media screen and (max-width: 790px) {
+        .sidebar {
+          width: 250px;
+        }
+        .sidebar.open ~ #header {
+          padding-left: 250px !important;
+        }
+        .header {
+          font-size: medium;
+        }
+      }
+      @media screen and (max-width: 690) {
+        .content {
+          padding-left: 0 !important;
+        }
+        .sidebar.open ~ #header {
+          padding-left: 0px !important;
+        }
+
+        .sidebar.open ~ .content {
+          padding-left: 0 !important;
+        }
+        .menu-toggle {
+          display: inline-block;
+        }
+      }
+      @media screen and (min-width: 690px) {
+        .close-toggle {
+          display: none;
+        }
+      }
+      @media screen and (max-width: 442px) {
+        .header {
+          padding: 3px;
+        }
+        .timedeaitls_wrapper {
+          align-items: start;
+        }
+      }
+      @media screen and (max-width: 425px) {
+        .menu-toggle {
+          font-size: small;
+        }
+
+        .bettor {
+          font-size: small;
+        }
+        .header {
+          font-size: small;
+          text-wrap: nowrap;
+        }
+        .marquee-text {
+          font-size: small;
+        }
+      }
+      @media screen and (max-width: 320px) {
+        .menu-toggle {
+          font-size: small;
+        }
+
+        .bettor {
+          font-size: x-small;
+        }
+        .header {
+          font-size: x-small;
+          text-wrap: nowrap;
+        }
+      }
+    </style>
+    <!-- black green patti style -->
+    <style>
+      .module_text {
+        line-height: 1.467;
+        font-size: 0.9375rem;
+        font-family: "Public Sans", sans-serif, -apple-system,
+          BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+          sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+        color: rgb(0, 0, 0);
+      }
+      .triangle_left::after {
+        border-right: 20px solid rgba(0, 0, 0, 0);
+        border-top: 38px solid rgb(0, 0, 0);
+        content: "";
+        left: 100%;
+        position: absolute;
+      }
+      .triangle_right::before {
+        border-bottom: 38px solid rgb(0, 168, 38);
+        border-left: 20px solid rgba(0, 0, 0, 0);
+        content: "";
+        position: absolute;
+        right: 100%;
+      }
+      .triangle_right {
+        background-color: rgb(0, 168, 38);
+      }
+      .heigt_sport_book {
+        height: 38px;
+      }
+      .triangle_left {
+        margin-right: 1.375rem;
+        background-color: rgb(0, 0, 0);
+      }
+    </style>
+
+    <!-- sport box images  -->
+    <style>
+      .sport_games {
+        box-sizing: border-box;
+        width: calc(100% + 1.25rem);
+        margin-left: -1.25rem;
+        margin-top: 1rem;
+        padding: 1rem;
+      }
+
+      .card:hover {
+        box-shadow: rgba(0, 177, 129, 0.9) 0px 4px 8px 0px,
+          rgba(0, 177, 129, 0.8) 0px 6px 20px 0px;
+        transform: scale(1.01);
+        cursor: pointer;
+      }
+      .card {
+        line-height: 0;
+        border-radius: 8px 8px 0px 0px;
+        box-shadow: rgba(111, 111, 111, 0.9) 0px 4px 8px 0px,
+          rgba(114, 114, 114, 0.8) 0px 6px 20px 0px;
+        overflow: hidden;
+        transition: box-shadow 0.3s ease 0s, width 0.5s ease 0s;
+      }
+      .card img:hover {
+        transform: scale(1.02);
+      }
+      .card img {
+        border-radius: 8px 8px 0px 0px;
+        transition: transform 0.3s ease 0s;
+      }
+      .card_text {
+        margin: 0px;
+        font-weight: 500;
+        line-height: 1.3334;
+        font-size: 1.125rem;
+        font-family: "Public Sans", sans-serif, -apple-system,
+          BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+          sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        color: rgb(0, 0, 0);
+      }
+    </style>
+    <style>
+      .dropdown-container {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 56px;
+        left: auto;
+        right: 1%;
+        width: 230px;
+        height: 270px;
+        background-color: white;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        border: 1px solid #ddd;
+        overflow: auto;
+        padding: 8px;
+      }
+
+      .dropdown-item {
+        padding: 8px 16px;
+        cursor: pointer;
+        border-radius: 6px;
+      }
+
+      .dropdown-item:hover {
+        background-color: #f1f1f1;
+        color: rgb(0, 168, 38);
+      }
+
+      hr {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header" id="header">
+      <i class="fa fa-bars menu-toggle ml-1" id="menuToggle"></i>
+      <!-- <h5 class="ml-2 mb-0 dashbaord">Dashboard</h5> -->
+      <div class="mx-auto">
+        <span class="navbar-brand mb-0 h1 text-center bettor">Bettor</span>
+      </div>
+      <div class="ml-auto">
+        <span class="navbar-text">B:2378</span>
+        <span class="navbar-text ml-3 text-success">L:0</span>
+        <span class="navbar-text ml-3">Username</span>
+        <span
+          ><svg
+            stroke="currentColor"
+            fill="currentColor"
+            stroke-width="0"
+            viewBox="0 0 512 512"
+            class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeMedium css-1slk8wg"
+            aria-hidden="true"
+            style="height: 1rem; width: 1rem"
+            xmlns="http://www.w3.org/2000/svg"
+            id="dropdownToggle"
+          >
+            <path
+              d="M256 294.1L383 167c9.4-9.4 24.6-9.4 33.9 0s9.3 24.6 0 34L273 345c-9.1 9.1-23.7 9.3-33.1.7L95 201.1c-4.7-4.7-7-10.9-7-17s2.3-12.3 7-17c9.4-9.4 24.6-9.4 33.9 0l127.1 127z"
+            ></path>
+          </svg>
+         <div class="dropdown-menu">
+            <a href="myprofile.html" class="dropdown-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                aria-hidden="true"
+                role="img"
+                font-size="1.375rem"
+                class="iconify iconify--tabler"
+                width="1em"
+                height="1em"
+                viewBox="0 0 24 24"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                >
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path
+                    d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2m1-10l2 2l4-4"
+                  ></path>
+                </g>
+              </svg>
+              My Profile
+            </a>
+            <a href="#" class="dropdown-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                aria-hidden="true"
+                role="img"
+                font-size="1.375rem"
+                class="iconify iconify--tabler"
+                width="1em"
+                height="1em"
+                viewBox="0 0 24 24"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                >
+                  <path
+                    d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 0 0-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 0 0-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 0 0-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 0 0-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 0 0 1.066-2.573c-.94-1.543.826-3.31 2.37-2.37c1 .608 2.296.07 2.572-1.065z"
+                  ></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </g>
+              </svg>
+              Statement
+            </a>
+            <a href="#" class="dropdown-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                aria-hidden="true"
+                role="img"
+                font-size="1.375rem"
+                class="iconify iconify--tabler"
+                width="1em"
+                height="1em"
+                viewBox="0 0 24 24"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                >
+                  <rect width="18" height="14" x="3" y="5" rx="3"></rect>
+                  <path d="M3 10h18M7 15h.01M11 15h2"></path>
+                </g>
+              </svg>
+              Result
+            </a>
+            <hr />
+            <a href="#" class="dropdown-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                aria-hidden="true"
+                role="img"
+                font-size="1.375rem"
+                class="iconify iconify--tabler"
+                width="1em"
+                height="1em"
+                viewBox="0 0 24 24"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                >
+                  <circle cx="12" cy="12" r="4"></circle>
+                  <circle cx="12" cy="12" r="9"></circle>
+                  <path
+                    d="m15 15l3.35 3.35M9 15l-3.35 3.35m0-12.7L9 9m9.35-3.35L15 9"
+                  ></path>
+                </g>
+              </svg>
+              Profit Loss
+            </a>
+            <a href="#" class="dropdown-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                aria-hidden="true"
+                role="img"
+                font-size="1.375rem"
+                class="iconify iconify--tabler"
+                width="1em"
+                height="1em"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M16.7 8A3 3 0 0 0 14 6h-4a3 3 0 0 0 0 6h4a3 3 0 0 1 0 6h-4a3 3 0 0 1-2.7-2M12 3v3m0 12v3"
+                ></path>
+              </svg>
+              Bet History
+            </a>
+            <hr />
+            <a href="#" class="dropdown-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                aria-hidden="true"
+                role="img"
+                font-size="1.375rem"
+                class="iconify iconify--tabler"
+                width="1em"
+                height="1em"
+                viewBox="0 0 24 24"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                >
+                  <path
+                    d="M14 8V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2-2v-2"
+                  ></path>
+                  <path d="M7 12h14l-3-3m0 6l3-3"></path>
+                </g>
+              </svg>
+              Logout
+            </a>
+          </div>
+        </span>
+      </div>
+    </div>
+    <div class="marquee-container">
+      <div class="marquee-text">
+        Welcome to 1obet.com - Announcement - All casino Profit Loss will be 1
+        to 2 Ratio - Her casino may Jeet Har 1 ka 2 ho ge - Welcome to Exchange
+        - Zero commissions on chota bara, kalli jotta, fancies
+      </div>
+    </div>
+    <!-- main boady content -->
+    <div class="content m-2">
+      <div
+        class="heigt_sport_book m-0 d-flex flex-row flex-grow-0 position-relative w-100"
+      >
+        <div
+          class="triangle_left d-flex pl-4 pr-4 align-items-center position-relative"
+        >
+          <p class="text-white m-0 fw-normal module_text">1obet Casino</p>
+        </div>
+        <div
+          class="triangle_right d-flex flex-grow-1 flex-shrink-1 position-relative align-items-center justify-content-end text-whit"
+        ></div>
+      </div>
+
+      <div class="row sport_games">
+        <div class="pt-4 pl-4 col-xs-12 col-sm-12 col-md-3 col-lg-3">
+          <div class="card">
+            <img
+              class="w-100"
+              src="https://d1b82hscw3e9o2.cloudfront.net/media/images/slots/small/es/jpg/es-three-card-poker-lobby-mobile.jpg"
+            />
+            <h5
+              class="card_text"
+              style="
+                text-align: center;
+                background: linear-gradient(
+                  rgba(125, 185, 232, 0),
+                  rgb(0, 177, 129)
+                );
+                text-transform: uppercase;
+                padding: 4px;
+                color: white;
+              "
+            >
+              Live Betting
+            </h5>
+          </div>
+        </div>
+
+        <div class="pt-4 pl-4 col-xs-12 col-sm-12 col-md-3 col-lg-3">
+          <div class="card">
+            <img
+              class="w-100"
+              src="https://d1b82hscw3e9o2.cloudfront.net/media/images/slots/small/be/jpg/be-livecasino.jpg"
+            />
+            <h5
+              class="card_text"
+              style="
+                text-align: center;
+                background: linear-gradient(
+                  rgba(125, 185, 232, 0),
+                  rgb(0, 177, 129)
+                );
+                text-transform: uppercase;
+                padding: 4px;
+                color: white;
+              "
+            >
+              Esports
+            </h5>
+          </div>
+        </div>
+
+        <div class="pt-4 pl-4 col-xs-12 col-sm-12 col-md-3 col-lg-3">
+          <div class="card">
+            <img
+              class="w-100"
+              src="https://d1b82hscw3e9o2.cloudfront.net/media/images/slots/small/es/jpg/es-football-studio-in-spanish-mobile.jpg"
+            />
+            <h5
+              class="card_text"
+              style="
+                text-align: center;
+                background: linear-gradient(
+                  rgba(125, 185, 232, 0),
+                  rgb(0, 177, 129)
+                );
+                text-transform: uppercase;
+                padding: 4px;
+                color: white;
+              "
+            >
+              Sportsbook
+            </h5>
+          </div>
+        </div>
+        <div class="pt-4 pl-4 col-xs-12 col-sm-12 col-md-3 col-lg-3">
+          <div class="card">
+            <img
+              class="w-100"
+              src="https://d1b82hscw3e9o2.cloudfront.net/media/images/slots/small/ez/jpg/ez-sic-bo.jpg"
+            />
+            <h5
+              class="card_text"
+              style="
+                text-align: center;
+                background: linear-gradient(
+                  rgba(125, 185, 232, 0),
+                  rgb(0, 177, 129)
+                );
+                text-transform: uppercase;
+                padding: 4px;
+                color: white;
+              "
+            >
+              Esports
+            </h5>
+          </div>
+        </div>
+        <div class="pt-4 pl-4 col-xs-12 col-sm-12 col-md-3 col-lg-3">
+          <div class="card">
+            <img
+              class="w-100"
+              src="https://d1b82hscw3e9o2.cloudfront.net/media/images/slots/small/es/jpg/es-extra-chili-epic-spins-mobile.jpg"
+            />
+            <h5
+              class="card_text"
+              style="
+                text-align: center;
+                background: linear-gradient(
+                  rgba(125, 185, 232, 0),
+                  rgb(0, 177, 129)
+                );
+                text-transform: uppercase;
+                padding: 4px;
+                color: white;
+              "
+            >
+              Esports
+            </h5>
+          </div>
+        </div>
+        <div class="pt-4 pl-4 col-xs-12 col-sm-12 col-md-3 col-lg-3">
+          <div class="card">
+            <img
+              class="w-100"
+              src="https://d1b82hscw3e9o2.cloudfront.net/media/images/slots/small/ez/jpg/ez-bet-on-teen-patti.jpg"
+            />
+            <h5
+              class="card_text"
+              style="
+                text-align: center;
+                background: linear-gradient(
+                  rgba(125, 185, 232, 0),
+                  rgb(0, 177, 129)
+                );
+                text-transform: uppercase;
+                padding: 4px;
+                color: white;
+              "
+            >
+              Esports
+            </h5>
+          </div>
+        </div>
+        <div class="pt-4 pl-4 col-xs-12 col-sm-12 col-md-3 col-lg-3">
+          <div class="card">
+            <img
+              class="w-100"
+              src="https://d1b82hscw3e9o2.cloudfront.net/media/images/slots/small/ez/jpg/ez-blackjack-salon-prive-mobile.jpg"
+            />
+            <h5
+              class="card_text"
+              style="
+                text-align: center;
+                background: linear-gradient(
+                  rgba(125, 185, 232, 0),
+                  rgb(0, 177, 129)
+                );
+                text-transform: uppercase;
+                padding: 4px;
+                color: white;
+              "
+            >
+              Esports
+            </h5>
+          </div>
+        </div>
+        <div class="pt-4 pl-4 col-xs-12 col-sm-12 col-md-3 col-lg-3">
+          <div class="card">
+            <img
+              class="w-100"
+              src="https://d1b82hscw3e9o2.cloudfront.net/media/images/slots/small/es/jpg/es-first-person-xxxtreme-lightning-roulette-mobile.jpg"
+            />
+            <h5
+              class="card_text"
+              style="
+                text-align: center;
+                background: linear-gradient(
+                  rgba(125, 185, 232, 0),
+                  rgb(0, 177, 129)
+                );
+                text-transform: uppercase;
+                padding: 4px;
+                color: white;
+              "
+            >
+              Esports
+            </h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="m-3" id="footer">
+      <div class="margin-top footer">
+        <div class="row" style="margin: auto">
+          <div class="col" style="background-color: rgb(34, 42, 60)">
+            <div class="footerLinks">
+              <div>
+                <a href="#/privacyPolicy" target="_blank"> PrivacyPolicy</a>
+                <a href="#/terms-and-conditions" target="_blank"
+                  >- Terms and Conditions</a
+                >
+                <a href="#/rules-regulation" target="_blank"
+                  >- Rules and Regulations</a
+                >
+                <a href="#/KYC" target="_blank">- KYC</a>
+                <a href="#/responsible-game" target="_blank"
+                  >- Responsible Gaming</a
+                >
+                <a href="#/about-us" target="_blank">- About Us</a>
+                <a href="#/self-exclusion-policy" target="_blank"
+                  >- SelfexclusionPolicy</a
+                >
+                <a href="#/under-age-policy" target="_blank"
+                  >- UnderagePolicy</a
+                >
+                <a href="#/dispute" target="_blank">- Dispute Resolution</a>
+                <a href="#/aml" target="_blank">- AML</a>
+                <a href="#/fairness-and-rng" target="_blank"
+                  >- Fairness &amp; RNG</a
+                >
+                <a href="#/A-P-B" target="_blank">- Accounts &amp; Bonuses</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer_img">
+        <div class="row justify-content-center">
+          <div class="col-auto">
+            <img
+              src="./public/assets/images/login-footer-image2.webp"
+              alt="BellIconDark Img"
+              class="loginfooterimg"
+            />
+
+            <img
+              src="data:image/png;base64,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"
+              alt="BellIconDark Img"
+              class="loginfooterimgto"
+            />
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="sidebar" id="sidebar">
+      <div class="d-flex align-items-center mt-3">
+        <img
+          src="./public/assets/images/logo.webp 512.webp"
+          alt="1obet-logo"
+          width="50"
+          height="50"
+        />
+        <h3>1OBET</h3>
+        <i class="fa fa-times close-toggle ml-5" id="closeToggle"></i>
+      </div>
+      <ul class="p-0">
+        <li>
+          <a href="dashboard.html" class="menu-item">
+            <img
+              src="./public/assets/side-menu-icons/light-icons/dashboard.png"
+              alt=""
+            /><span class="m-1">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="tennis.html" class="menu-item">
+            <img
+              src="./public/assets/side-menu-icons/light-icons/tennis.png"
+              alt=""
+            /><span class="m-1">Tennis</span>
+          </a>
+        </li>
+        <li>
+          <a href="cricket.html" class="menu-item">
+            <img
+              src="./public/assets/side-menu-icons/light-icons/cricket.png"
+              alt=""
+            /><span class="ml-1">Cricket</span>
+          </a>
+        </li>
+        <li>
+          <a href="soccer.html" class="menu-item">
+            <img
+              src="./public/assets/side-menu-icons/light-icons/soccer.png"
+              alt=""
+            /><span class="ml-1">Soccer</span>
+          </a>
+        </li>
+        <li>
+          <a href="greyhound.html" class="menu-item">
+            <img
+              src="./public/assets/side-menu-icons/light-icons/royal-casino.png"
+              alt=""
+            /><span class="ml-1">Greyhound</span>
+          </a>
+        </li>
+        <li>
+          <a href="current_postion.html" class="menu-item">
+            <img
+              src="./public/assets/side-menu-icons/light-icons/current-position.png"
+              alt=""
+            /><span class="ml-1">Current position</span>
+          </a>
+        </li>
+        <li>
+          <a href="horserace.html" class="menu-item">
+            <img
+              src="./public/assets/side-menu-icons/light-icons/horse-race.png"
+              alt=""
+            /><span class="ml-1">Horse Race</span>
+          </a>
+        </li>
+        <li>
+          <a href="sportsBook.html" class="menu-item">
+            <img
+              src="./public/assets/side-menu-icons/light-icons/all-sports.png"
+              alt=""
+            /><span class="ml-1">Sports Book</span>
+          </a>
+        </li>
+        <li>
+          <a href="betfair_games.html" class="menu-item">
+            <img
+              src="./public/assets/side-menu-icons/light-icons/bet-fair-games.png"
+              alt=""
+            /><span class="ml-1">Betfair Games</span>
+          </a>
+        </li>
+        <li>
+          <a href="evolution_casino.html" class="menu-item">
+            <img
+              src="./public/assets/side-menu-icons/light-icons/royal-casino.png"
+              alt=""
+            /><span class="ml-1">Evoluation Casino</span>
+          </a>
+        </li>
+        <li>
+          <a href="1obetcasino.html" class="menu-item active">
+            <img
+              src="./public/assets/side-menu-icons/light-icons/royal-casino.png"
+              alt=""
+            /><span class="ml-1">1obet Casino</span>
+          </a>
+        </li>
+        <li>
+          <a href="result.html" class="menu-item">
+            <img
+              src="./public/assets/side-menu-icons/light-icons/results.png"
+              alt=""
+            /><span class="ml-1">Result</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="menu-item">
+            <img
+              src="./public/assets/side-menu-icons/light-icons/royal-casino.png"
+              alt=""
+            /><span class="ml-1">Ezugi Casino</span>
+          </a>
+        </li>
+        <li>
+          <a href="120_british_casino.html" class="menu-item">
+            <img
+              src="./public/assets/side-menu-icons/light-icons/royal-casino.png"
+              alt=""
+            /><span class="ml-1">120 British Casino</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      const closeToggle = document.getElementById("closeToggle");
+      const menuToggle = document.getElementById("menuToggle");
+      const sidebar = document.getElementById("sidebar");
+      const header = document.getElementById("header");
+      const content = document.querySelector(".content");
+      const footer = document.getElementById("footer");
+
+      menuToggle.addEventListener("click", function () {
+        sidebar.classList.toggle("open");
+        // Adjust the position of the toggle button and header padding
+        if (sidebar.classList.contains("open")) {
+          if (window.innerWidth <= 690) {
+            header.style.paddingLeft = "0";
+            content.style.paddingLeft = "0";
+            footer.style.paddingLeft = "0";
+          } else if (window.innerWidth <= 790) {
+            header.style.paddingLeft = "250px";
+            content.style.paddingLeft = "250px";
+            footer.style.paddingLeft = "250px";
+          } else {
+            header.style.paddingLeft = "308px";
+            content.style.paddingLeft = "310px";
+            footer.style.paddingLeft = "310px";
+          }
+        } else {
+          header.style.paddingLeft = "0";
+          content.style.paddingLeft = "0";
+          footer.style.paddingLeft = "0";
+        }
+      });
+      closeToggle.addEventListener("click", function () {
+        sidebar.classList.remove("open");
+        header.style.paddingLeft = "0";
+        content.style.paddingLeft = "0";
+        footer.style.paddingLeft = "0";
+      });
+      window.addEventListener("resize", function () {
+        if (sidebar.classList.contains("open")) {
+          if (window.innerWidth <= 690) {
+            header.style.paddingLeft = "0";
+            content.style.paddingLeft = "0";
+            footer.style.paddingLeft = "0"; // Add this line
+          } else if (window.innerWidth <= 790) {
+            header.style.paddingLeft = "250px";
+            content.style.paddingLeft = "250px";
+            footer.style.paddingLeft = "250px"; // Add this line
+          } else {
+            header.style.paddingLeft = "308px";
+            content.style.paddingLeft = "310px";
+            footer.style.paddingLeft = "310px"; // Add this line
+          }
+        }
+      });
+
+      document.querySelectorAll(".menu-item").forEach((item) => {
+        item.addEventListener("click", function () {
+          document.querySelectorAll(".menu-item").forEach((i) => {
+            i.classList.remove("active");
+          });
+          this.classList.add("active");
+        });
+      });
+    </script>
+    <script>
+      document
+        .getElementById("dropdownToggle")
+        .addEventListener("click", function () {
+          var dropdownMenu = document.querySelector(".dropdown-menu");
+          dropdownMenu.style.display =
+            dropdownMenu.style.display === "block" ? "none" : "block";
+        });
+
+      // Close the dropdown if the user clicks outside of it
+      window.onclick = function (event) {
+        if (!event.target.matches("#dropdownToggle")) {
+          var dropdowns = document.getElementsByClassName("dropdown-menu");
+          for (var i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.style.display === "block") {
+              openDropdown.style.display = "none";
+            }
+          }
+        }
+      };
+    </script>
+  </body>
+</html>
