@@ -167,7 +167,7 @@
       .marquee-text {
         display: inline-block;
         padding-left: 100%;
-        animation: marquee 15s linear infinite;
+        animation: marquee 30s linear infinite;
       }
       @keyframes marquee {
         0% {
@@ -717,6 +717,18 @@
           max-width: 100%;
         }
       }
+      @media screen and (max-width: 670px) {
+        .myprofile_details {
+          display: block !important;
+        }
+      }
+      .myprofile_details {
+        position: relative;
+        z-index: -1;
+      }
+      .username:hover {
+        text-decoration: none;
+      }
     </style>
   </head>
   <body>
@@ -729,8 +741,10 @@
       <div class="ml-auto">
         <span class="navbar-text">B:2378</span>
         <span class="navbar-text ml-3 text-success">L:0</span>
-        <span class="navbar-text ml-3">Username</span>
-        <span
+        <a href="#user" class="username text-white">
+          <span class="navbar-text ml-3">Username</span>
+        </a>
+        <span class="mr-2"
           ><svg
             stroke="currentColor"
             fill="currentColor"
@@ -774,7 +788,7 @@
               </svg>
               My Profile
             </a>
-            <a href="#" class="dropdown-item">
+            <a href="statement.html" class="dropdown-item">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -919,7 +933,7 @@
     </div>
     <!-- main boady content -->
     <div class="content m-3">
-      <div class="d-flex">
+      <div class="d-flex myprofile_details">
         <div
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-iol86l"
         >
@@ -1621,7 +1635,7 @@
           </a>
         </li>
         <li>
-          <a href="tennis.html" class="menu-item active">
+          <a href="tennis.html" class="menu-item">
             <img
               src="./public/assets/side-menu-icons/light-icons/tennis.png"
               alt=""

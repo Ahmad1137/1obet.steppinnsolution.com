@@ -162,7 +162,7 @@
       .marquee-text {
         display: inline-block;
         padding-left: 100%;
-        animation: marquee 15s linear infinite;
+        animation: marquee 30s linear infinite;
       }
       @keyframes marquee {
         0% {
@@ -365,6 +365,9 @@
       hr {
         margin: 0;
       }
+      .username:hover {
+        text-decoration: none;
+      }
     </style>
   </head>
   <body>
@@ -377,8 +380,10 @@
       <div class="ml-auto">
         <span class="navbar-text">B:2378</span>
         <span class="navbar-text ml-3 text-success">L:0</span>
-        <span class="navbar-text ml-3">Username</span>
-        <span
+        <a href="#user" class="username text-white">
+          <span class="navbar-text ml-3">Username</span>
+        </a>
+        <span class="mr-2"
           ><svg
             stroke="currentColor"
             fill="currentColor"

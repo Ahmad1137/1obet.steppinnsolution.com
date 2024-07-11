@@ -171,7 +171,7 @@
       .marquee-text {
         display: inline-block;
         padding-left: 100%;
-        animation: marquee 15s linear infinite;
+        animation: marquee 30s linear infinite;
       }
       @keyframes marquee {
         0% {
@@ -296,9 +296,6 @@
       .triangle_left {
         margin-right: 1.375rem;
         background-color: rgb(0, 0, 0);
-      }
-      svg {
-        background: rgb(0, 168, 38);
       }
     </style>
     <style>
@@ -757,6 +754,9 @@
       hr {
         margin: 0;
       }
+      .username:hover {
+        text-decoration: none;
+      }
     </style>
   </head>
   <body>
@@ -769,8 +769,10 @@
       <div class="ml-auto">
         <span class="navbar-text">B:2378</span>
         <span class="navbar-text ml-3 text-success">L:0</span>
-        <span class="navbar-text ml-3">Username</span>
-        <span
+        <a href="#user" class="username text-white">
+          <span class="navbar-text ml-3">Username</span>
+        </a>
+        <span class="mr-2"
           ><svg
             stroke="currentColor"
             fill="currentColor"
@@ -786,7 +788,7 @@
               d="M256 294.1L383 167c9.4-9.4 24.6-9.4 33.9 0s9.3 24.6 0 34L273 345c-9.1 9.1-23.7 9.3-33.1.7L95 201.1c-4.7-4.7-7-10.9-7-17s2.3-12.3 7-17c9.4-9.4 24.6-9.4 33.9 0l127.1 127z"
             ></path>
           </svg>
-         <div class="dropdown-menu">
+          <div class="dropdown-menu">
             <a href="myprofile.html" class="dropdown-item">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -814,7 +816,7 @@
               </svg>
               My Profile
             </a>
-            <a href="#" class="dropdown-item">
+            <a href="statement.html" class="dropdown-item">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -979,6 +981,7 @@
               width: 28px;
               border-radius: 50%;
               margin-right: 3px;
+              background: #00a826;
             "
           >
             <g></g>
@@ -1088,6 +1091,7 @@
             >
               <span class="selected-value ml-1">10</span>
               <svg
+                style="background: #00a826"
                 class="css-1cmd6q3"
                 focusable="false"
                 aria-hidden="true"
@@ -1327,7 +1331,7 @@
           </a>
         </li>
         <li>
-          <a href="result.html" class="menu-item">
+          <a href="result.html" class="menu-item active">
             <img
               src="./public/assets/side-menu-icons/light-icons/results.png"
               alt=""
