@@ -220,6 +220,9 @@
         .close-toggle {
           display: none;
         }
+        .timefromto {
+          flex-flow: column !important;
+        }
       }
       @media screen and (max-width: 442px) {
         .header {
@@ -299,11 +302,6 @@
       }
     </style>
     <style>
-      @media screen and (max-width: 425px) {
-        .inputfields {
-          width: 80px;
-        }
-      }
       .datetime_input {
         background-color: rgb(255, 255, 255);
         color: rgb(0, 0, 0);
@@ -998,7 +996,7 @@
       <div class="datetime_input w-100 bg-none overflow-hidden mb-2">
         <div class="p-0">
           <div class="p-3">
-            <div class="d-flex flex-row gap align-items-center">
+            <div class="timefromto d-flex flex-row gap align-items-center">
               <div class="d-inline-block p-0 border-0">
                 <div class="position-relative d-inline-block w-100">
                   <span

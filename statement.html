@@ -201,9 +201,13 @@
           font-size: medium;
         }
       }
-      @media screen and (max-width: 690) {
+
+      @media screen and (max-width: 690px) {
         .content {
           padding-left: 0 !important;
+        }
+        .timefromto {
+          flex-flow: column !important;
         }
         .sidebar.open ~ #header {
           padding-left: 0px !important;
@@ -214,6 +218,12 @@
         }
         .menu-toggle {
           display: inline-block;
+        }
+        .css-cr5cwv {
+          display: block !important;
+        }
+        .css-9u59n1 {
+          width: 50% !important;
         }
       }
       @media screen and (min-width: 690px) {
@@ -299,11 +309,6 @@
       }
     </style>
     <style>
-      @media screen and (max-width: 425px) {
-        .inputfields {
-          width: 80px;
-        }
-      }
       .datetime_input {
         background-color: rgb(255, 255, 255);
         color: rgb(0, 0, 0);
@@ -415,7 +420,7 @@
         font-weight: 500;
         border: 1px solid rgb(0, 168, 38);
         color: rgb(0, 168, 38);
-        min-width: 50px;
+        min-width: 60px;
         text-transform: none;
         transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
           box-shadow 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
@@ -677,7 +682,7 @@
         align-items: center;
         justify-content: space-between;
         padding: 10px;
-        border: 1px solid #ccc;
+
         border-radius: 4px;
         cursor: pointer;
       }
@@ -994,7 +999,7 @@
       <div class="datetime_input w-100 bg-none overflow-hidden mb-2">
         <div class="p-0">
           <div class="p-3">
-            <div class="d-flex flex-row gap align-items-center">
+            <div class="timefromto d-flex flex-row gap align-items-center">
               <div class="d-inline-block p-0 border-0">
                 <div class="position-relative d-inline-block w-100">
                   <span
@@ -1069,7 +1074,7 @@
         ></div>
       </div>
       <div class="css-cr5cwv">
-        <div class="dropdown-container d-flex css-k6senv">
+        <div class="dropdown-container d-flex ml-3 css-k6senv">
           <h6 class="css-qzylx">Show</h6>
           <div class="dropdown">
             <div
