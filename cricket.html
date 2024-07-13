@@ -827,7 +827,7 @@
         background-color: #00a826;
       }
       .menu-toggle {
-        font-size: 35px;
+        font-size: 1.5rem;
         color: white;
         cursor: pointer;
         transition: all 0.5s ease;
@@ -835,8 +835,8 @@
       .sidebar {
         position: fixed;
         top: 0;
-        left: -300px;
-        width: 300px;
+        left: -260px;
+        width: 260px;
         height: 100%;
         background: black;
         color: white;
@@ -857,9 +857,14 @@
         color: white;
         position: fixed;
         top: 0;
-        width: 100%;
+        width: calc(100% - 32px);
         z-index: 1000;
-        transition: padding-left 0.5s ease;
+        transition: padding-left 0.5s ease, margin 0.5s ease; /* Added margin transition */
+        font-size: 0.9rem;
+        margin-top: 1rem;
+        border-radius: 6px;
+        min-height: 50px;
+        flex-wrap: wrap; /* Allow wrapping */
       }
       .marquee-container {
         overflow: hidden;
@@ -867,7 +872,9 @@
         width: 100%;
         background-color: black;
         color: white;
-        padding-top: 50px; /* Adjust for fixed header */
+        border-radius: 6px;
+        padding-top: 0px;
+        padding-left: 10px;
       }
       .marquee-text {
         display: inline-block;
@@ -928,7 +935,7 @@
         }
         .sound_screen {
           position: absolute;
-          top: 34%;
+          top: 20%;
           text-align: center;
           font-size: 1.8rem;
         }
@@ -957,7 +964,7 @@
       @media screen and (max-width: 320px) {
         .sound_screen {
           position: absolute;
-          top: 40%;
+          top: 30%;
           text-align: center;
           font-size: 1.8rem;
         }
@@ -1018,1538 +1025,1567 @@
       .username:hover {
         text-decoration: none;
       }
+      .margin-top {
+        margin-top: 6rem;
+      }
     </style>
   </head>
   <body>
-    <div class="header" id="header">
-      <i class="fa fa-bars menu-toggle ml-1" id="menuToggle"></i>
-      <!-- <h5 class="ml-2 mb-0 dashbaord">Dashboard</h5> -->
-      <div class="mx-auto">
-        <span class="navbar-brand mb-0 h1 text-center bettor">Bettor</span>
-      </div>
-      <div class="ml-auto">
-        <span class="navbar-text">B:2378</span>
-        <span class="navbar-text ml-3 text-success">L:0</span>
-        <a href="#user" class="username text-white">
-          <span class="navbar-text ml-3">Username</span>
-        </a>
-        <span class="mr-2"
-          ><svg
-            stroke="currentColor"
-            fill="currentColor"
-            stroke-width="0"
-            viewBox="0 0 512 512"
-            class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeMedium css-1slk8wg"
-            aria-hidden="true"
-            style="height: 1rem; width: 1rem"
-            xmlns="http://www.w3.org/2000/svg"
-            id="dropdownToggle"
-          >
-            <path
-              d="M256 294.1L383 167c9.4-9.4 24.6-9.4 33.9 0s9.3 24.6 0 34L273 345c-9.1 9.1-23.7 9.3-33.1.7L95 201.1c-4.7-4.7-7-10.9-7-17s2.3-12.3 7-17c9.4-9.4 24.6-9.4 33.9 0l127.1 127z"
-            ></path>
-          </svg>
-          <div class="dropdown-menu">
-            <a href="myprofile.html" class="dropdown-item">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                aria-hidden="true"
-                role="img"
-                font-size="1.375rem"
-                class="iconify iconify--tabler"
-                width="1em"
-                height="1em"
-                viewBox="0 0 24 24"
-              >
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="1.5"
-                >
-                  <circle cx="9" cy="7" r="4"></circle>
-                  <path
-                    d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2m1-10l2 2l4-4"
-                  ></path>
-                </g>
-              </svg>
-              My Profile
-            </a>
-            <a href="statement.html" class="dropdown-item">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                aria-hidden="true"
-                role="img"
-                font-size="1.375rem"
-                class="iconify iconify--tabler"
-                width="1em"
-                height="1em"
-                viewBox="0 0 24 24"
-              >
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="1.5"
-                >
-                  <path
-                    d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 0 0-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 0 0-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 0 0-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 0 0-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 0 0 1.066-2.573c-.94-1.543.826-3.31 2.37-2.37c1 .608 2.296.07 2.572-1.065z"
-                  ></path>
-                  <circle cx="12" cy="12" r="3"></circle>
-                </g>
-              </svg>
-              Statement
-            </a>
-            <a href="#" class="dropdown-item">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                aria-hidden="true"
-                role="img"
-                font-size="1.375rem"
-                class="iconify iconify--tabler"
-                width="1em"
-                height="1em"
-                viewBox="0 0 24 24"
-              >
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="1.5"
-                >
-                  <rect width="18" height="14" x="3" y="5" rx="3"></rect>
-                  <path d="M3 10h18M7 15h.01M11 15h2"></path>
-                </g>
-              </svg>
-              Result
-            </a>
-            <hr />
-            <a href="#" class="dropdown-item">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                aria-hidden="true"
-                role="img"
-                font-size="1.375rem"
-                class="iconify iconify--tabler"
-                width="1em"
-                height="1em"
-                viewBox="0 0 24 24"
-              >
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="1.5"
-                >
-                  <circle cx="12" cy="12" r="4"></circle>
-                  <circle cx="12" cy="12" r="9"></circle>
-                  <path
-                    d="m15 15l3.35 3.35M9 15l-3.35 3.35m0-12.7L9 9m9.35-3.35L15 9"
-                  ></path>
-                </g>
-              </svg>
-              Profit Loss
-            </a>
-            <a href="#" class="dropdown-item">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                aria-hidden="true"
-                role="img"
-                font-size="1.375rem"
-                class="iconify iconify--tabler"
-                width="1em"
-                height="1em"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="1.5"
-                  d="M16.7 8A3 3 0 0 0 14 6h-4a3 3 0 0 0 0 6h4a3 3 0 0 1 0 6h-4a3 3 0 0 1-2.7-2M12 3v3m0 12v3"
-                ></path>
-              </svg>
-              Bet History
-            </a>
-            <hr />
-            <a href="#" class="dropdown-item">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                aria-hidden="true"
-                role="img"
-                font-size="1.375rem"
-                class="iconify iconify--tabler"
-                width="1em"
-                height="1em"
-                viewBox="0 0 24 24"
-              >
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="1.5"
-                >
-                  <path
-                    d="M14 8V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2-2v-2"
-                  ></path>
-                  <path d="M7 12h14l-3-3m0 6l3-3"></path>
-                </g>
-              </svg>
-              Logout
-            </a>
-          </div>
-        </span>
-      </div>
-    </div>
-    <div class="marquee-container">
-      <div class="marquee-text">
-        Welcome to 1obet.com - Announcement - All casino Profit Loss will be 1
-        to 2 Ratio - Her casino may Jeet Har 1 ka 2 ho ge - Welcome to Exchange
-        - Zero commissions on chota bara, kalli jotta, fancies
-      </div>
-    </div>
     <!-- main boady content -->
-    <div class="content m-2 d-flex display_block">
-      <div class="w-100">
-        <div class="mainheader p-2 mt-1">
-          <div class="svg-icon mr-3">
-            <svg
+    <div class="content m-3">
+      <div class="header pl-4 pt-2" id="header">
+        <i class="fa fa-bars menu-toggle ml-1" id="menuToggle"></i>
+        <div class="ml-auto">
+          <span class="navbar-brand mb-0 h1 text-center bettor">Bettor</span>
+        </div>
+        <div class="ml-auto">
+          <span class="navbar-text">B:2378</span>
+          <span class="navbar-text ml-3 text-success">L:0</span>
+          <a href="#user" class="username text-white">
+            <span class="navbar-text ml-3">Username</span>
+          </a>
+          <span class="mr-2"
+            ><svg
               stroke="currentColor"
               fill="currentColor"
               stroke-width="0"
               viewBox="0 0 512 512"
-              height="1em"
-              width="1em"
+              class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeMedium css-1slk8wg"
+              aria-hidden="true"
+              style="height: 1rem; width: 1rem"
               xmlns="http://www.w3.org/2000/svg"
+              id="dropdownToggle"
             >
               <path
-                d="M433.2 17.99L159.8 291.4l60.8 60.8-6.3 6.3L494 78.79c0-24.32-36.5-60.8-60.8-60.8zM161.5 64.03a32 32 0 0 0-7.8.59c3.9 21.25 13.8 38.48 30.3 52.48a32 32 0 0 0 3.7-37.13 32 32 0 0 0-26.2-15.94zm-24.1 9.35a32 32 0 0 0-5.1 38.62 32 32 0 0 0 36 14.9c-15.5-14.7-25.9-32.79-30.9-53.52zm26.4 247.22C126.3 378.1 60.46 427.7 19.06 479.5c-4.82 5.9 7.6 18.2 13.53 13.5C84.32 451.6 133.9 385.7 191.4 348.2z"
+                d="M256 294.1L383 167c9.4-9.4 24.6-9.4 33.9 0s9.3 24.6 0 34L273 345c-9.1 9.1-23.7 9.3-33.1.7L95 201.1c-4.7-4.7-7-10.9-7-17s2.3-12.3 7-17c9.4-9.4 24.6-9.4 33.9 0l127.1 127z"
               ></path>
             </svg>
-          </div>
-          <div class="timedeaitls_wrapper">
-            <div class="timedeaitls">
-              <span
-                ><span>2 hours and 39 minutes ago | </span
-                ><span>Jun 24 9:30 AM</span></span
-              >
-              <div class="timedeaitls">
-                <h1 class="m-0 font-size">
-                  Sri Lanka Women v West Indies Women
-                </h1>
-                <div>Matched: 3,915,808</div>
-              </div>
-            </div>
-            <div>
-              <h4>OPEN</h4>
-              <div class="sound_screen">
+            <div class="dropdown-menu">
+              <a href="myprofile.html" class="dropdown-item">
                 <svg
-                  stroke="currentColor"
-                  fill="currentColor"
-                  stroke-width="0"
-                  viewBox="0 0 16 16"
-                  height="1em"
-                  width="1em"
                   xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06zm7.137 2.096a.5.5 0 0 1 0 .708L12.207 8l1.647 1.646a.5.5 0 0 1-.708.708L11.5 8.707l-1.646 1.647a.5.5 0 0 1-.708-.708L10.793 8 9.146 6.354a.5.5 0 1 1 .708-.708L11.5 7.293l1.646-1.647a.5.5 0 0 1 .708 0z"
-                  ></path>
-                </svg>
-                <svg
-                  stroke="currentColor"
-                  fill="currentColor"
-                  stroke-width="0"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  aria-hidden="true"
+                  role="img"
+                  font-size="1.375rem"
+                  class="iconify iconify--tabler"
+                  width="1em"
+                  height="1em"
                   viewBox="0 0 24 24"
-                  height="1em"
-                  width="1em"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                  >
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path
+                      d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2m1-10l2 2l4-4"
+                    ></path>
+                  </g>
+                </svg>
+                My Profile
+              </a>
+              <a href="statement.html" class="dropdown-item">
+                <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  style="cursor: pointer"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  aria-hidden="true"
+                  role="img"
+                  font-size="1.375rem"
+                  class="iconify iconify--tabler"
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 24 24"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                  >
+                    <path
+                      d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 0 0-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 0 0-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 0 0-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 0 0-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 0 0 1.066-2.573c-.94-1.543.826-3.31 2.37-2.37c1 .608 2.296.07 2.572-1.065z"
+                    ></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </g>
+                </svg>
+                Statement
+              </a>
+              <a href="#" class="dropdown-item">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  aria-hidden="true"
+                  role="img"
+                  font-size="1.375rem"
+                  class="iconify iconify--tabler"
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 24 24"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                  >
+                    <rect width="18" height="14" x="3" y="5" rx="3"></rect>
+                    <path d="M3 10h18M7 15h.01M11 15h2"></path>
+                  </g>
+                </svg>
+                Result
+              </a>
+              <hr />
+              <a href="#" class="dropdown-item">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  aria-hidden="true"
+                  role="img"
+                  font-size="1.375rem"
+                  class="iconify iconify--tabler"
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 24 24"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                  >
+                    <circle cx="12" cy="12" r="4"></circle>
+                    <circle cx="12" cy="12" r="9"></circle>
+                    <path
+                      d="m15 15l3.35 3.35M9 15l-3.35 3.35m0-12.7L9 9m9.35-3.35L15 9"
+                    ></path>
+                  </g>
+                </svg>
+                Profit Loss
+              </a>
+              <a href="#" class="dropdown-item">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  aria-hidden="true"
+                  role="img"
+                  font-size="1.375rem"
+                  class="iconify iconify--tabler"
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 24 24"
                 >
                   <path
-                    d="M20 6h-5.586l2.293-2.293-1.414-1.414L12 5.586 8.707 2.293 7.293 3.707 9.586 6H4c-1.103 0-2 .897-2 2v11c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V8c0-1.103-.897-2-2-2zM4 19V8h16l.002 11H4z"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M16.7 8A3 3 0 0 0 14 6h-4a3 3 0 0 0 0 6h4a3 3 0 0 1 0 6h-4a3 3 0 0 1-2.7-2M12 3v3m0 12v3"
                   ></path>
                 </svg>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div class="MuiStack-root css-1jtgica">
-            <div class="MuiStack-root css-1ks4tg7">
-              <div class="MuiStack-root css-j7qwjs">
-                <div class="MuiStack-root css-1mgdvdd">
-                  <div class="MuiStack-root css-1mgdvdd">
-                    <p
-                      class="MuiTypography-root MuiTypography-body1 css-1gfpw9x"
-                    >
-                      GAM
-                    </p>
-                    <p
-                      class="MuiTypography-root MuiTypography-body1 css-1gfpw9x"
-                    >
-                      115-2 (13.4)
-                    </p>
-                  </div>
-                  <p class="MuiTypography-root MuiTypography-body1 css-1gfpw9x">
-                    CRR 8.42
-                  </p>
-                  <p
-                    class="MuiTypography-root MuiTypography-body1 css-11h2uyk"
-                  ></p>
-                </div>
-                <div class="MuiStack-root css-1xhj18k">
-                  <p
-                    class="MuiTypography-root MuiTypography-body1 css-11h2uyk"
-                  ></p>
-                  <p class="MuiTypography-root MuiTypography-body1 css-11h2uyk">
-                    RRR 9.95
-                  </p>
-                </div>
-                <div class="MuiStack-root css-vide34">
-                  <p class="MuiTypography-root MuiTypography-body1 css-11h2uyk">
-                    Over:
-                  </p>
-                  <p class="MuiTypography-root MuiTypography-body1 css-11h2uyk">
-                    2
-                  </p>
-                  <p class="MuiTypography-root MuiTypography-body1 css-11h2uyk">
-                    1
-                  </p>
-                  <p class="MuiTypography-root MuiTypography-body1 css-11h2uyk">
-                    1
-                  </p>
-                  <p class="MuiTypography-root MuiTypography-body1 css-11h2uyk">
-                    1
-                  </p>
-                  <p class="MuiTypography-root MuiTypography-body1 css-11h2uyk">
-                    = 5
-                  </p>
-                </div>
-              </div>
-              <div class="MuiStack-root css-ypblli">
-                <p class="MuiTypography-root MuiTypography-body1 css-klloh0">
-                  Ball
-                </p>
-                <div class="MuiBox-root css-xnim3s">
-                  Galle Marvels NEED 63 RUNS IN 6.2 OVERS TO WIN
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="bg-black display_dekstop">
-          <iframe
-            class="iframe"
-            style="width: 100%; height: 100%"
-            src="https://tele.bazigarprediction.website/score/index.php?match_id=33369838"
-            title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen=""
-          ></iframe>
-        </div>
-        <!-- match odds , fancies etc -->
-        <div class="MuiStack-root css-jnr44o">
-          <div class="MuiStack-root css-9jay18">
-            <div class="MuiStack-root css-yhsfmz">
-              <div class="MuiStack-root css-2p8vrk">
-                <div class="MuiStack-root css-g6etzp">
-                  <img
-                    class="MuiBox-root css-iz2ltj"
-                    src="./public/assets/icons/betterIcon/inPlayW.png"
-                  />
-                  <h6
-                    class="MuiTypography-root MuiTypography-subtitle2 css-tn9bsb"
-                  >
-                    Match Odds
-                  </h6>
-                </div>
-                <div class="MuiStack-root css-19hxgaf" aria-label="Rules">
-                  <svg
+                Bet History
+              </a>
+              <hr />
+              <a href="#" class="dropdown-item">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  aria-hidden="true"
+                  role="img"
+                  font-size="1.375rem"
+                  class="iconify iconify--tabler"
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 24 24"
+                >
+                  <g
+                    fill="none"
                     stroke="currentColor"
-                    fill="currentColor"
-                    stroke-width="0"
-                    viewBox="0 0 24 24"
-                    color="#fff"
-                    height="18px"
-                    width="18px"
-                    xmlns="http://www.w3.org/2000/svg"
-                    style="color: rgb(255, 255, 255)"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
                   >
-                    <path fill="none" d="M0 0h24v24H0z"></path>
                     <path
-                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"
+                      d="M14 8V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2-2v-2"
                     ></path>
-                  </svg>
-                </div>
-              </div>
-              <div class="MuiStack-root css-het29j">
-                <h6
-                  class="MuiTypography-root MuiTypography-subtitle2 css-qzylx"
-                >
-                  Colombo Strikers
-                </h6>
-                <p
-                  class="MuiTypography-root MuiTypography-body1 css-1ha19hj"
-                ></p>
-              </div>
-              <div class="MuiStack-root css-het29j">
-                <h6
-                  class="MuiTypography-root MuiTypography-subtitle2 css-qzylx"
-                >
-                  B-Love Kandy
-                </h6>
-                <p
-                  class="MuiTypography-root MuiTypography-body1 css-1ha19hj"
-                ></p>
-              </div>
+                    <path d="M7 12h14l-3-3m0 6l3-3"></path>
+                  </g>
+                </svg>
+                Logout
+              </a>
             </div>
-            <div class="MuiStack-root css-yhsfmz">
-              <div class="MuiStack-root css-8dztdt">
-                <h6
-                  class="MuiTypography-root MuiTypography-subtitle2 css-1todn3t"
-                >
-                  Back
-                </h6>
-                <h6
-                  class="MuiTypography-root MuiTypography-subtitle2 css-f2ku00"
-                >
-                  Lay
-                </h6>
-              </div>
-              <div class="MuiStack-root css-yhsfmz">
-                <div class="MuiStack-root css-1mgdvdd">
-                  <div class="MuiStack-root css-y0gi4w">
-                    <div class="MuiStack-root css-1y0llhg">
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
-                      >
-                        1.79
-                      </p>
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
-                      >
-                        4.1K
-                      </p>
-                    </div>
-                    <div class="MuiStack-root css-1y0llhg hide_at_561">
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
-                      >
-                        1.78
-                      </p>
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
-                      >
-                        5.5K
-                      </p>
-                    </div>
-                    <div class="MuiStack-root css-1y0llhg hide_at_561">
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
-                      >
-                        1.77
-                      </p>
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
-                      >
-                        23.2K
-                      </p>
-                    </div>
-                  </div>
-                  <div class="MuiStack-root css-1snnq6o">
-                    <div class="MuiStack-root css-aelu6g hide_at_561">
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
-                      >
-                        1.8
-                      </p>
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
-                      >
-                        6.1K
-                      </p>
-                    </div>
-                    <div class="MuiStack-root css-aelu6g hide_at_561">
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
-                      >
-                        1.81
-                      </p>
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
-                      >
-                        14.9K
-                      </p>
-                    </div>
-                    <div class="MuiStack-root css-aelu6g">
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
-                      >
-                        1.82
-                      </p>
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
-                      >
-                        3.0K
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="MuiStack-root css-1mgdvdd">
-                  <div class="MuiStack-root css-y0gi4w">
-                    <div class="MuiStack-root css-1y0llhg">
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
-                      >
-                        2.24
-                      </p>
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
-                      >
-                        6.3K
-                      </p>
-                    </div>
-                    <div class="MuiStack-root css-1y0llhg hide_at_561">
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
-                      >
-                        2.22
-                      </p>
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
-                      >
-                        11.6K
-                      </p>
-                    </div>
-                    <div class="MuiStack-root css-1y0llhg hide_at_561">
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
-                      >
-                        2.2
-                      </p>
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
-                      >
-                        1.8K
-                      </p>
-                    </div>
-                  </div>
-                  <div class="MuiStack-root css-1snnq6o">
-                    <div class="MuiStack-root css-aelu6g hide_at_561">
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
-                      >
-                        2.26
-                      </p>
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
-                      >
-                        4.8
-                      </p>
-                    </div>
-                    <div class="MuiStack-root css-aelu6g">
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
-                      >
-                        2.28
-                      </p>
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
-                      >
-                        3.2K
-                      </p>
-                    </div>
-                    <div class="MuiStack-root css-aelu6g hide_at_561">
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
-                      >
-                        2.3
-                      </p>
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
-                      >
-                        22.1K
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          </span>
         </div>
-        <div class="MuiStack-root css-jnr44o">
-          <div class="MuiStack-root css-9jay18">
-            <div class="MuiStack-root css-yhsfmz">
-              <div class="MuiStack-root css-2p8vrk">
-                <div class="MuiStack-root css-g6etzp">
-                  <img
-                    class="MuiBox-root css-iz2ltj"
-                    src="./public/assets/icons/betterIcon/inPlayW.png"
-                  />
-                  <h6
-                    class="MuiTypography-root MuiTypography-subtitle2 css-tn9bsb"
-                  >
-                    Bookmaker
-                  </h6>
-                </div>
-                <div class="MuiStack-root css-19hxgaf" aria-label="Rules">
-                  <svg
-                    stroke="currentColor"
-                    fill="currentColor"
-                    stroke-width="0"
-                    viewBox="0 0 24 24"
-                    color="#fff"
-                    height="18px"
-                    width="18px"
-                    xmlns="http://www.w3.org/2000/svg"
-                    style="color: rgb(255, 255, 255)"
-                  >
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                    <path
-                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"
-                    ></path>
-                  </svg>
-                </div>
-              </div>
-              <div class="MuiStack-root css-het29j">
-                <h6
-                  class="MuiTypography-root MuiTypography-subtitle2 css-qzylx"
-                >
-                  Colombo Strikers
-                </h6>
-                <p
-                  class="MuiTypography-root MuiTypography-body1 css-1ha19hj"
-                ></p>
-              </div>
-              <div class="MuiStack-root css-het29j">
-                <h6
-                  class="MuiTypography-root MuiTypography-subtitle2 css-qzylx"
-                >
-                  B-Love Kandy
-                </h6>
-                <p
-                  class="MuiTypography-root MuiTypography-body1 css-1ha19hj"
-                ></p>
-              </div>
-            </div>
-            <div class="MuiStack-root css-yhsfmz">
-              <div class="MuiStack-root css-8dztdt">
-                <h6
-                  class="MuiTypography-root MuiTypography-subtitle2 css-1todn3t"
-                >
-                  Back
-                </h6>
-                <h6
-                  class="MuiTypography-root MuiTypography-subtitle2 css-f2ku00"
-                >
-                  Lay
-                </h6>
-              </div>
-              <div class="MuiStack-root css-yhsfmz">
-                <div class="MuiStack-root css-1mgdvdd">
-                  <div class="MuiStack-root css-y0gi4w">
-                    <div class="MuiStack-root css-1y0llhg">
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
-                      >
-                        1.79
-                      </p>
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
-                      >
-                        4.1K
-                      </p>
-                    </div>
-                    <div class="MuiStack-root css-1y0llhg hide_at_561">
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
-                      >
-                        1.78
-                      </p>
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
-                      >
-                        5.5K
-                      </p>
-                    </div>
-                    <div class="MuiStack-root css-1y0llhg hide_at_561">
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
-                      >
-                        1.77
-                      </p>
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
-                      >
-                        23.2K
-                      </p>
-                    </div>
-                  </div>
-                  <div class="MuiStack-root css-1snnq6o">
-                    <div class="MuiStack-root css-aelu6g hide_at_561">
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
-                      >
-                        1.8
-                      </p>
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
-                      >
-                        6.1K
-                      </p>
-                    </div>
-                    <div class="MuiStack-root css-aelu6g hide_at_561">
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
-                      >
-                        1.81
-                      </p>
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
-                      >
-                        14.9K
-                      </p>
-                    </div>
-                    <div class="MuiStack-root css-aelu6g">
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
-                      >
-                        1.82
-                      </p>
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
-                      >
-                        3.0K
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="MuiStack-root css-1mgdvdd">
-                  <div class="MuiStack-root css-y0gi4w">
-                    <div class="MuiStack-root css-1y0llhg">
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
-                      >
-                        2.24
-                      </p>
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
-                      >
-                        6.3K
-                      </p>
-                    </div>
-                    <div class="MuiStack-root css-1y0llhg hide_at_561">
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
-                      >
-                        2.22
-                      </p>
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
-                      >
-                        11.6K
-                      </p>
-                    </div>
-                    <div class="MuiStack-root css-1y0llhg hide_at_561">
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
-                      >
-                        2.2
-                      </p>
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
-                      >
-                        1.8K
-                      </p>
-                    </div>
-                  </div>
-                  <div class="MuiStack-root css-1snnq6o">
-                    <div class="MuiStack-root css-aelu6g hide_at_561">
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
-                      >
-                        2.26
-                      </p>
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
-                      >
-                        4.8
-                      </p>
-                    </div>
-                    <div class="MuiStack-root css-aelu6g hide_at_561">
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
-                      >
-                        2.28
-                      </p>
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
-                      >
-                        3.2K
-                      </p>
-                    </div>
-                    <div class="MuiStack-root css-aelu6g">
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
-                      >
-                        2.3
-                      </p>
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
-                      >
-                        22.1K
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="MuiStack-root css-jnr44o">
-          <div class="MuiStack-root css-9jay18">
-            <div class="MuiStack-root css-yhsfmz">
-              <div class="MuiStack-root css-2p8vrk">
-                <div class="MuiStack-root css-g6etzp">
-                  <img
-                    class="MuiBox-root css-iz2ltj"
-                    src="./public/assets/icons/betterIcon/inPlayW.png"
-                  />
-                  <h6
-                    class="MuiTypography-root MuiTypography-subtitle2 css-tn9bsb"
-                  >
-                    Tide Match
-                  </h6>
-                </div>
-                <div class="MuiStack-root css-19hxgaf" aria-label="Rules">
-                  <svg
-                    stroke="currentColor"
-                    fill="currentColor"
-                    stroke-width="0"
-                    viewBox="0 0 24 24"
-                    color="#fff"
-                    height="18px"
-                    width="18px"
-                    xmlns="http://www.w3.org/2000/svg"
-                    style="color: rgb(255, 255, 255)"
-                  >
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                    <path
-                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"
-                    ></path>
-                  </svg>
-                </div>
-              </div>
-              <div class="MuiStack-root css-het29j">
-                <h6
-                  class="MuiTypography-root MuiTypography-subtitle2 css-qzylx"
-                >
-                  Colombo Strikers
-                </h6>
-                <p
-                  class="MuiTypography-root MuiTypography-body1 css-1ha19hj"
-                ></p>
-              </div>
-              <div class="MuiStack-root css-het29j">
-                <h6
-                  class="MuiTypography-root MuiTypography-subtitle2 css-qzylx"
-                >
-                  B-Love Kandy
-                </h6>
-                <p
-                  class="MuiTypography-root MuiTypography-body1 css-1ha19hj"
-                ></p>
-              </div>
-            </div>
-            <div class="MuiStack-root css-yhsfmz">
-              <div class="MuiStack-root css-8dztdt">
-                <h6
-                  class="MuiTypography-root MuiTypography-subtitle2 css-1todn3t"
-                >
-                  Back
-                </h6>
-                <h6
-                  class="MuiTypography-root MuiTypography-subtitle2 css-f2ku00"
-                >
-                  Lay
-                </h6>
-              </div>
-              <div class="MuiStack-root css-yhsfmz">
-                <div class="MuiStack-root css-1mgdvdd">
-                  <div class="MuiStack-root css-y0gi4w">
-                    <div class="MuiStack-root css-1y0llhg">
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
-                      >
-                        1.79
-                      </p>
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
-                      >
-                        4.1K
-                      </p>
-                    </div>
-                    <div class="MuiStack-root css-1y0llhg hide_at_561">
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
-                      >
-                        1.78
-                      </p>
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
-                      >
-                        5.5K
-                      </p>
-                    </div>
-                    <div class="MuiStack-root css-1y0llhg hide_at_561">
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
-                      >
-                        1.77
-                      </p>
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
-                      >
-                        23.2K
-                      </p>
-                    </div>
-                  </div>
-                  <div class="MuiStack-root css-1snnq6o">
-                    <div class="MuiStack-root css-aelu6g">
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
-                      >
-                        1.8
-                      </p>
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
-                      >
-                        6.1K
-                      </p>
-                    </div>
-                    <div class="MuiStack-root css-aelu6g hide_at_561">
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
-                      >
-                        1.81
-                      </p>
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
-                      >
-                        14.9K
-                      </p>
-                    </div>
-                    <div class="MuiStack-root css-aelu6g hide_at_561">
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
-                      >
-                        1.82
-                      </p>
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
-                      >
-                        3.0K
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="MuiStack-root css-1mgdvdd">
-                  <div class="MuiStack-root css-y0gi4w">
-                    <div class="MuiStack-root css-1y0llhg">
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
-                      >
-                        2.24
-                      </p>
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
-                      >
-                        6.3K
-                      </p>
-                    </div>
-                    <div class="MuiStack-root css-1y0llhg hide_at_561">
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
-                      >
-                        2.22
-                      </p>
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
-                      >
-                        11.6K
-                      </p>
-                    </div>
-                    <div class="MuiStack-root css-1y0llhg hide_at_561">
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
-                      >
-                        2.2
-                      </p>
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
-                      >
-                        1.8K
-                      </p>
-                    </div>
-                  </div>
-                  <div class="MuiStack-root css-1snnq6o">
-                    <div class="MuiStack-root css-aelu6g hide_at_561">
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
-                      >
-                        2.26
-                      </p>
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
-                      >
-                        4.8
-                      </p>
-                    </div>
-                    <div class="MuiStack-root css-aelu6g hide_at_561">
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
-                      >
-                        2.28
-                      </p>
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
-                      >
-                        3.2K
-                      </p>
-                    </div>
-                    <div class="MuiStack-root css-aelu6g">
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
-                      >
-                        2.3
-                      </p>
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
-                      >
-                        22.1K
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="MuiStack-root css-jnr44o">
-          <div class="MuiStack-root css-9jay18">
-            <div class="MuiStack-root css-yhsfmz">
-              <div class="MuiStack-root css-2p8vrk">
-                <div class="MuiStack-root css-g6etzp">
-                  <img
-                    class="MuiBox-root css-iz2ltj"
-                    src="./public/assets/icons/betterIcon/inPlayW.png"
-                  />
-                  <h6
-                    class="MuiTypography-root MuiTypography-subtitle2 css-tn9bsb"
-                  >
-                    Fancy
-                  </h6>
-                </div>
-                <div class="MuiStack-root css-19hxgaf" aria-label="Rules">
-                  <svg
-                    stroke="currentColor"
-                    fill="currentColor"
-                    stroke-width="0"
-                    viewBox="0 0 24 24"
-                    color="#fff"
-                    height="18px"
-                    width="18px"
-                    xmlns="http://www.w3.org/2000/svg"
-                    style="color: rgb(255, 255, 255)"
-                  >
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                    <path
-                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"
-                    ></path>
-                  </svg>
-                </div>
-              </div>
-              <div class="MuiStack-root css-het29j">
-                <h6
-                  class="MuiTypography-root MuiTypography-subtitle2 css-qzylx"
-                >
-                  Colombo Strikers
-                </h6>
-                <p
-                  class="MuiTypography-root MuiTypography-body1 css-1ha19hj"
-                ></p>
-              </div>
-              <div class="MuiStack-root css-het29j">
-                <h6
-                  class="MuiTypography-root MuiTypography-subtitle2 css-qzylx"
-                >
-                  B-Love Kandy
-                </h6>
-                <p
-                  class="MuiTypography-root MuiTypography-body1 css-1ha19hj"
-                ></p>
-              </div>
-            </div>
-            <div class="MuiStack-root css-yhsfmz">
-              <div class="MuiStack-root css-8dztdt">
-                <h6
-                  class="MuiTypography-root MuiTypography-subtitle2 css-1todn3t"
-                >
-                  Back
-                </h6>
-                <h6
-                  class="MuiTypography-root MuiTypography-subtitle2 css-f2ku00"
-                >
-                  Lay
-                </h6>
-              </div>
-              <div class="MuiStack-root css-yhsfmz">
-                <div class="MuiStack-root css-1mgdvdd">
-                  <div class="MuiStack-root css-y0gi4w">
-                    <div class="MuiStack-root css-1y0llhg">
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
-                      >
-                        1.79
-                      </p>
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
-                      >
-                        4.1K
-                      </p>
-                    </div>
-                    <div class="MuiStack-root css-1y0llhg hide_at_561">
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
-                      >
-                        1.78
-                      </p>
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
-                      >
-                        5.5K
-                      </p>
-                    </div>
-                    <div class="MuiStack-root css-1y0llhg hide_at_561">
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
-                      >
-                        1.77
-                      </p>
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
-                      >
-                        23.2K
-                      </p>
-                    </div>
-                  </div>
-                  <div class="MuiStack-root css-1snnq6o">
-                    <div class="MuiStack-root css-aelu6g hide_at_561">
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
-                      >
-                        1.8
-                      </p>
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
-                      >
-                        6.1K
-                      </p>
-                    </div>
-                    <div class="MuiStack-root css-aelu6g hide_at_561">
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
-                      >
-                        1.81
-                      </p>
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
-                      >
-                        14.9K
-                      </p>
-                    </div>
-                    <div class="MuiStack-root css-aelu6g">
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
-                      >
-                        1.82
-                      </p>
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
-                      >
-                        3.0K
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="MuiStack-root css-1mgdvdd">
-                  <div class="MuiStack-root css-y0gi4w">
-                    <div class="MuiStack-root css-1y0llhg">
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
-                      >
-                        2.24
-                      </p>
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
-                      >
-                        6.3K
-                      </p>
-                    </div>
-                    <div class="MuiStack-root css-1y0llhg hide_at_561">
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
-                      >
-                        2.22
-                      </p>
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
-                      >
-                        11.6K
-                      </p>
-                    </div>
-                    <div class="MuiStack-root css-1y0llhg hide_at_561">
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
-                      >
-                        2.2
-                      </p>
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
-                      >
-                        1.8K
-                      </p>
-                    </div>
-                  </div>
-                  <div class="MuiStack-root css-1snnq6o">
-                    <div class="MuiStack-root css-aelu6g hide_at_561">
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
-                      >
-                        2.26
-                      </p>
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
-                      >
-                        4.8
-                      </p>
-                    </div>
-                    <div class="MuiStack-root css-aelu6g hide_at_561">
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
-                      >
-                        2.28
-                      </p>
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
-                      >
-                        3.2K
-                      </p>
-                    </div>
-                    <div class="MuiStack-root css-aelu6g">
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-o92rli"
-                      >
-                        2.3
-                      </p>
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
-                      >
-                        22.1K
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="MuiStack-root css-ddwuyb">
-          <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1s05omm">
-            <div class="MuiBox-root css-nu8l0g">JKS 5 Over Figure</div>
-            <div class="MuiBox-root css-1tv6lwp">
-              <p class="MuiTypography-root MuiTypography-body1 css-9laub6">
-                (0% commission)
-              </p>
-            </div>
-          </div>
-          <div class="MuiStack-root css-p58oka">
-            <div class="MuiStack-root css-rhier5">
-              <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
-                0
-              </p>
-              <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
-                8.85
-              </p>
-            </div>
-            <div class="MuiStack-root css-rhier5">
-              <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
-                1
-              </p>
-              <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
-                8.85
-              </p>
-            </div>
-            <div class="MuiStack-root css-rhier5">
-              <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
-                2
-              </p>
-              <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
-                8.85
-              </p>
-            </div>
-            <div class="MuiStack-root css-rhier5">
-              <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
-                3
-              </p>
-              <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
-                8.85
-              </p>
-            </div>
-            <div class="MuiStack-root css-rhier5">
-              <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
-                4
-              </p>
-              <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
-                8.85
-              </p>
-            </div>
-            <div class="MuiStack-root css-rhier5">
-              <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
-                5
-              </p>
-              <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
-                8.85
-              </p>
-            </div>
-            <div class="MuiStack-root css-rhier5">
-              <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
-                6
-              </p>
-              <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
-                8.85
-              </p>
-            </div>
-            <div class="MuiStack-root css-rhier5">
-              <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
-                7
-              </p>
-              <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
-                8.85
-              </p>
-            </div>
-            <div class="MuiStack-root css-rhier5">
-              <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
-                8
-              </p>
-              <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
-                8.85
-              </p>
-            </div>
-            <div class="MuiStack-root css-rhier5">
-              <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
-                9
-              </p>
-              <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
-                8.85
-              </p>
-            </div>
-          </div>
-          <div class="MuiStack-root css-1uelkw">
-            <div class="MuiStack-root css-17pexuo">
-              <div class="MuiStack-root css-il7sii">
-                <p class="MuiTypography-root MuiTypography-body1 css-tn9xkt">
-                  JOTTA
-                </p>
-                <div class="MuiStack-root css-13mkirs" style="min-width: 140px">
-                  <div class="MuiStack-root css-khshwk">J</div>
-                  <div class="MuiStack-root css-6orp6a">
-                    <div class="MuiStack-root css-up5l35">
-                      100
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-1bv81gv"
-                      >
-                        %
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="MuiStack-root css-il7sii">
-                <div class="MuiStack-root css-10o8scn">
-                  <p class="MuiTypography-root MuiTypography-body1 css-tn9xkt">
-                    KALI(0% commission)
-                  </p>
-                </div>
-                <div class="MuiStack-root css-13mkirs">
-                  <div class="MuiStack-root css-khshwk">K</div>
-                  <div class="MuiStack-root css-6orp6a">
-                    <div class="MuiStack-root css-up5l35">
-                      100
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-1bv81gv"
-                      >
-                        %
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="MuiStack-root css-17pexuo">
-              <div class="MuiStack-root css-il7sii" style="min-width: 140px">
-                <p class="MuiTypography-root MuiTypography-body1 css-tn9xkt">
-                  CHOTA
-                </p>
-                <div class="MuiStack-root css-1gb1rig">
-                  <div class="MuiStack-root css-1vouuc8">CH</div>
-                  <div class="MuiStack-root css-1nvrxws">
-                    <div class="MuiStack-root css-up5l35">
-                      100
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-1bv81gv"
-                      >
-                        %
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="MuiStack-root css-il7sii">
-                <div class="MuiStack-root css-10o8scn">
-                  <p class="MuiTypography-root MuiTypography-body1 css-tn9xkt">
-                    BARA(0% commission)
-                  </p>
-                </div>
-                <div class="MuiStack-root css-1gb1rig">
-                  <div class="MuiStack-root css-1vouuc8">BR</div>
-                  <div class="MuiStack-root css-1nvrxws">
-                    <div class="MuiStack-root css-up5l35">
-                      100
-                      <p
-                        class="MuiTypography-root MuiTypography-body1 css-1bv81gv"
-                      >
-                        %
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+        <div class="marquee-container">
+          <div class="marquee-text">
+            Welcome to 1obet.com - Announcement - All casino Profit Loss will be
+            1 to 2 Ratio - Her casino may Jeet Har 1 ka 2 ho ge - Welcome to
+            Exchange - Zero commissions on chota bara, kalli jotta, fancies
           </div>
         </div>
       </div>
-
-      <div class="mt-1 ml-1">
-        <div class="bg-black display_mobile">
-          <iframe
-            class="iframe"
-            style="width: 100%; height: 100%"
-            src="https://tele.bazigarprediction.website/score/index.php?match_id=33369838"
-            title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen=""
-          ></iframe>
-        </div>
-        <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1s05omm">
-          <div class="MuiBox-root css-nu8l0g">
-            <p
-              class="MuiTypography-root MuiTypography-body1 css-tn9xkt text-white"
-            >
-              Related Events
-            </p>
+      <div class="margin-top d-flex display_block">
+        <div class="w-100">
+          <div class="mainheader p-2 mt-1">
+            <div class="svg-icon mr-3">
+              <svg
+                stroke="currentColor"
+                fill="currentColor"
+                stroke-width="0"
+                viewBox="0 0 512 512"
+                height="1em"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M433.2 17.99L159.8 291.4l60.8 60.8-6.3 6.3L494 78.79c0-24.32-36.5-60.8-60.8-60.8zM161.5 64.03a32 32 0 0 0-7.8.59c3.9 21.25 13.8 38.48 30.3 52.48a32 32 0 0 0 3.7-37.13 32 32 0 0 0-26.2-15.94zm-24.1 9.35a32 32 0 0 0-5.1 38.62 32 32 0 0 0 36 14.9c-15.5-14.7-25.9-32.79-30.9-53.52zm26.4 247.22C126.3 378.1 60.46 427.7 19.06 479.5c-4.82 5.9 7.6 18.2 13.53 13.5C84.32 451.6 133.9 385.7 191.4 348.2z"
+                ></path>
+              </svg>
+            </div>
+            <div class="timedeaitls_wrapper">
+              <div class="timedeaitls">
+                <span
+                  ><span>2 hours and 39 minutes ago | </span
+                  ><span>Jun 24 9:30 AM</span></span
+                >
+                <div class="timedeaitls">
+                  <h1 class="m-0 font-size">
+                    Sri Lanka Women v West Indies Women
+                  </h1>
+                  <div>Matched: 3,915,808</div>
+                </div>
+              </div>
+              <div>
+                <h4>OPEN</h4>
+                <div class="sound_screen">
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 16 16"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06zm7.137 2.096a.5.5 0 0 1 0 .708L12.207 8l1.647 1.646a.5.5 0 0 1-.708.708L11.5 8.707l-1.646 1.647a.5.5 0 0 1-.708-.708L10.793 8 9.146 6.354a.5.5 0 1 1 .708-.708L11.5 7.293l1.646-1.647a.5.5 0 0 1 .708 0z"
+                    ></path>
+                  </svg>
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 24 24"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                    style="cursor: pointer"
+                  >
+                    <path
+                      d="M20 6h-5.586l2.293-2.293-1.414-1.414L12 5.586 8.707 2.293 7.293 3.707 9.586 6H4c-1.103 0-2 .897-2 2v11c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V8c0-1.103-.897-2-2-2zM4 19V8h16l.002 11H4z"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="MuiBox-root css-1tv6lwp"></div>
+          <div>
+            <div class="MuiStack-root css-1jtgica">
+              <div class="MuiStack-root css-1ks4tg7">
+                <div class="MuiStack-root css-j7qwjs">
+                  <div class="MuiStack-root css-1mgdvdd">
+                    <div class="MuiStack-root css-1mgdvdd">
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-1gfpw9x"
+                      >
+                        GAM
+                      </p>
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-1gfpw9x"
+                      >
+                        115-2 (13.4)
+                      </p>
+                    </div>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-1gfpw9x"
+                    >
+                      CRR 8.42
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-11h2uyk"
+                    ></p>
+                  </div>
+                  <div class="MuiStack-root css-1xhj18k">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-11h2uyk"
+                    ></p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-11h2uyk"
+                    >
+                      RRR 9.95
+                    </p>
+                  </div>
+                  <div class="MuiStack-root css-vide34">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-11h2uyk"
+                    >
+                      Over:
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-11h2uyk"
+                    >
+                      2
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-11h2uyk"
+                    >
+                      1
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-11h2uyk"
+                    >
+                      1
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-11h2uyk"
+                    >
+                      1
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-11h2uyk"
+                    >
+                      = 5
+                    </p>
+                  </div>
+                </div>
+                <div class="MuiStack-root css-ypblli">
+                  <p class="MuiTypography-root MuiTypography-body1 css-klloh0">
+                    Ball
+                  </p>
+                  <div class="MuiBox-root css-xnim3s">
+                    Galle Marvels NEED 63 RUNS IN 6.2 OVERS TO WIN
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-black display_dekstop">
+            <iframe
+              class="iframe"
+              style="width: 100%; height: 100%"
+              src="https://tele.bazigarprediction.website/score/index.php?match_id=33369838"
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen=""
+            ></iframe>
+          </div>
+          <!-- match odds , fancies etc -->
+          <div class="MuiStack-root css-jnr44o">
+            <div class="MuiStack-root css-9jay18">
+              <div class="MuiStack-root css-yhsfmz">
+                <div class="MuiStack-root css-2p8vrk">
+                  <div class="MuiStack-root css-g6etzp">
+                    <img
+                      class="MuiBox-root css-iz2ltj"
+                      src="./public/assets/icons/betterIcon/inPlayW.png"
+                    />
+                    <h6
+                      class="MuiTypography-root MuiTypography-subtitle2 css-tn9bsb"
+                    >
+                      Match Odds
+                    </h6>
+                  </div>
+                  <div class="MuiStack-root css-19hxgaf" aria-label="Rules">
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 24 24"
+                      color="#fff"
+                      height="18px"
+                      width="18px"
+                      xmlns="http://www.w3.org/2000/svg"
+                      style="color: rgb(255, 255, 255)"
+                    >
+                      <path fill="none" d="M0 0h24v24H0z"></path>
+                      <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="MuiStack-root css-het29j">
+                  <h6
+                    class="MuiTypography-root MuiTypography-subtitle2 css-qzylx"
+                  >
+                    Colombo Strikers
+                  </h6>
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-1ha19hj"
+                  ></p>
+                </div>
+                <div class="MuiStack-root css-het29j">
+                  <h6
+                    class="MuiTypography-root MuiTypography-subtitle2 css-qzylx"
+                  >
+                    B-Love Kandy
+                  </h6>
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-1ha19hj"
+                  ></p>
+                </div>
+              </div>
+              <div class="MuiStack-root css-yhsfmz">
+                <div class="MuiStack-root css-8dztdt">
+                  <h6
+                    class="MuiTypography-root MuiTypography-subtitle2 css-1todn3t"
+                  >
+                    Back
+                  </h6>
+                  <h6
+                    class="MuiTypography-root MuiTypography-subtitle2 css-f2ku00"
+                  >
+                    Lay
+                  </h6>
+                </div>
+                <div class="MuiStack-root css-yhsfmz">
+                  <div class="MuiStack-root css-1mgdvdd">
+                    <div class="MuiStack-root css-y0gi4w">
+                      <div class="MuiStack-root css-1y0llhg">
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                        >
+                          1.79
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                        >
+                          4.1K
+                        </p>
+                      </div>
+                      <div class="MuiStack-root css-1y0llhg hide_at_561">
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                        >
+                          1.78
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                        >
+                          5.5K
+                        </p>
+                      </div>
+                      <div class="MuiStack-root css-1y0llhg hide_at_561">
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                        >
+                          1.77
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                        >
+                          23.2K
+                        </p>
+                      </div>
+                    </div>
+                    <div class="MuiStack-root css-1snnq6o">
+                      <div class="MuiStack-root css-aelu6g hide_at_561">
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                        >
+                          1.8
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                        >
+                          6.1K
+                        </p>
+                      </div>
+                      <div class="MuiStack-root css-aelu6g hide_at_561">
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                        >
+                          1.81
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                        >
+                          14.9K
+                        </p>
+                      </div>
+                      <div class="MuiStack-root css-aelu6g">
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                        >
+                          1.82
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                        >
+                          3.0K
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="MuiStack-root css-1mgdvdd">
+                    <div class="MuiStack-root css-y0gi4w">
+                      <div class="MuiStack-root css-1y0llhg">
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                        >
+                          2.24
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                        >
+                          6.3K
+                        </p>
+                      </div>
+                      <div class="MuiStack-root css-1y0llhg hide_at_561">
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                        >
+                          2.22
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                        >
+                          11.6K
+                        </p>
+                      </div>
+                      <div class="MuiStack-root css-1y0llhg hide_at_561">
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                        >
+                          2.2
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                        >
+                          1.8K
+                        </p>
+                      </div>
+                    </div>
+                    <div class="MuiStack-root css-1snnq6o">
+                      <div class="MuiStack-root css-aelu6g hide_at_561">
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                        >
+                          2.26
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                        >
+                          4.8
+                        </p>
+                      </div>
+                      <div class="MuiStack-root css-aelu6g">
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                        >
+                          2.28
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                        >
+                          3.2K
+                        </p>
+                      </div>
+                      <div class="MuiStack-root css-aelu6g hide_at_561">
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                        >
+                          2.3
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                        >
+                          22.1K
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="MuiStack-root css-jnr44o">
+            <div class="MuiStack-root css-9jay18">
+              <div class="MuiStack-root css-yhsfmz">
+                <div class="MuiStack-root css-2p8vrk">
+                  <div class="MuiStack-root css-g6etzp">
+                    <img
+                      class="MuiBox-root css-iz2ltj"
+                      src="./public/assets/icons/betterIcon/inPlayW.png"
+                    />
+                    <h6
+                      class="MuiTypography-root MuiTypography-subtitle2 css-tn9bsb"
+                    >
+                      Bookmaker
+                    </h6>
+                  </div>
+                  <div class="MuiStack-root css-19hxgaf" aria-label="Rules">
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 24 24"
+                      color="#fff"
+                      height="18px"
+                      width="18px"
+                      xmlns="http://www.w3.org/2000/svg"
+                      style="color: rgb(255, 255, 255)"
+                    >
+                      <path fill="none" d="M0 0h24v24H0z"></path>
+                      <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="MuiStack-root css-het29j">
+                  <h6
+                    class="MuiTypography-root MuiTypography-subtitle2 css-qzylx"
+                  >
+                    Colombo Strikers
+                  </h6>
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-1ha19hj"
+                  ></p>
+                </div>
+                <div class="MuiStack-root css-het29j">
+                  <h6
+                    class="MuiTypography-root MuiTypography-subtitle2 css-qzylx"
+                  >
+                    B-Love Kandy
+                  </h6>
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-1ha19hj"
+                  ></p>
+                </div>
+              </div>
+              <div class="MuiStack-root css-yhsfmz">
+                <div class="MuiStack-root css-8dztdt">
+                  <h6
+                    class="MuiTypography-root MuiTypography-subtitle2 css-1todn3t"
+                  >
+                    Back
+                  </h6>
+                  <h6
+                    class="MuiTypography-root MuiTypography-subtitle2 css-f2ku00"
+                  >
+                    Lay
+                  </h6>
+                </div>
+                <div class="MuiStack-root css-yhsfmz">
+                  <div class="MuiStack-root css-1mgdvdd">
+                    <div class="MuiStack-root css-y0gi4w">
+                      <div class="MuiStack-root css-1y0llhg">
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                        >
+                          1.79
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                        >
+                          4.1K
+                        </p>
+                      </div>
+                      <div class="MuiStack-root css-1y0llhg hide_at_561">
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                        >
+                          1.78
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                        >
+                          5.5K
+                        </p>
+                      </div>
+                      <div class="MuiStack-root css-1y0llhg hide_at_561">
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                        >
+                          1.77
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                        >
+                          23.2K
+                        </p>
+                      </div>
+                    </div>
+                    <div class="MuiStack-root css-1snnq6o">
+                      <div class="MuiStack-root css-aelu6g hide_at_561">
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                        >
+                          1.8
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                        >
+                          6.1K
+                        </p>
+                      </div>
+                      <div class="MuiStack-root css-aelu6g hide_at_561">
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                        >
+                          1.81
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                        >
+                          14.9K
+                        </p>
+                      </div>
+                      <div class="MuiStack-root css-aelu6g">
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                        >
+                          1.82
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                        >
+                          3.0K
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="MuiStack-root css-1mgdvdd">
+                    <div class="MuiStack-root css-y0gi4w">
+                      <div class="MuiStack-root css-1y0llhg">
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                        >
+                          2.24
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                        >
+                          6.3K
+                        </p>
+                      </div>
+                      <div class="MuiStack-root css-1y0llhg hide_at_561">
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                        >
+                          2.22
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                        >
+                          11.6K
+                        </p>
+                      </div>
+                      <div class="MuiStack-root css-1y0llhg hide_at_561">
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                        >
+                          2.2
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                        >
+                          1.8K
+                        </p>
+                      </div>
+                    </div>
+                    <div class="MuiStack-root css-1snnq6o">
+                      <div class="MuiStack-root css-aelu6g hide_at_561">
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                        >
+                          2.26
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                        >
+                          4.8
+                        </p>
+                      </div>
+                      <div class="MuiStack-root css-aelu6g hide_at_561">
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                        >
+                          2.28
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                        >
+                          3.2K
+                        </p>
+                      </div>
+                      <div class="MuiStack-root css-aelu6g">
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                        >
+                          2.3
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                        >
+                          22.1K
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="MuiStack-root css-jnr44o">
+            <div class="MuiStack-root css-9jay18">
+              <div class="MuiStack-root css-yhsfmz">
+                <div class="MuiStack-root css-2p8vrk">
+                  <div class="MuiStack-root css-g6etzp">
+                    <img
+                      class="MuiBox-root css-iz2ltj"
+                      src="./public/assets/icons/betterIcon/inPlayW.png"
+                    />
+                    <h6
+                      class="MuiTypography-root MuiTypography-subtitle2 css-tn9bsb"
+                    >
+                      Tide Match
+                    </h6>
+                  </div>
+                  <div class="MuiStack-root css-19hxgaf" aria-label="Rules">
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 24 24"
+                      color="#fff"
+                      height="18px"
+                      width="18px"
+                      xmlns="http://www.w3.org/2000/svg"
+                      style="color: rgb(255, 255, 255)"
+                    >
+                      <path fill="none" d="M0 0h24v24H0z"></path>
+                      <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="MuiStack-root css-het29j">
+                  <h6
+                    class="MuiTypography-root MuiTypography-subtitle2 css-qzylx"
+                  >
+                    Colombo Strikers
+                  </h6>
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-1ha19hj"
+                  ></p>
+                </div>
+                <div class="MuiStack-root css-het29j">
+                  <h6
+                    class="MuiTypography-root MuiTypography-subtitle2 css-qzylx"
+                  >
+                    B-Love Kandy
+                  </h6>
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-1ha19hj"
+                  ></p>
+                </div>
+              </div>
+              <div class="MuiStack-root css-yhsfmz">
+                <div class="MuiStack-root css-8dztdt">
+                  <h6
+                    class="MuiTypography-root MuiTypography-subtitle2 css-1todn3t"
+                  >
+                    Back
+                  </h6>
+                  <h6
+                    class="MuiTypography-root MuiTypography-subtitle2 css-f2ku00"
+                  >
+                    Lay
+                  </h6>
+                </div>
+                <div class="MuiStack-root css-yhsfmz">
+                  <div class="MuiStack-root css-1mgdvdd">
+                    <div class="MuiStack-root css-y0gi4w">
+                      <div class="MuiStack-root css-1y0llhg">
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                        >
+                          1.79
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                        >
+                          4.1K
+                        </p>
+                      </div>
+                      <div class="MuiStack-root css-1y0llhg hide_at_561">
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                        >
+                          1.78
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                        >
+                          5.5K
+                        </p>
+                      </div>
+                      <div class="MuiStack-root css-1y0llhg hide_at_561">
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                        >
+                          1.77
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                        >
+                          23.2K
+                        </p>
+                      </div>
+                    </div>
+                    <div class="MuiStack-root css-1snnq6o">
+                      <div class="MuiStack-root css-aelu6g">
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                        >
+                          1.8
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                        >
+                          6.1K
+                        </p>
+                      </div>
+                      <div class="MuiStack-root css-aelu6g hide_at_561">
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                        >
+                          1.81
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                        >
+                          14.9K
+                        </p>
+                      </div>
+                      <div class="MuiStack-root css-aelu6g hide_at_561">
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                        >
+                          1.82
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                        >
+                          3.0K
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="MuiStack-root css-1mgdvdd">
+                    <div class="MuiStack-root css-y0gi4w">
+                      <div class="MuiStack-root css-1y0llhg">
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                        >
+                          2.24
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                        >
+                          6.3K
+                        </p>
+                      </div>
+                      <div class="MuiStack-root css-1y0llhg hide_at_561">
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                        >
+                          2.22
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                        >
+                          11.6K
+                        </p>
+                      </div>
+                      <div class="MuiStack-root css-1y0llhg hide_at_561">
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                        >
+                          2.2
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                        >
+                          1.8K
+                        </p>
+                      </div>
+                    </div>
+                    <div class="MuiStack-root css-1snnq6o">
+                      <div class="MuiStack-root css-aelu6g hide_at_561">
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                        >
+                          2.26
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                        >
+                          4.8
+                        </p>
+                      </div>
+                      <div class="MuiStack-root css-aelu6g hide_at_561">
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                        >
+                          2.28
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                        >
+                          3.2K
+                        </p>
+                      </div>
+                      <div class="MuiStack-root css-aelu6g">
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                        >
+                          2.3
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                        >
+                          22.1K
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="MuiStack-root css-jnr44o">
+            <div class="MuiStack-root css-9jay18">
+              <div class="MuiStack-root css-yhsfmz">
+                <div class="MuiStack-root css-2p8vrk">
+                  <div class="MuiStack-root css-g6etzp">
+                    <img
+                      class="MuiBox-root css-iz2ltj"
+                      src="./public/assets/icons/betterIcon/inPlayW.png"
+                    />
+                    <h6
+                      class="MuiTypography-root MuiTypography-subtitle2 css-tn9bsb"
+                    >
+                      Fancy
+                    </h6>
+                  </div>
+                  <div class="MuiStack-root css-19hxgaf" aria-label="Rules">
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 24 24"
+                      color="#fff"
+                      height="18px"
+                      width="18px"
+                      xmlns="http://www.w3.org/2000/svg"
+                      style="color: rgb(255, 255, 255)"
+                    >
+                      <path fill="none" d="M0 0h24v24H0z"></path>
+                      <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="MuiStack-root css-het29j">
+                  <h6
+                    class="MuiTypography-root MuiTypography-subtitle2 css-qzylx"
+                  >
+                    Colombo Strikers
+                  </h6>
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-1ha19hj"
+                  ></p>
+                </div>
+                <div class="MuiStack-root css-het29j">
+                  <h6
+                    class="MuiTypography-root MuiTypography-subtitle2 css-qzylx"
+                  >
+                    B-Love Kandy
+                  </h6>
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-1ha19hj"
+                  ></p>
+                </div>
+              </div>
+              <div class="MuiStack-root css-yhsfmz">
+                <div class="MuiStack-root css-8dztdt">
+                  <h6
+                    class="MuiTypography-root MuiTypography-subtitle2 css-1todn3t"
+                  >
+                    Back
+                  </h6>
+                  <h6
+                    class="MuiTypography-root MuiTypography-subtitle2 css-f2ku00"
+                  >
+                    Lay
+                  </h6>
+                </div>
+                <div class="MuiStack-root css-yhsfmz">
+                  <div class="MuiStack-root css-1mgdvdd">
+                    <div class="MuiStack-root css-y0gi4w">
+                      <div class="MuiStack-root css-1y0llhg">
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                        >
+                          1.79
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                        >
+                          4.1K
+                        </p>
+                      </div>
+                      <div class="MuiStack-root css-1y0llhg hide_at_561">
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                        >
+                          1.78
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                        >
+                          5.5K
+                        </p>
+                      </div>
+                      <div class="MuiStack-root css-1y0llhg hide_at_561">
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                        >
+                          1.77
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                        >
+                          23.2K
+                        </p>
+                      </div>
+                    </div>
+                    <div class="MuiStack-root css-1snnq6o">
+                      <div class="MuiStack-root css-aelu6g hide_at_561">
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                        >
+                          1.8
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                        >
+                          6.1K
+                        </p>
+                      </div>
+                      <div class="MuiStack-root css-aelu6g hide_at_561">
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                        >
+                          1.81
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                        >
+                          14.9K
+                        </p>
+                      </div>
+                      <div class="MuiStack-root css-aelu6g">
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                        >
+                          1.82
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                        >
+                          3.0K
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="MuiStack-root css-1mgdvdd">
+                    <div class="MuiStack-root css-y0gi4w">
+                      <div class="MuiStack-root css-1y0llhg">
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                        >
+                          2.24
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                        >
+                          6.3K
+                        </p>
+                      </div>
+                      <div class="MuiStack-root css-1y0llhg hide_at_561">
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                        >
+                          2.22
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                        >
+                          11.6K
+                        </p>
+                      </div>
+                      <div class="MuiStack-root css-1y0llhg hide_at_561">
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                        >
+                          2.2
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                        >
+                          1.8K
+                        </p>
+                      </div>
+                    </div>
+                    <div class="MuiStack-root css-1snnq6o">
+                      <div class="MuiStack-root css-aelu6g hide_at_561">
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                        >
+                          2.26
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                        >
+                          4.8
+                        </p>
+                      </div>
+                      <div class="MuiStack-root css-aelu6g hide_at_561">
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                        >
+                          2.28
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                        >
+                          3.2K
+                        </p>
+                      </div>
+                      <div class="MuiStack-root css-aelu6g">
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                        >
+                          2.3
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                        >
+                          22.1K
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="MuiStack-root css-ddwuyb">
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1s05omm"
+            >
+              <div class="MuiBox-root css-nu8l0g">JKS 5 Over Figure</div>
+              <div class="MuiBox-root css-1tv6lwp">
+                <p class="MuiTypography-root MuiTypography-body1 css-9laub6">
+                  (0% commission)
+                </p>
+              </div>
+            </div>
+            <div class="MuiStack-root css-p58oka">
+              <div class="MuiStack-root css-rhier5">
+                <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
+                  0
+                </p>
+                <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
+                  8.85
+                </p>
+              </div>
+              <div class="MuiStack-root css-rhier5">
+                <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
+                  1
+                </p>
+                <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
+                  8.85
+                </p>
+              </div>
+              <div class="MuiStack-root css-rhier5">
+                <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
+                  2
+                </p>
+                <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
+                  8.85
+                </p>
+              </div>
+              <div class="MuiStack-root css-rhier5">
+                <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
+                  3
+                </p>
+                <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
+                  8.85
+                </p>
+              </div>
+              <div class="MuiStack-root css-rhier5">
+                <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
+                  4
+                </p>
+                <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
+                  8.85
+                </p>
+              </div>
+              <div class="MuiStack-root css-rhier5">
+                <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
+                  5
+                </p>
+                <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
+                  8.85
+                </p>
+              </div>
+              <div class="MuiStack-root css-rhier5">
+                <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
+                  6
+                </p>
+                <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
+                  8.85
+                </p>
+              </div>
+              <div class="MuiStack-root css-rhier5">
+                <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
+                  7
+                </p>
+                <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
+                  8.85
+                </p>
+              </div>
+              <div class="MuiStack-root css-rhier5">
+                <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
+                  8
+                </p>
+                <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
+                  8.85
+                </p>
+              </div>
+              <div class="MuiStack-root css-rhier5">
+                <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
+                  9
+                </p>
+                <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
+                  8.85
+                </p>
+              </div>
+            </div>
+            <div class="MuiStack-root css-1uelkw">
+              <div class="MuiStack-root css-17pexuo">
+                <div class="MuiStack-root css-il7sii">
+                  <p class="MuiTypography-root MuiTypography-body1 css-tn9xkt">
+                    JOTTA
+                  </p>
+                  <div
+                    class="MuiStack-root css-13mkirs"
+                    style="min-width: 140px"
+                  >
+                    <div class="MuiStack-root css-khshwk">J</div>
+                    <div class="MuiStack-root css-6orp6a">
+                      <div class="MuiStack-root css-up5l35">
+                        100
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-1bv81gv"
+                        >
+                          %
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="MuiStack-root css-il7sii">
+                  <div class="MuiStack-root css-10o8scn">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-tn9xkt"
+                    >
+                      KALI(0% commission)
+                    </p>
+                  </div>
+                  <div class="MuiStack-root css-13mkirs">
+                    <div class="MuiStack-root css-khshwk">K</div>
+                    <div class="MuiStack-root css-6orp6a">
+                      <div class="MuiStack-root css-up5l35">
+                        100
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-1bv81gv"
+                        >
+                          %
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="MuiStack-root css-17pexuo">
+                <div class="MuiStack-root css-il7sii" style="min-width: 140px">
+                  <p class="MuiTypography-root MuiTypography-body1 css-tn9xkt">
+                    CHOTA
+                  </p>
+                  <div class="MuiStack-root css-1gb1rig">
+                    <div class="MuiStack-root css-1vouuc8">CH</div>
+                    <div class="MuiStack-root css-1nvrxws">
+                      <div class="MuiStack-root css-up5l35">
+                        100
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-1bv81gv"
+                        >
+                          %
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="MuiStack-root css-il7sii">
+                  <div class="MuiStack-root css-10o8scn">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-tn9xkt"
+                    >
+                      BARA(0% commission)
+                    </p>
+                  </div>
+                  <div class="MuiStack-root css-1gb1rig">
+                    <div class="MuiStack-root css-1vouuc8">BR</div>
+                    <div class="MuiStack-root css-1nvrxws">
+                      <div class="MuiStack-root css-up5l35">
+                        100
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-1bv81gv"
+                        >
+                          %
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div>
-          <table class="table table-bordered custom-table">
-            <tbody class="MuiTableBody-root css-12dfzmm">
-              <tr class="MuiTableRow-root css-e03dsj">
-                <td
-                  class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1rgxqo9"
-                  style="padding: 5px 15px"
-                >
-                  Today<br class="MuiBox-root css-0" />15:00
-                </td>
-                <td
-                  class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1rgxqo9"
-                  style="cursor: pointer; padding: 5px 15px"
-                >
-                  Leicestershire v Middlesex
-                </td>
-              </tr>
-              <tr class="MuiTableRow-root css-e03dsj">
-                <td
-                  class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1rgxqo9"
-                  style="padding: 5px 15px"
-                >
-                  Today<br class="MuiBox-root css-0" />15:00
-                </td>
-                <td
-                  class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1rgxqo9"
-                  style="cursor: pointer; padding: 5px 15px"
-                >
-                  Derbyshire v Yorkshire
-                </td>
-              </tr>
-              <tr class="MuiTableRow-root css-e03dsj">
-                <td
-                  class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1rgxqo9"
-                  style="padding: 5px 15px"
-                >
-                  Today<br class="MuiBox-root css-0" />15:00
-                </td>
-                <td
-                  class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1rgxqo9"
-                  style="cursor: pointer; padding: 5px 15px"
-                >
-                  Northamptonshire v Sussex
-                </td>
-              </tr>
-              <tr class="MuiTableRow-root css-e03dsj">
-                <td
-                  class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1rgxqo9"
-                  style="padding: 5px 15px"
-                >
-                  Today<br class="MuiBox-root css-0" />15:00
-                </td>
-                <td
-                  class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1rgxqo9"
-                  style="cursor: pointer; padding: 5px 15px"
-                >
-                  Gloucestershire v Glamorgan
-                </td>
-              </tr>
-              <tr class="MuiTableRow-root css-e03dsj">
-                <td
-                  class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1rgxqo9"
-                  style="padding: 5px 15px"
-                >
-                  Today<br class="MuiBox-root css-0" />15:00
-                </td>
-                <td
-                  class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1rgxqo9"
-                  style="cursor: pointer; padding: 5px 15px"
-                >
-                  Hampshire v Kent
-                </td>
-              </tr>
-            </tbody>
-          </table>
+
+        <div class="mt-1 ml-1">
+          <div class="bg-black display_mobile">
+            <iframe
+              class="iframe"
+              style="width: 100%; height: 100%"
+              src="https://tele.bazigarprediction.website/score/index.php?match_id=33369838"
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen=""
+            ></iframe>
+          </div>
+          <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1s05omm">
+            <div class="MuiBox-root css-nu8l0g">
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-tn9xkt text-white"
+              >
+                Related Events
+              </p>
+            </div>
+            <div class="MuiBox-root css-1tv6lwp"></div>
+          </div>
+          <div>
+            <table class="table table-bordered custom-table">
+              <tbody class="MuiTableBody-root css-12dfzmm">
+                <tr class="MuiTableRow-root css-e03dsj">
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1rgxqo9"
+                    style="padding: 5px 15px"
+                  >
+                    Today<br class="MuiBox-root css-0" />15:00
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1rgxqo9"
+                    style="cursor: pointer; padding: 5px 15px"
+                  >
+                    Leicestershire v Middlesex
+                  </td>
+                </tr>
+                <tr class="MuiTableRow-root css-e03dsj">
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1rgxqo9"
+                    style="padding: 5px 15px"
+                  >
+                    Today<br class="MuiBox-root css-0" />15:00
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1rgxqo9"
+                    style="cursor: pointer; padding: 5px 15px"
+                  >
+                    Derbyshire v Yorkshire
+                  </td>
+                </tr>
+                <tr class="MuiTableRow-root css-e03dsj">
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1rgxqo9"
+                    style="padding: 5px 15px"
+                  >
+                    Today<br class="MuiBox-root css-0" />15:00
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1rgxqo9"
+                    style="cursor: pointer; padding: 5px 15px"
+                  >
+                    Northamptonshire v Sussex
+                  </td>
+                </tr>
+                <tr class="MuiTableRow-root css-e03dsj">
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1rgxqo9"
+                    style="padding: 5px 15px"
+                  >
+                    Today<br class="MuiBox-root css-0" />15:00
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1rgxqo9"
+                    style="cursor: pointer; padding: 5px 15px"
+                  >
+                    Gloucestershire v Glamorgan
+                  </td>
+                </tr>
+                <tr class="MuiTableRow-root css-e03dsj">
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1rgxqo9"
+                    style="padding: 5px 15px"
+                  >
+                    Today<br class="MuiBox-root css-0" />15:00
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1rgxqo9"
+                    style="cursor: pointer; padding: 5px 15px"
+                  >
+                    Hampshire v Kent
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>
@@ -2717,7 +2753,7 @@
           </a>
         </li>
         <li>
-          <a href="#" class="menu-item">
+          <a href="ezugi_casino.html" class="menu-item">
             <img
               src="./public/assets/side-menu-icons/light-icons/royal-casino.png"
               alt=""
@@ -2745,25 +2781,31 @@
       const header = document.getElementById("header");
       const content = document.querySelector(".content");
       const footer = document.getElementById("footer");
-
+      if (window.innerWidth >= 1220) {
+        sidebar.classList.toggle("open");
+        content.style.paddingLeft = "270px";
+        footer.style.paddingLeft = "270px";
+        header.style.width = "calc(100% - 300px)";
+      }
       menuToggle.addEventListener("click", function () {
         sidebar.classList.toggle("open");
         // Adjust the position of the toggle button and header padding
         if (sidebar.classList.contains("open")) {
-          if (window.innerWidth <= 690) {
+          if (window.innerWidth <= 1220) {
             header.style.paddingLeft = "0";
             content.style.paddingLeft = "0";
-            footer.style.paddingLeft = "0";
-          } else if (window.innerWidth <= 790) {
-            header.style.paddingLeft = "250px";
+          } else if (window.innerWidth <= 1230) {
+            header.style.width = "calc(100% - 282px)";
             content.style.paddingLeft = "250px";
             footer.style.paddingLeft = "250px";
           } else {
-            header.style.paddingLeft = "308px";
-            content.style.paddingLeft = "310px";
-            footer.style.paddingLeft = "310px";
+            header.style.width = "calc(100% - 300px)";
+            header.style.paddingLeft = "0px";
+            content.style.paddingLeft = "270px";
+            footer.style.paddingLeft = "270px";
           }
         } else {
+          header.style.width = "calc(100% - 32px)";
           header.style.paddingLeft = "0";
           content.style.paddingLeft = "0";
           footer.style.paddingLeft = "0";
@@ -2771,24 +2813,27 @@
       });
       closeToggle.addEventListener("click", function () {
         sidebar.classList.remove("open");
+        header.style.width = "calc(100% - 32px)";
         header.style.paddingLeft = "0";
         content.style.paddingLeft = "0";
         footer.style.paddingLeft = "0";
       });
       window.addEventListener("resize", function () {
         if (sidebar.classList.contains("open")) {
-          if (window.innerWidth <= 690) {
+          if (window.innerWidth <= 1220) {
+            header.style.width = "calc(100% - 32px)";
             header.style.paddingLeft = "0";
             content.style.paddingLeft = "0";
-            footer.style.paddingLeft = "0"; // Add this line
-          } else if (window.innerWidth <= 790) {
-            header.style.paddingLeft = "250px";
+            footer.style.paddingLeft = "0";
+          } else if (window.innerWidth <= 1230) {
+            header.style.width = "calc(100% - 282px)";
+
             content.style.paddingLeft = "250px";
-            footer.style.paddingLeft = "250px"; // Add this line
+            footer.style.paddingLeft = "250px";
           } else {
-            header.style.paddingLeft = "308px";
-            content.style.paddingLeft = "310px";
-            footer.style.paddingLeft = "310px"; // Add this line
+            header.style.width = "calc(100% - 300px)";
+            content.style.paddingLeft = "270px";
+            footer.style.paddingLeft = "270px ";
           }
         }
       });

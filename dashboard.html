@@ -8,14 +8,16 @@
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
     <script
       src="https://kit.fontawesome.com/69c89fc43e.js"
       crossorigin="anonymous"
     ></script>
     <style>
-      
       body {
         font-family: "Public Sans", sans-serif, -apple-system,
           BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
@@ -23,17 +25,17 @@
         font-size: 1rem;
       }
       .css-1xvgq63 {
-    user-select: none;
-    width: 1em;
-    height: 1em;
-    overflow: hidden;
-    display: inline-block;
-    text-align: center;
-    flex-shrink: 0;
-    font-size: 1.40625rem;
-    color: white;
-    cursor: pointer;
-}
+        user-select: none;
+        width: 1em;
+        height: 1em;
+        overflow: hidden;
+        display: inline-block;
+        text-align: center;
+        flex-shrink: 0;
+        font-size: 1.40625rem;
+        color: white;
+        cursor: pointer;
+      }
       .footer .footerLinks {
         background-color: rgb(34, 42, 60);
         min-width: 100%;
@@ -107,8 +109,8 @@
       .sidebar {
         position: fixed;
         top: 0;
-        left: -300px;
-        width: 300px;
+        left: -260px;
+        width: 260px;
         height: 100%;
         background: black;
         color: white;
@@ -155,7 +157,7 @@
         background-color: #00a826;
       }
       .menu-toggle {
-        font-size: 35px;
+        font-size: 1.5rem;
         color: white;
         cursor: pointer;
         transition: all 0.5s ease;
@@ -173,9 +175,14 @@
         color: white;
         position: fixed;
         top: 0;
-        width: 100%;
+        width: calc(100% - 32px);
         z-index: 1000;
-        transition: padding-left 0.5s ease;
+        transition: padding-left 0.5s ease, margin 0.5s ease; /* Added margin transition */
+        font-size: 0.9rem;
+        margin-top: 1rem;
+        border-radius: 6px;
+        min-height: 50px;
+        flex-wrap: wrap; /* Allow wrapping */
       }
       .marquee-container {
         overflow: hidden;
@@ -183,7 +190,9 @@
         width: 100%;
         background-color: black;
         color: white;
-        padding-top: 50px; /* Adjust for fixed header */
+        border-radius: 6px;
+        padding-top: 0px;
+        padding-left: 10px;
       }
       .marquee-text {
         display: inline-block;
@@ -205,11 +214,12 @@
     <style>
       .css-1s05omm {
         box-sizing: border-box;
-        margin: 0px;
+
         flex-direction: row;
         height: 38px;
         display: flex;
         position: relative;
+        margin-top: 6rem;
       }
 
       .css-nu8l0g {
@@ -226,8 +236,6 @@
       .css-a4cdis {
         display: flex;
         flex-direction: row;
-        
-
       }
       .css-nu8l0g .MuiTypography-root {
         color: rgb(255, 255, 255);
@@ -248,7 +256,9 @@
       .MuiStack-root p {
         margin-bottom: 0rem;
         margin-left: 8px;
-        font-family: "Public Sans", sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-family: "Public Sans", sans-serif, -apple-system,
+          BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+          sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
       }
       .css-1tv6lwp::before {
         border-bottom: 38px solid rgb(0, 168, 38);
@@ -290,13 +300,13 @@
     </style>
     <style>
       .css-1yehak0 {
+        margin-top: -95px !important;
         display: flex;
         flex-direction: row;
         margin-top: 0.75rem;
         overflow-x: auto;
       }
-      .css-1yehak0 p
-      {
+      .css-1yehak0 p {
         font-size: 17px !important;
       }
       .css-sfjdjv {
@@ -608,12 +618,11 @@
         font-size: 1.31rem;
       }
 
-       @media screen and (max-width: 1024px) {
-        .css-flm59u
-        {
+      @media screen and (max-width: 1024px) {
+        .css-flm59u {
           margin: 0px;
         }
-        }
+      }
       @media screen and (max-width: 900px) {
         .wrapper .carousel {
           grid-auto-columns: calc((100% / 2) - 9px);
@@ -622,19 +631,15 @@
     </style>
     <style>
       @media screen and (max-width: 510px) {
-        .creditdetal
-        {
+        .creditdetal {
           height: 45px;
         }
-        .creditdetal_border::before
-        {
+        .creditdetal_border::before {
           border-bottom: 45px solid rgb(0, 168, 38) !important;
         }
-        .creditdetal_border::after
-        {
-           border-top: 45px solid rgb(0, 0, 0);
+        .creditdetal_border::after {
+          border-top: 45px solid rgb(0, 0, 0);
         }
-        
       }
       @media screen and (max-width: 790px) {
         .sidebar {
@@ -654,10 +659,12 @@
         }
         .css-tn9xkt {
           margin-left: 10px;
-          font-family: "Public Sans", sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+          font-family: "Public Sans", sans-serif, -apple-system,
+            BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+            sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
         }
       }
-      
+
       .close-toggle {
         cursor: pointer;
         /* Initially hidden */
@@ -679,11 +686,10 @@
           display: inline-block;
         }
       }
-      @media screen and (min-width: 690px) {
+      @media screen and (min-width: 1220px) {
         .close-toggle {
           display: none;
         }
-        
       }
       @media screen and (max-width: 442px) {
         .header {
@@ -769,222 +775,213 @@
     </style>
   </head>
   <body>
-    <div class="header" id="header">
-      <i class="fa fa-bars menu-toggle ml-1" id="menuToggle"></i>
-      <!-- <h5 class="ml-2 mb-0 dashbaord">Dashboard</h5> -->
-      <div class="mx-auto">
-        <span class="navbar-brand mb-0 h1 text-center bettor">Bettor</span>
-      </div>
-      <div class="ml-auto">
-        <span class="navbar-text">B:2378</span>
-        <span class="navbar-text ml-3 text-success">L:0</span>
-     <a href="#user" class="username text-white">
-          <span class="navbar-text ml-3">Username</span>
-        </a>
-        <span class="mr-2"
-          ><svg
-            stroke="currentColor"
-            fill="currentColor"
-            stroke-width="0"
-            viewBox="0 0 512 512"
-            class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeMedium css-1slk8wg"
-            aria-hidden="true"
-            style="height: 1rem; width: 1rem"
-            xmlns="http://www.w3.org/2000/svg"
-            id="dropdownToggle"
-          >
-            <path
-              d="M256 294.1L383 167c9.4-9.4 24.6-9.4 33.9 0s9.3 24.6 0 34L273 345c-9.1 9.1-23.7 9.3-33.1.7L95 201.1c-4.7-4.7-7-10.9-7-17s2.3-12.3 7-17c9.4-9.4 24.6-9.4 33.9 0l127.1 127z"
-            ></path>
-          </svg>
-          <div class="dropdown-menu">
-            <a href="myprofile.html" class="dropdown-item">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                aria-hidden="true"
-                role="img"
-                font-size="1.375rem"
-                class="iconify iconify--tabler"
-                width="1em"
-                height="1em"
-                viewBox="0 0 24 24"
-              >
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="1.5"
-                >
-                  <circle cx="9" cy="7" r="4"></circle>
-                  <path
-                    d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2m1-10l2 2l4-4"
-                  ></path>
-                </g>
-              </svg>
-              My Profile
-            </a>
-            <a href="statement.html" class="dropdown-item">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                aria-hidden="true"
-                role="img"
-                font-size="1.375rem"
-                class="iconify iconify--tabler"
-                width="1em"
-                height="1em"
-                viewBox="0 0 24 24"
-              >
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="1.5"
-                >
-                  <path
-                    d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 0 0-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 0 0-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 0 0-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 0 0-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 0 0 1.066-2.573c-.94-1.543.826-3.31 2.37-2.37c1 .608 2.296.07 2.572-1.065z"
-                  ></path>
-                  <circle cx="12" cy="12" r="3"></circle>
-                </g>
-              </svg>
-              Statement
-            </a>
-            <a href="#" class="dropdown-item">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                aria-hidden="true"
-                role="img"
-                font-size="1.375rem"
-                class="iconify iconify--tabler"
-                width="1em"
-                height="1em"
-                viewBox="0 0 24 24"
-              >
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="1.5"
-                >
-                  <rect width="18" height="14" x="3" y="5" rx="3"></rect>
-                  <path d="M3 10h18M7 15h.01M11 15h2"></path>
-                </g>
-              </svg>
-              Result
-            </a>
-            <hr />
-            <a href="#" class="dropdown-item">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                aria-hidden="true"
-                role="img"
-                font-size="1.375rem"
-                class="iconify iconify--tabler"
-                width="1em"
-                height="1em"
-                viewBox="0 0 24 24"
-              >
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="1.5"
-                >
-                  <circle cx="12" cy="12" r="4"></circle>
-                  <circle cx="12" cy="12" r="9"></circle>
-                  <path
-                    d="m15 15l3.35 3.35M9 15l-3.35 3.35m0-12.7L9 9m9.35-3.35L15 9"
-                  ></path>
-                </g>
-              </svg>
-              Profit Loss
-            </a>
-            <a href="#" class="dropdown-item">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                aria-hidden="true"
-                role="img"
-                font-size="1.375rem"
-                class="iconify iconify--tabler"
-                width="1em"
-                height="1em"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="1.5"
-                  d="M16.7 8A3 3 0 0 0 14 6h-4a3 3 0 0 0 0 6h4a3 3 0 0 1 0 6h-4a3 3 0 0 1-2.7-2M12 3v3m0 12v3"
-                ></path>
-              </svg>
-              Bet History
-            </a>
-            <hr />
-            <a href="#" class="dropdown-item">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                aria-hidden="true"
-                role="img"
-                font-size="1.375rem"
-                class="iconify iconify--tabler"
-                width="1em"
-                height="1em"
-                viewBox="0 0 24 24"
-              >
-                <g
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="1.5"
-                >
-                  <path
-                    d="M14 8V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2-2v-2"
-                  ></path>
-                  <path d="M7 12h14l-3-3m0 6l3-3"></path>
-                </g>
-              </svg>
-              Logout
-            </a>
-          </div>
-        </span>
-      </div>
-    </div>
-    <div class="marquee-container">
-      <div class="marquee-text">
-        Welcome to 1obet.com - Announcement - All casino Profit Loss will be 1
-        to 2 Ratio - Her casino may Jeet Har 1 ka 2 ho ge - Welcome to Exchange
-        - Zero commissions on chota bara, kalli jotta, fancies
-      </div>
-    </div>
     <!-- main content of body -->
-    <div class="content m-2">
+    <div class="content m-3">
+      <div class="header pl-4 pt-2" id="header">
+        <i class="fa fa-bars menu-toggle ml-1" id="menuToggle"></i>
+        <div class="ml-auto">
+          <span class="navbar-brand mb-0 h1 text-center bettor">Bettor</span>
+        </div>
+        <div class="ml-auto">
+          <span class="navbar-text">B:2378</span>
+          <span class="navbar-text ml-3 text-success">L:0</span>
+          <a href="#user" class="username text-white">
+            <span class="navbar-text ml-3">Username</span>
+          </a>
+          <span class="mr-2"
+            ><svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 512 512"
+              class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeMedium css-1slk8wg"
+              aria-hidden="true"
+              style="height: 1rem; width: 1rem"
+              xmlns="http://www.w3.org/2000/svg"
+              id="dropdownToggle"
+            >
+              <path
+                d="M256 294.1L383 167c9.4-9.4 24.6-9.4 33.9 0s9.3 24.6 0 34L273 345c-9.1 9.1-23.7 9.3-33.1.7L95 201.1c-4.7-4.7-7-10.9-7-17s2.3-12.3 7-17c9.4-9.4 24.6-9.4 33.9 0l127.1 127z"
+              ></path>
+            </svg>
+            <div class="dropdown-menu">
+              <a href="myprofile.html" class="dropdown-item">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  aria-hidden="true"
+                  role="img"
+                  font-size="1.375rem"
+                  class="iconify iconify--tabler"
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 24 24"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                  >
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path
+                      d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2m1-10l2 2l4-4"
+                    ></path>
+                  </g>
+                </svg>
+                My Profile
+              </a>
+              <a href="statement.html" class="dropdown-item">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  aria-hidden="true"
+                  role="img"
+                  font-size="1.375rem"
+                  class="iconify iconify--tabler"
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 24 24"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                  >
+                    <path
+                      d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 0 0-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 0 0-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 0 0-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 0 0-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 0 0 1.066-2.573c-.94-1.543.826-3.31 2.37-2.37c1 .608 2.296.07 2.572-1.065z"
+                    ></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </g>
+                </svg>
+                Statement
+              </a>
+              <a href="#" class="dropdown-item">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  aria-hidden="true"
+                  role="img"
+                  font-size="1.375rem"
+                  class="iconify iconify--tabler"
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 24 24"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                  >
+                    <rect width="18" height="14" x="3" y="5" rx="3"></rect>
+                    <path d="M3 10h18M7 15h.01M11 15h2"></path>
+                  </g>
+                </svg>
+                Result
+              </a>
+              <hr />
+              <a href="#" class="dropdown-item">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  aria-hidden="true"
+                  role="img"
+                  font-size="1.375rem"
+                  class="iconify iconify--tabler"
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 24 24"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                  >
+                    <circle cx="12" cy="12" r="4"></circle>
+                    <circle cx="12" cy="12" r="9"></circle>
+                    <path
+                      d="m15 15l3.35 3.35M9 15l-3.35 3.35m0-12.7L9 9m9.35-3.35L15 9"
+                    ></path>
+                  </g>
+                </svg>
+                Profit Loss
+              </a>
+              <a href="#" class="dropdown-item">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  aria-hidden="true"
+                  role="img"
+                  font-size="1.375rem"
+                  class="iconify iconify--tabler"
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M16.7 8A3 3 0 0 0 14 6h-4a3 3 0 0 0 0 6h4a3 3 0 0 1 0 6h-4a3 3 0 0 1-2.7-2M12 3v3m0 12v3"
+                  ></path>
+                </svg>
+                Bet History
+              </a>
+              <hr />
+              <a href="#" class="dropdown-item">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  aria-hidden="true"
+                  role="img"
+                  font-size="1.375rem"
+                  class="iconify iconify--tabler"
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 24 24"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                  >
+                    <path
+                      d="M14 8V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2-2v-2"
+                    ></path>
+                    <path d="M7 12h14l-3-3m0 6l3-3"></path>
+                  </g>
+                </svg>
+                Logout
+              </a>
+            </div>
+          </span>
+        </div>
+        <div class="marquee-container">
+          <div class="marquee-text">
+            Welcome to 1obet.com - Announcement - All casino Profit Loss will be
+            1 to 2 Ratio - Her casino may Jeet Har 1 ka 2 ho ge - Welcome to
+            Exchange - Zero commissions on chota bara, kalli jotta, fancies
+          </div>
+        </div>
+      </div>
       <div class="css-1s05omm creditdetal">
         <div class="MuiBox-root css-nu8l0g creditdetal_border">
           <div class="MuiStack-root css-a4cdis">
-            <p class="MuiTypography-root  css-tn9xkt ">
-              Credit: 0
-            </p>
-            <p class="MuiTypography-root css-tn9xkt">
-              Balance: 2,844.8
-            </p>
-            <p class="MuiTypography-root  css-tn9xkt">
-              Liable: 0
-            </p>
-            <p class="MuiTypography-root  css-tn9xkt">
-              Active Bet: 0
-            </p>
+            <p class="MuiTypography-root css-tn9xkt">Credit: 0</p>
+            <p class="MuiTypography-root css-tn9xkt">Balance: 2,844.8</p>
+            <p class="MuiTypography-root css-tn9xkt">Liable: 0</p>
+            <p class="MuiTypography-root css-tn9xkt">Active Bet: 0</p>
           </div>
         </div>
         <div class="MuiBox-root css-1tv6lwp creditdetal_border"></div>
@@ -1131,9 +1128,7 @@
                 d="M137.75 17.28l-15.313 78.782 20.313 56.876h45.97L137.75 17.28zM74.5 19L20 378.156v116.156h208L210.125 386.5H113.28l-2.218-6.156-25.78-71.594 17.562-6.344 23.562 65.406h90.344l230.688-2.968 9.812-33.406H278.5V312.75h184.22l7.374-25.156L415.53 209.5H291.47l-20.345-37.594h-75.28l-.095-.28h-46.313L159.563 200l-17.593 6.28-26.532-74.25-.126.72L74.5 19zm133.375 178.22h56.094l21.405 38.874-26.094-.438-51.405-38.437zm230.47 12.28l38.53 55.094L493.03 209.5h-54.686zm-82.814 15.938c6.613 0 11.97 5.356 11.97 11.968 0 6.613-5.357 11.97-11.97 11.97-6.61 0-11.967-5.357-11.967-11.97 0-6.612 5.356-11.97 11.968-11.97zm44.595 0c6.612 0 12 5.356 12 11.968 0 6.613-5.388 11.97-12 11.97s-11.97-5.357-11.97-11.97c0-6.612 5.358-11.97 11.97-11.97zm-66.188 29.187c6.612 0 11.97 5.356 11.97 11.97 0 6.61-5.358 11.967-11.97 11.967-6.61 0-11.968-5.356-11.968-11.968 0-6.613 5.356-11.97 11.967-11.97zm43.125 0c6.612 0 12 5.356 12 11.97 0 6.61-5.388 11.967-12 11.967-6.61 0-11.968-5.356-11.968-11.968 0-6.613 5.357-11.97 11.97-11.97zm42.063 0c6.612 0 11.97 5.356 11.97 11.97 0 6.61-5.358 11.967-11.97 11.967-6.612 0-11.97-5.356-11.97-11.968 0-6.613 5.358-11.97 11.97-11.97z"
               ></path>
             </svg>
-            <p class="MuiTypography-root  css-tn9xkt">
-              Grey hound
-            </p>
+            <p class="MuiTypography-root css-tn9xkt">Grey hound</p>
           </div>
         </div>
         <div class="MuiBox-root css-1tv6lwp">
@@ -1203,7 +1198,7 @@
                     d="M256 91.088c-111.453 0-202.122 88.575-202.122 197.456C53.878 397.426 144.548 486 256 486c111.453 0 202.122-88.574 202.122-197.456 0-108.881-90.67-197.455-202.122-197.455zm0 375.866c-100.942 0-183.076-80.039-183.076-178.41 0-98.37 82.134-178.41 183.076-178.41s183.076 80.04 183.076 178.41c0 98.371-82.134 178.41-183.076 178.41zm-.571-178.41l128.558 99.55A165.602 165.602 0 0 1 256 447.908c-90.467 0-164.03-71.493-164.03-159.365 0-87.681 73.266-159.055 163.447-159.352v159.352zM256 72.043a224.727 224.727 0 0 0-66.66 10.07V56.354A30.354 30.354 0 0 1 219.694 26h72.695a30.354 30.354 0 0 1 30.27 30.354v25.76A224.727 224.727 0 0 0 256 72.042zm128.939 40.71l20.117-19.748c8.797-8.642 21.272-10.463 27.878-4.083l20.403 19.748c6.594 6.38 4.761 18.558-3.988 27.2l-19.438 19.045a221.06 221.06 0 0 0-44.96-42.162zM82.435 154.51l-19.391-19.046c-8.797-8.642-10.713-20.724-4.202-26.985L78.875 89.1c6.476-6.26 18.856-4.344 27.652 4.298l20.046 19.688a221.06 221.06 0 0 0-44.138 41.425z"
                   ></path>
                 </svg>
-                <p class="MuiTypography-root  "style="text-wrap:nowrap">
+                <p class="MuiTypography-root" style="text-wrap: nowrap">
                   In Play
                 </p>
               </div>
@@ -3528,7 +3523,7 @@
           </a>
         </li>
         <li>
-          <a href="sportsBook .html" class="menu-item">
+          <a href="sportsBook.html" class="menu-item">
             <img
               src="./public/assets/side-menu-icons/light-icons/all-sports.png"
               alt=""
@@ -3568,7 +3563,7 @@
           </a>
         </li>
         <li>
-          <a href="#" class="menu-item">
+          <a href="ezugi_casino.html" class="menu-item">
             <img
               src="./public/assets/side-menu-icons/light-icons/royal-casino.png"
               alt=""
@@ -3585,44 +3580,70 @@
         </li>
       </ul>
     </div>
-
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
       const closeToggle = document.getElementById("closeToggle");
       const menuToggle = document.getElementById("menuToggle");
       const sidebar = document.getElementById("sidebar");
       const header = document.getElementById("header");
       const content = document.querySelector(".content");
+      const footer = document.getElementById("footer");
 
       menuToggle.addEventListener("click", function () {
         sidebar.classList.toggle("open");
         // Adjust the position of the toggle button and header padding
         if (sidebar.classList.contains("open")) {
-          if (window.innerWidth <= 690) {
+          if (window.innerWidth <= 1220) {
             header.style.paddingLeft = "0";
             content.style.paddingLeft = "0";
-          } else if (window.innerWidth <= 790) {
-            header.style.paddingLeft = "250px";
+          } else if (window.innerWidth <= 1230) {
+            header.style.width = "calc(100% - 282px)";
             content.style.paddingLeft = "250px";
+            footer.style.paddingLeft = "250px";
           } else {
-            header.style.paddingLeft = "308px";
-            content.style.paddingLeft = "310px";
+            header.style.width = "calc(100% - 300px)";
+            header.style.paddingLeft = "0px";
+            content.style.paddingLeft = "270px";
+            footer.style.paddingLeft = "270px";
           }
         } else {
+          header.style.width = "calc(100% - 32px)";
           header.style.paddingLeft = "0";
           content.style.paddingLeft = "0";
+          footer.style.paddingLeft = "0";
         }
       });
+      if (window.innerWidth >= 1220) {
+        sidebar.classList.toggle("open");
+        content.style.paddingLeft = "270px";
+        footer.style.paddingLeft = "270px";
+        header.style.width = "calc(100% - 300px)";
+      }
       closeToggle.addEventListener("click", function () {
         sidebar.classList.remove("open");
+        header.style.width = "calc(100% - 32px)";
+        header.style.paddingLeft = "0";
+        content.style.paddingLeft = "0";
+        footer.style.paddingLeft = "0";
       });
       window.addEventListener("resize", function () {
         if (sidebar.classList.contains("open")) {
-          if (window.innerWidth <= 790) {
-            header.style.paddingLeft = "250px";
+          if (window.innerWidth <= 1220) {
+            header.style.width = "calc(100% - 32px)";
+            header.style.paddingLeft = "0";
+            content.style.paddingLeft = "0";
+            footer.style.paddingLeft = "0";
+          } else if (window.innerWidth <= 1230) {
+            header.style.width = "calc(100% - 282px)";
+
             content.style.paddingLeft = "250px";
+            footer.style.paddingLeft = "250px";
           } else {
-            header.style.paddingLeft = "308px";
-            content.style.paddingLeft = "310px";
+            header.style.width = "calc(100% - 300px)";
+            content.style.paddingLeft = "270px";
+            footer.style.paddingLeft = "270px ";
           }
         }
       });
@@ -3759,5 +3780,4 @@
       };
     </script>
   </body>
-</html\
-
+</html>
