@@ -77,7 +77,7 @@
         list-style: none;
         text-decoration: none;
         margin-right: 15px;
-        margin-bottom: 1rem;
+        margin-bottom: 0.2rem;
       }
       ul li a {
         display: flex;
@@ -85,7 +85,7 @@
         height: 100%;
         width: 100%;
         line-height: 40px;
-        font-size: 20px;
+        font-size: 1rem;
         color: white;
         text-decoration: none;
         transition: background-color 0.3s ease;
@@ -94,13 +94,15 @@
       }
       ul li a:hover {
         text-decoration: none;
-        background-color: #00a826;
+        background: linear-gradient(72.47deg, rgb(0 90 21) 22.16%, rgb(0 116 26 / 70%) 76.47%);
         color: white;
-      }
+    }
       ul li a img {
         margin-right: 10px;
         transition: transform 0.3s ease;
         animation: rotate 2s linear infinite;
+        width: 18px;
+        height:18px;
       }
       ul li a.active img {
         animation: none;
@@ -116,9 +118,10 @@
           transform: rotate(360deg);
         }
       }
-      ul li a.active {
-        background-color: #00a826;
-      }
+     ul li a.active {
+        box-shadow: rgba(0, 168, 38, 0.8) 0px 2px 6px;
+        background: linear-gradient(72.47deg, rgb(0, 168, 38) 22.16%, rgba(0, 168, 38, 0.7) 76.47%);
+        }
       .menu-toggle {
         font-size: 1.5rem;
         color: white;

@@ -72,60 +72,73 @@
     </style>
 
     <!-- sidebar style -->
-    <style>
-      ul li {
+     <style>
+        ul li {
         list-style: none;
         text-decoration: none;
         margin-right: 15px;
-        margin-bottom: 1rem;
-      }
-      ul li a {
+        margin-bottom: 0.2rem;
+     }
+
+        ul li a {
         display: flex;
         align-items: center;
         height: 100%;
         width: 100%;
         line-height: 40px;
-        font-size: 20px;
+        font-size: 1rem;
         color: white;
         text-decoration: none;
         transition: background-color 0.3s ease;
         padding-left: 10px;
         border-radius: 10px;
-      }
-      ul li a:hover {
+        }
+
+        ul li a:hover {
         text-decoration: none;
-        background-color: #00a826;
+        background: linear-gradient(72.47deg, rgb(0 90 21) 22.16%, rgb(0 116 26 / 70%) 76.47%);
         color: white;
-      }
-      ul li a img {
+        }
+
+        ul li a img {
         margin-right: 10px;
         transition: transform 0.3s ease;
         animation: rotate 2s linear infinite;
-      }
-      ul li a.active img {
+         width: 18px;
+        height:18px;
+        }
+
+        ul li a.active img {
         animation: none;
-      }
-      ul li a.active img {
+        }
+
+        ul li a.active img {
         animation: none;
-      }
-      @keyframes rotate {
+        }
+
+        @keyframes rotate {
         from {
-          transform: rotate(0deg);
+            transform: rotate(0deg);
         }
+
         to {
-          transform: rotate(360deg);
+            transform: rotate(360deg);
         }
-      }
-      ul li a.active {
-        background-color: #00a826;
-      }
-      .menu-toggle {
+        }
+
+        ul li a.active {
+        box-shadow: rgba(0, 168, 38, 0.8) 0px 2px 6px;
+        background: linear-gradient(72.47deg, rgb(0, 168, 38) 22.16%, rgba(0, 168, 38, 0.7) 76.47%);
+        }
+
+        .menu-toggle {
         font-size: 1.5rem;
         color: white;
         cursor: pointer;
         transition: all 0.5s ease;
-      }
-      .sidebar {
+        }
+
+        .sidebar {
         position: fixed;
         top: 0;
         left: -260px;
@@ -135,13 +148,16 @@
         color: white;
         padding-left: 10px;
         transition: all 0.5s ease;
-        overflow-y: auto; /* Add scrolling */
+        overflow-y: auto;
+        /* Add scrolling */
         z-index: 1000;
-      }
-      .sidebar.open {
+        }
+
+        .sidebar.open {
         left: 0;
-      }
-      .header {
+        }
+
+        .header {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -152,14 +168,17 @@
         top: 0;
         width: calc(100% - 32px);
         z-index: 1000;
-        transition: padding-left 0.5s ease, margin 0.5s ease; /* Added margin transition */
+        transition: padding-left 0.5s ease, margin 0.5s ease;
+        /* Added margin transition */
         font-size: 0.9rem;
         margin-top: 1rem;
         border-radius: 6px;
         min-height: 50px;
-        flex-wrap: wrap; /* Allow wrapping */
-      }
-      .marquee-container {
+        flex-wrap: wrap;
+        /* Allow wrapping */
+        }
+
+        .marquee-container {
         overflow: hidden;
         white-space: nowrap;
         width: 100%;
@@ -168,97 +187,116 @@
         border-radius: 6px;
         padding-top: 0px;
         padding-left: 10px;
-      }
-      .marquee-text {
+        }
+
+        .marquee-text {
         display: inline-block;
         padding-left: 100%;
         animation: marquee 30s linear infinite;
-      }
-      @keyframes marquee {
+        }
+
+        @keyframes marquee {
         0% {
-          transform: translateX(0%);
+            transform: translateX(0%);
         }
+
         100% {
-          transform: translateX(-100%);
+            transform: translateX(-100%);
         }
-      }
-      .marquee-container:hover .marquee-text {
+        }
+
+        .marquee-container:hover .marquee-text {
         animation-play-state: paused;
-      }
-      .close-toggle {
+        }
+
+        .close-toggle {
         cursor: pointer;
 
-        margin-left: auto; /* Push to the right */
-      }
+        margin-left: auto;
+        /* Push to the right */
+        }
 
-      @media screen and (max-width: 790px) {
+        @media screen and (max-width: 790px) {
         .sidebar {
-          width: 250px;
+            width: 250px;
         }
-        .sidebar.open ~ #header {
-          padding-left: 250px !important;
+
+        .sidebar.open~#header {
+            padding-left: 250px !important;
         }
+
         .header {
-          font-size: medium;
+            font-size: medium;
         }
-      }
-      @media screen and (max-width: 690) {
+        }
+
+        @media screen and (max-width: 690) {
         .content {
-          padding-left: 0 !important;
-        }
-        .sidebar.open ~ #header {
-          padding-left: 0px !important;
+            padding-left: 0 !important;
         }
 
-        .sidebar.open ~ .content {
-          padding-left: 0 !important;
+        .sidebar.open~#header {
+            padding-left: 0px !important;
         }
+
+        .sidebar.open~.content {
+            padding-left: 0 !important;
+        }
+
         .menu-toggle {
-          display: inline-block;
+            display: inline-block;
         }
-      }
-      @media screen and (min-width: 1220px) {
+        }
+
+        @media screen and (min-width: 1220px) {
         .close-toggle {
-          display: none;
+            display: none;
         }
-      }
-      @media screen and (max-width: 442px) {
+        }
+
+        @media screen and (max-width: 442px) {
         .header {
-          padding: 3px;
+            padding: 3px;
         }
+
         .timedeaitls_wrapper {
-          align-items: start;
+            align-items: start;
         }
-      }
-      @media screen and (max-width: 425px) {
+        }
+
+        @media screen and (max-width: 425px) {
         .menu-toggle {
-          font-size: small;
+            font-size: small;
         }
 
         .bettor {
-          font-size: small;
+            font-size: small;
         }
+
         .header {
-          font-size: small;
-          text-wrap: nowrap;
+            font-size: small;
+            text-wrap: nowrap;
         }
+
         .marquee-text {
-          font-size: small;
+            font-size: small;
         }
-      }
-      @media screen and (max-width: 320px) {
+        }
+
+        @media screen and (max-width: 320px) {
         .menu-toggle {
-          font-size: small;
+            font-size: small;
         }
 
         .bettor {
-          font-size: x-small;
+            font-size: x-small;
         }
+
         .header {
-          font-size: x-small;
-          text-wrap: nowrap;
+            font-size: x-small;
+            text-wrap: nowrap;
         }
-      }
+        }
     </style>
     <!-- black green patti style -->
     <style>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Result</title>
+    <title>statement</title>
     <link
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
       rel="stylesheet"
@@ -214,9 +214,13 @@
           font-size: medium;
         }
       }
+
       @media screen and (max-width: 690px) {
         .content {
           padding-left: 0 !important;
+        }
+        .timefromto {
+          flex-flow: column !important;
         }
         .sidebar.open ~ #header {
           padding-left: 0px !important;
@@ -228,8 +232,11 @@
         .menu-toggle {
           display: inline-block;
         }
-        .timefromto {
-          flex-flow: column !important;
+        .css-cr5cwv {
+          display: block !important;
+        }
+        .css-9u59n1 {
+          width: 50% !important;
         }
       }
       @media screen and (min-width: 1220px) {
@@ -308,7 +315,12 @@
       }
       .heigt_sport_book {
         height: 42px;
-        margin-top: 6rem !important;
+      
+      }
+      .heigt_sport_book1
+      {
+        height: 42px;
+        margin-top: 7rem !important;
       }
       .triangle_left {
         margin-right: 1.375rem;
@@ -393,7 +405,7 @@
     <style>
       @media (min-width: 900px) {
         .marketbtn_boxsize {
-          flex-basis: 100%;
+          flex-basis: 69%;
           -webkit-box-flex: 0;
           flex-grow: 0;
           max-width: 100%;
@@ -403,10 +415,7 @@
         box-sizing: border-box;
         display: block !important;
       }
-      .marketbtns_shadow {
-        transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-        box-shadow: rgba(47, 43, 61, 0.1) 0px 4px 18px 0px;
-      }
+
       .marketbtn {
         display: inline-flex;
         -webkit-box-align: center;
@@ -430,7 +439,7 @@
         font-weight: 500;
         border: 1px solid rgb(0, 168, 38);
         color: rgb(0, 168, 38);
-        min-width: 50px;
+        min-width: 60px;
         text-transform: none;
         transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
           box-shadow 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
@@ -443,7 +452,7 @@
         padding: 0.3125rem 0.8125rem;
         margin: 5px 0.25rem;
       }
-      .marketbtn:focus {
+      .marketbtn {
         color: rgb(255, 255, 255);
         background-color: rgb(0, 168, 38);
         border: 0px;
@@ -663,14 +672,13 @@
       }
       .css-cr5cwv {
         box-sizing: border-box;
-        flex-flow: wrap;
+        flex-flow: nowrap;
         width: 100%;
         padding-top: 1rem;
         padding-bottom: 1rem;
         display: flex;
-        -webkit-box-pack: justify;
+        align-items: center;
         justify-content: space-between;
-        gap: 0.5rem;
       }
       .enteriesinput:focus {
         outline: none;
@@ -693,7 +701,7 @@
         align-items: center;
         justify-content: space-between;
         padding: 10px;
-        border: 1px solid #ccc;
+
         border-radius: 4px;
         cursor: pointer;
       }
@@ -733,8 +741,7 @@
     <style>
       .dropdown-container {
         position: relative;
-        display: flex;
-        align-items: center;
+        display: inline-block;
       }
 
       .dropdown-menu {
@@ -775,12 +782,14 @@
   <body>
     <!-- main boady content -->
     <div class="content m-3">
-      <?php include 'header.php';?>
+      <!-- header -->
+       <?php include 'header.php';?>
+
       <div
-        class="heigt_sport_book m-0 d-flex flex-row flex-grow-0 position-relative w-100"
+        class="heigt_sport_book1 m-0 d-flex flex-row flex-grow-0 position-relative w-100"
       >
         <div
-          class="triangle_left d-flex pl-5 pr-5 align-items-center position-relative"
+          class="triangle_left d-flex pl-3 pr-5 align-items-center position-relative"
         >
           <svg
             stroke="currentColor"
@@ -804,7 +813,7 @@
               d="M17 2v1h-17v-1h17zM0 7h17v-1h-17v1zM0 11h17v-1h-17v1zM0 15h17v-1h-17v1z"
             ></path>
           </svg>
-          <p class="text-white m-0 fw-normal module_text">Market Results</p>
+          <p class="text-white m-0 fw-normal module_text">Report Filter</p>
         </div>
         <div
           class="triangle_right d-flex flex-grow-1 flex-shrink-1 position-relative align-items-center justify-content-end text-whit"
@@ -873,31 +882,22 @@
           </div>
         </div>
       </div>
-      <div class="css-cr5cwv">
-        <div class="marketbtn_boxsize m-0 d-flex flex-row">
-          <div
-            class="marketbtns_shadow bg-white text-black rounded-2 bg-none overflow-hidden"
-          >
-            <div>
-              <button class="marketbtn" tabindex="0" type="button">
-                Cricket</button
-              ><button class="marketbtn" tabindex="0" type="button">
-                Soccer</button
-              ><button class="marketbtn" tabindex="0" type="button">
-                Tenis</button
-              ><button class="marketbtn" tabindex="0" type="button">
-                Horse Race</button
-              ><button class="marketbtn" tabindex="0" type="button">
-                GreyHound</button
-              ><button class="marketbtn" tabindex="0" type="button">
-                Fancy</button
-              ><button class="marketbtn" tabindex="0" type="button">
-                Casino
-              </button>
-            </div>
-          </div>
+      <div
+        class="heigt_sport_book mb-5 m-0 d-flex flex-row flex-grow-0 position-relative w-100"
+      >
+        <div
+          class="triangle_left d-flex pl-3 pr-5 align-items-center position-relative"
+        >
+          <p class="text-white m-0 fw-normal module_text">
+            Sports ProfitLoss (ahmad123)
+          </p>
         </div>
-        <div class="dropdown-container css-k6senv">
+        <div
+          class="triangle_right d-flex flex-grow-1 flex-shrink-1 position-relative align-items-center justify-content-end text-whit"
+        ></div>
+      </div>
+      <!-- <div class="css-cr5cwv">
+        <div class="dropdown-container d-flex ml-3 css-k6senv">
           <h6 class="css-qzylx">Show</h6>
           <div class="dropdown">
             <div
@@ -969,6 +969,21 @@
           </div>
           <h6 class="css-qzylx">Entries</h6>
         </div>
+        <div class="marketbtn_boxsize m-0 d-flex flex-row">
+          <div
+            class="marketbtns_shadow bg-white text-black rounded-2 bg-none overflow-hidden"
+          >
+            <div>
+              <button class="marketbtn" tabindex="0" type="button">
+                Print
+              </button>
+              <button class="marketbtn" tabindex="0" type="button">
+                Excel
+              </button>
+              <button class="marketbtn" tabindex="0" type="button">PDF</button>
+            </div>
+          </div>
+        </div>
         <div class="css-1bj8auj">
           <p class="MuiTypography-body1 css-tn9xkt">Search</p>
           <div
@@ -988,16 +1003,16 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
 
     <!-- footer -->
     <?php include 'footer.php';?>
     <!-- sidebar -->
     <?php include 'sidebar.php';?>
-
-   <!-- script -->
-    <?php include 'script.php';?>
+    
+    <!-- script -->
+     <?php include 'script.php';?>
     <script>
       flatpickr("#fromdatetime", {
         enableTime: true, // Enables time selection
@@ -1046,6 +1061,6 @@
         });
       });
     </script>
-    
+   
   </body>
 </html>
