@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Horce Race</title>
+    <title>Cricket</title>
     <link
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
       rel="stylesheet"
@@ -23,6 +23,9 @@
       .footerLinks a {
         color: white;
       }
+      .footerLinks a:hover{
+        text-decoration:none;
+    }
       .footer {
         min-width: 100%;
       }
@@ -553,14 +556,14 @@
         display: flex;
         flex-direction: column;
       }
-      .sound_screen {
-        font-size: 2rem;
-      }
       .timedeaitls_wrapper {
         display: flex;
         justify-content: space-between;
         width: 100%;
         align-items: center;
+      }
+      .sound_screen {
+        font-size: 2rem;
       }
       .mainheader {
         color: white;
@@ -778,7 +781,7 @@
         text-align: center;
       }
     </style>
-    <!-- dashbaord style -->
+    <!-- sidebar style -->
     <style>
       ul li {
         list-style: none;
@@ -924,7 +927,7 @@
           display: inline-block;
         }
       }
-      @media screen and (min-width: 1220px) {
+      @media screen and (min-width: 690px) {
         .close-toggle {
           display: none;
         }
@@ -933,14 +936,14 @@
         .header {
           padding: 3px;
         }
-        .timedeaitls_wrapper {
-          align-items: start;
-        }
         .sound_screen {
           position: absolute;
           top: 20%;
           text-align: center;
           font-size: 1.8rem;
+        }
+        .timedeaitls_wrapper {
+          align-items: start;
         }
       }
       @media screen and (max-width: 425px) {
@@ -1025,7 +1028,7 @@
       .username:hover {
         text-decoration: none;
       }
-      .margin_top {
+      .margin-top {
         margin-top: 6rem;
       }
     </style>
@@ -1033,205 +1036,10 @@
   <body>
     <!-- main boady content -->
     <div class="content m-3">
-      <div class="header pl-4 pt-2" id="header">
-        <i class="fa fa-bars menu-toggle ml-1" id="menuToggle"></i>
-        <div class="ml-auto">
-          <span class="navbar-brand mb-0 h1 text-center bettor">Bettor</span>
-        </div>
-        <div class="ml-auto">
-          <span class="navbar-text">B:2378</span>
-          <span class="navbar-text ml-3 text-success">L:0</span>
-          <a href="#user" class="username text-white">
-            <span class="navbar-text ml-3">Username</span>
-          </a>
-          <span class="mr-2"
-            ><svg
-              stroke="currentColor"
-              fill="currentColor"
-              stroke-width="0"
-              viewBox="0 0 512 512"
-              class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeMedium css-1slk8wg"
-              aria-hidden="true"
-              style="height: 1rem; width: 1rem"
-              xmlns="http://www.w3.org/2000/svg"
-              id="dropdownToggle"
-            >
-              <path
-                d="M256 294.1L383 167c9.4-9.4 24.6-9.4 33.9 0s9.3 24.6 0 34L273 345c-9.1 9.1-23.7 9.3-33.1.7L95 201.1c-4.7-4.7-7-10.9-7-17s2.3-12.3 7-17c9.4-9.4 24.6-9.4 33.9 0l127.1 127z"
-              ></path>
-            </svg>
-            <div class="dropdown-menu">
-              <a href="myprofile.html" class="dropdown-item">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                  aria-hidden="true"
-                  role="img"
-                  font-size="1.375rem"
-                  class="iconify iconify--tabler"
-                  width="1em"
-                  height="1em"
-                  viewBox="0 0 24 24"
-                >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1.5"
-                  >
-                    <circle cx="9" cy="7" r="4"></circle>
-                    <path
-                      d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2m1-10l2 2l4-4"
-                    ></path>
-                  </g>
-                </svg>
-                My Profile
-              </a>
-              <a href="statement.html" class="dropdown-item">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                  aria-hidden="true"
-                  role="img"
-                  font-size="1.375rem"
-                  class="iconify iconify--tabler"
-                  width="1em"
-                  height="1em"
-                  viewBox="0 0 24 24"
-                >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1.5"
-                  >
-                    <path
-                      d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 0 0-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 0 0-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 0 0-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 0 0-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 0 0 1.066-2.573c-.94-1.543.826-3.31 2.37-2.37c1 .608 2.296.07 2.572-1.065z"
-                    ></path>
-                    <circle cx="12" cy="12" r="3"></circle>
-                  </g>
-                </svg>
-                Statement
-              </a>
-              <a href="#" class="dropdown-item">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                  aria-hidden="true"
-                  role="img"
-                  font-size="1.375rem"
-                  class="iconify iconify--tabler"
-                  width="1em"
-                  height="1em"
-                  viewBox="0 0 24 24"
-                >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1.5"
-                  >
-                    <rect width="18" height="14" x="3" y="5" rx="3"></rect>
-                    <path d="M3 10h18M7 15h.01M11 15h2"></path>
-                  </g>
-                </svg>
-                Result
-              </a>
-              <hr />
-              <a href="#" class="dropdown-item">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                  aria-hidden="true"
-                  role="img"
-                  font-size="1.375rem"
-                  class="iconify iconify--tabler"
-                  width="1em"
-                  height="1em"
-                  viewBox="0 0 24 24"
-                >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1.5"
-                  >
-                    <circle cx="12" cy="12" r="4"></circle>
-                    <circle cx="12" cy="12" r="9"></circle>
-                    <path
-                      d="m15 15l3.35 3.35M9 15l-3.35 3.35m0-12.7L9 9m9.35-3.35L15 9"
-                    ></path>
-                  </g>
-                </svg>
-                Profit Loss
-              </a>
-              <a href="#" class="dropdown-item">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                  aria-hidden="true"
-                  role="img"
-                  font-size="1.375rem"
-                  class="iconify iconify--tabler"
-                  width="1em"
-                  height="1em"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1.5"
-                    d="M16.7 8A3 3 0 0 0 14 6h-4a3 3 0 0 0 0 6h4a3 3 0 0 1 0 6h-4a3 3 0 0 1-2.7-2M12 3v3m0 12v3"
-                  ></path>
-                </svg>
-                Bet History
-              </a>
-              <hr />
-              <a href="#" class="dropdown-item">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                  aria-hidden="true"
-                  role="img"
-                  font-size="1.375rem"
-                  class="iconify iconify--tabler"
-                  width="1em"
-                  height="1em"
-                  viewBox="0 0 24 24"
-                >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1.5"
-                  >
-                    <path
-                      d="M14 8V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2-2v-2"
-                    ></path>
-                    <path d="M7 12h14l-3-3m0 6l3-3"></path>
-                  </g>
-                </svg>
-                Logout
-              </a>
-            </div>
-          </span>
-        </div>
-        <div class="marquee-container">
-          <div class="marquee-text">
-            Welcome to 1obet.com - Announcement - All casino Profit Loss will be
-            1 to 2 Ratio - Her casino may Jeet Har 1 ka 2 ho ge - Welcome to
-            Exchange - Zero commissions on chota bara, kalli jotta, fancies
-          </div>
-        </div>
-      </div>
-      <div class="margin_top d-flex display_block">
+      <!-- header -->
+       <?php include 'header.php'; ?>
+
+      <div class="margin-top d-flex display_block">
         <div class="w-100">
           <div class="mainheader p-2 mt-1">
             <div class="svg-icon mr-3">
@@ -1240,40 +1048,142 @@
                 fill="currentColor"
                 stroke-width="0"
                 viewBox="0 0 512 512"
-                class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeMedium css-110fo5k"
-                aria-hidden="true"
                 height="1em"
                 width="1em"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M400 16c-21.335 9.73-58.244 17.34-73.086 48.232-22.36 1.948-72.753 10.673-122.22 40.25-58.098 34.74-116.017 97.417-131.776 213.702l-.48 3.537-2.774 2.25c-30.87 25.002-40.657 38.937-44.416 61.153-3.536 20.9-.72 51.46-.363 101.877H328.36c3.455-16.892 10.44-29.245 12.472-41.568 2.337-14.176.19-29.938-20.812-58.547-43.078-58.683-46.853-129.458-12.916-171.28-8.654-2.765-15.09-6.887-19.458-12.546-6.115-7.924-7.4-17.006-8.57-25.884l17.848-2.352c1.112 8.446 2.38 13.88 4.97 17.237 2.59 3.356 7.31 6.472 19.55 8.46l-.022.128.172-.17 5.998 9.424c19.957 31.358 42.84 51.292 73.332 54.44l6.51.672 1.367 6.4c2.74 12.828 8.626 19.095 15.116 22.238 6.49 3.143 14.225 2.944 20.47.205 9.316-4.086 14.518-11.35 16.7-22.712 2.122-11.05.546-25.834-5.137-42.106-33.538-38.248-44.475-87.277-63.903-128.772-6.055-9.947-12.448-18.518-20.385-24.856C376.808 55.126 386.456 34.852 400 16zM214.068 34.97C179.55 35.06 146.075 43.06 96 58.58c31.146 9.92 70.397 18.9 86.037 39.01 4.463-3.017 8.94-5.88 13.418-8.56 40.51-24.22 80.387-35.286 108.23-40.04-35.854-9.477-63.047-14.094-89.617-14.023zM157.16 96.712c-1.13-.01-2.265-.01-3.402.004-30.353.37-63.1 9.745-96.647 31.283 27.186 3.672 54.67 3.724 72.58 15.398 15.9-17.92 33.144-32.634 50.677-44.668-7.548-1.244-15.292-1.938-23.207-2.017zM368 128a13.214 13.215 0 0 1 13.213 13.215A13.214 13.215 0 0 1 368 154.432a13.214 13.215 0 0 1-13.213-13.217A13.214 13.215 0 0 1 368 128zm-238.906 16.068c-36.395 1.495-68.903 6.53-104.76 24.766 33.236 7.095 50.913 13.507 65.025 33.83 11.522-22.53 25.045-41.93 39.734-58.596zM74.518 201.46C53.53 201.65 36.614 213.14 16 224c27.854 0 46.067 3.862 58.71 12.055 4.33-11.652 9.16-22.615 14.41-32.924-5.12-1.19-9.963-1.71-14.602-1.67zm-.623 36.82c-17.933 5.845-35.452 7.15-54.23 22.284 17.62 4.638 34.79 9.596 41.398 22.034 3.496-15.77 7.814-30.523 12.832-44.32zm370.142 8.57c1.617-.035 3.222.044 4.783.187l-1.64 17.926c-3.928-.36-5.513.416-5.57.465-.058.048-1.035.656-.635 5.886l-17.95 1.372c-.638-8.35 1.297-16.207 6.955-20.997 4.245-3.593 9.206-4.735 14.057-4.84zM52.215 290.723c-10.352.13-23.76 5.646-34.656 12.334 12.173 6.83 12.357 23.472 8.938 37.668 7.3-9.105 16.855-18.323 29.158-28.48 1.016-7.043 2.19-13.9 3.506-20.585-2.082-.67-4.42-.97-6.947-.937z"
+                  d="M433.2 17.99L159.8 291.4l60.8 60.8-6.3 6.3L494 78.79c0-24.32-36.5-60.8-60.8-60.8zM161.5 64.03a32 32 0 0 0-7.8.59c3.9 21.25 13.8 38.48 30.3 52.48a32 32 0 0 0 3.7-37.13 32 32 0 0 0-26.2-15.94zm-24.1 9.35a32 32 0 0 0-5.1 38.62 32 32 0 0 0 36 14.9c-15.5-14.7-25.9-32.79-30.9-53.52zm26.4 247.22C126.3 378.1 60.46 427.7 19.06 479.5c-4.82 5.9 7.6 18.2 13.53 13.5C84.32 451.6 133.9 385.7 191.4 348.2z"
                 ></path>
               </svg>
             </div>
             <div class="timedeaitls_wrapper">
               <div class="timedeaitls">
-                <span>
-                  <span>1 hour and 10 minutes ago | Jul 3 1:00 PM </span>
-                </span>
+                <span
+                  ><span>2 hours and 39 minutes ago | </span
+                  ><span>Jun 24 9:30 AM</span></span
+                >
                 <div class="timedeaitls">
-                  <h1 class="m-0 font-size">Compiegne (FRA) 9th Jul</h1>
-                  <div>Matched: 118</div>
+                  <h1 class="m-0 font-size">
+                    Sri Lanka Women v West Indies Women
+                  </h1>
+                  <div>Matched: 3,915,808</div>
                 </div>
               </div>
               <div>
                 <h4>OPEN</h4>
-                <div class="sound_screen d-flex justify-content-end">
-                  <img
-                    width="36"
-                    height="36"
-                    src="data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 10080 5040'%3e%3cdefs%3e%3cclipPath id='b'%3e%3cpath d='M0 0h6v3H0z'/%3e%3c/clipPath%3e%3cclipPath id='c'%3e%3cpath d='M0 0v1.5h6V3zm6 0H3v3H0z'/%3e%3c/clipPath%3e%3cpath id='a' d='m0-360 69.421 215.845 212.038-80.301L155.99-35.603l194.985 115.71-225.881 19.651 31.105 224.59L0 160l-156.198 164.349 31.105-224.59-225.881-19.651 194.986-115.711-125.471-188.853 212.038 80.301z'/%3e%3cpath id='e' d='M0-210 54.86-75.508l144.862 10.614L88.765 28.842l34.67 141.052L0 93.334l-123.435 76.56 34.67-141.052-110.957-93.736L-54.86-75.508z'/%3e%3cuse xlink:href='%23a' id='d' transform='scale(2.1)'/%3e%3c/defs%3e%3cpath fill='%23012169' d='M0 0h10080v5040H0z'/%3e%3cpath stroke='%23fff' stroke-width='.6' d='m0 0 6 3m0-3L0 3' clip-path='url(%23b)' transform='scale(840)'/%3e%3cpath stroke='%23e4002b' stroke-width='.4' d='m0 0 6 3m0-3L0 3' clip-path='url(%23c)' transform='scale(840)'/%3e%3cpath stroke='%23fff' stroke-width='840' d='M2520 0v2520M0 1260h5040'/%3e%3cpath stroke='%23e4002b' stroke-width='504' d='M2520 0v2520M0 1260h5040'/%3e%3cg fill='%23fff'%3e%3cuse xlink:href='%23d' x='2520' y='3780'/%3e%3cuse xlink:href='%23a' x='7560' y='4200'/%3e%3cuse xlink:href='%23a' x='6300' y='2205'/%3e%3cuse xlink:href='%23a' x='7560' y='840'/%3e%3cuse xlink:href='%23a' x='8680' y='1869'/%3e%3cuse xlink:href='%23e' x='8064' y='2730'/%3e%3c/g%3e%3c/svg%3e"
-                  />
+                <div class="sound_screen">
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 16 16"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06zm7.137 2.096a.5.5 0 0 1 0 .708L12.207 8l1.647 1.646a.5.5 0 0 1-.708.708L11.5 8.707l-1.646 1.647a.5.5 0 0 1-.708-.708L10.793 8 9.146 6.354a.5.5 0 1 1 .708-.708L11.5 7.293l1.646-1.647a.5.5 0 0 1 .708 0z"
+                    ></path>
+                  </svg>
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 24 24"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                    style="cursor: pointer"
+                  >
+                    <path
+                      d="M20 6h-5.586l2.293-2.293-1.414-1.414L12 5.586 8.707 2.293 7.293 3.707 9.586 6H4c-1.103 0-2 .897-2 2v11c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V8c0-1.103-.897-2-2-2zM4 19V8h16l.002 11H4z"
+                    ></path>
+                  </svg>
                 </div>
               </div>
             </div>
           </div>
-
+          <div>
+            <div class="MuiStack-root css-1jtgica">
+              <div class="MuiStack-root css-1ks4tg7">
+                <div class="MuiStack-root css-j7qwjs">
+                  <div class="MuiStack-root css-1mgdvdd">
+                    <div class="MuiStack-root css-1mgdvdd">
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-1gfpw9x"
+                      >
+                        GAM
+                      </p>
+                      <p
+                        class="MuiTypography-root MuiTypography-body1 css-1gfpw9x"
+                      >
+                        115-2 (13.4)
+                      </p>
+                    </div>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-1gfpw9x"
+                    >
+                      CRR 8.42
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-11h2uyk"
+                    ></p>
+                  </div>
+                  <div class="MuiStack-root css-1xhj18k">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-11h2uyk"
+                    ></p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-11h2uyk"
+                    >
+                      RRR 9.95
+                    </p>
+                  </div>
+                  <div class="MuiStack-root css-vide34">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-11h2uyk"
+                    >
+                      Over:
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-11h2uyk"
+                    >
+                      2
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-11h2uyk"
+                    >
+                      1
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-11h2uyk"
+                    >
+                      1
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-11h2uyk"
+                    >
+                      1
+                    </p>
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-11h2uyk"
+                    >
+                      = 5
+                    </p>
+                  </div>
+                </div>
+                <div class="MuiStack-root css-ypblli">
+                  <p class="MuiTypography-root MuiTypography-body1 css-klloh0">
+                    Ball
+                  </p>
+                  <div class="MuiBox-root css-xnim3s">
+                    Galle Marvels NEED 63 RUNS IN 6.2 OVERS TO WIN
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="bg-black display_dekstop">
             <iframe
               class="iframe"
@@ -1292,12 +1202,12 @@
                   <div class="MuiStack-root css-g6etzp">
                     <img
                       class="MuiBox-root css-iz2ltj"
-                      src="./public/assets/icons/betterIcon/inPlayW.png"
+                      src="public/assets/icons/betterIcon/inPlayW.png"
                     />
                     <h6
                       class="MuiTypography-root MuiTypography-subtitle2 css-tn9bsb"
                     >
-                      1m6f Mdn
+                      Match Odds
                     </h6>
                   </div>
                   <div class="MuiStack-root css-19hxgaf" aria-label="Rules">
@@ -1323,7 +1233,7 @@
                   <h6
                     class="MuiTypography-root MuiTypography-subtitle2 css-qzylx"
                   >
-                    1.Skywalk
+                    Colombo Strikers
                   </h6>
                   <p
                     class="MuiTypography-root MuiTypography-body1 css-1ha19hj"
@@ -1333,7 +1243,7 @@
                   <h6
                     class="MuiTypography-root MuiTypography-subtitle2 css-qzylx"
                   >
-                    2.Got Yeah
+                    B-Love Kandy
                   </h6>
                   <p
                     class="MuiTypography-root MuiTypography-body1 css-1ha19hj"
@@ -1517,12 +1427,42 @@
           <div class="MuiStack-root css-jnr44o">
             <div class="MuiStack-root css-9jay18">
               <div class="MuiStack-root css-yhsfmz">
-                <div class="MuiStack-root css-2p8vrk"></div>
+                <div class="MuiStack-root css-2p8vrk">
+                  <div class="MuiStack-root css-g6etzp">
+                    <img
+                      class="MuiBox-root css-iz2ltj"
+                      src="public/assets/icons/betterIcon/inPlayW.png"
+                    />
+                    <h6
+                      class="MuiTypography-root MuiTypography-subtitle2 css-tn9bsb"
+                    >
+                      Bookmaker
+                    </h6>
+                  </div>
+                  <div class="MuiStack-root css-19hxgaf" aria-label="Rules">
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 24 24"
+                      color="#fff"
+                      height="18px"
+                      width="18px"
+                      xmlns="http://www.w3.org/2000/svg"
+                      style="color: rgb(255, 255, 255)"
+                    >
+                      <path fill="none" d="M0 0h24v24H0z"></path>
+                      <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
                 <div class="MuiStack-root css-het29j">
                   <h6
                     class="MuiTypography-root MuiTypography-subtitle2 css-qzylx"
                   >
-                    3. Wiradjuri Queen
+                    Colombo Strikers
                   </h6>
                   <p
                     class="MuiTypography-root MuiTypography-body1 css-1ha19hj"
@@ -1532,7 +1472,7 @@
                   <h6
                     class="MuiTypography-root MuiTypography-subtitle2 css-qzylx"
                   >
-                    4. Ready To Wiggle
+                    B-Love Kandy
                   </h6>
                   <p
                     class="MuiTypography-root MuiTypography-body1 css-1ha19hj"
@@ -1540,6 +1480,18 @@
                 </div>
               </div>
               <div class="MuiStack-root css-yhsfmz">
+                <div class="MuiStack-root css-8dztdt">
+                  <h6
+                    class="MuiTypography-root MuiTypography-subtitle2 css-1todn3t"
+                  >
+                    Back
+                  </h6>
+                  <h6
+                    class="MuiTypography-root MuiTypography-subtitle2 css-f2ku00"
+                  >
+                    Lay
+                  </h6>
+                </div>
                 <div class="MuiStack-root css-yhsfmz">
                   <div class="MuiStack-root css-1mgdvdd">
                     <div class="MuiStack-root css-y0gi4w">
@@ -1671,7 +1623,7 @@
                           4.8
                         </p>
                       </div>
-                      <div class="MuiStack-root css-aelu6g">
+                      <div class="MuiStack-root css-aelu6g hide_at_561">
                         <p
                           class="MuiTypography-root MuiTypography-body1 css-o92rli"
                         >
@@ -1683,7 +1635,7 @@
                           3.2K
                         </p>
                       </div>
-                      <div class="MuiStack-root css-aelu6g hide_at_561">
+                      <div class="MuiStack-root css-aelu6g">
                         <p
                           class="MuiTypography-root MuiTypography-body1 css-o92rli"
                         >
@@ -1701,15 +1653,45 @@
               </div>
             </div>
           </div>
-          <div class="MuiStack-root css-jnr44o m-0">
+          <div class="MuiStack-root css-jnr44o">
             <div class="MuiStack-root css-9jay18">
               <div class="MuiStack-root css-yhsfmz">
-                <div class="MuiStack-root css-2p8vrk"></div>
+                <div class="MuiStack-root css-2p8vrk">
+                  <div class="MuiStack-root css-g6etzp">
+                    <img
+                      class="MuiBox-root css-iz2ltj"
+                      src="public/assets/icons/betterIcon/inPlayW.png"
+                    />
+                    <h6
+                      class="MuiTypography-root MuiTypography-subtitle2 css-tn9bsb"
+                    >
+                      Tide Match
+                    </h6>
+                  </div>
+                  <div class="MuiStack-root css-19hxgaf" aria-label="Rules">
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 24 24"
+                      color="#fff"
+                      height="18px"
+                      width="18px"
+                      xmlns="http://www.w3.org/2000/svg"
+                      style="color: rgb(255, 255, 255)"
+                    >
+                      <path fill="none" d="M0 0h24v24H0z"></path>
+                      <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
                 <div class="MuiStack-root css-het29j">
                   <h6
                     class="MuiTypography-root MuiTypography-subtitle2 css-qzylx"
                   >
-                    5. Best Ever
+                    Colombo Strikers
                   </h6>
                   <p
                     class="MuiTypography-root MuiTypography-body1 css-1ha19hj"
@@ -1719,7 +1701,7 @@
                   <h6
                     class="MuiTypography-root MuiTypography-subtitle2 css-qzylx"
                   >
-                    6. Canya Supersonic
+                    B-Love Kandy
                   </h6>
                   <p
                     class="MuiTypography-root MuiTypography-body1 css-1ha19hj"
@@ -1727,6 +1709,18 @@
                 </div>
               </div>
               <div class="MuiStack-root css-yhsfmz">
+                <div class="MuiStack-root css-8dztdt">
+                  <h6
+                    class="MuiTypography-root MuiTypography-subtitle2 css-1todn3t"
+                  >
+                    Back
+                  </h6>
+                  <h6
+                    class="MuiTypography-root MuiTypography-subtitle2 css-f2ku00"
+                  >
+                    Lay
+                  </h6>
+                </div>
                 <div class="MuiStack-root css-yhsfmz">
                   <div class="MuiStack-root css-1mgdvdd">
                     <div class="MuiStack-root css-y0gi4w">
@@ -1768,7 +1762,7 @@
                       </div>
                     </div>
                     <div class="MuiStack-root css-1snnq6o">
-                      <div class="MuiStack-root css-aelu6g hide_at_561">
+                      <div class="MuiStack-root css-aelu6g">
                         <p
                           class="MuiTypography-root MuiTypography-body1 css-o92rli"
                         >
@@ -1792,7 +1786,7 @@
                           14.9K
                         </p>
                       </div>
-                      <div class="MuiStack-root css-aelu6g">
+                      <div class="MuiStack-root css-aelu6g hide_at_561">
                         <p
                           class="MuiTypography-root MuiTypography-body1 css-o92rli"
                         >
@@ -1858,7 +1852,7 @@
                           4.8
                         </p>
                       </div>
-                      <div class="MuiStack-root css-aelu6g">
+                      <div class="MuiStack-root css-aelu6g hide_at_561">
                         <p
                           class="MuiTypography-root MuiTypography-body1 css-o92rli"
                         >
@@ -1870,7 +1864,7 @@
                           3.2K
                         </p>
                       </div>
-                      <div class="MuiStack-root css-aelu6g hide_at_561">
+                      <div class="MuiStack-root css-aelu6g">
                         <p
                           class="MuiTypography-root MuiTypography-body1 css-o92rli"
                         >
@@ -1888,15 +1882,45 @@
               </div>
             </div>
           </div>
-          <div class="MuiStack-root css-jnr44o m-0">
+          <div class="MuiStack-root css-jnr44o">
             <div class="MuiStack-root css-9jay18">
               <div class="MuiStack-root css-yhsfmz">
-                <div class="MuiStack-root css-2p8vrk"></div>
+                <div class="MuiStack-root css-2p8vrk">
+                  <div class="MuiStack-root css-g6etzp">
+                    <img
+                      class="MuiBox-root css-iz2ltj"
+                      src="public/assets/icons/betterIcon/inPlayW.png"
+                    />
+                    <h6
+                      class="MuiTypography-root MuiTypography-subtitle2 css-tn9bsb"
+                    >
+                      Fancy
+                    </h6>
+                  </div>
+                  <div class="MuiStack-root css-19hxgaf" aria-label="Rules">
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 24 24"
+                      color="#fff"
+                      height="18px"
+                      width="18px"
+                      xmlns="http://www.w3.org/2000/svg"
+                      style="color: rgb(255, 255, 255)"
+                    >
+                      <path fill="none" d="M0 0h24v24H0z"></path>
+                      <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
                 <div class="MuiStack-root css-het29j">
                   <h6
                     class="MuiTypography-root MuiTypography-subtitle2 css-qzylx"
                   >
-                    7. Blazin Oaklee
+                    Colombo Strikers
                   </h6>
                   <p
                     class="MuiTypography-root MuiTypography-body1 css-1ha19hj"
@@ -1906,7 +1930,7 @@
                   <h6
                     class="MuiTypography-root MuiTypography-subtitle2 css-qzylx"
                   >
-                    8. Bronte Lee
+                    B-Love Kandy
                   </h6>
                   <p
                     class="MuiTypography-root MuiTypography-body1 css-1ha19hj"
@@ -1914,6 +1938,18 @@
                 </div>
               </div>
               <div class="MuiStack-root css-yhsfmz">
+                <div class="MuiStack-root css-8dztdt">
+                  <h6
+                    class="MuiTypography-root MuiTypography-subtitle2 css-1todn3t"
+                  >
+                    Back
+                  </h6>
+                  <h6
+                    class="MuiTypography-root MuiTypography-subtitle2 css-f2ku00"
+                  >
+                    Lay
+                  </h6>
+                </div>
                 <div class="MuiStack-root css-yhsfmz">
                   <div class="MuiStack-root css-1mgdvdd">
                     <div class="MuiStack-root css-y0gi4w">
@@ -2045,7 +2081,7 @@
                           4.8
                         </p>
                       </div>
-                      <div class="MuiStack-root css-aelu6g">
+                      <div class="MuiStack-root css-aelu6g hide_at_561">
                         <p
                           class="MuiTypography-root MuiTypography-body1 css-o92rli"
                         >
@@ -2057,7 +2093,7 @@
                           3.2K
                         </p>
                       </div>
-                      <div class="MuiStack-root css-aelu6g hide_at_561">
+                      <div class="MuiStack-root css-aelu6g">
                         <p
                           class="MuiTypography-root MuiTypography-body1 css-o92rli"
                         >
@@ -2067,6 +2103,190 @@
                           class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
                         >
                           22.1K
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="MuiStack-root css-ddwuyb">
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1s05omm"
+            >
+              <div class="MuiBox-root css-nu8l0g">JKS 5 Over Figure</div>
+              <div class="MuiBox-root css-1tv6lwp">
+                <p class="MuiTypography-root MuiTypography-body1 css-9laub6">
+                  (0% commission)
+                </p>
+              </div>
+            </div>
+            <div class="MuiStack-root css-p58oka">
+              <div class="MuiStack-root css-rhier5">
+                <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
+                  0
+                </p>
+                <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
+                  8.85
+                </p>
+              </div>
+              <div class="MuiStack-root css-rhier5">
+                <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
+                  1
+                </p>
+                <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
+                  8.85
+                </p>
+              </div>
+              <div class="MuiStack-root css-rhier5">
+                <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
+                  2
+                </p>
+                <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
+                  8.85
+                </p>
+              </div>
+              <div class="MuiStack-root css-rhier5">
+                <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
+                  3
+                </p>
+                <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
+                  8.85
+                </p>
+              </div>
+              <div class="MuiStack-root css-rhier5">
+                <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
+                  4
+                </p>
+                <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
+                  8.85
+                </p>
+              </div>
+              <div class="MuiStack-root css-rhier5">
+                <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
+                  5
+                </p>
+                <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
+                  8.85
+                </p>
+              </div>
+              <div class="MuiStack-root css-rhier5">
+                <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
+                  6
+                </p>
+                <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
+                  8.85
+                </p>
+              </div>
+              <div class="MuiStack-root css-rhier5">
+                <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
+                  7
+                </p>
+                <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
+                  8.85
+                </p>
+              </div>
+              <div class="MuiStack-root css-rhier5">
+                <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
+                  8
+                </p>
+                <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
+                  8.85
+                </p>
+              </div>
+              <div class="MuiStack-root css-rhier5">
+                <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
+                  9
+                </p>
+                <p class="MuiTypography-root MuiTypography-body1 css-1mj48m5">
+                  8.85
+                </p>
+              </div>
+            </div>
+            <div class="MuiStack-root css-1uelkw">
+              <div class="MuiStack-root css-17pexuo">
+                <div class="MuiStack-root css-il7sii">
+                  <p class="MuiTypography-root MuiTypography-body1 css-tn9xkt">
+                    JOTTA
+                  </p>
+                  <div
+                    class="MuiStack-root css-13mkirs"
+                    style="min-width: 140px"
+                  >
+                    <div class="MuiStack-root css-khshwk">J</div>
+                    <div class="MuiStack-root css-6orp6a">
+                      <div class="MuiStack-root css-up5l35">
+                        100
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-1bv81gv"
+                        >
+                          %
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="MuiStack-root css-il7sii">
+                  <div class="MuiStack-root css-10o8scn">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-tn9xkt"
+                    >
+                      KALI(0% commission)
+                    </p>
+                  </div>
+                  <div class="MuiStack-root css-13mkirs">
+                    <div class="MuiStack-root css-khshwk">K</div>
+                    <div class="MuiStack-root css-6orp6a">
+                      <div class="MuiStack-root css-up5l35">
+                        100
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-1bv81gv"
+                        >
+                          %
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="MuiStack-root css-17pexuo">
+                <div class="MuiStack-root css-il7sii" style="min-width: 140px">
+                  <p class="MuiTypography-root MuiTypography-body1 css-tn9xkt">
+                    CHOTA
+                  </p>
+                  <div class="MuiStack-root css-1gb1rig">
+                    <div class="MuiStack-root css-1vouuc8">CH</div>
+                    <div class="MuiStack-root css-1nvrxws">
+                      <div class="MuiStack-root css-up5l35">
+                        100
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-1bv81gv"
+                        >
+                          %
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="MuiStack-root css-il7sii">
+                  <div class="MuiStack-root css-10o8scn">
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 css-tn9xkt"
+                    >
+                      BARA(0% commission)
+                    </p>
+                  </div>
+                  <div class="MuiStack-root css-1gb1rig">
+                    <div class="MuiStack-root css-1vouuc8">BR</div>
+                    <div class="MuiStack-root css-1nvrxws">
+                      <div class="MuiStack-root css-up5l35">
+                        100
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-1bv81gv"
+                        >
+                          %
                         </p>
                       </div>
                     </div>
@@ -2178,383 +2398,10 @@
       </div>
     </div>
     <!-- footer -->
-    <footer class="m-3" id="footer">
-      <div class="margin-top footer">
-        <div class="row" style="margin: auto">
-          <div class="col" style="background-color: rgb(34, 42, 60)">
-            <div class="footerLinks">
-              <div>
-                <a href="#/privacyPolicy" target="_blank"> PrivacyPolicy</a>
-                <a href="#/terms-and-conditions" target="_blank"
-                  >- Terms and Conditions</a
-                >
-                <a href="#/rules-regulation" target="_blank"
-                  >- Rules and Regulations</a
-                >
-                <a href="#/KYC" target="_blank">- KYC</a>
-                <a href="#/responsible-game" target="_blank"
-                  >- Responsible Gaming</a
-                >
-                <a href="#/about-us" target="_blank">- About Us</a>
-                <a href="#/self-exclusion-policy" target="_blank"
-                  >- SelfexclusionPolicy</a
-                >
-                <a href="#/under-age-policy" target="_blank"
-                  >- UnderagePolicy</a
-                >
-                <a href="#/dispute" target="_blank">- Dispute Resolution</a>
-                <a href="#/aml" target="_blank">- AML</a>
-                <a href="#/fairness-and-rng" target="_blank"
-                  >- Fairness &amp; RNG</a
-                >
-                <a href="#/A-P-B" target="_blank">- Accounts &amp; Bonuses</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="footer_img">
-        <div class="row justify-content-center">
-          <div class="col-auto">
-            <img
-              src="./public/assets/images/login-footer-image2.webp"
-              alt="BellIconDark Img"
-              class="loginfooterimg"
-            />
+    <?php include 'footer.php';?>
+    <!-- sidebar -->
+    <?php include 'sidebar.php';?>
 
-            <img
-              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQ4AAAA/CAYAAAAR4CYZAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAABLASURBVHgB7V0JuB01FT4X2WStFpCdh8oiCBSUVYGyurFUBGRvUQQBoQU+EERoQQVFpQ9EZe9DQECBFvADBaWPTZDtsajsvFcosnWjUJbSEv+/yfRN500yc+9k7tb833e+uTfJJGcyyZmTk5NEJCAgICAgICAgICAgICAgICAgICAgIKBMKKXGg3pjNBE0DtSRSNcBGhtL1wMaCRpk4keY8M7EfdE9oyzlDkrhIaJxJu3IFB55z/BYfiMtefSa+KGJ8B6Tz9jks1r4T9433MSPMuGjU+prHq8SENBuMJ2AeMz8nm7+T486FK5DYuF9iXS9pvMPit03KJZ/rwmfGAvrMGHdFh4i6jTxY2JlTTTpIoyypJlPJn5ojL+JKc8wxFI/XSbNBKUF6sTYM41JPOPQ2H09JqxDAgLaDaq/0w6NhXWasKjjLtBRTNigWOcYk5ZXrLNGiGsn8U4/gIcEj2NSyo/y7rWlSeQRpe+25N2rYgIvFt+VUj/D4nnF8u5JPN84CagbFpGARuMxc13edJgOUF+lUhkTJcDvGbgcav6ONNebzHV44hqFj0iET5AFMcx0uogGdOQUHjsS4Zsk8hjiyEPMM3WbfFxphxgBMQy/9zRh3SaPbvObacbiymFLH+gMCQhoR8S+9qOijqH6NYzhWV9PE6fM7/nDFfO/V/UPZZQpqyP+dU7wkMRQEx9pBeMMj6Sxia/+GEseY0x8qsZh4iKtYoQjLgkOc4bE0nWo/qEPMVwCAtoVjk473sQPMf97U+6NhMD0lPxGm+u4RPhIcx2Vcs8wk2dE0dDGJhR6Vb8dJkrTacnDJTh6TdzQlLiuFN5GKC0kkvaciIfHJKDuCEOVxoBq9aGGNoX6/U0G4spO0Adih5k/c2A6zHjz94pYPtGwZIy5npcIj2ZdksMUYgbK64vRjET8BMNfVN4EpqsyD4k/g9JDiw7RQ7FusSOeb5cJG2QoQp+59khAQDtDZRgmTZohsa8yrz2qXy3vSXx1B8U1glh4Ryy8x8LDdJU+lbqA4dOU0RvnO5ZmQB6m7KFxvgzFZ5CyZlWiadiJsbJ7E2mdw7qAcrGoBNQTj5ur9ctMrQOdYQfRWgQ72CdAk0RrE53xrzp/Iy01grUkplXwSx0LP8/Cgw19oo2PfbEyqHlQAxoRi+u23D/DUHdK+OPJZ7CUnQyjBtWZkh/ThqFKQEBAQEBAQEBAQEBAQEBAQEDrAsa3q0Hvgd5N0HuW8FkJisL3E89Ang+A5qbQbNAaEmAF6ucAS92RzpESgHzXBZ0Ouh/0unlPNh4+MsTf70uTATx9I8ZjnFfSxdJANMusyuKgJaU4ynieRST4uxSBre4q4hlKO7qdCVpWqgN5+Zg0HyoysJ6i/w1tk2E6thi8N/6A6gGBsRQuN4K+IgF1QfiSBrQDLpPiQkNJ80HVGFc6gsYR0NKgHQCXb1dzS+x3JSUsIAeC4AhodZwo7iHjTBDd0v8KekVaa3jZtAItCI6AlgW0jU/hsrkjyWTQQZVK5S5pTXCmZ4qkC7v3pIFoFsERjIwBtWAj0FKWuHdA+0Jo3C+ti27QZy1xH0gDUargwBeBU6zLSbZg+Lj4wTLmK+SCQmN6Q/wgjI0bi0874m5vcaHBBYYf4fKWNCHK1jiWBt0i+svgMkQtJn5wPmhsSnhUJnn4KehnEtAO+KQj7l8SUBpKFRyQmFOV3iKuG7SSlI/FxC2E/g46VwKaAT6Gpy6nrXcloDSU7scB4fEULnuB3pbG4kXQweDHp1Ep2GaaF2EYWSLqYhxFZ70Pmsf+ojebaYRB9mXQduDjNSkJeD4+1/agHUEbiDZquWw3FKTcP5Q8PQ96EPQEeHxJ/PE0GJdtQJuC1hWt9ZGWybiV4+pphrdnQA+D/gneZmaUxzpYTfo77cqO5Msi/ZriBu1RLyfyXzUWv7zj3uVy5P8R8p9si8T91Gi2Am0JWtvQiqKHSLaPBjUd1h2nfvle/w16EuU8LVVC6R3XLkkpi/V7I/L8Yco9fL93S3o/OxP3/CGWloblg0HbgjaUflf92aJnc14F0U50D+hR3OtfGIOJSo40R5uFOvXEW6BNpEbg3gct+XKh0Zqgj4GOAE1SxZ+NeT4KOha0tNQA3Leo4edOpRd4+QIXE14D2sxR9lqgOWrBRWQ2xBds2WhKIv9tq8h/biJtGj1keY7tQJeB3lZ+EL3X45Xu2Hnf5dcdeV5iuWcNU14ajo2l4077s1R+/rnY86viE8iQ0v0ulaODIs25qn74EPQ1KQDlFhzcH5TPXYYwfIm8qxwCOcbrzkoLsDLBzshONTilfArSucofpiXyZ4f2WdePJPJfAXSjKvfj9prSnTbPh9a74AANVnrlcC1gvbD/VgrbOJRWH38H2g50M/5nqcH09LtDygfVqlOgXt0m5eEq0c9dhq2DS/Y5I/WjPIlR74fjcjsoSz0vCqrv3wFdbt59PVGa3QLPwuHH30Dccb5M2xXdBWig/73UH3x3FDhbSW1gvXAF8gGFBIeRmiczIxPERkuJbR3boiPPxeVA0LNSHtjAuFnveVIeWHcbSrngix6N+tzXlQjxPO2Mz1pPY+3uoJOkXNTTwHkaaDOpD/ieOJw8VsqBrd4o8IdJMZD304p+MU4Rvf9BvMHuAroUlbKPbQYD4W8ifmf85CHFnxH/+DPoOJTzodQXfGEcl79lrvRenGOuBOubGhmNUPzy0NBGA5Wrw3N6+eeorzvxPFMGFKjUeqJXhy6ZwReNsVMNzUjwJYYn5sHjFzgOX0HcU9vk+SSUfy34elHKQdmCIzoVj9rdYTnTs87eBL1hfs8CsZ3xPS4hus6ovbAO+X5d75Zq/y2ov16pDz6fEkZDKHfRp5GYQ0M6bPLdUwngDvtJ5YIG3xNqFhxGNT5D0iuGKxYpwa1qNq3lHMOJ9vFYRfyBjj9Hug4HqhJ5vuIUFFcboiY13WhWVhg1nw2LFvtjQDs4yqI1f2/QhSlxPwYNttxH4cCjBbhbFI8mmAq+5kgGlLa2rw7ayfD2OUtSzmocAYqs+1NM+qixbSHaap+GO6T/4Ch2yLRnTwr+F0A/kP4NbnYVrfmkgR+Pu2Sg8ImXE3kQc9bJNcSeZXjljMQToDez6lFpr2l6tlK7PkoWPEwqAjXKE0Q/U73BGTK2p8tBLySfR2njPB03yftBogUMP1Cj0z5guYBMt1YLnt1pM6SckiMvGgDzWnez8ILyvJ0f8nsoo0waMbeUAsD9i4BOVW6j3L0p962s9KxRGmggozGs0M5WhrdxDr6eUhZbB8IPdNz3SykIU2c2HFVFPtxu8ELQq2rgO+AHruZZOZP/3spusOT7q1juq9U4Oke58TRoY8kJpD0BtLkUATJYEfScygcKl50z8quATlPFLdkfgLYWz1BuwcEXtL14APJZUrk7KL1wV0rc42pYnD7z4uCn9Glu0yzlUOivYbnPJTh+JQWhPAmOWH5s298F0cg/w+RzuhSE0u/2cQufbPcbWu4rQ3Bwir6YEJAqPUdRIB2abhb7ir0kqJ5dgfs2sCUwTiW/EK0G1Tqm5X2HNGBR022+lmwjHy6hZiO1qcAcb66dCNtC7LjYLJIqDDPsu8USzTaxrrQBaHsDXQbaA3/XET08vEIKwrzbB2zRoK0dcb5xIfh5SAoit+BQeszGzVCqncqhp98duN8qbPAgHD8dL9pGUC0oNEYij+uk/hgvHmG8JB+0RctAwbGOJa1y5FMrnreEk6+1pM1ghMgNoEniB6844tazhPs2DjO/S8UDchlHlR6DscDtpDZQeNyEfLbFi5iWlgDh9NL7nmj/hbzqPyuCbrS/kfqDZf9H/INnoW5jiUt6HdqMotQ0/id+4TI2D5Y2hdL2GxrvWfc0GNKIGtcEot90NadmMc/dnO05kZVr0d1yUh9wicOT4gF5Z1VOlX5fjVrB4cqfQFabB1U6vCguiKNHX4dkgxrKGdI4+NrXIw7Xlym57b/N8Emh5pzV8YzFpU2A9sfhNYcqHD6wrVKbYj/JO2xg3dNu8RyudD68Eu26Rxq8Y5fBS77Wm2QKDqWdi+jk5WO8tRPyOwvMu6ZpaYTbBz/vE3uD5MPzy3x8KQtv8qGszvmOFAff1X6oRx95RdhU2hhKTz+OANEpi0PAWtt7dEbL+oYOQt6N/LjFkTkVnxdOwaH0gqaLRKtovnAy8n0WHb7LlgBxDxvhwdW0aS+QtoC9OQ6V9oMPQciGe6E0Hi2xtB1tjUORK0Fc2ezbIElfHXr1PiptBKtxFJVJS/n1oj0cfWKevQT57+1MVKlw9obSPykl6XyyX4neigHVo2X3vkA7pBMb2zmd3cpy2acgLzwF6gHe3lOq4FB6Xv5WGWjF9wVWZBfK2cWVCMLhAlxGS/8D0/A0vNX3kgxoKpwl9unQNCgHLTQYMFQxMyh/lHLWkMTB4c9FKG+HjCmvs0WPr78FOhlpb5WAZkM9F9d5g9E2aPR38U+BQHd9bjv5X9FrfZKCInKBZ5umfYTaBX1sstaqtCzSbBz8yn9Z6gNqNFfRAOuYpqW32/fx8w78vkQWblTTCJWU12hVxv9WAZcKuHYRo5v/YWh3z0iVUNprl5oM2y5PmvO1IXdTYAHBgYc9TvSilnqCQuoClM0XlDrXzU2PRS/UWhjgw02cdqEvSP3wsrQmuHjPJlxpeN8Nba+m4wmM1y5nBrltJrUVGquXlMbC24dkvuDAw3Eo8GtpDPYDcWekE7NWlTYR+BKWEv8YJH4wqdZG7xHNrqa7HNdu9Vh/XFU7TKrfC6Np62/e1w0ddjdcrpHGMcpyuRz7bGktrC7+sZojLumXMduSju/V5xR6u8JVR1PFE4yv0b3SRljErCHhNmaNHoNR++HyXb8bopYHCruNxD/Wd8QlPVVtfiwUHGUItWqxUM00ZKChRzb6BjsrDTcPZKTjIhwfnYQ7HT2SEj7PTdf83h/C4/4mULPzYA/w2unLexV5deDyRVu0DFxo5vJloWXf20I38Mb1RnR5f66KVbeuYWfW3rT1QD3P+mm0fcMrFkUjyDwOEY1mJC6dUhw9KG8faR9w0R8F77VSEKhjanzcSct2FgtV5+TZHI+IHdx567fiD1y9zI1qnzXGPu6I9UjGTmvUkGyzO/WauXPBJThWFb/wvldMI5HXgu9L5WzFOW0Xz6w/Ticfoao4xiAJ3Ms9HimYD3ckSzsQidvvvW9JvyXyPbsIX4Y3nhtzKH4eLdpxjzMRx5iyn0Ecn38Jy+3UiGz7vm6A+3aVxsLlP8R1VYUdIJXeqIp1t7vUD6X3s7yrY9vSicUT2JloIzocDYTrHe4SPT35Njp66rjWLKii/wCdhbg/K7UW17EGHBpckAzkPibI6wrR+36mgYsTd0Qa7ivJqUGezDXLbCwjFt7YJjhbxPUbXN4fnfSVbCtsE1xqvrLtOUWv9KWWlLZNHe+fgPLOwbULNDnPfqiewVPWWGZaP6Dz1j3gj9OodDqkkJnp2gDb1B01Ri6Tp/c1648TD0OlzfpQI45jbEewUWxmiJ38ddAkszqVvinRWJ9ChkKDjZLLtZeTfA2KQ5J/WOI4HGHntk0Nb2GIPPBIR+6rOcPwmZylIT9s+JzZWUPchzpHuN4WQUGAsrhzmG1/S5bFXc+OBHHv0unSb+uK6iXSdrnbmpdNaGLoA3H5u20zZtbDTwyPHCpy/1Ha3rh5cdx+E73X6INAwzTtQY0QFnUpMwiOYkgbv3P4sor427mdDfUgm0ES4U+iMXOXbDrIud4nG/dq4p7urRbcyOiyjDTki0cP2BZLRppL1tGIk8QzzP4v1Cg6JfuIipXFfRbuQoXST6tvY1Bo0LBc5jQbbQS7ooFnHV7VJXoxYD1VfRo+96pknF1jDtHmEQBF66mUqV3wd77oDabKxmxpIwTBkQ3lCOfaGc4SeTth3oDaRRdoCzTszClVMx1M57lDpIQvcwIsa6Jo3nKdxod03KmNMzIzpXaU6RNC4+91JZbBIeK54hcNtZnUe1alFcG9O2nk40lXLxuKfit0Co7h6ePCL34RvwDWMcfRNHZujHwPNWt0coHCA0TvXy7c4vR5n/h9bzSo3g3aCeXsWO0mvkjPIQHPJ7lZmqw98cRBEJc9cNkFfWV88cd8+kTPqEyW6qFqjCsdeW0c/LLcEPufl+lK4p7HpPXAxpRaT9HshJkmPRPjZe70xClGGiN53B7tCTa/jOmG2AE580AD6NPI63UpAHP/+eCFO7fRmexLos+47RB9NGEeRyQOeWhbmWz44wa3dBJ8vsjMB+7tw2VP8Ea+OJvEhXiRITELaUKUK6rZ0dnOkm2y6pP8wN948PYX0cKXM0mbGf64fihvX6HBmbNXPHXuHtDt9HUxG2O9YNKolOdIA9+BbXd52z3KlJOmkbwmnvB/6LU9a7bCcXEAAAAASUVORK5CYII="
-              alt="BellIconDark Img"
-              class="loginfooterimgto"
-            />
-          </div>
-        </div>
-      </div>
-    </footer>
-    <div class="sidebar" id="sidebar">
-      <div class="d-flex align-items-center mt-3">
-        <img
-          src="./public/assets/images/logo.webp 512.webp"
-          alt="1obet-logo"
-          width="50"
-          height="50"
-        />
-        <h3>1OBET</h3>
-        <i class="fa fa-times close-toggle ml-5" id="closeToggle"></i>
-      </div>
-      <ul class="p-0">
-        <li>
-          <a href="dashboard.html" class="menu-item">
-            <img
-              src="./public/assets/side-menu-icons/light-icons/dashboard.png"
-              alt=""
-            /><span class="m-1">Dashboard</span>
-          </a>
-        </li>
-        <li>
-          <a href="tennis.html" class="menu-item">
-            <img
-              src="./public/assets/side-menu-icons/light-icons/tennis.png"
-              alt=""
-            /><span class="m-1">Tennis</span>
-          </a>
-        </li>
-        <li>
-          <a href="cricket.html" class="menu-item">
-            <img
-              src="./public/assets/side-menu-icons/light-icons/cricket.png"
-              alt=""
-            /><span class="ml-1">Cricket</span>
-          </a>
-        </li>
-        <li>
-          <a href="soccer.html" class="menu-item">
-            <img
-              src="./public/assets/side-menu-icons/light-icons/soccer.png"
-              alt=""
-            /><span class="ml-1">Soccer</span>
-          </a>
-        </li>
-        <li>
-          <a href="greyhound.html" class="menu-item">
-            <img
-              src="./public/assets/side-menu-icons/light-icons/royal-casino.png"
-              alt=""
-            /><span class="ml-1">Greyhound</span>
-          </a>
-        </li>
-        <li>
-          <a href="current_postion.html" class="menu-item">
-            <img
-              src="./public/assets/side-menu-icons/light-icons/current-position.png"
-              alt=""
-            /><span class="ml-1">Current position</span>
-          </a>
-        </li>
-        <li>
-          <a href="horserace.html" class="menu-item active">
-            <img
-              src="./public/assets/side-menu-icons/light-icons/horse-race.png"
-              alt=""
-            /><span class="ml-1">Horse Race</span>
-          </a>
-        </li>
-        <li>
-          <a href="sportsBook.html" class="menu-item">
-            <img
-              src="./public/assets/side-menu-icons/light-icons/all-sports.png"
-              alt=""
-            /><span class="ml-1">Sports Book</span>
-          </a>
-        </li>
-        <li>
-          <a href="betfair_games.html" class="menu-item">
-            <img
-              src="./public/assets/side-menu-icons/light-icons/bet-fair-games.png"
-              alt=""
-            /><span class="ml-1">Betfair Games</span>
-          </a>
-        </li>
-        <li>
-          <a href="evolution_casino.html" class="menu-item">
-            <img
-              src="./public/assets/side-menu-icons/light-icons/royal-casino.png"
-              alt=""
-            /><span class="ml-1">Evoluation Casino</span>
-          </a>
-        </li>
-        <li>
-          <a href="1obetcasino.html" class="menu-item">
-            <img
-              src="./public/assets/side-menu-icons/light-icons/royal-casino.png"
-              alt=""
-            /><span class="ml-1">1obet Casino</span>
-          </a>
-        </li>
-        <li>
-          <a href="result.html" class="menu-item">
-            <img
-              src="./public/assets/side-menu-icons/light-icons/results.png"
-              alt=""
-            /><span class="ml-1">Result</span>
-          </a>
-        </li>
-        <li>
-          <a href="ezugi_casino.html" class="menu-item">
-            <img
-              src="./public/assets/side-menu-icons/light-icons/royal-casino.png"
-              alt=""
-            /><span class="ml-1">Ezugi Casino</span>
-          </a>
-        </li>
-        <li>
-          <a href="120_british_casino.html" class="menu-item">
-            <img
-              src="./public/assets/side-menu-icons/light-icons/royal-casino.png"
-              alt=""
-            /><span class="ml-1">120 British Casino</span>
-          </a>
-        </li>
-      </ul>
-    </div>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-      const closeToggle = document.getElementById("closeToggle");
-      const menuToggle = document.getElementById("menuToggle");
-      const sidebar = document.getElementById("sidebar");
-      const header = document.getElementById("header");
-      const content = document.querySelector(".content");
-      const footer = document.getElementById("footer");
-      if (window.innerWidth >= 1220) {
-        sidebar.classList.toggle("open");
-        content.style.paddingLeft = "270px";
-        footer.style.paddingLeft = "270px";
-        header.style.width = "calc(100% - 300px)";
-      }
-      menuToggle.addEventListener("click", function () {
-        sidebar.classList.toggle("open");
-        // Adjust the position of the toggle button and header padding
-        if (sidebar.classList.contains("open")) {
-          if (window.innerWidth <= 1220) {
-            header.style.paddingLeft = "0";
-            content.style.paddingLeft = "0";
-          } else if (window.innerWidth <= 1230) {
-            header.style.width = "calc(100% - 282px)";
-            content.style.paddingLeft = "250px";
-            footer.style.paddingLeft = "250px";
-          } else {
-            header.style.width = "calc(100% - 300px)";
-            header.style.paddingLeft = "0px";
-            content.style.paddingLeft = "270px";
-            footer.style.paddingLeft = "270px";
-          }
-        } else {
-          header.style.width = "calc(100% - 32px)";
-          header.style.paddingLeft = "0";
-          content.style.paddingLeft = "0";
-          footer.style.paddingLeft = "0";
-        }
-      });
-      closeToggle.addEventListener("click", function () {
-        sidebar.classList.remove("open");
-        header.style.width = "calc(100% - 32px)";
-        header.style.paddingLeft = "0";
-        content.style.paddingLeft = "0";
-        footer.style.paddingLeft = "0";
-      });
-      window.addEventListener("resize", function () {
-        if (sidebar.classList.contains("open")) {
-          if (window.innerWidth <= 1220) {
-            header.style.width = "calc(100% - 32px)";
-            header.style.paddingLeft = "0";
-            content.style.paddingLeft = "0";
-            footer.style.paddingLeft = "0";
-          } else if (window.innerWidth <= 1230) {
-            header.style.width = "calc(100% - 282px)";
-
-            content.style.paddingLeft = "250px";
-            footer.style.paddingLeft = "250px";
-          } else {
-            header.style.width = "calc(100% - 300px)";
-            content.style.paddingLeft = "270px";
-            footer.style.paddingLeft = "270px ";
-          }
-        }
-      });
-
-      document.querySelectorAll(".menu-item").forEach((item) => {
-        item.addEventListener("click", function () {
-          document.querySelectorAll(".menu-item").forEach((i) => {
-            i.classList.remove("active");
-          });
-          this.classList.add("active");
-        });
-      });
-    </script>
-    <script>
-      const wrapper = document.querySelector(".wrapper");
-      const carousel = document.querySelector(".carousel");
-      const firstCardWidth = carousel.querySelector(".card").offsetWidth;
-      const arrowBtns = document.querySelectorAll(".wrapper i");
-      const carouselChildrens = [...carousel.children];
-
-      let isDragging = false,
-        isAutoPlay = true,
-        startX,
-        startScrollLeft,
-        timeoutId;
-
-      // Get the number of cards that can fit in the carousel at once
-      let cardPerView = Math.round(carousel.offsetWidth / firstCardWidth);
-
-      // Insert copies of the last few cards to beginning of carousel for infinite scrolling
-      carouselChildrens
-        .slice(-cardPerView)
-        .reverse()
-        .forEach((card) => {
-          carousel.insertAdjacentHTML("afterbegin", card.outerHTML);
-        });
-
-      // Insert copies of the first few cards to end of carousel for infinite scrolling
-      carouselChildrens.slice(0, cardPerView).forEach((card) => {
-        carousel.insertAdjacentHTML("beforeend", card.outerHTML);
-      });
-
-      // Scroll the carousel at appropriate postition to hide first few duplicate cards on Firefox
-      carousel.classList.add("no-transition");
-      carousel.scrollLeft = carousel.offsetWidth;
-      carousel.classList.remove("no-transition");
-
-      // Add event listeners for the arrow buttons to scroll the carousel left and right
-      arrowBtns.forEach((btn) => {
-        btn.addEventListener("click", () => {
-          carousel.scrollLeft +=
-            btn.id == "left" ? -firstCardWidth : firstCardWidth;
-        });
-      });
-
-      const dragStart = (e) => {
-        isDragging = true;
-        carousel.classList.add("dragging");
-        // Records the initial cursor and scroll position of the carousel
-        startX = e.pageX;
-        startScrollLeft = carousel.scrollLeft;
-      };
-
-      const dragging = (e) => {
-        if (!isDragging) return; // if isDragging is false return from here
-        // Updates the scroll position of the carousel based on the cursor movement
-        carousel.scrollLeft = startScrollLeft - (e.pageX - startX);
-      };
-
-      const dragStop = () => {
-        isDragging = false;
-        carousel.classList.remove("dragging");
-      };
-
-      const infiniteScroll = () => {
-        // If the carousel is at the beginning, scroll to the end
-        if (carousel.scrollLeft === 0) {
-          carousel.classList.add("no-transition");
-          carousel.scrollLeft = carousel.scrollWidth - 2 * carousel.offsetWidth;
-          carousel.classList.remove("no-transition");
-        }
-        // If the carousel is at the end, scroll to the beginning
-        else if (
-          Math.ceil(carousel.scrollLeft) ===
-          carousel.scrollWidth - carousel.offsetWidth
-        ) {
-          carousel.classList.add("no-transition");
-          carousel.scrollLeft = carousel.offsetWidth;
-          carousel.classList.remove("no-transition");
-        }
-
-        // Clear existing timeout & start autoplay if mouse is not hovering over carousel
-        clearTimeout(timeoutId);
-        if (!wrapper.matches(":hover")) autoPlay();
-      };
-
-      const autoPlay = () => {
-        if (window.innerWidth < 800 || !isAutoPlay) return; // Return if window is smaller than 800 or isAutoPlay is false
-        // Autoplay the carousel after every 2500 ms
-        timeoutId = setTimeout(
-          () => (carousel.scrollLeft += firstCardWidth),
-          2500
-        );
-      };
-      autoPlay();
-
-      carousel.addEventListener("mousedown", dragStart);
-      carousel.addEventListener("mousemove", dragging);
-      document.addEventListener("mouseup", dragStop);
-      carousel.addEventListener("scroll", infiniteScroll);
-      wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
-      wrapper.addEventListener("mouseleave", autoPlay);
-    </script>
-    <script>
-      document
-        .getElementById("dropdownToggle")
-        .addEventListener("click", function () {
-          var dropdownMenu = document.querySelector(".dropdown-menu");
-          dropdownMenu.style.display =
-            dropdownMenu.style.display === "block" ? "none" : "block";
-        });
-
-      // Close the dropdown if the user clicks outside of it
-      window.onclick = function (event) {
-        if (!event.target.matches("#dropdownToggle")) {
-          var dropdowns = document.getElementsByClassName("dropdown-menu");
-          for (var i = 0; i < dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
-            if (openDropdown.style.display === "block") {
-              openDropdown.style.display = "none";
-            }
-          }
-        }
-      };
-    </script>
+    <?php include 'script.php';?>
   </body>
 </html>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Grey Hound</title>
+    <title>Soccer</title>
     <link
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
       rel="stylesheet"
@@ -23,6 +23,9 @@
       .footerLinks a {
         color: white;
       }
+      .footerLinks a:hover{
+        text-decoration:none;
+    }
       .footer {
         min-width: 100%;
       }
@@ -273,11 +276,15 @@
         .display_dekstop {
           display: none;
         }
+        .iframe {
+          margin-top: 0.2rem !important;
+        }
       }
       @media screen and (max-width: 1000px) {
         .display_mobile {
           display: none;
         }
+
         .display_block {
           display: block !important;
         }
@@ -553,14 +560,14 @@
         display: flex;
         flex-direction: column;
       }
-      .sound_screen {
-        font-size: 2rem;
-      }
       .timedeaitls_wrapper {
         display: flex;
         justify-content: space-between;
         width: 100%;
         align-items: center;
+      }
+      .sound_screen {
+        font-size: 2rem;
       }
       .mainheader {
         color: white;
@@ -897,7 +904,11 @@
 
         margin-left: auto; /* Push to the right */
       }
-
+      @media screen and (max-width: 1228px) {
+        .sidebar {
+          width: 262px;
+        }
+      }
       @media screen and (max-width: 790px) {
         .sidebar {
           width: 250px;
@@ -909,7 +920,7 @@
           font-size: medium;
         }
       }
-      @media screen and (max-width: 690) {
+      /* @media screen and (max-width: 690px) {
         .content {
           padding-left: 0 !important;
         }
@@ -923,7 +934,7 @@
         .menu-toggle {
           display: inline-block;
         }
-      }
+      } */
       @media screen and (min-width: 1220px) {
         .close-toggle {
           display: none;
@@ -933,14 +944,14 @@
         .header {
           padding: 3px;
         }
-        .timedeaitls_wrapper {
-          align-items: start;
-        }
         .sound_screen {
           position: absolute;
           top: 20%;
           text-align: center;
           font-size: 1.8rem;
+        }
+        .timedeaitls_wrapper {
+          align-items: start;
         }
       }
       @media screen and (max-width: 425px) {
@@ -1033,204 +1044,9 @@
   <body>
     <!-- main boady content -->
     <div class="content m-3">
-      <div class="header pl-4 pt-2" id="header">
-        <i class="fa fa-bars menu-toggle ml-1" id="menuToggle"></i>
-        <div class="ml-auto">
-          <span class="navbar-brand mb-0 h1 text-center bettor">Bettor</span>
-        </div>
-        <div class="ml-auto">
-          <span class="navbar-text">B:2378</span>
-          <span class="navbar-text ml-3 text-success">L:0</span>
-          <a href="#user" class="username text-white">
-            <span class="navbar-text ml-3">Username</span>
-          </a>
-          <span class="mr-2"
-            ><svg
-              stroke="currentColor"
-              fill="currentColor"
-              stroke-width="0"
-              viewBox="0 0 512 512"
-              class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeMedium css-1slk8wg"
-              aria-hidden="true"
-              style="height: 1rem; width: 1rem"
-              xmlns="http://www.w3.org/2000/svg"
-              id="dropdownToggle"
-            >
-              <path
-                d="M256 294.1L383 167c9.4-9.4 24.6-9.4 33.9 0s9.3 24.6 0 34L273 345c-9.1 9.1-23.7 9.3-33.1.7L95 201.1c-4.7-4.7-7-10.9-7-17s2.3-12.3 7-17c9.4-9.4 24.6-9.4 33.9 0l127.1 127z"
-              ></path>
-            </svg>
-            <div class="dropdown-menu">
-              <a href="myprofile.html" class="dropdown-item">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                  aria-hidden="true"
-                  role="img"
-                  font-size="1.375rem"
-                  class="iconify iconify--tabler"
-                  width="1em"
-                  height="1em"
-                  viewBox="0 0 24 24"
-                >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1.5"
-                  >
-                    <circle cx="9" cy="7" r="4"></circle>
-                    <path
-                      d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2m1-10l2 2l4-4"
-                    ></path>
-                  </g>
-                </svg>
-                My Profile
-              </a>
-              <a href="statement.html" class="dropdown-item">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                  aria-hidden="true"
-                  role="img"
-                  font-size="1.375rem"
-                  class="iconify iconify--tabler"
-                  width="1em"
-                  height="1em"
-                  viewBox="0 0 24 24"
-                >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1.5"
-                  >
-                    <path
-                      d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 0 0-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 0 0-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 0 0-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 0 0-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 0 0 1.066-2.573c-.94-1.543.826-3.31 2.37-2.37c1 .608 2.296.07 2.572-1.065z"
-                    ></path>
-                    <circle cx="12" cy="12" r="3"></circle>
-                  </g>
-                </svg>
-                Statement
-              </a>
-              <a href="#" class="dropdown-item">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                  aria-hidden="true"
-                  role="img"
-                  font-size="1.375rem"
-                  class="iconify iconify--tabler"
-                  width="1em"
-                  height="1em"
-                  viewBox="0 0 24 24"
-                >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1.5"
-                  >
-                    <rect width="18" height="14" x="3" y="5" rx="3"></rect>
-                    <path d="M3 10h18M7 15h.01M11 15h2"></path>
-                  </g>
-                </svg>
-                Result
-              </a>
-              <hr />
-              <a href="#" class="dropdown-item">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                  aria-hidden="true"
-                  role="img"
-                  font-size="1.375rem"
-                  class="iconify iconify--tabler"
-                  width="1em"
-                  height="1em"
-                  viewBox="0 0 24 24"
-                >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1.5"
-                  >
-                    <circle cx="12" cy="12" r="4"></circle>
-                    <circle cx="12" cy="12" r="9"></circle>
-                    <path
-                      d="m15 15l3.35 3.35M9 15l-3.35 3.35m0-12.7L9 9m9.35-3.35L15 9"
-                    ></path>
-                  </g>
-                </svg>
-                Profit Loss
-              </a>
-              <a href="#" class="dropdown-item">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                  aria-hidden="true"
-                  role="img"
-                  font-size="1.375rem"
-                  class="iconify iconify--tabler"
-                  width="1em"
-                  height="1em"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1.5"
-                    d="M16.7 8A3 3 0 0 0 14 6h-4a3 3 0 0 0 0 6h4a3 3 0 0 1 0 6h-4a3 3 0 0 1-2.7-2M12 3v3m0 12v3"
-                  ></path>
-                </svg>
-                Bet History
-              </a>
-              <hr />
-              <a href="#" class="dropdown-item">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                  aria-hidden="true"
-                  role="img"
-                  font-size="1.375rem"
-                  class="iconify iconify--tabler"
-                  width="1em"
-                  height="1em"
-                  viewBox="0 0 24 24"
-                >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1.5"
-                  >
-                    <path
-                      d="M14 8V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2-2v-2"
-                    ></path>
-                    <path d="M7 12h14l-3-3m0 6l3-3"></path>
-                  </g>
-                </svg>
-                Logout
-              </a>
-            </div>
-          </span>
-        </div>
-        <div class="marquee-container">
-          <div class="marquee-text">
-            Welcome to 1obet.com - Announcement - All casino Profit Loss will be
-            1 to 2 Ratio - Her casino may Jeet Har 1 ka 2 ho ge - Welcome to
-            Exchange - Zero commissions on chota bara, kalli jotta, fancies
-          </div>
-        </div>
-      </div>
+      <!-- header -->
+       <?php include 'header.php';?>
+
       <div class="margin_top d-flex display_block">
         <div class="w-100">
           <div class="mainheader p-2 mt-1">
@@ -1247,28 +1063,50 @@
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M137.75 17.28l-15.313 78.782 20.313 56.876h45.97L137.75 17.28zM74.5 19L20 378.156v116.156h208L210.125 386.5H113.28l-2.218-6.156-25.78-71.594 17.562-6.344 23.562 65.406h90.344l230.688-2.968 9.812-33.406H278.5V312.75h184.22l7.374-25.156L415.53 209.5H291.47l-20.345-37.594h-75.28l-.095-.28h-46.313L159.563 200l-17.593 6.28-26.532-74.25-.126.72L74.5 19zm133.375 178.22h56.094l21.405 38.874-26.094-.438-51.405-38.437zm230.47 12.28l38.53 55.094L493.03 209.5h-54.686zm-82.814 15.938c6.613 0 11.97 5.356 11.97 11.968 0 6.613-5.357 11.97-11.97 11.97-6.61 0-11.967-5.357-11.967-11.97 0-6.612 5.356-11.97 11.968-11.97zm44.595 0c6.612 0 12 5.356 12 11.968 0 6.613-5.388 11.97-12 11.97s-11.97-5.357-11.97-11.97c0-6.612 5.358-11.97 11.97-11.97zm-66.188 29.187c6.612 0 11.97 5.356 11.97 11.97 0 6.61-5.358 11.967-11.97 11.967-6.61 0-11.968-5.356-11.968-11.968 0-6.613 5.356-11.97 11.967-11.97zm43.125 0c6.612 0 12 5.356 12 11.97 0 6.61-5.388 11.967-12 11.967-6.61 0-11.968-5.356-11.968-11.968 0-6.613 5.357-11.97 11.97-11.97zm42.063 0c6.612 0 11.97 5.356 11.97 11.97 0 6.61-5.358 11.967-11.97 11.967-6.612 0-11.97-5.356-11.97-11.968 0-6.613 5.358-11.97 11.97-11.97z"
+                  d="M290.2 49.04c-15.7.1-32.3 13.83-38 35.81-6.5 25.15 4.7 47.85 22.1 52.35 17.4 4.5 38.2-9.9 44.7-35 6.5-25.16-4.6-47.82-22.1-52.33-2.2-.56-4.4-.84-6.7-.83zM89.04 68.3L77.5 87.31c32.4 15.99 63.1 33.49 96.4 46.49 9.5-3.8 18.8-7.8 28-12-40.2-15.4-76.7-33.69-112.86-53.5zm148.06 56.1c-47.8 25.4-97.9 41.6-153.64 61.1l8.08 16.4c51.96-16.1 111.26-32.9 161.16-56-6.9-5.5-12.1-12.9-15.6-21.5zm30.3 34.8c-22.5 10.8-46.8 20.2-71.4 28.7-20.3 45.6-27.7 94.9-36.8 140.1l-2.1 10.5-101.02-39.4-16.03 25.4 130.25 60.7c1-1.4 1.7-2.5 2.9-4.5 3.9-6.7 9.2-16.6 15.2-28.6 11.9-23.8 26.7-55.9 40.4-88.1 13.8-32.1 26.4-64.4 33.9-88.4 1.9-6.1 3.5-11.6 4.7-16.4zm-31.9 134.6c-5.5 12.5-11.1 24.8-16.5 36.3 25 37.4 57 79 94.9 109.2l23.3-17.6c-35.8-39.7-72.9-84.3-101.7-127.9zM423.9 367a48 48 0 0 0-48 48 48 48 0 0 0 48 48 48 48 0 0 0 48-48 48 48 0 0 0-48-48z"
                 ></path>
               </svg>
             </div>
             <div class="timedeaitls_wrapper">
               <div class="timedeaitls">
-                <span>
-                  <span>1 hour and 10 minutes ago | Jul 3 1:00 PM </span>
-                </span>
+                <span
+                  ><span>1 hour and 52 minutes ago | Jul 3 3:00 PM</span></span
+                >
                 <div class="timedeaitls">
-                  <h1 class="m-0 font-size">Gosford (AUS) 9th Jul</h1>
-                  <div>Matched: 118</div>
+                  <h1 class="m-0 font-size">Yokohama FM v Tosu</h1>
+                  <div>Matched: 3,915,808</div>
                 </div>
               </div>
               <div>
                 <h4>OPEN</h4>
-                <div class="sound_screen d-flex justify-content-end">
-                  <img
-                    width="36"
-                    height="36"
-                    src="data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 10080 5040'%3e%3cdefs%3e%3cclipPath id='b'%3e%3cpath d='M0 0h6v3H0z'/%3e%3c/clipPath%3e%3cclipPath id='c'%3e%3cpath d='M0 0v1.5h6V3zm6 0H3v3H0z'/%3e%3c/clipPath%3e%3cpath id='a' d='m0-360 69.421 215.845 212.038-80.301L155.99-35.603l194.985 115.71-225.881 19.651 31.105 224.59L0 160l-156.198 164.349 31.105-224.59-225.881-19.651 194.986-115.711-125.471-188.853 212.038 80.301z'/%3e%3cpath id='e' d='M0-210 54.86-75.508l144.862 10.614L88.765 28.842l34.67 141.052L0 93.334l-123.435 76.56 34.67-141.052-110.957-93.736L-54.86-75.508z'/%3e%3cuse xlink:href='%23a' id='d' transform='scale(2.1)'/%3e%3c/defs%3e%3cpath fill='%23012169' d='M0 0h10080v5040H0z'/%3e%3cpath stroke='%23fff' stroke-width='.6' d='m0 0 6 3m0-3L0 3' clip-path='url(%23b)' transform='scale(840)'/%3e%3cpath stroke='%23e4002b' stroke-width='.4' d='m0 0 6 3m0-3L0 3' clip-path='url(%23c)' transform='scale(840)'/%3e%3cpath stroke='%23fff' stroke-width='840' d='M2520 0v2520M0 1260h5040'/%3e%3cpath stroke='%23e4002b' stroke-width='504' d='M2520 0v2520M0 1260h5040'/%3e%3cg fill='%23fff'%3e%3cuse xlink:href='%23d' x='2520' y='3780'/%3e%3cuse xlink:href='%23a' x='7560' y='4200'/%3e%3cuse xlink:href='%23a' x='6300' y='2205'/%3e%3cuse xlink:href='%23a' x='7560' y='840'/%3e%3cuse xlink:href='%23a' x='8680' y='1869'/%3e%3cuse xlink:href='%23e' x='8064' y='2730'/%3e%3c/g%3e%3c/svg%3e"
-                  />
+                <div class="sound_screen">
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 16 16"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06zm7.137 2.096a.5.5 0 0 1 0 .708L12.207 8l1.647 1.646a.5.5 0 0 1-.708.708L11.5 8.707l-1.646 1.647a.5.5 0 0 1-.708-.708L10.793 8 9.146 6.354a.5.5 0 1 1 .708-.708L11.5 7.293l1.646-1.647a.5.5 0 0 1 .708 0z"
+                    ></path>
+                  </svg>
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 24 24"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                    style="cursor: pointer"
+                  >
+                    <path
+                      d="M20 6h-5.586l2.293-2.293-1.414-1.414L12 5.586 8.707 2.293 7.293 3.707 9.586 6H4c-1.103 0-2 .897-2 2v11c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V8c0-1.103-.897-2-2-2zM4 19V8h16l.002 11H4z"
+                    ></path>
+                  </svg>
                 </div>
               </div>
             </div>
@@ -1276,7 +1114,6 @@
 
           <div class="bg-black display_dekstop">
             <iframe
-              class="iframe"
               style="width: 100%; height: 100%"
               src="https://tele.bazigarprediction.website/score/index.php?match_id=33369838"
               title="YouTube video player"
@@ -1292,12 +1129,12 @@
                   <div class="MuiStack-root css-g6etzp">
                     <img
                       class="MuiBox-root css-iz2ltj"
-                      src="./public/assets/icons/betterIcon/inPlayW.png"
+                      src="public/assets/icons/betterIcon/inPlayW.png"
                     />
                     <h6
                       class="MuiTypography-root MuiTypography-subtitle2 css-tn9bsb"
                     >
-                      R4 388m FFA
+                      Match Odds
                     </h6>
                   </div>
                   <div class="MuiStack-root css-19hxgaf" aria-label="Rules">
@@ -1323,7 +1160,7 @@
                   <h6
                     class="MuiTypography-root MuiTypography-subtitle2 css-qzylx"
                   >
-                    1. Lipstick Chaser
+                    Colombo Strikers
                   </h6>
                   <p
                     class="MuiTypography-root MuiTypography-body1 css-1ha19hj"
@@ -1333,7 +1170,7 @@
                   <h6
                     class="MuiTypography-root MuiTypography-subtitle2 css-qzylx"
                   >
-                    2. Dominics Girl
+                    B-Love Kandy
                   </h6>
                   <p
                     class="MuiTypography-root MuiTypography-body1 css-1ha19hj"
@@ -1517,12 +1354,42 @@
           <div class="MuiStack-root css-jnr44o">
             <div class="MuiStack-root css-9jay18">
               <div class="MuiStack-root css-yhsfmz">
-                <div class="MuiStack-root css-2p8vrk"></div>
+                <div class="MuiStack-root css-2p8vrk">
+                  <div class="MuiStack-root css-g6etzp">
+                    <img
+                      class="MuiBox-root css-iz2ltj"
+                      src="public/assets/icons/betterIcon/inPlayW.png"
+                    />
+                    <h6
+                      class="MuiTypography-root MuiTypography-subtitle2 css-tn9bsb"
+                    >
+                      Bookmaker
+                    </h6>
+                  </div>
+                  <div class="MuiStack-root css-19hxgaf" aria-label="Rules">
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 24 24"
+                      color="#fff"
+                      height="18px"
+                      width="18px"
+                      xmlns="http://www.w3.org/2000/svg"
+                      style="color: rgb(255, 255, 255)"
+                    >
+                      <path fill="none" d="M0 0h24v24H0z"></path>
+                      <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
                 <div class="MuiStack-root css-het29j">
                   <h6
                     class="MuiTypography-root MuiTypography-subtitle2 css-qzylx"
                   >
-                    3. Wiradjuri Queen
+                    Colombo Strikers
                   </h6>
                   <p
                     class="MuiTypography-root MuiTypography-body1 css-1ha19hj"
@@ -1532,7 +1399,7 @@
                   <h6
                     class="MuiTypography-root MuiTypography-subtitle2 css-qzylx"
                   >
-                    4. Ready To Wiggle
+                    B-Love Kandy
                   </h6>
                   <p
                     class="MuiTypography-root MuiTypography-body1 css-1ha19hj"
@@ -1540,6 +1407,18 @@
                 </div>
               </div>
               <div class="MuiStack-root css-yhsfmz">
+                <div class="MuiStack-root css-8dztdt">
+                  <h6
+                    class="MuiTypography-root MuiTypography-subtitle2 css-1todn3t"
+                  >
+                    Back
+                  </h6>
+                  <h6
+                    class="MuiTypography-root MuiTypography-subtitle2 css-f2ku00"
+                  >
+                    Lay
+                  </h6>
+                </div>
                 <div class="MuiStack-root css-yhsfmz">
                   <div class="MuiStack-root css-1mgdvdd">
                     <div class="MuiStack-root css-y0gi4w">
@@ -1671,7 +1550,7 @@
                           4.8
                         </p>
                       </div>
-                      <div class="MuiStack-root css-aelu6g">
+                      <div class="MuiStack-root css-aelu6g hide_at_561">
                         <p
                           class="MuiTypography-root MuiTypography-body1 css-o92rli"
                         >
@@ -1683,7 +1562,7 @@
                           3.2K
                         </p>
                       </div>
-                      <div class="MuiStack-root css-aelu6g hide_at_561">
+                      <div class="MuiStack-root css-aelu6g">
                         <p
                           class="MuiTypography-root MuiTypography-body1 css-o92rli"
                         >
@@ -1701,15 +1580,45 @@
               </div>
             </div>
           </div>
-          <div class="MuiStack-root css-jnr44o m-0">
+          <div class="MuiStack-root css-jnr44o">
             <div class="MuiStack-root css-9jay18">
               <div class="MuiStack-root css-yhsfmz">
-                <div class="MuiStack-root css-2p8vrk"></div>
+                <div class="MuiStack-root css-2p8vrk">
+                  <div class="MuiStack-root css-g6etzp">
+                    <img
+                      class="MuiBox-root css-iz2ltj"
+                      src="public/assets/icons/betterIcon/inPlayW.png"
+                    />
+                    <h6
+                      class="MuiTypography-root MuiTypography-subtitle2 css-tn9bsb"
+                    >
+                      Over/Under 0.5 Goals
+                    </h6>
+                  </div>
+                  <div class="MuiStack-root css-19hxgaf" aria-label="Rules">
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 24 24"
+                      color="#fff"
+                      height="18px"
+                      width="18px"
+                      xmlns="http://www.w3.org/2000/svg"
+                      style="color: rgb(255, 255, 255)"
+                    >
+                      <path fill="none" d="M0 0h24v24H0z"></path>
+                      <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
                 <div class="MuiStack-root css-het29j">
                   <h6
                     class="MuiTypography-root MuiTypography-subtitle2 css-qzylx"
                   >
-                    5. Best Ever
+                    Colombo Strikers
                   </h6>
                   <p
                     class="MuiTypography-root MuiTypography-body1 css-1ha19hj"
@@ -1719,7 +1628,7 @@
                   <h6
                     class="MuiTypography-root MuiTypography-subtitle2 css-qzylx"
                   >
-                    6. Canya Supersonic
+                    B-Love Kandy
                   </h6>
                   <p
                     class="MuiTypography-root MuiTypography-body1 css-1ha19hj"
@@ -1727,6 +1636,18 @@
                 </div>
               </div>
               <div class="MuiStack-root css-yhsfmz">
+                <div class="MuiStack-root css-8dztdt">
+                  <h6
+                    class="MuiTypography-root MuiTypography-subtitle2 css-1todn3t"
+                  >
+                    Back
+                  </h6>
+                  <h6
+                    class="MuiTypography-root MuiTypography-subtitle2 css-f2ku00"
+                  >
+                    Lay
+                  </h6>
+                </div>
                 <div class="MuiStack-root css-yhsfmz">
                   <div class="MuiStack-root css-1mgdvdd">
                     <div class="MuiStack-root css-y0gi4w">
@@ -1768,7 +1689,7 @@
                       </div>
                     </div>
                     <div class="MuiStack-root css-1snnq6o">
-                      <div class="MuiStack-root css-aelu6g hide_at_561">
+                      <div class="MuiStack-root css-aelu6g">
                         <p
                           class="MuiTypography-root MuiTypography-body1 css-o92rli"
                         >
@@ -1792,7 +1713,7 @@
                           14.9K
                         </p>
                       </div>
-                      <div class="MuiStack-root css-aelu6g">
+                      <div class="MuiStack-root css-aelu6g hide_at_561">
                         <p
                           class="MuiTypography-root MuiTypography-body1 css-o92rli"
                         >
@@ -1858,7 +1779,7 @@
                           4.8
                         </p>
                       </div>
-                      <div class="MuiStack-root css-aelu6g">
+                      <div class="MuiStack-root css-aelu6g hide_at_561">
                         <p
                           class="MuiTypography-root MuiTypography-body1 css-o92rli"
                         >
@@ -1870,7 +1791,7 @@
                           3.2K
                         </p>
                       </div>
-                      <div class="MuiStack-root css-aelu6g hide_at_561">
+                      <div class="MuiStack-root css-aelu6g">
                         <p
                           class="MuiTypography-root MuiTypography-body1 css-o92rli"
                         >
@@ -1888,15 +1809,45 @@
               </div>
             </div>
           </div>
-          <div class="MuiStack-root css-jnr44o m-0">
+          <div class="MuiStack-root css-jnr44o">
             <div class="MuiStack-root css-9jay18">
               <div class="MuiStack-root css-yhsfmz">
-                <div class="MuiStack-root css-2p8vrk"></div>
+                <div class="MuiStack-root css-2p8vrk">
+                  <div class="MuiStack-root css-g6etzp">
+                    <img
+                      class="MuiBox-root css-iz2ltj"
+                      src="public/assets/icons/betterIcon/inPlayW.png"
+                    />
+                    <h6
+                      class="MuiTypography-root MuiTypography-subtitle2 css-tn9bsb"
+                    >
+                      Over/Under 1.5 Goals
+                    </h6>
+                  </div>
+                  <div class="MuiStack-root css-19hxgaf" aria-label="Rules">
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 24 24"
+                      color="#fff"
+                      height="18px"
+                      width="18px"
+                      xmlns="http://www.w3.org/2000/svg"
+                      style="color: rgb(255, 255, 255)"
+                    >
+                      <path fill="none" d="M0 0h24v24H0z"></path>
+                      <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
                 <div class="MuiStack-root css-het29j">
                   <h6
                     class="MuiTypography-root MuiTypography-subtitle2 css-qzylx"
                   >
-                    7. Blazin Oaklee
+                    Colombo Strikers
                   </h6>
                   <p
                     class="MuiTypography-root MuiTypography-body1 css-1ha19hj"
@@ -1906,7 +1857,7 @@
                   <h6
                     class="MuiTypography-root MuiTypography-subtitle2 css-qzylx"
                   >
-                    8. Bronte Lee
+                    B-Love Kandy
                   </h6>
                   <p
                     class="MuiTypography-root MuiTypography-body1 css-1ha19hj"
@@ -1914,6 +1865,18 @@
                 </div>
               </div>
               <div class="MuiStack-root css-yhsfmz">
+                <div class="MuiStack-root css-8dztdt">
+                  <h6
+                    class="MuiTypography-root MuiTypography-subtitle2 css-1todn3t"
+                  >
+                    Back
+                  </h6>
+                  <h6
+                    class="MuiTypography-root MuiTypography-subtitle2 css-f2ku00"
+                  >
+                    Lay
+                  </h6>
+                </div>
                 <div class="MuiStack-root css-yhsfmz">
                   <div class="MuiStack-root css-1mgdvdd">
                     <div class="MuiStack-root css-y0gi4w">
@@ -2045,7 +2008,7 @@
                           4.8
                         </p>
                       </div>
-                      <div class="MuiStack-root css-aelu6g">
+                      <div class="MuiStack-root css-aelu6g hide_at_561">
                         <p
                           class="MuiTypography-root MuiTypography-body1 css-o92rli"
                         >
@@ -2057,7 +2020,236 @@
                           3.2K
                         </p>
                       </div>
+                      <div class="MuiStack-root css-aelu6g">
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                        >
+                          2.3
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                        >
+                          22.1K
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="MuiStack-root css-jnr44o">
+            <div class="MuiStack-root css-9jay18">
+              <div class="MuiStack-root css-yhsfmz">
+                <div class="MuiStack-root css-2p8vrk">
+                  <div class="MuiStack-root css-g6etzp">
+                    <img
+                      class="MuiBox-root css-iz2ltj"
+                      src="public/assets/icons/betterIcon/inPlayW.png"
+                    />
+                    <h6
+                      class="MuiTypography-root MuiTypography-subtitle2 css-tn9bsb"
+                    >
+                      Over/Under 2.5 Goals
+                    </h6>
+                  </div>
+                  <div class="MuiStack-root css-19hxgaf" aria-label="Rules">
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 24 24"
+                      color="#fff"
+                      height="18px"
+                      width="18px"
+                      xmlns="http://www.w3.org/2000/svg"
+                      style="color: rgb(255, 255, 255)"
+                    >
+                      <path fill="none" d="M0 0h24v24H0z"></path>
+                      <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="MuiStack-root css-het29j">
+                  <h6
+                    class="MuiTypography-root MuiTypography-subtitle2 css-qzylx"
+                  >
+                    Colombo Strikers
+                  </h6>
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-1ha19hj"
+                  ></p>
+                </div>
+                <div class="MuiStack-root css-het29j">
+                  <h6
+                    class="MuiTypography-root MuiTypography-subtitle2 css-qzylx"
+                  >
+                    B-Love Kandy
+                  </h6>
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-1ha19hj"
+                  ></p>
+                </div>
+              </div>
+              <div class="MuiStack-root css-yhsfmz">
+                <div class="MuiStack-root css-8dztdt">
+                  <h6
+                    class="MuiTypography-root MuiTypography-subtitle2 css-1todn3t"
+                  >
+                    Back
+                  </h6>
+                  <h6
+                    class="MuiTypography-root MuiTypography-subtitle2 css-f2ku00"
+                  >
+                    Lay
+                  </h6>
+                </div>
+                <div class="MuiStack-root css-yhsfmz">
+                  <div class="MuiStack-root css-1mgdvdd">
+                    <div class="MuiStack-root css-y0gi4w">
+                      <div class="MuiStack-root css-1y0llhg">
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                        >
+                          1.79
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                        >
+                          4.1K
+                        </p>
+                      </div>
+                      <div class="MuiStack-root css-1y0llhg hide_at_561">
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                        >
+                          1.78
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                        >
+                          5.5K
+                        </p>
+                      </div>
+                      <div class="MuiStack-root css-1y0llhg hide_at_561">
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                        >
+                          1.77
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                        >
+                          23.2K
+                        </p>
+                      </div>
+                    </div>
+                    <div class="MuiStack-root css-1snnq6o">
                       <div class="MuiStack-root css-aelu6g hide_at_561">
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                        >
+                          1.8
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                        >
+                          6.1K
+                        </p>
+                      </div>
+                      <div class="MuiStack-root css-aelu6g hide_at_561">
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                        >
+                          1.81
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                        >
+                          14.9K
+                        </p>
+                      </div>
+                      <div class="MuiStack-root css-aelu6g">
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                        >
+                          1.82
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                        >
+                          3.0K
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="MuiStack-root css-1mgdvdd">
+                    <div class="MuiStack-root css-y0gi4w">
+                      <div class="MuiStack-root css-1y0llhg">
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                        >
+                          2.24
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                        >
+                          6.3K
+                        </p>
+                      </div>
+                      <div class="MuiStack-root css-1y0llhg hide_at_561">
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                        >
+                          2.22
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                        >
+                          11.6K
+                        </p>
+                      </div>
+                      <div class="MuiStack-root css-1y0llhg hide_at_561">
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                        >
+                          2.2
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                        >
+                          1.8K
+                        </p>
+                      </div>
+                    </div>
+                    <div class="MuiStack-root css-1snnq6o">
+                      <div class="MuiStack-root css-aelu6g hide_at_561">
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                        >
+                          2.26
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                        >
+                          4.8
+                        </p>
+                      </div>
+                      <div class="MuiStack-root css-aelu6g hide_at_561">
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-o92rli"
+                        >
+                          2.28
+                        </p>
+                        <p
+                          class="MuiTypography-root MuiTypography-body1 css-17uwr3x"
+                        >
+                          3.2K
+                        </p>
+                      </div>
+                      <div class="MuiStack-root css-aelu6g">
                         <p
                           class="MuiTypography-root MuiTypography-body1 css-o92rli"
                         >
@@ -2077,10 +2269,9 @@
           </div>
         </div>
 
-        <div class="mt-1 ml-1">
-          <div class="bg-black display_mobile">
+        <div class="ml-1">
+          <div class="iframe bg-black display_mobile">
             <iframe
-              class="iframe"
               style="width: 100%; height: 100%"
               src="https://tele.bazigarprediction.website/score/index.php?match_id=33369838"
               title="YouTube video player"
@@ -2178,383 +2369,11 @@
       </div>
     </div>
     <!-- footer -->
-    <footer class="m-3" id="footer">
-      <div class="margin-top footer">
-        <div class="row" style="margin: auto">
-          <div class="col" style="background-color: rgb(34, 42, 60)">
-            <div class="footerLinks">
-              <div>
-                <a href="#/privacyPolicy" target="_blank"> PrivacyPolicy</a>
-                <a href="#/terms-and-conditions" target="_blank"
-                  >- Terms and Conditions</a
-                >
-                <a href="#/rules-regulation" target="_blank"
-                  >- Rules and Regulations</a
-                >
-                <a href="#/KYC" target="_blank">- KYC</a>
-                <a href="#/responsible-game" target="_blank"
-                  >- Responsible Gaming</a
-                >
-                <a href="#/about-us" target="_blank">- About Us</a>
-                <a href="#/self-exclusion-policy" target="_blank"
-                  >- SelfexclusionPolicy</a
-                >
-                <a href="#/under-age-policy" target="_blank"
-                  >- UnderagePolicy</a
-                >
-                <a href="#/dispute" target="_blank">- Dispute Resolution</a>
-                <a href="#/aml" target="_blank">- AML</a>
-                <a href="#/fairness-and-rng" target="_blank"
-                  >- Fairness &amp; RNG</a
-                >
-                <a href="#/A-P-B" target="_blank">- Accounts &amp; Bonuses</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="footer_img">
-        <div class="row justify-content-center">
-          <div class="col-auto">
-            <img
-              src="./public/assets/images/login-footer-image2.webp"
-              alt="BellIconDark Img"
-              class="loginfooterimg"
-            />
+    <?php include 'footer.php';?>
+    <!-- sidebar -->
+    <?php include 'sidebar.php';?>
 
-            <img
-              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQ4AAAA/CAYAAAAR4CYZAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAABLASURBVHgB7V0JuB01FT4X2WStFpCdh8oiCBSUVYGyurFUBGRvUQQBoQU+EERoQQVFpQ9EZe9DQECBFvADBaWPTZDtsajsvFcosnWjUJbSEv+/yfRN500yc+9k7tb833e+uTfJJGcyyZmTk5NEJCAgICAgICAgICAgICAgICAgICAgIKBMKKXGg3pjNBE0DtSRSNcBGhtL1wMaCRpk4keY8M7EfdE9oyzlDkrhIaJxJu3IFB55z/BYfiMtefSa+KGJ8B6Tz9jks1r4T9433MSPMuGjU+prHq8SENBuMJ2AeMz8nm7+T486FK5DYuF9iXS9pvMPit03KJZ/rwmfGAvrMGHdFh4i6jTxY2JlTTTpIoyypJlPJn5ojL+JKc8wxFI/XSbNBKUF6sTYM41JPOPQ2H09JqxDAgLaDaq/0w6NhXWasKjjLtBRTNigWOcYk5ZXrLNGiGsn8U4/gIcEj2NSyo/y7rWlSeQRpe+25N2rYgIvFt+VUj/D4nnF8u5JPN84CagbFpGARuMxc13edJgOUF+lUhkTJcDvGbgcav6ONNebzHV44hqFj0iET5AFMcx0uogGdOQUHjsS4Zsk8hjiyEPMM3WbfFxphxgBMQy/9zRh3SaPbvObacbiymFLH+gMCQhoR8S+9qOijqH6NYzhWV9PE6fM7/nDFfO/V/UPZZQpqyP+dU7wkMRQEx9pBeMMj6Sxia/+GEseY0x8qsZh4iKtYoQjLgkOc4bE0nWo/qEPMVwCAtoVjk473sQPMf97U+6NhMD0lPxGm+u4RPhIcx2Vcs8wk2dE0dDGJhR6Vb8dJkrTacnDJTh6TdzQlLiuFN5GKC0kkvaciIfHJKDuCEOVxoBq9aGGNoX6/U0G4spO0Adih5k/c2A6zHjz94pYPtGwZIy5npcIj2ZdksMUYgbK64vRjET8BMNfVN4EpqsyD4k/g9JDiw7RQ7FusSOeb5cJG2QoQp+59khAQDtDZRgmTZohsa8yrz2qXy3vSXx1B8U1glh4Ryy8x8LDdJU+lbqA4dOU0RvnO5ZmQB6m7KFxvgzFZ5CyZlWiadiJsbJ7E2mdw7qAcrGoBNQTj5ur9ctMrQOdYQfRWgQ72CdAk0RrE53xrzp/Iy01grUkplXwSx0LP8/Cgw19oo2PfbEyqHlQAxoRi+u23D/DUHdK+OPJZ7CUnQyjBtWZkh/ThqFKQEBAQEBAQEBAQEBAQEBAQEDrAsa3q0Hvgd5N0HuW8FkJisL3E89Ang+A5qbQbNAaEmAF6ucAS92RzpESgHzXBZ0Ouh/0unlPNh4+MsTf70uTATx9I8ZjnFfSxdJANMusyuKgJaU4ynieRST4uxSBre4q4hlKO7qdCVpWqgN5+Zg0HyoysJ6i/w1tk2E6thi8N/6A6gGBsRQuN4K+IgF1QfiSBrQDLpPiQkNJ80HVGFc6gsYR0NKgHQCXb1dzS+x3JSUsIAeC4AhodZwo7iHjTBDd0v8KekVaa3jZtAItCI6AlgW0jU/hsrkjyWTQQZVK5S5pTXCmZ4qkC7v3pIFoFsERjIwBtWAj0FKWuHdA+0Jo3C+ti27QZy1xH0gDUargwBeBU6zLSbZg+Lj4wTLmK+SCQmN6Q/wgjI0bi0874m5vcaHBBYYf4fKWNCHK1jiWBt0i+svgMkQtJn5wPmhsSnhUJnn4KehnEtAO+KQj7l8SUBpKFRyQmFOV3iKuG7SSlI/FxC2E/g46VwKaAT6Gpy6nrXcloDSU7scB4fEULnuB3pbG4kXQweDHp1Ep2GaaF2EYWSLqYhxFZ70Pmsf+ojebaYRB9mXQduDjNSkJeD4+1/agHUEbiDZquWw3FKTcP5Q8PQ96EPQEeHxJ/PE0GJdtQJuC1hWt9ZGWybiV4+pphrdnQA+D/gneZmaUxzpYTfo77cqO5Msi/ZriBu1RLyfyXzUWv7zj3uVy5P8R8p9si8T91Gi2Am0JWtvQiqKHSLaPBjUd1h2nfvle/w16EuU8LVVC6R3XLkkpi/V7I/L8Yco9fL93S3o/OxP3/CGWloblg0HbgjaUflf92aJnc14F0U50D+hR3OtfGIOJSo40R5uFOvXEW6BNpEbg3gct+XKh0Zqgj4GOAE1SxZ+NeT4KOha0tNQA3Leo4edOpRd4+QIXE14D2sxR9lqgOWrBRWQ2xBds2WhKIv9tq8h/biJtGj1keY7tQJeB3lZ+EL3X45Xu2Hnf5dcdeV5iuWcNU14ajo2l4077s1R+/rnY86viE8iQ0v0ulaODIs25qn74EPQ1KQDlFhzcH5TPXYYwfIm8qxwCOcbrzkoLsDLBzshONTilfArSucofpiXyZ4f2WdePJPJfAXSjKvfj9prSnTbPh9a74AANVnrlcC1gvbD/VgrbOJRWH38H2g50M/5nqcH09LtDygfVqlOgXt0m5eEq0c9dhq2DS/Y5I/WjPIlR74fjcjsoSz0vCqrv3wFdbt59PVGa3QLPwuHH30Dccb5M2xXdBWig/73UH3x3FDhbSW1gvXAF8gGFBIeRmiczIxPERkuJbR3boiPPxeVA0LNSHtjAuFnveVIeWHcbSrngix6N+tzXlQjxPO2Mz1pPY+3uoJOkXNTTwHkaaDOpD/ieOJw8VsqBrd4o8IdJMZD304p+MU4Rvf9BvMHuAroUlbKPbQYD4W8ifmf85CHFnxH/+DPoOJTzodQXfGEcl79lrvRenGOuBOubGhmNUPzy0NBGA5Wrw3N6+eeorzvxPFMGFKjUeqJXhy6ZwReNsVMNzUjwJYYn5sHjFzgOX0HcU9vk+SSUfy34elHKQdmCIzoVj9rdYTnTs87eBL1hfs8CsZ3xPS4hus6ovbAO+X5d75Zq/y2ov16pDz6fEkZDKHfRp5GYQ0M6bPLdUwngDvtJ5YIG3xNqFhxGNT5D0iuGKxYpwa1qNq3lHMOJ9vFYRfyBjj9Hug4HqhJ5vuIUFFcboiY13WhWVhg1nw2LFvtjQDs4yqI1f2/QhSlxPwYNttxH4cCjBbhbFI8mmAq+5kgGlLa2rw7ayfD2OUtSzmocAYqs+1NM+qixbSHaap+GO6T/4Ch2yLRnTwr+F0A/kP4NbnYVrfmkgR+Pu2Sg8ImXE3kQc9bJNcSeZXjljMQToDez6lFpr2l6tlK7PkoWPEwqAjXKE0Q/U73BGTK2p8tBLySfR2njPB03yftBogUMP1Cj0z5guYBMt1YLnt1pM6SckiMvGgDzWnez8ILyvJ0f8nsoo0waMbeUAsD9i4BOVW6j3L0p962s9KxRGmggozGs0M5WhrdxDr6eUhZbB8IPdNz3SykIU2c2HFVFPtxu8ELQq2rgO+AHruZZOZP/3spusOT7q1juq9U4Oke58TRoY8kJpD0BtLkUATJYEfScygcKl50z8quATlPFLdkfgLYWz1BuwcEXtL14APJZUrk7KL1wV0rc42pYnD7z4uCn9Glu0yzlUOivYbnPJTh+JQWhPAmOWH5s298F0cg/w+RzuhSE0u/2cQufbPcbWu4rQ3Bwir6YEJAqPUdRIB2abhb7ir0kqJ5dgfs2sCUwTiW/EK0G1Tqm5X2HNGBR022+lmwjHy6hZiO1qcAcb66dCNtC7LjYLJIqDDPsu8USzTaxrrQBaHsDXQbaA3/XET08vEIKwrzbB2zRoK0dcb5xIfh5SAoit+BQeszGzVCqncqhp98duN8qbPAgHD8dL9pGUC0oNEYij+uk/hgvHmG8JB+0RctAwbGOJa1y5FMrnreEk6+1pM1ghMgNoEniB6844tazhPs2DjO/S8UDchlHlR6DscDtpDZQeNyEfLbFi5iWlgDh9NL7nmj/hbzqPyuCbrS/kfqDZf9H/INnoW5jiUt6HdqMotQ0/id+4TI2D5Y2hdL2GxrvWfc0GNKIGtcEot90NadmMc/dnO05kZVr0d1yUh9wicOT4gF5Z1VOlX5fjVrB4cqfQFabB1U6vCguiKNHX4dkgxrKGdI4+NrXIw7Xlym57b/N8Emh5pzV8YzFpU2A9sfhNYcqHD6wrVKbYj/JO2xg3dNu8RyudD68Eu26Rxq8Y5fBS77Wm2QKDqWdi+jk5WO8tRPyOwvMu6ZpaYTbBz/vE3uD5MPzy3x8KQtv8qGszvmOFAff1X6oRx95RdhU2hhKTz+OANEpi0PAWtt7dEbL+oYOQt6N/LjFkTkVnxdOwaH0gqaLRKtovnAy8n0WHb7LlgBxDxvhwdW0aS+QtoC9OQ6V9oMPQciGe6E0Hi2xtB1tjUORK0Fc2ezbIElfHXr1PiptBKtxFJVJS/n1oj0cfWKevQT57+1MVKlw9obSPykl6XyyX4neigHVo2X3vkA7pBMb2zmd3cpy2acgLzwF6gHe3lOq4FB6Xv5WGWjF9wVWZBfK2cWVCMLhAlxGS/8D0/A0vNX3kgxoKpwl9unQNCgHLTQYMFQxMyh/lHLWkMTB4c9FKG+HjCmvs0WPr78FOhlpb5WAZkM9F9d5g9E2aPR38U+BQHd9bjv5X9FrfZKCInKBZ5umfYTaBX1sstaqtCzSbBz8yn9Z6gNqNFfRAOuYpqW32/fx8w78vkQWblTTCJWU12hVxv9WAZcKuHYRo5v/YWh3z0iVUNprl5oM2y5PmvO1IXdTYAHBgYc9TvSilnqCQuoClM0XlDrXzU2PRS/UWhjgw02cdqEvSP3wsrQmuHjPJlxpeN8Nba+m4wmM1y5nBrltJrUVGquXlMbC24dkvuDAw3Eo8GtpDPYDcWekE7NWlTYR+BKWEv8YJH4wqdZG7xHNrqa7HNdu9Vh/XFU7TKrfC6Np62/e1w0ddjdcrpHGMcpyuRz7bGktrC7+sZojLumXMduSju/V5xR6u8JVR1PFE4yv0b3SRljErCHhNmaNHoNR++HyXb8bopYHCruNxD/Wd8QlPVVtfiwUHGUItWqxUM00ZKChRzb6BjsrDTcPZKTjIhwfnYQ7HT2SEj7PTdf83h/C4/4mULPzYA/w2unLexV5deDyRVu0DFxo5vJloWXf20I38Mb1RnR5f66KVbeuYWfW3rT1QD3P+mm0fcMrFkUjyDwOEY1mJC6dUhw9KG8faR9w0R8F77VSEKhjanzcSct2FgtV5+TZHI+IHdx567fiD1y9zI1qnzXGPu6I9UjGTmvUkGyzO/WauXPBJThWFb/wvldMI5HXgu9L5WzFOW0Xz6w/Ticfoao4xiAJ3Ms9HimYD3ckSzsQidvvvW9JvyXyPbsIX4Y3nhtzKH4eLdpxjzMRx5iyn0Ecn38Jy+3UiGz7vm6A+3aVxsLlP8R1VYUdIJXeqIp1t7vUD6X3s7yrY9vSicUT2JloIzocDYTrHe4SPT35Njp66rjWLKii/wCdhbg/K7UW17EGHBpckAzkPibI6wrR+36mgYsTd0Qa7ivJqUGezDXLbCwjFt7YJjhbxPUbXN4fnfSVbCtsE1xqvrLtOUWv9KWWlLZNHe+fgPLOwbULNDnPfqiewVPWWGZaP6Dz1j3gj9OodDqkkJnp2gDb1B01Ri6Tp/c1648TD0OlzfpQI45jbEewUWxmiJ38ddAkszqVvinRWJ9ChkKDjZLLtZeTfA2KQ5J/WOI4HGHntk0Nb2GIPPBIR+6rOcPwmZylIT9s+JzZWUPchzpHuN4WQUGAsrhzmG1/S5bFXc+OBHHv0unSb+uK6iXSdrnbmpdNaGLoA3H5u20zZtbDTwyPHCpy/1Ha3rh5cdx+E73X6INAwzTtQY0QFnUpMwiOYkgbv3P4sor427mdDfUgm0ES4U+iMXOXbDrIud4nG/dq4p7urRbcyOiyjDTki0cP2BZLRppL1tGIk8QzzP4v1Cg6JfuIipXFfRbuQoXST6tvY1Bo0LBc5jQbbQS7ooFnHV7VJXoxYD1VfRo+96pknF1jDtHmEQBF66mUqV3wd77oDabKxmxpIwTBkQ3lCOfaGc4SeTth3oDaRRdoCzTszClVMx1M57lDpIQvcwIsa6Jo3nKdxod03KmNMzIzpXaU6RNC4+91JZbBIeK54hcNtZnUe1alFcG9O2nk40lXLxuKfit0Co7h6ePCL34RvwDWMcfRNHZujHwPNWt0coHCA0TvXy7c4vR5n/h9bzSo3g3aCeXsWO0mvkjPIQHPJ7lZmqw98cRBEJc9cNkFfWV88cd8+kTPqEyW6qFqjCsdeW0c/LLcEPufl+lK4p7HpPXAxpRaT9HshJkmPRPjZe70xClGGiN53B7tCTa/jOmG2AE580AD6NPI63UpAHP/+eCFO7fRmexLos+47RB9NGEeRyQOeWhbmWz44wa3dBJ8vsjMB+7tw2VP8Ea+OJvEhXiRITELaUKUK6rZ0dnOkm2y6pP8wN948PYX0cKXM0mbGf64fihvX6HBmbNXPHXuHtDt9HUxG2O9YNKolOdIA9+BbXd52z3KlJOmkbwmnvB/6LU9a7bCcXEAAAAASUVORK5CYII="
-              alt="BellIconDark Img"
-              class="loginfooterimgto"
-            />
-          </div>
-        </div>
-      </div>
-    </footer>
-    <div class="sidebar" id="sidebar">
-      <div class="d-flex align-items-center mt-3">
-        <img
-          src="./public/assets/images/logo.webp 512.webp"
-          alt="1obet-logo"
-          width="50"
-          height="50"
-        />
-        <h3>1OBET</h3>
-        <i class="fa fa-times close-toggle ml-5" id="closeToggle"></i>
-      </div>
-      <ul class="p-0">
-        <li>
-          <a href="dashboard.html" class="menu-item">
-            <img
-              src="./public/assets/side-menu-icons/light-icons/dashboard.png"
-              alt=""
-            /><span class="m-1">Dashboard</span>
-          </a>
-        </li>
-        <li>
-          <a href="tennis.html" class="menu-item">
-            <img
-              src="./public/assets/side-menu-icons/light-icons/tennis.png"
-              alt=""
-            /><span class="m-1">Tennis</span>
-          </a>
-        </li>
-        <li>
-          <a href="cricket.html" class="menu-item">
-            <img
-              src="./public/assets/side-menu-icons/light-icons/cricket.png"
-              alt=""
-            /><span class="ml-1">Cricket</span>
-          </a>
-        </li>
-        <li>
-          <a href="soccer.html" class="menu-item">
-            <img
-              src="./public/assets/side-menu-icons/light-icons/soccer.png"
-              alt=""
-            /><span class="ml-1">Soccer</span>
-          </a>
-        </li>
-        <li>
-          <a href="greyhound.html" class="menu-item active">
-            <img
-              src="./public/assets/side-menu-icons/light-icons/royal-casino.png"
-              alt=""
-            /><span class="ml-1">Greyhound</span>
-          </a>
-        </li>
-        <li>
-          <a href="current_postion.html" class="menu-item">
-            <img
-              src="./public/assets/side-menu-icons/light-icons/current-position.png"
-              alt=""
-            /><span class="ml-1">Current position</span>
-          </a>
-        </li>
-        <li>
-          <a href="horserace.html" class="menu-item">
-            <img
-              src="./public/assets/side-menu-icons/light-icons/horse-race.png"
-              alt=""
-            /><span class="ml-1">Horse Race</span>
-          </a>
-        </li>
-        <li>
-          <a href="sportsBook.html" class="menu-item">
-            <img
-              src="./public/assets/side-menu-icons/light-icons/all-sports.png"
-              alt=""
-            /><span class="ml-1">Sports Book</span>
-          </a>
-        </li>
-        <li>
-          <a href="betfair_games.html" class="menu-item">
-            <img
-              src="./public/assets/side-menu-icons/light-icons/bet-fair-games.png"
-              alt=""
-            /><span class="ml-1">Betfair Games</span>
-          </a>
-        </li>
-        <li>
-          <a href="evolution_casino.html" class="menu-item">
-            <img
-              src="./public/assets/side-menu-icons/light-icons/royal-casino.png"
-              alt=""
-            /><span class="ml-1">Evoluation Casino</span>
-          </a>
-        </li>
-        <li>
-          <a href="1obetcasino.html" class="menu-item">
-            <img
-              src="./public/assets/side-menu-icons/light-icons/royal-casino.png"
-              alt=""
-            /><span class="ml-1">1obet Casino</span>
-          </a>
-        </li>
-        <li>
-          <a href="result.html" class="menu-item">
-            <img
-              src="./public/assets/side-menu-icons/light-icons/results.png"
-              alt=""
-            /><span class="ml-1">Result</span>
-          </a>
-        </li>
-        <li>
-          <a href="ezugi_casino.html" class="menu-item">
-            <img
-              src="./public/assets/side-menu-icons/light-icons/royal-casino.png"
-              alt=""
-            /><span class="ml-1">Ezugi Casino</span>
-          </a>
-        </li>
-        <li>
-          <a href="120_british_casino.html" class="menu-item">
-            <img
-              src="./public/assets/side-menu-icons/light-icons/royal-casino.png"
-              alt=""
-            /><span class="ml-1">120 British Casino</span>
-          </a>
-        </li>
-      </ul>
-    </div>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-      const closeToggle = document.getElementById("closeToggle");
-      const menuToggle = document.getElementById("menuToggle");
-      const sidebar = document.getElementById("sidebar");
-      const header = document.getElementById("header");
-      const content = document.querySelector(".content");
-      const footer = document.getElementById("footer");
-      if (window.innerWidth >= 1220) {
-        sidebar.classList.toggle("open");
-        content.style.paddingLeft = "270px";
-        footer.style.paddingLeft = "270px";
-        header.style.width = "calc(100% - 300px)";
-      }
-      menuToggle.addEventListener("click", function () {
-        sidebar.classList.toggle("open");
-        // Adjust the position of the toggle button and header padding
-        if (sidebar.classList.contains("open")) {
-          if (window.innerWidth <= 1220) {
-            header.style.paddingLeft = "0";
-            content.style.paddingLeft = "0";
-          } else if (window.innerWidth <= 1230) {
-            header.style.width = "calc(100% - 282px)";
-            content.style.paddingLeft = "250px";
-            footer.style.paddingLeft = "250px";
-          } else {
-            header.style.width = "calc(100% - 300px)";
-            header.style.paddingLeft = "0px";
-            content.style.paddingLeft = "270px";
-            footer.style.paddingLeft = "270px";
-          }
-        } else {
-          header.style.width = "calc(100% - 32px)";
-          header.style.paddingLeft = "0";
-          content.style.paddingLeft = "0";
-          footer.style.paddingLeft = "0";
-        }
-      });
-      closeToggle.addEventListener("click", function () {
-        sidebar.classList.remove("open");
-        header.style.width = "calc(100% - 32px)";
-        header.style.paddingLeft = "0";
-        content.style.paddingLeft = "0";
-        footer.style.paddingLeft = "0";
-      });
-      window.addEventListener("resize", function () {
-        if (sidebar.classList.contains("open")) {
-          if (window.innerWidth <= 1220) {
-            header.style.width = "calc(100% - 32px)";
-            header.style.paddingLeft = "0";
-            content.style.paddingLeft = "0";
-            footer.style.paddingLeft = "0";
-          } else if (window.innerWidth <= 1230) {
-            header.style.width = "calc(100% - 282px)";
-
-            content.style.paddingLeft = "250px";
-            footer.style.paddingLeft = "250px";
-          } else {
-            header.style.width = "calc(100% - 300px)";
-            content.style.paddingLeft = "270px";
-            footer.style.paddingLeft = "270px ";
-          }
-        }
-      });
-
-      document.querySelectorAll(".menu-item").forEach((item) => {
-        item.addEventListener("click", function () {
-          document.querySelectorAll(".menu-item").forEach((i) => {
-            i.classList.remove("active");
-          });
-          this.classList.add("active");
-        });
-      });
-    </script>
-    <script>
-      const wrapper = document.querySelector(".wrapper");
-      const carousel = document.querySelector(".carousel");
-      const firstCardWidth = carousel.querySelector(".card").offsetWidth;
-      const arrowBtns = document.querySelectorAll(".wrapper i");
-      const carouselChildrens = [...carousel.children];
-
-      let isDragging = false,
-        isAutoPlay = true,
-        startX,
-        startScrollLeft,
-        timeoutId;
-
-      // Get the number of cards that can fit in the carousel at once
-      let cardPerView = Math.round(carousel.offsetWidth / firstCardWidth);
-
-      // Insert copies of the last few cards to beginning of carousel for infinite scrolling
-      carouselChildrens
-        .slice(-cardPerView)
-        .reverse()
-        .forEach((card) => {
-          carousel.insertAdjacentHTML("afterbegin", card.outerHTML);
-        });
-
-      // Insert copies of the first few cards to end of carousel for infinite scrolling
-      carouselChildrens.slice(0, cardPerView).forEach((card) => {
-        carousel.insertAdjacentHTML("beforeend", card.outerHTML);
-      });
-
-      // Scroll the carousel at appropriate postition to hide first few duplicate cards on Firefox
-      carousel.classList.add("no-transition");
-      carousel.scrollLeft = carousel.offsetWidth;
-      carousel.classList.remove("no-transition");
-
-      // Add event listeners for the arrow buttons to scroll the carousel left and right
-      arrowBtns.forEach((btn) => {
-        btn.addEventListener("click", () => {
-          carousel.scrollLeft +=
-            btn.id == "left" ? -firstCardWidth : firstCardWidth;
-        });
-      });
-
-      const dragStart = (e) => {
-        isDragging = true;
-        carousel.classList.add("dragging");
-        // Records the initial cursor and scroll position of the carousel
-        startX = e.pageX;
-        startScrollLeft = carousel.scrollLeft;
-      };
-
-      const dragging = (e) => {
-        if (!isDragging) return; // if isDragging is false return from here
-        // Updates the scroll position of the carousel based on the cursor movement
-        carousel.scrollLeft = startScrollLeft - (e.pageX - startX);
-      };
-
-      const dragStop = () => {
-        isDragging = false;
-        carousel.classList.remove("dragging");
-      };
-
-      const infiniteScroll = () => {
-        // If the carousel is at the beginning, scroll to the end
-        if (carousel.scrollLeft === 0) {
-          carousel.classList.add("no-transition");
-          carousel.scrollLeft = carousel.scrollWidth - 2 * carousel.offsetWidth;
-          carousel.classList.remove("no-transition");
-        }
-        // If the carousel is at the end, scroll to the beginning
-        else if (
-          Math.ceil(carousel.scrollLeft) ===
-          carousel.scrollWidth - carousel.offsetWidth
-        ) {
-          carousel.classList.add("no-transition");
-          carousel.scrollLeft = carousel.offsetWidth;
-          carousel.classList.remove("no-transition");
-        }
-
-        // Clear existing timeout & start autoplay if mouse is not hovering over carousel
-        clearTimeout(timeoutId);
-        if (!wrapper.matches(":hover")) autoPlay();
-      };
-
-      const autoPlay = () => {
-        if (window.innerWidth < 800 || !isAutoPlay) return; // Return if window is smaller than 800 or isAutoPlay is false
-        // Autoplay the carousel after every 2500 ms
-        timeoutId = setTimeout(
-          () => (carousel.scrollLeft += firstCardWidth),
-          2500
-        );
-      };
-      autoPlay();
-
-      carousel.addEventListener("mousedown", dragStart);
-      carousel.addEventListener("mousemove", dragging);
-      document.addEventListener("mouseup", dragStop);
-      carousel.addEventListener("scroll", infiniteScroll);
-      wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
-      wrapper.addEventListener("mouseleave", autoPlay);
-    </script>
-    <script>
-      document
-        .getElementById("dropdownToggle")
-        .addEventListener("click", function () {
-          var dropdownMenu = document.querySelector(".dropdown-menu");
-          dropdownMenu.style.display =
-            dropdownMenu.style.display === "block" ? "none" : "block";
-        });
-
-      // Close the dropdown if the user clicks outside of it
-      window.onclick = function (event) {
-        if (!event.target.matches("#dropdownToggle")) {
-          var dropdowns = document.getElementsByClassName("dropdown-menu");
-          for (var i = 0; i < dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
-            if (openDropdown.style.display === "block") {
-              openDropdown.style.display = "none";
-            }
-          }
-        }
-      };
-    </script>
+    <!-- script -->
+     <?php include 'script.php';?>
   </body>
 </html>

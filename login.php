@@ -496,7 +496,7 @@
         <div class="row justify-content-center">
           <div class="col-auto">
             <img
-              src="./public/assets/images/login-footer-image2.webp"
+              src="public/assets/images/login-footer-image2.webp"
               alt="BellIconDark Img"
               class="loginfooterimg"
             />
