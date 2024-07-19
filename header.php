@@ -43,7 +43,7 @@
                     </svg>
                     Statement
                 </a>
-                <a href="result.php" class="dropdown-item">
+                <a href="customerresult.php" class="dropdown-item">
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                         aria-hidden="true" role="img" font-size="1.375rem" class="iconify iconify--tabler" width="1em"
                         height="1em" viewBox="0 0 24 24">
