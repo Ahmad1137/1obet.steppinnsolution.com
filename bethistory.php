@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Result</title>
+    <title>statement</title>
     <link
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
       rel="stylesheet"
@@ -214,9 +214,13 @@
           font-size: medium;
         }
       }
+
       @media screen and (max-width: 690px) {
         .content {
           padding-left: 0 !important;
+        }
+        .timefromto {
+          flex-flow: column !important;
         }
         .sidebar.open ~ #header {
           padding-left: 0px !important;
@@ -228,8 +232,19 @@
         .menu-toggle {
           display: inline-block;
         }
-        .timefromto {
-          flex-flow: column !important;
+        .css-cr5cwv {
+          display: block !important;
+        }
+        .css-9u59n1 {
+          width: 50% !important;
+        }
+        .inputfields
+        {
+            width: 100% !important;
+        }
+        .all_markets
+        {
+            width: 200px !important !important;
         }
       }
       @media screen and (min-width: 1220px) {
@@ -273,10 +288,23 @@
           font-size: x-small;
           text-wrap: nowrap;
         }
+        .all_markets
+        {
+            width: 100px !important;
+        }
       }
     </style>
     <!-- green patti style -->
+      <style>
+        @media screen and (max-width: 960px) {
+            .inputfields
+            {
+                width: 100px;
+            }
+            
+        }
 
+      </style>
     <style>
       .module_text {
         line-height: 1.467;
@@ -308,7 +336,12 @@
       }
       .heigt_sport_book {
         height: 42px;
-        margin-top: 6rem !important;
+      
+      }
+      .heigt_sport_book1
+      {
+        height: 42px;
+        margin-top: 7rem !important;
       }
       .triangle_left {
         margin-right: 1.375rem;
@@ -377,7 +410,7 @@
         letter-spacing: 0.43px;
         font-weight: 500;
         background-color: rgb(0, 168, 38);
-        min-width: 50px;
+        min-width: 69px;
         text-transform: none;
         line-height: 1.231;
         border-radius: 4px;
@@ -393,7 +426,7 @@
     <style>
       @media (min-width: 900px) {
         .marketbtn_boxsize {
-          flex-basis: 100%;
+          flex-basis: 69%;
           -webkit-box-flex: 0;
           flex-grow: 0;
           max-width: 100%;
@@ -403,10 +436,7 @@
         box-sizing: border-box;
         display: block !important;
       }
-      .marketbtns_shadow {
-        transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-        box-shadow: rgba(47, 43, 61, 0.1) 0px 4px 18px 0px;
-      }
+
       .marketbtn {
         display: inline-flex;
         -webkit-box-align: center;
@@ -430,7 +460,7 @@
         font-weight: 500;
         border: 1px solid rgb(0, 168, 38);
         color: rgb(0, 168, 38);
-        min-width: 50px;
+        min-width: 60px;
         text-transform: none;
         transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
           box-shadow 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
@@ -443,7 +473,7 @@
         padding: 0.3125rem 0.8125rem;
         margin: 5px 0.25rem;
       }
-      .marketbtn:focus {
+      .marketbtn {
         color: rgb(255, 255, 255);
         background-color: rgb(0, 168, 38);
         border: 0px;
@@ -491,7 +521,11 @@
         position: relative;
         border-radius: 6px;
         height: 40px;
-        width: 80px;
+        width: 85px;
+      }
+      .all_markets
+      {
+        width: 120px;
       }
       .css-1ogifso.css-1ogifso.css-1ogifso {
         padding-right: 32px;
@@ -663,14 +697,13 @@
       }
       .css-cr5cwv {
         box-sizing: border-box;
-        flex-flow: wrap;
+        flex-flow: nowrap;
         width: 100%;
         padding-top: 1rem;
         padding-bottom: 1rem;
         display: flex;
-        -webkit-box-pack: justify;
+        align-items: center;
         justify-content: space-between;
-        gap: 0.5rem;
       }
       .enteriesinput:focus {
         outline: none;
@@ -693,10 +726,12 @@
         align-items: center;
         justify-content: space-between;
         padding: 10px;
-        border: 1px solid #ccc;
         border-radius: 4px;
         cursor: pointer;
       }
+      .dropdown-select:focus {
+        border: 1px solid #00A826;
+        }
 
       .dropdown-icon {
         width: 24px;
@@ -705,14 +740,14 @@
 
       .dropdown-list {
         display: none;
-        position: absolute;
+        position: fixed;
         background-color: #fff;
         border: 1px solid #ccc;
-        border-radius: 4px;
-        margin-top: 5px;
+        border-radius: 8px;
+       
         list-style-type: none;
-        padding: 0;
-        width: 100%;
+        padding: 8px;
+    
         z-index: 1;
       }
 
@@ -728,18 +763,18 @@
       .dropdown-list .dropdown-item[aria-selected="true"] {
         background-color: rgb(0, 168, 38);
         font-weight: bold;
+
       }
       .dropdown-list .dropdown-item[aria-selected="true"]:hover {
         /* background-color: rgb(0, 168, 38);  */
         color:black;
-      
+         
         }
     </style>
     <style>
       .dropdown-container {
         position: relative;
-        display: flex;
-        align-items: center;
+        display: inline-block;
       }
 
       .dropdown-menu {
@@ -780,12 +815,14 @@
   <body>
     <!-- main boady content -->
     <div class="content m-3">
-      <?php include 'header.php';?>
+      <!-- header -->
+       <?php include 'header.php';?>
+
       <div
-        class="heigt_sport_book m-0 d-flex flex-row flex-grow-0 position-relative w-100"
+        class="heigt_sport_book1 m-0 d-flex flex-row flex-grow-0 position-relative w-100"
       >
         <div
-          class="triangle_left d-flex pl-5 pr-5 align-items-center position-relative"
+          class="triangle_left d-flex pl-3 pr-5 align-items-center position-relative"
         >
           <svg
             stroke="currentColor"
@@ -809,7 +846,7 @@
               d="M17 2v1h-17v-1h17zM0 7h17v-1h-17v1zM0 11h17v-1h-17v1zM0 15h17v-1h-17v1z"
             ></path>
           </svg>
-          <p class="text-white m-0 fw-normal module_text">Market Results</p>
+          <p class="text-white m-0 fw-normal module_text">Bets History</p>
         </div>
         <div
           class="triangle_right d-flex flex-grow-1 flex-shrink-1 position-relative align-items-center justify-content-end text-whit"
@@ -819,6 +856,161 @@
         <div class="p-0">
           <div class="p-3">
             <div class="timefromto d-flex flex-row gap align-items-center">
+                <!-- dropdovn -->
+            <div class="d-flex">
+              <div class="dropdown-container d-flex  css-k6senv">
+                <div class="dropdown">
+                    <div
+                    class="dropdown-select MuiInputBase-root css-1iyurmi all_markets"
+                    tabindex="0"
+                        >
+                    <span class="selected-value ml-1">All</span>
+                    <svg
+                        style="background: #00a826"
+                        class="css-1cmd6q3"
+                        focusable="false"
+                        aria-hidden="true"
+                        viewBox="0 0 24 24"
+                        data-testid="ArrowDropDownIcon"
+                    >
+                        <path d="M7 10l5 5 5-5z"></path>
+                    </svg>
+                    <fieldset
+                        aria-hidden="true"
+                        class="MuiOutlinedInput-notchedOutline css-igs3ac"
+                    >
+                        <legend class="css-ihdtdm">
+                        <span class="notranslate">​</span>
+                        </legend>
+                    </fieldset>
+                    </div>
+                    <ul class="dropdown-list all_markets" role="listbox" tabindex="-1">
+                    <li
+                        class="dropdown-item"
+                        tabindex="-1"
+                        role="option"
+                        data-value="10"
+                    >
+                        All
+                    </li>
+                    <li
+                        class="dropdown-item"
+                        tabindex="-1"
+                        role="option"
+                        data-value="100"
+                    >
+                        Soccer
+                    </li>
+                    <li
+                        class="dropdown-item"
+                        tabindex="-1"
+                        role="option"
+                        data-value="250"
+                    >
+                        Tennis
+                    </li>
+                    <li
+                        class="dropdown-item"
+                        tabindex="-1"
+                        role="option"
+                        data-value="500"
+                    >
+                        Cricket
+                    </li>
+                    <li
+                        class="dropdown-item"
+                        tabindex="-1"
+                        role="option"
+                        data-value="1000"
+                    >
+                        Horse Race
+                    </li>
+                    <li
+                        class="dropdown-item"
+                        tabindex="-1"
+                        role="option"
+                        data-value="1000"
+                    >
+                        Casino
+                    </li>
+                    <li
+                        class="dropdown-item"
+                        tabindex="-1"
+                        role="option"
+                        data-value="1000"
+                    >
+                        Greyhound
+                    </li>
+                    </ul>
+                </div>
+                
+              </div>
+              <div class="dropdown-container d-flex ml-3 css-k6senv">
+                <div class="dropdown">
+                    <div
+                    class="dropdown-select MuiInputBase-root css-1iyurmi all_markets"
+                    tabindex="0"
+                        >
+                    <span class="selected-value ml-1">Aactive</span>
+                    <svg
+                        style="background: #00a826"
+                        class="css-1cmd6q3"
+                        focusable="false"
+                        aria-hidden="true"
+                        viewBox="0 0 24 24"
+                        data-testid="ArrowDropDownIcon"
+                    >
+                        <path d="M7 10l5 5 5-5z"></path>
+                    </svg>
+                    <fieldset
+                        aria-hidden="true"
+                        class="MuiOutlinedInput-notchedOutline css-igs3ac"
+                    >
+                        <legend class="css-ihdtdm">
+                        <span class="notranslate">​</span>
+                        </legend>
+                    </fieldset>
+                    </div>
+                    <ul class="dropdown-list all_markets" role="listbox" tabindex="-1">
+                    <li
+                        class="dropdown-item"
+                        tabindex="-1"
+                        role="option"
+                        data-value="10"
+                    >
+                        Aactive
+                    </li>
+                    <li
+                        class="dropdown-item"
+                        tabindex="-1"
+                        role="option"
+                        data-value="100"
+                    >
+                        Settled
+                    </li>
+                    <li
+                        class="dropdown-item"
+                        tabindex="-1"
+                        role="option"
+                        data-value="250"
+                    >
+                        Cancelled
+                    </li>
+                    <li
+                        class="dropdown-item"
+                        tabindex="-1"
+                        role="option"
+                        data-value="500"
+                    >
+                        Voided
+                    </li>
+                    
+                    </ul>
+                </div>
+                
+              </div>
+            </div>
+              <!-- dropdovn end -->
               <div class="d-inline-block p-0 border-0">
                 <div class="position-relative d-inline-block w-100">
                   <span
@@ -878,31 +1070,22 @@
           </div>
         </div>
       </div>
-      <div class="css-cr5cwv">
-        <div class="marketbtn_boxsize m-0 d-flex flex-row">
-          <div
-            class="marketbtns_shadow bg-white text-black rounded-2 bg-none overflow-hidden"
-          >
-            <div>
-              <button class="marketbtn" tabindex="0" type="button">
-                Cricket</button
-              ><button class="marketbtn" tabindex="0" type="button">
-                Soccer</button
-              ><button class="marketbtn" tabindex="0" type="button">
-                Tenis</button
-              ><button class="marketbtn" tabindex="0" type="button">
-                Horse Race</button
-              ><button class="marketbtn" tabindex="0" type="button">
-                GreyHound</button
-              ><button class="marketbtn" tabindex="0" type="button">
-                Fancy</button
-              ><button class="marketbtn" tabindex="0" type="button">
-                Casino
-              </button>
-            </div>
-          </div>
+      <div
+        class="heigt_sport_book mb-5 m-0 d-flex flex-row flex-grow-0 position-relative w-100"
+      >
+        <div
+          class="triangle_left d-flex pl-3 pr-5 align-items-center position-relative"
+        >
+          <p class="text-white m-0 fw-normal module_text">
+            Bets History
+          </p>
         </div>
-        <div class="dropdown-container css-k6senv">
+        <div
+          class="triangle_right d-flex flex-grow-1 flex-shrink-1 position-relative align-items-center justify-content-end text-whit"
+        ></div>
+      </div>
+      <div class="css-cr5cwv">
+        <div class="dropdown-container d-flex ml-3 css-k6senv">
           <h6 class="css-qzylx">Show</h6>
           <div class="dropdown">
             <div
@@ -974,6 +1157,21 @@
           </div>
           <h6 class="css-qzylx">Entries</h6>
         </div>
+        <!-- <div class="marketbtn_boxsize m-0 d-flex flex-row">
+          <div
+            class="marketbtns_shadow bg-white text-black rounded-2 bg-none overflow-hidden"
+          >
+            <div>
+              <button class="marketbtn" tabindex="0" type="button">
+                Print
+              </button>
+              <button class="marketbtn" tabindex="0" type="button">
+                Excel
+              </button>
+              <button class="marketbtn" tabindex="0" type="button">PDF</button>
+            </div>
+          </div>
+        </div> -->
         <div class="css-1bj8auj">
           <p class="MuiTypography-body1 css-tn9xkt">Search</p>
           <div
@@ -1000,9 +1198,9 @@
     <?php include 'footer.php';?>
     <!-- sidebar -->
     <?php include 'sidebar.php';?>
-
-   <!-- script -->
-    <?php include 'script.php';?>
+    
+    <!-- script -->
+     <?php include 'script.php';?>
     <script>
       flatpickr("#fromdatetime", {
         enableTime: true, // Enables time selection
@@ -1019,7 +1217,7 @@
         // Other options as needed
       });
     </script>
-    <script>
+    <!-- <script>
       document.addEventListener("DOMContentLoaded", function () {
         const dropdownSelect = document.querySelector(".dropdown-select");
         const dropdownList = document.querySelector(".dropdown-list");
@@ -1050,7 +1248,42 @@
           }
         });
       });
-    </script>
-    
+    </script> -->
+   <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const dropdownContainers = document.querySelectorAll(".dropdown-container");
+
+    dropdownContainers.forEach((container) => {
+      const dropdownSelect = container.querySelector(".dropdown-select");
+      const dropdownList = container.querySelector(".dropdown-list");
+      const dropdownItems = container.querySelectorAll(".dropdown-item");
+      const selectedValue = container.querySelector(".selected-value");
+
+      dropdownSelect.addEventListener("click", function () {
+        dropdownList.style.display =
+          dropdownList.style.display === "none" || !dropdownList.style.display
+            ? "block"
+            : "none";
+      });
+
+      dropdownItems.forEach((item) => {
+        item.addEventListener("click", function () {
+          selectedValue.innerText = item.innerText;
+          dropdownItems.forEach((i) =>
+            i.setAttribute("aria-selected", "false")
+          );
+          item.setAttribute("aria-selected", "true");
+          dropdownList.style.display = "none";
+        });
+      });
+
+      document.addEventListener("click", function (event) {
+        if (!container.contains(event.target)) {
+          dropdownList.style.display = "none";
+        }
+      });
+    });
+  });
+</script>
   </body>
 </html>

@@ -737,6 +737,11 @@
         background-color: rgb(0, 168, 38);
         font-weight: bold;
       }
+      .dropdown-list .dropdown-item[aria-selected="true"]:hover {
+        /* background-color: rgb(0, 168, 38);  */
+        color:black;
+      
+        }
     </style>
     <style>
       .dropdown-container {
