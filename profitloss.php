@@ -725,7 +725,7 @@
       }
 
       .dropdown-list .dropdown-item {
-        padding: 10px;
+        padding:6px;
         cursor: pointer;
       }
 

@@ -711,13 +711,13 @@
         border-radius: 4px;
         margin-top: 5px;
         list-style-type: none;
-        padding: 0;
+        padding: 8px;
         width: 100%;
         z-index: 1;
       }
 
       .dropdown-list .dropdown-item {
-        padding: 10px;
+        padding: 6px;
         cursor: pointer;
       }
 
