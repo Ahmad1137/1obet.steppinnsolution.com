@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>1Obet Casino</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+    
     <script src="https://kit.fontawesome.com/69c89fc43e.js" crossorigin="anonymous"></script>
     <!-- footer style -->
     <style>
@@ -143,6 +144,8 @@
     }
 
     .sidebar {
+        font-size: 0.9375rem;
+        font-weight:400;
         position: fixed;
         top: 0;
         left: -260px;
@@ -156,7 +159,6 @@
         /* Add scrolling */
         z-index: 1000;
     }
-
     .sidebar.open {
         left: 0;
     }

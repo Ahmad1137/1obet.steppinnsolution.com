@@ -129,6 +129,8 @@
         transition: all 0.5s ease;
       }
       .sidebar {
+        font-size: 0.9375rem;
+        font-weight:400;
         position: fixed;
         top: 0;
         left: -260px;
