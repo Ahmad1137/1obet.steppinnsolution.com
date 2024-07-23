@@ -106,15 +106,22 @@
       </div>
 
       <ul class="p-0 mt-3">
+        
         <li>
+        <div class="d-flex">
           <a href="tennis.php" class="mt-3">
             <span>Tennis Men's Wimbledon 2025</span>
           </a>
+          <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="mt-3 " aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M12 7a5 5 0 1 1 -4.995 5.217l-.005 -.217l.005 -.217a5 5 0 0 1 4.995 -4.783z"></path></svg>
+        </div>
         </li>
         <li>
+        <div class="d-flex">
           <a href="cricket.php" class="mt-3">
             <span>Cricket Women's Wimbledon 2025</span>
           </a>
+          <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="mt-3 " aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M12 7a5 5 0 1 1 -4.995 5.217l-.005 -.217l.005 -.217a5 5 0 0 1 4.995 -4.783z"></path></svg>
+        </div>
         </li>
         <li>
           <a href="greyhound.php" class="mt-3">
