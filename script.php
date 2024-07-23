@@ -74,6 +74,51 @@
         });
     });
     </script>
+      <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuToggle = document.getElementById("menuToggle");
+        const sidebar = document.getElementById("sidebar");
+        const matchesSidebar = document.getElementById("matchesSidebar");
+        const closesubmenu = document.getElementById("closesubmenu");
+        const header = document.querySelector(".header");
+        const content = document.querySelector(".content");
+        const footer = document.getElementById("footer");
+
+        document.querySelectorAll(".submenu-trigger").forEach((item) => {
+          item.addEventListener("click", function (event) {
+            event.preventDefault(); // Prevent default link behavior
+
+            // Hide the original sidebar
+            sidebar.style.zIndex = "999";
+            matchesSidebar.style.zIndex = "1000";
+            matchesSidebar.classList.add("open");
+            menuToggle.style.display = "none";
+          });
+        });
+
+        closesubmenu.addEventListener("click", function () {
+          // Hide Tennis submenu
+          matchesSidebar.classList.remove("open");
+
+          // Reset the z-index to hide the submenu behind the sidebar
+          setTimeout(() => {
+            sidebar.style.zIndex = "1000";
+          }, 500);
+
+          // Show the original sidebar
+          sidebar.classList.add("open");
+          menuToggle.style.display = "block";
+
+          if (window.innerWidth <= 1220) {
+            sidebar.classList.remove("open");
+            header.style.width = "calc(100% - 32px)";
+            header.style.paddingLeft = "0";
+            content.style.paddingLeft = "0";
+            footer.style.paddingLeft = "0";
+          }
+        });
+      });
+    </script>
     <script>
     document
         .getElementById("dropdownToggle")

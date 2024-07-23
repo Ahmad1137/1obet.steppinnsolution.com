@@ -142,7 +142,42 @@
         cursor: pointer;
         transition: all 0.5s ease;
     }
+    .matches-sidebar {
+        position: fixed;
+        top: 0;
+        left: -260px; /* Initially hidden */
+        width: 260px;
+        height: 100%;
+        background: black;
+        color: white;
+        padding-left: 10px;
+        transition: all 0.5s ease;
+        overflow-y: auto; /* Add scrolling */
+        z-index: 1000;
+      }
 
+      .matches-sidebar.open {
+        left: 0;
+      }
+
+      .matches-sidebar ul li a {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        line-height: 1.467;
+        font-size: 13px;
+        color: white;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+        padding-left: 0px;
+        border-radius: 10px;
+      }
+
+      .matches-sidebar ul li a:hover {
+        text-decoration: none;
+        background-color: #000;
+      }
     .sidebar {
         font-size: 0.9375rem;
         font-weight:400;

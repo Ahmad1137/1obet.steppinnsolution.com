@@ -17,24 +17,24 @@
             </a>
         </li>
         <li>
-            <a href="tennis.php" class="menu-item <?php echo $req == 'tennis.php' ? 'active' : ''; ?>">
+            <a href="#" class="menu-item submenu-trigger <?php echo $req == 'tennis.php' ? 'active' : ''; ?>">
                 <img src="public/assets/side-menu-icons/light-icons/tennis.png" alt="" /><span class="ml-1">Tennis</span>
             </a>
         </li>
         <li>
-            <a href="cricket.php" class="menu-item <?php echo $req == 'cricket.php' ? 'active' : ''; ?>">
+            <a href="#" class="menu-item submenu-trigger <?php echo $req == 'cricket.php' ? 'active' : ''; ?>">
                 <img src="public/assets/side-menu-icons/light-icons/cricket.png" alt="" /><span
                     class="ml-1">Cricket</span>
             </a>
         </li>
         <li>
-            <a href="soccer.php" class="menu-item <?php echo $req == 'soccer.php' ? 'active' : ''; ?>">
+            <a href="soccer.php" class="menu-item submenu-trigger <?php echo $req == 'soccer.php' ? 'active' : ''; ?>">
                 <img src="public/assets/side-menu-icons/light-icons/soccer.png" alt="" /><span
                     class="ml-1">Soccer</span>
             </a>
         </li>
         <li>
-            <a href="greyhound.php" class="menu-item <?php echo $req == 'greyhound.php' ? 'active' : ''; ?>">
+            <a href="greyhound.php" class="menu-item submenu-trigger <?php echo $req == 'greyhound.php' ? 'active' : ''; ?>">
                 <img src="public/assets/side-menu-icons/light-icons/royal-casino.png" alt="" /><span
                     class="ml-1">Greyhound</span>
             </a>
@@ -46,7 +46,7 @@
             </a>
         </li>
         <li>
-            <a href="horserace.php" class="menu-item <?php echo $req == 'horserace.phps' ? 'active' : ''; ?>">
+            <a href="horserace.php" class="menu-item submenu-trigger <?php echo $req == 'horserace.phps' ? 'active' : ''; ?>">
                 <img src="public/assets/side-menu-icons/light-icons/horse-race.png" alt="" /><span class="ml-1">Horse
                     Race</span>
             </a>
@@ -95,3 +95,42 @@
         </li>
     </ul>
 </div>
+<div class="matches-sidebar" id="matchesSidebar">
+      <div class="d-flex align-items-center mt-3">
+        <p class="m-0">All Matches</p>
+
+        <i
+          class="fa fa-times d-flex justify-content-end flex-grow-1 mr-3"
+          id="closesubmenu"
+        ></i>
+      </div>
+
+      <ul class="p-0 mt-3">
+        <li>
+          <a href="tennis.php" class="mt-3">
+            <span>Tennis Men's Wimbledon 2025</span>
+          </a>
+        </li>
+        <li>
+          <a href="cricket.php" class="mt-3">
+            <span>Cricket Women's Wimbledon 2025</span>
+          </a>
+        </li>
+        <li>
+          <a href="greyhound.php" class="mt-3">
+            <span>Greyhound Women's Wimbledon 2025</span>
+          </a>
+        </li>
+        <li>
+          <a href="soccer.php" class="mt-3">
+            <span>Soccer Women's Wimbledon 2025</span>
+          </a>
+        </li>
+        <li>
+          <a href="horserace.php" class="mt-3">
+            <span>Horserace Women's Wimbledon 2025</span>
+          </a>
+        </li>
+        <!-- Add more items here as needed -->
+      </ul>
+    </div>
